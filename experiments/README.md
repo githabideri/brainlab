@@ -14,6 +14,7 @@ One directory per experiment. Each directory carries:
 
 ## On the bench
 
-Nothing yet. The first experiment is the **control comparison** (fly vs.
-shuffled vs. disconnected wiring, same stimulus protocol, same readout);
-its directory lands with the campaign that produces it.
+- **control-comparison** (the first experiment): fly vs. shuffled vs.
+  disconnected FlyWire wiring, same sugar-GRN stimulus, same AlphaLIF
+  model, 5 seeds. The campaign that produces it is running on a
+  4-core CPU host; its report lands here when the numbers are in.
