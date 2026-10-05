@@ -50,6 +50,10 @@ class Scorer(nn.Module):
         hidden = self.circuit.step(self.circuit.initial(state.shape[0], state.device), drive)
         return self.readout(hidden[:, self.circuit.outputs]), hidden
 
+    def forward(self, state: torch.Tensor):
+        """Full pass: state -> (features, hidden)."""
+        return self.features(state)
+
     def score(self, state: torch.Tensor, task: str, abstain_margin: float = 0.25):
         """(scores (B,K), chosen (B,), margin (B,), abstained (B,))"""
         features, _ = self.features(state)

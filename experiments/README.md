@@ -27,7 +27,7 @@ One directory per experiment. Each directory carries:
   than on shuffled wiring?) — the direct follow-up that upgrades the
   first campaign's activity-structure result into an information
   result; reuses the same three arms and driver.
-- **scorer** (the frozen 1,536-node olfactory circuit as a decision-scoring unit: learned state drive + readout + candidate-list heads, argmax with abstention; first steps = the CPU latency benchmark and the toy through-the-wiring training smoke) — `scorer/`.
+- **scorer** (the frozen 1,536-node olfactory circuit as a decision-scoring unit: learned state drive + readout + candidate-list heads, argmax with abstention) — `scorer/`. **First measurements in (2026-10-05):** one decision ≈ 1.2 ms p50 on a 4-core CPU; the 3-class toy learns through the pure-wiring passthrough at epoch 25 (100/100). Report: `../reports/2026-10-05-scorer-first-measurements.md`; numbers: `scorer/results/`.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling

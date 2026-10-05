@@ -1,0 +1,11 @@
+{
+  "history": [
+    {
+      "epoch": 25,
+      "train": 1.0,
+      "val": 1.0
+    }
+  ],
+  "wall_s": 139.4,
+  "pass": true
+}

@@ -1,0 +1,32 @@
+{
+  "label": "4-core-cpu-testbed",
+  "circuit": "circuit.json",
+  "neurons": 1536,
+  "edges": 42921,
+  "sensory": 256,
+  "outputs": 384,
+  "params_total": 233521,
+  "params_trainable": 233521,
+  "threads": {
+    "1": {
+      "p50_ms": 1.712,
+      "p95_ms": 1.784,
+      "mean_ms": 1.712
+    },
+    "2": {
+      "p50_ms": 1.259,
+      "p95_ms": 1.434,
+      "mean_ms": 1.291
+    },
+    "4": {
+      "p50_ms": 1.162,
+      "p95_ms": 1.459,
+      "mean_ms": 1.218
+    },
+    "8": {
+      "p50_ms": 2.44,
+      "p95_ms": 3.457,
+      "mean_ms": 2.535
+    }
+  }
+}
