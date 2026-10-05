@@ -22,7 +22,12 @@ One directory per experiment. Each directory carries:
   with the shuffled one (ρ = 0.13) while shuffled sits close to the null
   (ρ = 0.59). Report: `../reports/2026-10-05-first-campaign.md`;
   aggregates: `control-comparison/results/`.
+- **stimulus discriminability** (multi-stimulus: sugar vs water vs salt
+  drive; can a downstream readout separate the stimuli better on real
+  than on shuffled wiring?) — the direct follow-up that upgrades the
+  first campaign's activity-structure result into an information
+  result; reuses the same three arms and driver.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
-  substrate) — next; the toolkit is read-only, so this one means writing
-  the learning rule (the FlyBridge gain-scaling recipe is the reference
-  to beat).
+  substrate) — after discriminability; the toolkit is read-only, so this
+  one means writing the learning rule (the FlyBridge gain-scaling
+  recipe is the reference to beat).

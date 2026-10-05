@@ -66,8 +66,20 @@ Pairwise comparison (mean over the 5 seeds):
    carries only ~88% of the null's spike count. Random rewiring does not
    just attenuate the sugar signal — it destroys the response landscape
    almost entirely; what survives looks like the Poisson floor, not a
-   degraded version of the real response. The real connectome is a
-   signal-propagation architecture, not a bag of edges.
+   degraded version of the real response. In other words, the response
+   depends on the *specificity* of the wiring — which edge goes where —
+   not merely on the existence of edges (that is what the disconnected
+   arm shows, and is the trivial half of the result).
+   Two scope limits, stated rather than footnoted: (a) this is an
+   *activity-structure* result, not an *information* result — we have
+   not shown that the real wiring carries a decodable stimulus code the
+   shuffled one destroys; that needs the multi-stimulus
+   discriminability follow-up (sugar vs water vs salt: can a downstream
+   readout separate them better on real than on shuffled wiring); (b) the
+   olfactory pathway is a known sparse-expansion circuit, so "specific
+   convergence matters" is partly *confirmatory* — a quantitative
+   confirmation of why the circuit is shaped that way, not a new fact
+   about the fly.
 3. **Seed stability:** shuffled is astonishingly stable across seeds
    (±5 spikes on 4,793) — when the pathway is destroyed, the outcome is
    nearly deterministic; fly's ±192 is the network doing real work.
