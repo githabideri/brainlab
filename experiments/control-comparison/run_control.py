@@ -41,9 +41,8 @@ FLYBRAIN = Path(os.environ.get("FLYBRAIN_DIR", "/opt/fly-brain"))
 sys.path.insert(0, str(FLYBRAIN / "code"))
 
 log(f"importing toolkit from {FLYBRAIN}")
-from benchmark import (get_experiment, get_hash_tables, path_comp, path_con,  # noqa: E402
-                       path_wt)
-from run_pytorch import DT, MODEL_PARAMS, TorchModel, get_weights  # noqa: E402
+from benchmark import get_experiment, path_comp, path_con, path_wt  # noqa: E402
+from run_pytorch import DT, MODEL_PARAMS, TorchModel, get_weights, get_hash_tables  # noqa: E402
 
 # ---------------------------------------------------------------- helpers ---
 
@@ -113,25 +112,22 @@ def run_variant(name, weights, exc_idx, n, seed, pre, stim, post, out):
 
     model = TorchModel(1, n, DT, MODEL_PARAMS, weights,
                        exc_indices=exc_idx, device="cpu")
-    try:
-        state = model.neurons.state_init()
-    except AttributeError:
-        state = model.state_init()
-    conductance, delay_buffer, spikes, v, refrac = state
+    conductance, delay_buffer, spikes, v, refrac = model.state_init()
 
     rates = torch.zeros(1, n, device="cpu")
     total_count = torch.zeros(n, dtype=torch.long)
     post_count = torch.zeros(n, dtype=torch.long)
     t0 = time.time()
-    for step in range(total):
-        rates.zero_()
-        if pre_steps <= step < pre_steps + stim_steps:
-            rates[0, exc_idx] = 200.0
-        out_state = model(rates, conductance, delay_buffer, spikes, v, refrac)
-        conductance, delay_buffer, spikes, v, refrac = out_state
-        total_count += (spikes[0] > 0).long()
-        if step >= pre_steps + stim_steps:
-            post_count += (spikes[0] > 0).long()
+    with torch.no_grad():
+        for step in range(total):
+            rates.zero_()
+            if pre_steps <= step < pre_steps + stim_steps:
+                rates[0, exc_idx] = 200.0
+            out_state = model(rates, conductance, delay_buffer, spikes, v, refrac)
+            conductance, delay_buffer, spikes, v, refrac = out_state
+            total_count += (spikes[0] > 0).long()
+            if step >= pre_steps + stim_steps:
+                post_count += (spikes[0] > 0).long()
     wall = time.time() - t0
 
     dur = pre + stim + post
@@ -223,8 +219,8 @@ def main():
 
     variants = {"fly": w_csr}
     if "shuffled" in args.variants:
-        _, sp2, sv = build_shuffled(presyn, postsyn, vals, n, has_input,
-                                    args.shuf_seed_base)
+        sp, sp2, sv = build_shuffled(presyn, postsyn, vals, n, has_input,
+                                     args.shuf_seed_base)
         ws = torch.sparse_coo_tensor(
             torch.tensor([sp2, sp]),
             torch.tensor(sv, dtype=torch.float32), (n, n)).coalesce()
