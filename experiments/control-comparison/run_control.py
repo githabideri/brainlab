@@ -105,9 +105,9 @@ def build_shuffled(presyn, postsyn, weights, n, candidates, shuf_seed):
 
 def run_variant(name, weights, exc_idx, n, seed, pre, stim, post, out):
     torch.manual_seed(seed)
-    pre_steps = int(pre / DT)
-    stim_steps = int(stim / DT)
-    post_steps = int(post / DT)
+    pre_steps = int(round(pre / DT))
+    stim_steps = int(round(stim / DT))
+    post_steps = int(round(post / DT))
     total = pre_steps + stim_steps + post_steps
 
     model = TorchModel(1, n, DT, MODEL_PARAMS, weights,
