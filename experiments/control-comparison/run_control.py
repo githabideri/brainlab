@@ -105,9 +105,10 @@ def build_shuffled(presyn, postsyn, weights, n, candidates, shuf_seed):
 
 def run_variant(name, weights, exc_idx, n, seed, pre, stim, post, out):
     torch.manual_seed(seed)
-    pre_steps = int(round(pre / DT))
-    stim_steps = int(round(stim / DT))
-    post_steps = int(round(post / DT))
+    # DT is in ms; the protocol times are in seconds
+    pre_steps = int(round(pre * 1000 / DT))
+    stim_steps = int(round(stim * 1000 / DT))
+    post_steps = int(round(post * 1000 / DT))
     total = pre_steps + stim_steps + post_steps
 
     model = TorchModel(1, n, DT, MODEL_PARAMS, weights,
@@ -217,6 +218,13 @@ def main():
     has_input = np.unique(presyn)  # neurons with >=1 input = targets
     log(f"shuffling candidate targets: {len(has_input)} neurons")
 
+    # expected Poisson spikes in the stim window: n_stim × stim_steps × p,
+    # p = rate(Hz) × dt(s). Any run returning far below this is a protocol
+    # bug (e.g. a units mix-up in the step counts), not a result.
+    expected_poisson = len(exc_idx) * int(round(args.stim * 1000 / DT)) \
+        * (exp["stim_rate"] * DT / 1000.0)
+    log(f"expected Poisson stim spikes ≈ {expected_poisson:.0f}")
+
     variants = {"fly": w_csr}
     if "shuffled" in args.variants:
         sp, sp2, sv = build_shuffled(presyn, postsyn, vals, n, has_input,
@@ -255,6 +263,10 @@ def main():
                 continue
             results[tag] = r
             res.write_text(json.dumps(r, indent=2))
+            if r["total_spikes"] < 0.5 * expected_poisson:
+                log(f"WARNING {tag}: {r['total_spikes']} spikes is far below "
+                    f"the expected ~{expected_poisson:.0f} Poisson stim spikes — "
+                    f"treat as a protocol bug, not a result")
             log(f"{tag} done: {r['total_spikes']} spikes "
                 f"({r['active_neurons_gt1Hz']} active) in {r['wall_s']}s wall")
 
