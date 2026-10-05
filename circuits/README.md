@@ -10,7 +10,7 @@ the provenance fields (see [../docs/substrate.md](../docs/substrate.md)).
 
 | Name | Dataset (release) | Selection | Neurons | Connections | Hash | Used by |
 |------|-------------------|-----------|---------|-------------|------|---------|
-| _(none yet — the first row lands with the first campaign's report)_ | | | | | | |
+| [flywire-fafb-olfactory-1536](flywire-fafb-olfactory-1536.md) | FlyWire FAFB v783, via the FlyBridge atlas (`dist/data/circuit.json`) | degree-based olfactory subgraph (256 sensory / 128 local / 256 projection / 512 KC / 96 MB-out / 288 LH) | 1,536 | 42,921 | `ef6a6c1d…` (full hash in the entry) | `experiments/scorer/` |
 
 ## Upstream sources
 
