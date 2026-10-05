@@ -1,0 +1,210 @@
+{
+ "corpus": "polis/corpus",
+ "seed": 0,
+ "state_dim": 143,
+ "wall_s": 317.2,
+ "runs": [
+  {
+   "variant": "fly",
+   "internal_val_acc": 0.9913,
+   "val": {
+    "n": 141,
+    "slices": {
+     "valworld": 96,
+     "abstain": 45
+    },
+    "scorer_accuracy_pct": {
+     "total": 92.91,
+     "valworld": 89.58,
+     "abstain": 100.0
+    },
+    "llm_infile_accuracy_pct": {
+     "2b": {
+      "valworld": {
+       "n": 96,
+       "ok": 71,
+       "pct": 73.96
+      },
+      "abstain": {
+       "n": 45,
+       "ok": 7,
+       "pct": 15.56
+      },
+      "total": {
+       "n": 141,
+       "ok": 78,
+       "pct": 55.32
+      }
+     },
+     "2b-ft": {
+      "valworld": {
+       "n": 96,
+       "ok": 96,
+       "pct": 100.0
+      },
+      "abstain": {
+       "n": 45,
+       "ok": 13,
+       "pct": 28.89
+      },
+      "total": {
+       "n": 141,
+       "ok": 109,
+       "pct": 77.3
+      }
+     },
+     "2b-ft2": {
+      "valworld": {
+       "n": 96,
+       "ok": 96,
+       "pct": 100.0
+      },
+      "abstain": {
+       "n": 45,
+       "ok": 45,
+       "pct": 100.0
+      },
+      "total": {
+       "n": 141,
+       "ok": 141,
+       "pct": 100.0
+      }
+     }
+    },
+    "violations": {
+     "scorer-fly": {
+      "n": 0,
+      "rules": [],
+      "rows": []
+     },
+     "2b": {
+      "n": 4,
+      "rules": [
+       "mine-without-pickaxe"
+      ],
+      "rows": [
+       "valw-020",
+       "valw-029",
+       "valw-065",
+       "valw-078"
+      ]
+     },
+     "2b-ft": {
+      "n": 0,
+      "rules": [],
+      "rows": []
+     },
+     "2b-ft2": {
+      "n": 0,
+      "rules": [],
+      "rows": []
+     }
+    },
+    "note": "2B accuracies are in-file (their rows carry no state); 2B violations cover the valworld slice only. Scorer numbers are on the val file's own 141 rows."
+   }
+  },
+  {
+   "variant": "shuffled",
+   "internal_val_acc": 0.9913,
+   "val": {
+    "n": 141,
+    "slices": {
+     "valworld": 96,
+     "abstain": 45
+    },
+    "scorer_accuracy_pct": {
+     "total": 92.2,
+     "valworld": 88.54,
+     "abstain": 100.0
+    },
+    "llm_infile_accuracy_pct": {
+     "2b": {
+      "valworld": {
+       "n": 96,
+       "ok": 71,
+       "pct": 73.96
+      },
+      "abstain": {
+       "n": 45,
+       "ok": 7,
+       "pct": 15.56
+      },
+      "total": {
+       "n": 141,
+       "ok": 78,
+       "pct": 55.32
+      }
+     },
+     "2b-ft": {
+      "valworld": {
+       "n": 96,
+       "ok": 96,
+       "pct": 100.0
+      },
+      "abstain": {
+       "n": 45,
+       "ok": 13,
+       "pct": 28.89
+      },
+      "total": {
+       "n": 141,
+       "ok": 109,
+       "pct": 77.3
+      }
+     },
+     "2b-ft2": {
+      "valworld": {
+       "n": 96,
+       "ok": 96,
+       "pct": 100.0
+      },
+      "abstain": {
+       "n": 45,
+       "ok": 45,
+       "pct": 100.0
+      },
+      "total": {
+       "n": 141,
+       "ok": 141,
+       "pct": 100.0
+      }
+     }
+    },
+    "violations": {
+     "scorer-shuffled": {
+      "n": 1,
+      "rules": [
+       "give-tool-already-held"
+      ],
+      "rows": [
+       "valw-045"
+      ]
+     },
+     "2b": {
+      "n": 4,
+      "rules": [
+       "mine-without-pickaxe"
+      ],
+      "rows": [
+       "valw-020",
+       "valw-029",
+       "valw-065",
+       "valw-078"
+      ]
+     },
+     "2b-ft": {
+      "n": 0,
+      "rules": [],
+      "rows": []
+     },
+     "2b-ft2": {
+      "n": 0,
+      "rules": [],
+      "rows": []
+     }
+    },
+    "note": "2B accuracies are in-file (their rows carry no state); 2B violations cover the valworld slice only. Scorer numbers are on the val file's own 141 rows."
+   }
+  }
+ ]
+}

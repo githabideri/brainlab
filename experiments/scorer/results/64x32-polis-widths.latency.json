@@ -1,0 +1,22 @@
+{
+  "label": "64x32-polis-widths",
+  "circuit": "/var/brainlab/scorer/circuit.json",
+  "neurons": 1536,
+  "edges": 42921,
+  "sensory": 256,
+  "outputs": 384,
+  "params_total": 89687,
+  "params_trainable": 89687,
+  "threads": {
+    "1": {
+      "p50_ms": 1.662,
+      "p95_ms": 1.826,
+      "mean_ms": 1.677
+    },
+    "4": {
+      "p50_ms": 1.085,
+      "p95_ms": 1.174,
+      "mean_ms": 1.11
+    }
+  }
+}

@@ -27,7 +27,7 @@ One directory per experiment. Each directory carries:
   than on shuffled wiring?) — the direct follow-up that upgrades the
   first campaign's activity-structure result into an information
   result; reuses the same three arms and driver.
-- **scorer** (the frozen 1,536-node olfactory circuit as a decision-scoring unit: learned state drive + readout + candidate-list heads, argmax with abstention) — `scorer/`. **First measurements in (2026-10-05):** one decision ≈ 1.2 ms p50 on a 4-core CPU; the 3-class toy learns through the pure-wiring passthrough at epoch 25 (100/100). Report: `../reports/2026-10-05-scorer-first-measurements.md`; numbers: `scorer/results/`.
+- **scorer** (the frozen 1,536-node olfactory circuit as a decision-scoring unit: learned state drive + readout + candidate-list heads, argmax with abstention) — `scorer/`. **First measurements in (2026-10-05):** one decision ≈ 1.2 ms p50 on a 4-core CPU; the 3-class toy learns through the pure-wiring passthrough at epoch 25 (100/100). **S2 in (2026-10-05, the polis decision corpus):** 92.91% on the 141-row held-out val (100% on the stuck→wait abstain slice), zero damaging choices, ~1.1 ms/decision; the shuffled-wiring control is null (92.20) — on this tanh-rate corpus the gain is in the encoder, not the connectome. Reports: `../reports/2026-10-05-scorer-first-measurements.md`, `../reports/2026-10-05-scorer-polis-s2-screen.md`; numbers: `scorer/results/`.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling

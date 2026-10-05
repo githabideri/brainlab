@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import time
 
 import torch
@@ -68,11 +69,11 @@ class FamilyTrainer:
         self.model.train()
         for i in range(0, len(X), batch):
             b = slice(i, i + batch)
-            scores = self.scores(X[b], fams[i + b])
+            scores = self.scores(X[b], fams[b])
             opt.zero_grad()
             loss = 0.0
             for fam, (idx, s) in scores.items():
-                yb = torch.tensor([y[i + b][j] for j in idx], device=X.device)
+                yb = torch.tensor([y[b][j] for j in idx], device=X.device)
                 loss = loss + lossf(s, yb) * len(idx) / len(X[b])
             loss.backward()
             opt.step()
@@ -83,8 +84,8 @@ class FamilyTrainer:
             hits, n = 0, 0
             for fam, (idx, s) in self.scores(X, fams).items():
                 c = s.argmax(-1)
-                for j, yj in zip(idx, [y[i] for i in idx]):
-                    hits += int(c[j] == yj)
+                for k, j in enumerate(idx):
+                    hits += int(c[k] == y[j])
                     n += 1
         return hits / max(1, n)
 
@@ -127,55 +128,72 @@ def train_variant(variant, mtr, miv, circuit_path, state_dim, epochs, seed):
     return model, best_acc
 
 
-def screen(t: FamilyTrainer, mval, baselines):
-    """Held-out val, once: accuracy per model + damaging-choice violations.
+def llm_infile(baselines):
+    """In-file accuracy for the 2B models (choice vs the oracle recorded in
+    the file itself) — these files carry no state, so the abstain slice can
+    only be measured in-file (their 45-row abstain set is the same set as the
+    val file's, verified by (mission, oracle) multiset)."""
+    out = {}
+    for m in LLM_MODELS:
+        per = {}
+        for sl in ("valworld", "abstain"):
+            rows = baselines[f"{m}/{sl}"]
+            ok = sum(1 for r in rows if r["choice"] == r["oracle"])
+            per[sl] = {"n": len(rows), "ok": ok,
+                       "pct": round(100 * ok / len(rows), 2) if rows else None}
+        n = sum(per[s]["n"] for s in per)
+        ok = sum(per[s]["ok"] for s in per)
+        out[m] = {**{k: v for k, v in per.items()},
+                  "total": {"n": n, "ok": ok, "pct": round(100 * ok / n, 2) if n else None}}
+    return out
 
-    val = 96 valworld rows (joined to the baselines by id) + 45 abstain rows
-    (stuck-situation rows, oracle=wait; id=null everywhere, joined by
-    position; oracle agreement checked at load).
-    """
-    acc = {f"scorer-{t.model.circuit.variant}": [0, 0], **{m: [0, 0] for m in LLM_MODELS}}
-    viol = {k: [] for k in acc}
-    slices = {"valworld": 0, "abstain": 0}
+
+def screen(t: FamilyTrainer, mval, baselines):
+    """Held-out val, once: scorer accuracy per slice + damaging-choice
+    violations (scorer per val row; 2B models on the valworld slice, where
+    the id join is valid and val carries the state; 2B abstain has no state
+    in the files, so no per-row violation analysis is possible there)."""
+    key = f"scorer-{t.model.circuit.variant}"
+    acc = [0, 0]
+    scorer_slice = {"valworld": [0, 0], "abstain": [0, 0]}
+    viol = {key: [], **{m: [] for m in LLM_MODELS}}
     abstain_idx = 0
-    oracle_mismatch = 0
     for v in mval:
         r = v["row"]
         rid = r.get("id")
-        label = rid or f"abstain-{abstain_idx}"
         task = adapter.parse_state(r["state"]).get("task", "")
-        sl = "abstain" if (r.get("family") == "abstain" or adapter.mission_class(task) == "other") else "valworld"
-        slices[sl] += 1
-        key = f"scorer-{t.model.circuit.variant}"
+        if r.get("family") == "abstain" or adapter.mission_class(task) == "other":
+            sl = "abstain"
+            label = f"abstain-{abstain_idx}"
+            abstain_idx += 1
+        else:
+            sl, label = "valworld", rid
         choice = r["options"][t.choose(v["x"], v["fam"])]
-        acc[key][0] += int(choice == r["oracle"])
-        acc[key][1] += 1
+        hit = int(choice == r["oracle"])
+        acc[0] += hit; acc[1] += 1
+        scorer_slice[sl][0] += hit; scorer_slice[sl][1] += 1
         for rule in adapter.violations(r["state"], choice):
             viol[key].append({"row": label, "rule": rule})
-        for m in LLM_MODELS:
-            if sl == "abstain":
-                b = baselines[f"{m}/abstain"][abstain_idx] if abstain_idx < len(baselines[f"{m}/abstain"]) else None
-                if b is not None and b.get("oracle") != r["oracle"]:
-                    oracle_mismatch += 1
-                abstain_idx += 1
-            else:
+        if sl == "valworld":
+            for m in LLM_MODELS:
                 b = next((x for x in baselines[f"{m}/valworld"] if x["row"] == rid), None)
-            if b is None:
-                continue
-            acc[m][0] += int(b["choice"] == r["oracle"])
-            acc[m][1] += 1
-            for rule in adapter.violations(r["state"], b["choice"]):
-                viol[m].append({"row": label, "rule": rule})
+                if b is None:
+                    continue
+                for rule in adapter.violations(r["state"], b["choice"]):
+                    viol[m].append({"row": label, "rule": rule})
     fmt = lambda a: round(100 * a[0] / a[1], 2) if a[1] else None
     return {
         "n": len(mval),
-        "slices": slices,
-        "abstain_oracle_mismatches": oracle_mismatch,
-        "accuracy_pct": {k: fmt(v) for k, v in acc.items()},
+        "slices": {k: v[1] for k, v in scorer_slice.items()},
+        "scorer_accuracy_pct": {"total": fmt(acc), **{k: fmt(v) for k, v in scorer_slice.items()}},
+        "llm_infile_accuracy_pct": llm_infile(baselines),
         "violations": {k: {"n": len(v),
                            "rules": sorted({x["rule"] for x in v}),
                            "rows": sorted({x["row"] for x in v})}
                        for k, v in viol.items()},
+        "note": ("2B accuracies are in-file (their rows carry no state); 2B "
+                 "violations cover the valworld slice only. Scorer numbers "
+                 "are on the val file's own 141 rows."),
     }
 
 
@@ -211,6 +229,8 @@ def main():
     for variant in ("fly", "shuffled"):
         model, best_acc = train_variant(variant, mrows_tr, mrows_iv,
                                         args.circuit, state_dim, args.epochs, args.seed)
+        torch.save(model.state_dict(), os.path.join(os.path.dirname(args.out) or ".",
+                                                    f"scorer-{variant}.pt"))
         res = {"variant": variant, "internal_val_acc": round(best_acc, 4),
                "val": screen(FamilyTrainer(model), mval, baselines)}
         runs.append(res)

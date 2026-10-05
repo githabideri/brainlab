@@ -86,6 +86,10 @@ python3 bench_latency.py --circuit circuit.json --threads 1,2,4,8 \
 ## What a pass does not establish
 
 That the scorer makes *good* decisions on a real task (that's the
-corpus-trained stage), that it beats a small fine-tuned model on a real
-battery (that's the A/B), or anything about biology beyond "this wiring,
-driven and read out this way, can classify".
+corpus-trained stage — **done, `polis/`**: 92.91% on the 141-row held-out
+polis val, zero damaging choices, shuffled control null → the gain is in
+the encoder, not the wiring; see
+[`../../reports/2026-10-05-scorer-polis-s2-screen.md`](../../reports/2026-10-05-scorer-polis-s2-screen.md)),
+that it beats a small fine-tuned model on a real battery (that's the
+A/B — S3, owned by the polis build session), or anything about biology
+beyond "this wiring, driven and read out this way, can classify".
