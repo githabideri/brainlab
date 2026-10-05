@@ -29,13 +29,16 @@ def main() -> None:
     ap.add_argument("--state-dim", type=int, default=16)
     ap.add_argument("--tasks", default="taskA:8")  # name:n_candidates[,name2:n2]
     ap.add_argument("--label", default="cpu-testbed")
+    ap.add_argument("--encoder-hidden", type=int, default=256)
+    ap.add_argument("--readout-hidden", type=int, default=128)
     args = ap.parse_args()
 
     torch.manual_seed(0)
     doc = load_circuit(args.circuit)
     tasks = dict(t.split(":") for t in args.tasks.split(","))
     tasks = {t: int(n) for t, n in tasks.items()}
-    model = Scorer(doc, state_dim=args.state_dim, tasks=tasks)
+    model = Scorer(doc, state_dim=args.state_dim, tasks=tasks,
+                   encoder_hidden=args.encoder_hidden, readout_hidden=args.readout_hidden)
     n_params = sum(p.numel() for p in model.parameters())
     n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
 

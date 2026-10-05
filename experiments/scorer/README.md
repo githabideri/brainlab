@@ -43,6 +43,12 @@ fixed-list scorer cannot exhibit the generative degeneration modes
 - `toy_train.py` — 3-class toy through the frozen wiring; writes
   `toy<seed>.json`.
 - `fetch_circuit.py` — fetch-by-hash helper for the circuits/ entry.
+- `polis/` — **S2**: the polis decision-corpus adapter and offline screen
+  (575 measured ft2 rows train the two heads; the 141-row val file — 96
+  valworld + 45 stuck-situation abstain rows with oracle `wait` — is the
+  held-out screen vs the three measured 2B models; the shuffled-wiring
+  control is the anti-fabrication check). `dataset.md` documents the
+  corpus; the damaging-choice rules live in `adapter.py`.
 
 ## Run (on a plain CPU box, torch only)
 
@@ -67,6 +73,15 @@ python3 bench_latency.py --circuit circuit.json --threads 1,2,4,8 \
   thread sweep on a plain CPU. The working hypothesis: well under the
   ~6 ms/decision the FlyBridge author reported *on a GPU*, so the
   "faster than a deliberation model tier" claim is testable.
+- **Polis screen (S2):** on the held-out val, the scorer must score at
+  least as high as the *base* 2B model (74.0% on valworld; the FT models
+  are the ceiling, not the bar), commit **zero** damaging-choice
+  violations (the 2B models commit some), and **must beat the
+  shuffled-wiring control** — if the permuted wiring scores the same,
+  the gain is in the encoder, not the connectome, and that is reported
+  as such. The oracle in this corpus is phase-following by design: the
+  scorer is a veto tier below the LLM decider, not a replacement (the
+  live A/B in S3 uses the game's own success metrics, not oracle match).
 
 ## What a pass does not establish
 

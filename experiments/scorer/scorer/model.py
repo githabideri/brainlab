@@ -24,22 +24,22 @@ def _head(n_in: int, n_out: int) -> nn.Linear:
 
 class Scorer(nn.Module):
     def __init__(self, circuit_doc: dict, state_dim: int, tasks: dict,
-                 variant: str = "fly"):
+                 variant: str = "fly", encoder_hidden: int = 256, readout_hidden: int = 128):
         """tasks: {task_name: n_candidates}"""
         super().__init__()
         self.circuit = Circuit(circuit_doc, variant=variant)
         n_sensory = len(self.circuit.sensory)
         self.state_encoder = nn.Sequential(
-            nn.Linear(state_dim, 256), nn.ELU(),
-            nn.Linear(256, 256), nn.ELU(),
-            nn.LayerNorm(256),
+            nn.Linear(state_dim, encoder_hidden), nn.ELU(),
+            nn.Linear(encoder_hidden, encoder_hidden), nn.ELU(),
+            nn.LayerNorm(encoder_hidden),
         )
-        self.sensory_drive = nn.Linear(256, n_sensory)
+        self.sensory_drive = nn.Linear(encoder_hidden, n_sensory)
         self.readout = nn.Sequential(
             nn.LayerNorm(len(self.circuit.outputs), eps=1e-6),
-            nn.Linear(len(self.circuit.outputs), HIDDEN), nn.Tanh(),
+            nn.Linear(len(self.circuit.outputs), readout_hidden), nn.Tanh(),
         )
-        self.heads = nn.ModuleDict({t: _head(HIDDEN, k) for t, k in tasks.items()})
+        self.heads = nn.ModuleDict({t: _head(readout_hidden, k) for t, k in tasks.items()})
 
     def features(self, state: torch.Tensor):
         """state (B, state_dim) -> (features (B, HIDDEN), hidden (B, n))"""

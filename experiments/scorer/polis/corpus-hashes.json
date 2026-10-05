@@ -1,0 +1,18 @@
+{
+ "source": {
+  "repo": "polis (gitea, main)",
+  "commit": "c7559b2f6484d22d326089083e3b75a048871e62",
+  "retrieved": "2026-10-05"
+ },
+ "sha256": {
+  "ft2-train.jsonl": "605e8e31739511aef0b7205e3aa87ee83f5b31b92d5578de58e33ab015f59b09",
+  "val.json": "2e68be9044791f7927c3915212ce0f02944e33804c2f861ea4cedddb86037dd3",
+  "2b-valworld.jsonl": "a83a9c18b946477480c47beb5853749a2edd8fd1db4bc2af0eee578447be0042",
+  "2b-abstain.jsonl": "3f47b4212dd088b480416d60207766748647d5e6822cefd403818f39e1012325",
+  "2b-ft-valworld.jsonl": "dabcdc6f2a4443ac9db0931d0bee25ed45db4348f164f476603aac830ea42e1b",
+  "2b-ft-abstain.jsonl": "7c3504e581ca4b5d1e63b7cdb5a05aeeefcd40649410fabc13ce51acf04af50b",
+  "2b-ft2-valworld.jsonl": "29e9dd0b0e64c6bd1f7c5c24d44c61e557b5e7ee7558fb7806db6e2d630279d7",
+  "2b-ft2-abstain.jsonl": "22f388c43da3290d91d574ad21ca964277329ac7108a95c0555349886a7e379f",
+  "ab-summary.json": "a3ae962cd24341a458adf200eec60c838461e6bc3895a153fb83f52e4f6d74c5"
+ }
+}
