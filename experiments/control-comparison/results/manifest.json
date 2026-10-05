@@ -1,0 +1,44 @@
+{
+  "experiment": "control-comparison",
+  "circuit_parquet_sha256_16": "efeb23fb99098e9c",
+  "circuit_csv_sha256_16": "52b0ac6094cd32c5",
+  "toolkit_commit": "a3db62f9436074e485c0278290c2164ed6150808",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.5.3",
+  "nproc": 4,
+  "model_params": {
+    "tauSyn": 5.0,
+    "tDelay": 1.8,
+    "v0": -52.0,
+    "vReset": -52.0,
+    "vRest": -52.0,
+    "vThreshold": -45.0,
+    "tauMem": 20.0,
+    "tRefrac": 2.2,
+    "scalePoisson": 250,
+    "wScale": 0.275
+  },
+  "dt_ms": 0.1,
+  "stimulus": {
+    "experiment": "sugar",
+    "n_stimulated": 21,
+    "rate_hz": 200.0,
+    "pre_s": 0.5,
+    "stim_s": 1.0,
+    "post_s": 1.0
+  },
+  "stim_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "shuffled_seed_base": 20261004,
+  "variants": [
+    "fly",
+    "shuffled",
+    "disconnected"
+  ],
+  "started": "2026-10-05T08:08:09+0000"
+}

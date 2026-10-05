@@ -1,0 +1,108 @@
+{
+  "manifest_file": "manifest.json",
+  "pairwise": {
+    "seed_100": {
+      "fly_vs_shuffled": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2731,
+        "spearman_rates": 0.1332
+      },
+      "fly_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2412,
+        "spearman_rates": 0.23
+      },
+      "shuffled_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.8831,
+        "spearman_rates": 0.5821
+      }
+    },
+    "seed_101": {
+      "fly_vs_shuffled": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2693,
+        "spearman_rates": 0.1344
+      },
+      "fly_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2372,
+        "spearman_rates": 0.2264
+      },
+      "shuffled_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.8811,
+        "spearman_rates": 0.5967
+      }
+    },
+    "seed_102": {
+      "fly_vs_shuffled": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2724,
+        "spearman_rates": 0.1324
+      },
+      "fly_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2389,
+        "spearman_rates": 0.2342
+      },
+      "shuffled_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.8769,
+        "spearman_rates": 0.5685
+      }
+    },
+    "seed_103": {
+      "fly_vs_shuffled": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.278,
+        "spearman_rates": 0.1375
+      },
+      "fly_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2439,
+        "spearman_rates": 0.2336
+      },
+      "shuffled_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.8773,
+        "spearman_rates": 0.5917
+      }
+    },
+    "seed_104": {
+      "fly_vs_shuffled": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.27,
+        "spearman_rates": 0.1336
+      },
+      "fly_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.2369,
+        "spearman_rates": 0.225
+      },
+      "shuffled_vs_disconnected": {
+        "jaccard_top50": 0.2658,
+        "total_spike_ratio_b_over_a": 0.8776,
+        "spearman_rates": 0.5967
+      }
+    }
+  },
+  "aggregates": {
+    "fly": {
+      "total_spikes_mean": 17588.6,
+      "total_spikes_sd": 191.9,
+      "runs_completed": 5
+    },
+    "shuffled": {
+      "total_spikes_mean": 4793.2,
+      "total_spikes_sd": 4.6,
+      "runs_completed": 5
+    },
+    "disconnected": {
+      "total_spikes_mean": 4214.2,
+      "total_spikes_sd": 15.2,
+      "runs_completed": 5
+    }
+  },
+  "finished": "2026-10-05T10:14:37+0000"
+}

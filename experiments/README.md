@@ -16,5 +16,13 @@ One directory per experiment. Each directory carries:
 
 - **control-comparison** (the first experiment): fly vs. shuffled vs.
   disconnected FlyWire wiring, same sugar-GRN stimulus, same AlphaLIF
-  model, 5 seeds. The campaign that produces it is running on a
-  4-core CPU host; its report lands here when the numbers are in.
+  model, 5 seeds. **Done — campaign 2026-10-04/05:** the real wiring
+  sustains ~3.7× the spiking of shuffled wiring and ~4.2× of the
+  disconnected null, and its response landscape is nearly uncorrelated
+  with the shuffled one (ρ = 0.13) while shuffled sits close to the null
+  (ρ = 0.59). Report: `../reports/2026-10-05-first-campaign.md`;
+  aggregates: `control-comparison/results/`.
+- **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
+  substrate) — next; the toolkit is read-only, so this one means writing
+  the learning rule (the FlyBridge gain-scaling recipe is the reference
+  to beat).
