@@ -84,17 +84,36 @@ Pairwise comparison (mean over the 5 seeds):
 From the same campaign, the toolkit's benchmark suite on the 4-core box
 (run label `brainlab-cpu-20261004`; spikes disabled to keep the CSV lean):
 
-| Backend | t (s) | n | sim wall (s) | real-time factor |
+| Backend | t (s) | n | sim wall (s) | vs the toolkit's CPU machine |
 |---|---|---|---|---|
-| Brian2 (CPU, brian2cpp) | 0.1 | 1 | 1.13 | 0.088 |
-| Brian2 (CPU) | 1 | 1 | 4.71 | 0.213 |
-| Brian2 (CPU) | 10 | 1 | 40.8 | 0.245 |
-| Brian2 (CPU) | 0.1 | 4 | 6.19 | 0.065 |
-| Brian2 (CPU) | 1 | 4 | 7.44 | 0.538 |
-| Brian2 (CPU) | 100 | 1 | 573.4 | 0.174 |
+| Brian2 (CPU, brian2cpp) | 0.1 | 1 | 1.13 | ~30–60% slower |
+| Brian2 (CPU) | 1 | 1 | 4.71 | ~1.5–1.7× slower |
+| Brian2 (CPU) | 10 | 1 | 40.8 | ~1.4–1.8× slower |
+| Brian2 (CPU) | 0.1 | 4 | 6.19 | ~0.9–1.3× |
+| Brian2 (CPU) | 1 | 4 | 7.44 | ~0.6–1.1× (in the published band) |
+| Brian2 (CPU) | 100 | 1 | 573.4 | ~1.9–2.1× slower |
 
-The toolkit's published CPU rows (a larger machine) are ~2× faster at
-t = 100 s (270–300 s vs our 573 s); the short runs run 30–75% slower.
+The toolkit's published CSV has **no PyTorch-CPU rows** (its PyTorch runs
+were CUDA), so the following are new data points — the first
+PyTorch-CPU numbers for this model that we know of:
+
+| Backend | t (s) | n | sim wall (s) | per step |
+|---|---|---|---|---|
+| PyTorch (CPU) | 0.1 | 1 | 27.3 | 27.3 ms |
+| PyTorch (CPU) | 1 | 1 | 274.5 | 27.5 ms |
+| PyTorch (CPU) | 10 | 1 | 2,751 | 27.5 ms |
+| PyTorch (CPU) | 0.1 | 4 | 68.4 | 17.1 ms/trial |
+| PyTorch (CPU) | 1 | 4 | 685.1 | 17.1 ms/trial |
+| PyTorch (CPU) | 10 | 4 | 6,777 | 17.1 ms/trial |
+
+The per-step cost is flat across t (27.5 ms, n1) and scales linearly in
+the batch (n4 ≈ 4× n1 per step, 17.1 ms/trial) — the PyTorch CPU path is
+a clean, predictable cost model: **a 100 s simulation of the full brain
+on 4 desktop cores is ≈ 7.7 h at n = 1** (we deliberately did not wait
+for it; the brian2cpp row above is the practical t = 100 s answer on
+this tier). Spike columns read 0 in this CSV by design (spike output was
+disabled to keep the run lean; the control-comparison section carries the
+spike counts).
 
 **The 8 GB ceiling (measured, not a limit we chose):** brian2's `n_run > 1`
 runs launch one worker per trial, and each worker preallocates its network
@@ -104,10 +123,6 @@ workers died but the harness recorded a bogus "success" row — 4.1 s,
 "97.6× real-time" — which is how an OOM looks in the toolkit's CSV; treat
 that row as a failure). On this box, brian2 batching is viable up to
 t ≤ 1 s at n = 4.
-
-*The PyTorch-CPU half of the grid (t 0.1/1/10, n 1/4) is still running at
-the time of writing; its rows are appended below when the campaign
-completes.*
 
 ## Method notes (why the numbers are trustworthy)
 
@@ -130,6 +145,12 @@ completes.*
   comparison whose three arms all agree — is precisely what a broken
   control *looks like* when the control is broken in the same way, and
   it is the reason the guard exists.
+- **Supervised, not set-and-forget:** each phase was checked as it
+  landed; a missing dependency (which killed a backend), a 4-worker
+  OOM, and the units bug above were each caught mid-campaign and the
+  affected phases re-run. The raw CSV therefore contains exactly one
+  known-bad row (the brian2 t = 100 n = 4 OOM artifact, flagged above);
+  everything else in it is as run.
 
 ## Artifacts
 
