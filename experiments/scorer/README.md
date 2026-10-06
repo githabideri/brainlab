@@ -91,5 +91,9 @@ polis val, zero damaging choices, shuffled control null → the gain is in
 the encoder, not the wiring; see
 [`../../reports/2026-10-05-scorer-polis-s2-screen.md`](../../reports/2026-10-05-scorer-polis-s2-screen.md)),
 that it beats a small fine-tuned model on a real battery (that's the
-A/B — S3, owned by the polis build session), or anything about biology
-beyond "this wiring, driven and read out this way, can classify".
+A/B — **S3, done 2026-10-06**: the decider-tier pre-veto is a structural
+null in live — the 27B judge sits downstream of the hook and overwrites
+it; the hook's correct position is a pre-judge veto, specified as S4; see
+[`../../reports/2026-10-06-scorer-polis-s3-ab-pilot.md`](../../reports/2026-10-06-scorer-polis-s3-ab-pilot.md)),
+or anything about biology beyond "this wiring, driven and read out this
+way, can classify".
