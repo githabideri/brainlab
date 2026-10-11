@@ -10,6 +10,7 @@ carry) a supersede pointer.
 | [substrate.md](substrate.md) | What brains exist as open data, the modelling standard, how a circuit file is built and provenanced |
 | [evaluation.md](evaluation.md) | How a claim is earned here: frozen checks, retention, negative labels, worksheets, hidden exams, the control-wiring bar |
 | [benchmarks.md](benchmarks.md) | How a number is measured: the decision-throughput protocol, the hardware envelope table |
+| [architecture.md](architecture.md) | The minimal organism-independent contract: circuit records, control taxonomy, the run contract, task interface |
 
 ## Fact ownership (one owner per volatile fact class)
 
@@ -18,6 +19,7 @@ carry) a supersede pointer.
 - **Measured performance** (ms/step, decisions/s, per hardware) →
   `benchmarks.md` table; reports cite it, never restate drifting copies.
 - **Protocol parameters** (check counts, pass thresholds) → `evaluation.md`.
+- **The shared interface** (circuit record shape, control taxonomy, run contract) → `architecture.md`; experiments conform to it and cite it.
 - **Hardware identity** → *nowhere in this repo.* Roles only ("a 12 GB GPU
   card"). The private deployment docs hold the mapping.
 
