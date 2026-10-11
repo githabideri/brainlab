@@ -269,3 +269,167 @@ used as subgraphs (central complex, mushroom bodies, larva) rather than as
 one brute-force 139k-neuron simulation.
 
 ---
+
+## Zebrafish
+
+The first synapse-resolution vertebrate connectomes; the field is moving
+from single circuits (2016–2022) toward whole-larva volumes (Fish1, 2025).
+Larvae are transparent, small, and behaviorally tractable — the closest
+vertebrate analog to the invertebrate workhorses in this catalog.
+
+### Fish1 (Petkova et al. 2025)
+
+1. **Organism / stage / sex.** *Danio rerio*, 7-day-old (7 dpf) larva;
+   combined light + electron microscopy (CLEM) specimen.
+2. **Anatomical coverage.** The brain **plus the anterior spinal cord** —
+   not the entire adult CNS (the larval spinal cord continues posteriorly
+   and is not in scope of this release).
+3. **Scale / completeness.** >180,000 segmented soma, >40,000 molecularly
+   annotated neurons (26,915 excitatory *vglut2a* / 14,510 inhibitory
+   *gad1b* via the confocal channel), ~30 million synapses, most
+   classified excitatory / inhibitory / modulatory; 4×4×30 nm serial
+   section EM (Petkova et al., bioRxiv 10.1101/2025.06.10.658982, 2025;
+   preprint under CC-BY-NC 4.0).
+4. **What else ships.** The confocal channel gives molecular identity
+   (excitatory vs. inhibitory) directly from the same specimen — a
+   structural + functional fusion. The authors validate three circuit
+   readouts: water-flow direction encoding in the lateral line, a
+   hindbrain motion integrator with recurrent excitation and
+   contralateral inhibition, and long-range projections from a
+   tegmental excitatory nucleus.
+5. **Format / access.** Open-access platform on a public Google Cloud
+   Storage bucket (`fish1-release.storage.googleapis.com`): CAVE
+   programmatic Python API, VAST for region-limited viewing, FishExplorer
+   for search. Versioned releases.
+6. **License / cost.** Open-access data policy: independent publication
+   encouraged, no co-authorship required, citation of the primary paper
+   required, all manual edits tracked in a public CAVE changelog. The
+   preprint itself is CC-BY-NC 4.0; the data policy page does not state an
+   explicit CC license for the raw data *(license wording unverified)*.
+   Raw EM is TB–PB scale — not fetchable to a 10 GB box; graph-level and
+   sub-volume access only.
+7. **Simulation maturity.** Low — too young; no whole-brain simulation,
+   region-level analyses are the current frontier.
+8. **Task fit.** **Sensory and sensorimotor** (lateral line flow sensing is
+   a clean sensorimotor loop; the motion integrator is a visual
+   sensorimotor circuit). **Navigation** in the map sense is limited at
+   7 dpf. **Memory** is weak at this stage — treat it as a sensory
+   substrate, not a memory one.
+9. **Confidence / limitations.** High for what it covers (transparent
+   specimen, CLEM, large-scale automation). In-progress: community
+   proofreading is ongoing; treat synapse-level completeness as
+   improving, not final.
+
+### Predecessors
+
+- **Wanner et al. 2016 / Hildebrand et al. 2017** — single-region EM of
+  the larval optic tectum (visual pathway); region-limited `structural`.
+- **Svara et al. 2022** (*Nature Methods*, doi:10.1038/s41592-022-01621-0) —
+  a 208-neuron network for visual motion processing in the pretectum,
+  **reconstructed in the same specimen as 2P calcium imaging**: the clean
+  `structural` + `physiological` fusion of the zebrafish line. Best small
+  readout of a sensory/sensorimotor loop in a vertebrate.
+
+**Zebrafish verdict.** Fish1 is the only whole-larva vertebrate
+connectome in the catalog — the right comparative anchor for "what does a
+vertebrate sensory/sensorimotor system look like at synapse resolution?",
+used as subgraphs given the lab-box constraint.
+
+---
+
+## Mouse
+
+Two regimes exist and they are not comparable in scale: **region-level
+synapse-resolved EM** (MICrONS) and **whole-brain molecular / functional
+atlases** (BICCN, Allen). The first is "wiring"; the second is "what cells
+are where and what talks to what at regional scale".
+
+### MICrONS Phase 1 (Kasthuri et al. 2015)
+
+1. **Organism / stage / sex.** *Mus musculus*, P36, male.
+2. **Anatomical coverage.** 250 × 140 × 90 µm of layer 2/3 visual cortex
+   (V1); 3.58 × 3.58 × 40 nm serial-section EM.
+3. **Scale / completeness.** 364 excitatory neurons fully proofread
+   (dendrites and axons), dense segmentation of the rest, and a 3.2
+   million-row putative-synapse table. The synapse table is a *detection*,
+   not a validated connectivity graph (the project says so explicitly).
+4. **What else ships.** Soma valence table (excitatory/inhibitory/glial),
+   fixed meshes, versioned releases (v185.4 at time of writing).
+5. **Format / access.** Public: CAVE datastack "pinky_sandbox" for
+   proofreading, neuroglancer for visualization, release notes per
+   version; bulk download by request (there is a cost, so request
+   efficiently). (microns-explorer.org/phase1)
+6. **License / cost.** Public; raw volume is large — graph/sub-volume
+   access for the lab box.
+7. **Simulation maturity.** Medium — local cortical models (feedforward +
+   recurrent) are the standard use; no whole-brain model (obviously not
+   at this scale).
+8. **Task fit.** **Sensory** (V1) and **sensorimotor** (cortical
+   processing); memory/navigation only indirectly (cortex as substrate).
+9. **Confidence / limitations.** High for the proofread subset; the rest
+   is dense-but-unproofed. Region-limited — a patch of cortex, not a
+   brain.
+
+### MICrONS Cubic Millimeter (MICrONS Consortium 2025)
+
+1. **Organism / stage / sex.** Adult mouse; ~1 mm³ of neocortex.
+2. **Anatomical coverage.** 1.4 × 0.87 × 0.84 mm³ volume.
+3. **Scale / completeness.** >200,000 cells, ~120,000 neurons, **523
+   million synapses**; 75,000 of the cells were also imaged with 2P
+   calcium imaging in the same animal (MICrONS Consortium, *Nature*
+   640:435–47, 2025, doi:10.1038/s41586-025-08790-w).
+4. **What else ships.** The largest functional + structural fusion of the
+   mammalian line: EM anatomy paired with in-vivo activity on a large
+   cell subset in the same specimen.
+5. **Format / access.** Public via the Allen Brain Portal / MICrONS
+   infrastructure; versioned.
+6. **License / cost.** Public; raw volume is PB-scale — graph/sub-volume
+   only for the lab box.
+7. **Simulation maturity.** Low — no whole-brain model; region-level
+   analysis is the current frontier.
+8. **Task fit.** **Sensory/sensorimotor at scale** (neocortex); a reference
+   for "what a mammalian local circuit looks like at synapse resolution".
+   Memory/navigation are not the focus of a 1 mm³ cortical patch.
+9. **Confidence / limitations.** High (large consortium, Nature).
+   Region-limited, adult mouse, neocortex only.
+
+### BICCN — Brain Research through Advancing Innovative Neurotechnologies, Cell Census Network
+
+1. **Scope.** A consortium (NIH BRAIN) producing a **spatial molecular
+   atlas** of the mouse brain and cross-species (mouse/monkey/human)
+   cell-type resources — not a wiring diagram.
+2. **Flagship (Shi et al. 2023).** *Nature* 622:552–561,
+   doi:10.1038/s41586-023-06569-5: STARmap PLUS whole-brain molecular
+   atlas — 1.09M cells, 230 molecular cell types, 106 tissue regions.
+3. **What else ships.** The consortium has catalogued >5,300 cell types
+   across mouse/monkey/human (biccn.org); wiring-diagram data is produced
+   by the network and distributed via brain-map.org *(specific release
+   details unverified)*.
+4. **Format / access.** Public via brain-map.org and the Allen Brain
+   Portal; web + programmatic access.
+5. **Simulation maturity.** None directly — it is a reference atlas, not a
+   substrate for simulation.
+6. **Task fit.** **Cell-type reference** for whatever substrate is chosen;
+   contextualizes "which cell types are in which region" for
+   memory/navigation circuits. Not a wiring substrate.
+7. **Confidence / limitations.** High (large consortium, Nature). It is a
+   *molecular/cell-type* atlas — do not conflate with a connectome.
+
+### Allen Connectivity Atlas (Lee et al. 2010)
+
+1. **Scope.** Whole-brain **regional** connectivity of the mouse, derived
+   from viral trans-synaptic tracing plus 2P tomography (Lee et al.,
+   *Nature* 464:755–759, 2010, doi:10.1038/nature08854).
+2. **Status.** `functional` / `molecular` at **regional** (nuclear)
+   resolution — not synapse-level.
+3. **Task fit.** Whole-brain context: which regions talk to which. Useful
+   for framing where memory/navigation circuits sit relative to the rest
+   of the brain; not a simulation substrate.
+
+**Mouse verdict.** The region-level EM (MICrONS) is the reference for
+mammalian local circuit anatomy and the functional + structural fusion;
+the whole-brain atlases (BICCN, Allen) give context and cell-type
+reference. Neither is a lab-box simulation substrate at full scale —
+use subgraphs.
+
+---
