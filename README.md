@@ -11,12 +11,14 @@ does it for LLM inference, but for brains made of real wiring.
 
 ## The premise
 
-A complete animal brain is now a downloadable dataset (a fruit fly: ~140k
-neurons, ~50 million synapses, free to download). The standard way to run it
-is a leaky integrate-and-fire network with the real wiring and the predicted
-neurotransmitter signs — and it runs on a laptop. That makes a strange
-experiment possible: *keep the wiring fixed, put something between its
-inputs and outputs, and measure what it does.*
+A complete animal brain is now a downloadable dataset (an adult fruit-fly
+brain: ~140k neurons, ~50 million anatomical synapses, free to download). The
+standard way to run it is a leaky integrate-and-fire network: the real
+wiring (connectivity and synapse counts), with per-synapse efficacy and
+excitatory/inhibitory signs assigned from predicted neurotransmitter
+identities — and it runs on a laptop. That makes a strange experiment
+possible: *keep the wiring fixed, put something between its inputs and
+outputs, and measure what it does.*
 
 This lab exists to do that measurement honestly: control wirings, frozen
 checks, retention tests, numbers on the hardware.
@@ -32,9 +34,11 @@ checks, retention tests, numbers on the hardware.
 
 ## What actually matters (current state)
 
-- The substrate is settled: two complete *Drosophila* connectomes are open
-  data (FlyWire, 2024; MaleCNS, 2026). The modelling standard is the LIF
-  model of Shiu et al. (*Nature* 2024) — see [docs/substrate.md](docs/substrate.md).
+- The substrate is settled: the open adult-female whole-brain connectome
+  (FlyWire, 2024) and the first complete male CNS — brain, optic lobes and
+  ventral nerve cord (MaleCNS, 2026). The modelling standard is the LIF
+  model of Shiu et al. (*Nature* 2024) — see [docs/substrate.md](docs/substrate.md)
+  for release dates, scales and the measured-vs-assumed split.
 - The evaluation method is written down and in use:
   [docs/evaluation.md](docs/evaluation.md).
 - First measurements land in `reports/` as they happen; the first is the
@@ -51,8 +55,8 @@ The space this lab works in (context only — this repo is not an index):
 the [FlyWire](https://www.nature.com/articles/s41586-024-07558-y) and
 [MaleCNS](https://www.janelia.org/project-team/flyem/male-cns-connectome)
 connectomes, the [LIF sensorimotor model](https://www.nature.com/articles/s41586-024-07763-9)
-(Shiu et al., *Nature* 2024), the whole-brain emulation
-[eonsystemspbc/fly-brain](https://github.com/eonsystemspbc/fly-brain), the
+(Shiu et al., *Nature* 2024), the [eonsystemspbc/fly-brain](https://github.com/eonsystemspbc/fly-brain)
+LIF simulation toolkit, the
 [FlyBridge](https://github.com/swotstudio/FlyBridge) trained-circuit
 experiment, and [cobanov/awesome-fly](https://github.com/cobanov/awesome-fly)
 for the wider scene.

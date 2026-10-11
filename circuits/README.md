@@ -14,14 +14,20 @@ the provenance fields (see [../docs/substrate.md](../docs/substrate.md)).
 
 ## Upstream sources
 
-- **FlyWire** (female *Drosophila*, Dorkenwald et al., *Nature* 2024, CC BY 4.0):
-  the full-brain neuron/connection tables and the annotation release
-  (`flywire_annotations`, pin the exact release). Public mirrors exist
-  (e.g. the `flybrain` packaging); prefer downloading from a mirror that
-  publishes the hashes of the originals.
-- **MaleCNS v1.0** (male *Drosophila* CNS, Berg et al., *Cell* 2026):
-  Janelia's release; note the file sizes are an order of magnitude above
-  FlyWire's.
+- **FlyWire FAFB** (adult female *Drosophila* whole brain incl. optic lobes,
+  no ventral nerve cord; Dorkenwald et al., *Nature* 2024, CC BY 4.0):
+  the neuron/connection tables (139,255 neurons, ~5×10⁷ synapses; the
+  per-connection weight is the PSD count, a structural measure) and the
+  annotation release (`flywire_annotations`, pin the exact release).
+  Public mirrors exist (e.g. the `flybrain` packaging); prefer downloading
+  from a mirror that publishes the hashes of the originals.
+- **MaleCNS v1.0** (adult male *Drosophila* complete CNS: central brain +
+  optic lobes + ventral nerve cord, intact neck connective; 166,691
+  neurons, 46M presynaptic sites → 312M PSDs; Berg et al., *Cell* 2026 Sep
+  3, DOI 10.1016/j.cell.2026.08.015, preprint
+  [10.1101/2025.10.09.680999](https://www.biorxiv.org/content/10.1101/2025.10.09.680999),
+  CC BY 4.0): Janelia release v1.0 (2026-06-08, <https://male-cns.janelia.org/>);
+  note the file sizes are an order of magnitude above FlyWire's.
 - **eonsystemspbc/fly-brain** (MIT): a ready-to-run LIF implementation of
   the FlyWire connectome with multiple backends — used here as a
   reference implementation, not a dependency.

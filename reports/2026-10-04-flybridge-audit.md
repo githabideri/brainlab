@@ -127,3 +127,12 @@ other hardware (we measure it), whether the 12/12 bar generalizes beyond
 Minecraft's privileged-facts environment (we'll see), or anything about
 consciousness — the video's own most popular claim is the one with the
 least evidence behind it, and this report deliberately does not touch it.
+
+> **Clarification (2026-10-12, terminology only — no finding in this report
+> is changed):** the circuit's per-edge "strengths" are the dataset's
+> synapse counts (postsynaptic densities), a structural measure of each
+> connection, not measured functional synaptic strengths; the edge signs
+> come from *predicted* neurotransmitter identities. The per-synapse gains
+> FlyBridge trains (0–2×) are an externally trained model parameter under
+> external gradient descent — not biological plasticity — as the "What is
+> not the fly" section already states.
