@@ -52,7 +52,7 @@ paywalled, the PubMed/PMC abstract was used and the paper cited by DOI.
 
 | Organism | Dataset (year) | Stage / sex | Coverage | Scale (neurons / synapses) | Status | License / access | Simulation maturity | Best-fit computations |
 |---|---|---|---|---|---|---|---|---|
-| *C. elegans* | Worm wiring (1998) | adult hermaphrodite | whole animal | 302 / 5,590 | `structural`, complete | free download (WormWiring), paper public | **high** (NeuroML, openWorm) | learning, sensorimotor, locomotion |
+| *C. elegans* | Worm connectome (White 1986) | adult hermaphrodite | whole animal | 302 / 5,590 | `structural`, complete | free download (WormWiring), paper public | **high** (NeuroML, openWorm) | learning, sensorimotor, locomotion |
 | *C. elegans* | Cook et al. update (2019) | adult, both sexes | whole animal, sensory input → end organ | 302 / 385 (4,887 + 1,447 herm edges) | `structural`, complete | open access (PMC6889226) | **high** | learning, sexual behavior, sensorimotor |
 | *C. elegans* | Developmental series (2020) | L1 → adult hermaphrodite | nerve ring + ventral ganglion | 162 → 180 (brain) of 218/300 | `structural`, in progress (preprint) | preprint (bioRxiv) | medium | growth, maturation of learning circuits |
 | *D. melanogaster* | FAFB (2024) | adult female | whole brain | 139,255 / ~5×10⁷ | `structural`, near-complete | CC-BY (FlyWire) | medium (subgraphs only) | memory, navigation |
@@ -66,7 +66,7 @@ paywalled, the PubMed/PMC abstract was used and the paper cited by DOI.
 | *Mouse* | MICrONS Phase 1 (2015) | P36 male | 250×140×90 µm, L2/3 V1 | 364 fully proofread / 3.2M putative | `structural`, region | public (CAVE "pinky_sandbox", neuroglancer) | medium (local models) | cortical processing, sensory |
 | *Mouse* | MICrONS cubic mm (2025) | adult | 1.4×0.87×0.84 mm³ | ~120,000 / 523M | `structural` + `physiological` (75K cells 2P), region, in progress | public (Allen portal) | low | sensory/sensorimotor at scale |
 | *Mouse* | BICCN spatial atlas (2023) | postnatal stages | whole brain (molecular) | 1.09M cells / 230 types | `molecular` — **not** a wiring diagram | public (brain-map.org) | none | cell-type reference |
-| *Mouse* | Allen Connectivity Atlas (2010) | adult | whole brain, regional | region-level (viral + 2P tomography) | `functional`, whole brain | public (allenbrain.org) | low | whole-brain context |
+| *Mouse* | Allen mesoscale connectome (2010) | adult | whole brain, nuclear-level | region-level (viral + 2P tomography) | `functional`, whole brain | public (allenbrain.org) | low | whole-brain context |
 | *C. intestinalis* | Tadpole larva CNS (2016) | tadpole | whole CNS | 177 / 6,618 (+ 1,206 gap junctions) | `structural`, complete | paper + supplements (graph access unverified) | **none** (greenfield) | comparative (chordate baseline) |
 | *P. dumerilii* | Whole-body larva (2025) | larva (marine annelid) | whole body | >9,000 cells; 202 neuronal types | `structural`, whole body | paper (data access unverified) | none | intersegmental control, evolution |
 | *B. impatiens* | Central complex projectome (2021) | adult bumblebee | central complex (axonal projections) | — | `functional`/projection map, not synapse-level | paper | low | navigation (reference) |
@@ -87,13 +87,13 @@ machine over three decades. It is the only organism where a **whole-brain,
 whole-animal simulation** (nervous system *plus* soft body) already runs on
 ordinary hardware.
 
-### Adult hermaphrodite — "the 1998 connectome" (White et al. 1986)
+### Adult hermaphrodite — White et al. 1986 (the original connectome)
 
 1. **Organism / stage / sex.** *C. elegans* N2, adult hermaphrodite.
 2. **Anatomical coverage.** Whole animal nervous system: head, nerve ring,
    ventral nerve cord, tail — the full 3D EM reconstruction basis of the
-   series that defined the field (White, Southgate, Brenner, etc., *Phil.
-   Trans. R. Soc. B* 314:1–340, doi:10.1098/rstb.1986.0051).
+   series that defined the field (White et al., *Phil. Trans. R. Soc. B*
+   314:1–340, doi:10.1098/rstb.1986.0051).
 3. **Scale / completeness.** 302 neurons; 5,590 chemical synapses (original
    counting basis); plus gap junctions and motor-neuron → muscle connections.
    Complete for the stage.
@@ -140,7 +140,7 @@ ordinary hardware.
 5. **Format / version / provenance.** Paper + supplementary data (open
    access); the same graphs flow through WormWiring/WormAtlas and WormBase.
 6. **License / cost.** Open access; MB-scale.
-7. **Simulation maturity.** High — same tooling as the 1998 connectome
+7. **Simulation maturity.** High — same tooling as the 1986 connectome
    (NeuroML/openWorm), now with whole-animal input–output coverage.
 8. **Task fit.** **Sensorimotor** (full loop, both sexes), **learning**
    (sex-specific learning reported in the literature), sexual-behavior
@@ -417,9 +417,10 @@ are where and what talks to what at regional scale".
 
 ### Allen Connectivity Atlas (Lee et al. 2010)
 
-1. **Scope.** Whole-brain **regional** connectivity of the mouse, derived
-   from viral trans-synaptic tracing plus 2P tomography (Lee et al.,
-   *Nature* 464:755–759, 2010, doi:10.1038/nature08854).
+1. **Scope.** Whole-brain **mesoscale** connectivity of the mouse — "a
+   mesoscale connectome" — derived from viral trans-synaptic tracing plus
+   2P tomography (Lee et al., *Nature* 464:755–759, 2010,
+   doi:10.1038/nature13186; the Allen Brain Institute release).
 2. **Status.** `functional` / `molecular` at **regional** (nuclear)
    resolution — not synapse-level.
 3. **Task fit.** Whole-brain context: which regions talk to which. Useful
@@ -433,3 +434,266 @@ reference. Neither is a lab-box simulation substrate at full scale —
 use subgraphs.
 
 ---
+
+## *Ciona intestinalis* (tunicate / sea squirt)
+
+### Tadpole larval CNS (Ryan, Lu, Meinertzhagen 2016)
+
+1. **Organism / stage / sex.** *Ciona intestinalis* (L.), tadpole larva —
+   a tunicate, i.e. a **chordate** (the sister lineage to the
+   craniates/vertebrates).
+2. **Anatomical coverage.** Whole CNS (brain + ventral nerve cord); the
+   first complete chordate connectome (Ryan et al., *eLife* 5:e16962,
+   2016, doi:10.7554/eLife.16962; PMC5140270).
+3. **Scale / completeness.** 177 neurons; 6,618 synapses (including 1,772
+   neuromuscular junctions); 1,206 gap junctions; 922 **polyadic**
+   synapses (one presynaptic terminal contacting multiple postsynaptic
+   targets — a motif that is rare in the other entries here).
+4. **What else ships.** Chordate "sidedness": pronounced left-right
+   asymmetry in the brain; a small brain with chordate-grade
+   organization, which is the point of the paper.
+5. **Format / access.** Paper + supplementary material. A
+   machine-readable public graph could **not** be located in this
+   session *(access unverified)* — assume paper-derived reconstruction
+   work is needed for simulation use.
+6. **Cost.** Trivial (177-neuron graph).
+7. **Simulation maturity.** **None found** — greenfield. At 177 neurons
+   this is the *easiest* greenfield whole-organism simulation target in
+   the catalog (smaller than *C. elegans*, chordate).
+8. **Task fit.** **Comparative baseline**: the chordate reference point
+   for "what did the vertebrate brain start from?" Tunicate larvae show
+   simple sensory responses and ciliary-beat plasticity in the literature
+   — a learning-adjacent readout, not a navigation one (the tadpole
+   swims; it does not navigate in the map sense).
+9. **Confidence / limitations.** High for completeness (small, fully
+   traced); a single specimen, 2D serial sections; machine-readable data
+   access unverified.
+
+## *Platynereis dumerilii* (marine annelid)
+
+### Whole-body larval connectome (Verasztó, Jasek, et al., Jékely 2025)
+
+1. **Organism / stage / sex.** *Platynereis dumerilii*, segmented marine
+   annelid, larva.
+2. **Anatomical coverage.** The **whole body** — the first
+   whole-body (not just CNS) connectome in the catalog: brain, nerve
+   cord, and peripheral nerves across all segments, from whole-body
+   serial-section EM (Verasztó et al., *eLife* 13:RP97964, 2025,
+   doi:10.7554/eLife.97964; PMC12387772).
+3. **Scale / completeness.** >9,000 neuronal and non-neuronal cells;
+   202 neuronal and 92 non-neuronal cell types; segment-specific
+   (heteromeric) and segmentally repeated (serially homologous) types;
+   intersegmental, ascending/descending, and peptidergic circuits; a
+   multimodal mechanosensory girdle.
+4. **What else ships.** Motor circuits for ciliated cells, glands,
+   pigment cells, and muscles — a template for **whole-body
+   sensorimotor coordination** (the animal moves every segment
+   deliberately).
+5. **Format / access.** Paper (open access, eLife); machine-readable
+   reconstruction data access **not verified** this session.
+6. **Cost.** Small graph (thousands of nodes).
+7. **Simulation maturity.** None found — greenfield; no whole-body
+   multi-segment simulation exists in the literature as of this writing.
+8. **Task fit.** **Sensorimotor** (intersegmental coordination — the
+   closest invertebrate analog to "body-level" control). Not memory, not
+   navigation.
+9. **Confidence / limitations.** High (eLife, complete reconstruction);
+   larval stage only; data access unverified.
+
+## Hymenoptera: honeybee, bumblebee, ants
+
+### Honeybee (*Apis mellifera*) — gap
+
+1. **Status.** **No complete connectome has been published.** The adult
+   brain is estimated at **>1 million neurons** — roughly an order of
+   magnitude above *D. melanogaster* and well beyond current
+   single-volume invertebrate connectome capacity (Frontiers in
+   Neuroscience review, 2026, doi:10.3389/fnins.2026.1911198).
+2. **Projects.** A honeybee **nodulus** (central complex) reconstruction
+   was advertised on a lab project page (braininbrain.org); that domain
+   now resolves to an unrelated site, so the project's current status is
+   **unverified**.
+3. **What is known without a connectome.** The honeybee central complex
+   is a well-characterized compass/path-integrator neuropil (the insect
+   navigation module, homologous to the fly's); the waggle dance and
+   spatial learning are among the richest behavioral datasets in
+   entomology.
+4. **Task fit.** **Navigation** (the reference system) and **memory**
+   (dance learning) — at the level of *behavioral and light-microscopy
+   circuit* models, not wiring diagrams.
+5. **Expectation.** Regional releases (central complex first) before any
+   whole-brain attempt; watch list.
+
+### Bumblebee central complex projectome (Sayre et al. 2021)
+
+1. **Organism / stage / sex.** *Bombus impatiens*, adult bumblebee.
+2. **Coverage.** The central complex — a **projectome** (axonal
+   projection map), *not* a synapse-level graph (Sayre et al., *eLife*
+   10:e68911, 2021; Lund Vision Group).
+3. **Category.** `functional`/projection map.
+4. **Task fit.** **Navigation** reference: the projection architecture of
+   the insect path-integrator neuropil.
+5. **Confidence.** Solid (peer-reviewed eLife); but it is projections,
+   not wiring — do not cite it as a connectome.
+
+### Ants
+
+1. **Status.** No connectome.
+2. **What exists.** A **reference brain** (nomenclature + anatomical
+   atlas) for the clonal raider ant *Ooceraea biroi* — Frank et al.,
+   *Current Biology* 2025 (PII S0960-9822(25)01520-9) — built for
+   behavioral-neuroscience reference, not wiring.
+3. **Task fit.** Colony-level navigation (trail following, foraging
+   networks) is a *behavioral* literature domain; no neural substrate is
+   published.
+
+## Lepidoptera (moths)
+
+**Gap.** No whole-brain or regional EM connectome of a moth was found in
+this session. The 2026 Frontiers review lists Lepidoptera as a frontier
+for comparative connectomics (alongside Coleoptera and Orthoptera).
+Light-level anatomy and physiology of the antennal lobe (olfaction) and
+the central complex (the same path-integrator neuropil as flies and bees)
+are well studied; wiring is not. **Task fit:** navigation reference at
+the literature level only.
+
+## Larger vertebrates and human
+
+### Zebra finch — song system
+
+- **HVC (Kornfeld et al. 2017, eLife):** dense serial-section EM of HVC,
+  the cortico-basal forebrain nucleus that *generates the temporal
+  sequences* of song; the paper's focus is how axonal targets vary
+  within a sequence-generating network — i.e. the anatomy of a learned
+  **sensorimotor sequence generator**.
+- **Area X (Shvedov et al. 2026, *Current Biology*, PII
+  S0960-9822(26)00377-5):** dense EM of the striatal Area X; enables
+  studies of neuronal migration and adult neurogenesis within a
+  connectomic framework.
+- **Task fit.** **Sensorimotor** (sequence generation) — the best
+  small-vertebrate reference for "learned sequences"; memory/navigation
+  only indirectly (song memory).
+
+### Human — 1 mm³ temporal cortex
+
+1. **Scope.** Shapson-Coe et al., *Science* 384:eadk4858, 2024: ~57,000
+   cells and ~150 million synapses in 1 mm³ of temporal cortex; ~1.4 PB
+   of EM.
+2. **Access.** Restricted (described in the paper); not a lab-box
+   dataset.
+3. **Task fit.** **Scale reference only**: what mammalian cortex looks
+   like at synapse resolution, in the organism that matters for the
+   project's long-term question. No simulation at this scale.
+4. **Mesoscale watch.** A *mesoscale* (region-level) human brain
+   connectome is projected "within the next decade" (Trends in
+   Neurosciences 2025, PII S0166-2236(25)00238-3) — a watch item, not a
+   dataset.
+
+### Octopus (distant comparator)
+
+- *Octopus vulgaris* **vertical lobe** (Bidel et al., *eLife* 12:e84257,
+  2023): the memory-acquisition network in a mollusc — a connectomic
+  comparison point for **convergent evolution of memory circuits**.
+  Region-limited; reference only.
+
+---
+
+## Prioritized shortlist (lab-box constrained)
+
+Hardware assumption: **4-core CPU, 12 GB RAM, ~10 GB free disk** (no GPU,
+no TB-scale storage). The shortlist orders the catalog by *what is
+actually runnable here*, mapped to the target computations
+(memory, navigation, learning, sensorimotor).
+
+### Tier 1 — end-to-end feasible (graph **and** simulation on this box)
+
+| # | Substrate | Why it fits |
+|---|---|---|
+| 1 | **C. elegans adult** (herm 302 / male 385) | Complete, MB-scale, NeuroML/openWorm code exists; best small-brain **learning** (habituation) + **sensorimotor** (full sensory→effector matrices) target. *First choice.* |
+| 2 | **Ciona tadpole** (177) | Smallest complete **chordate** graph; no published simulation → the easiest greenfield whole-organism model in the catalog. |
+| 3 | **Drosophila FAFB subgraphs** — central complex (**navigation**: heading integrator / path integrator) and mushroom bodies (**memory**: PAV plasticity models) | Each is 10²–10³ neurons; graph products are CC-BY via FlyWire; reference circuit models exist to compare against. |
+| 4 | **D. melanogaster 1st-instar larva** (3,016) | Whole-organism simulation feasible at this scale; **learning** + **sensorimotor** in the minimal bilaterian setup (no compass — navigation not applicable). |
+
+### Tier 2 — graph-level analysis feasible, whole-brain simulation is not
+
+| # | Substrate | How to use it here |
+|---|---|---|
+| 5 | **Drosophila FAFB full graph** (139,255) | Structural analytics (motifs, paths, cross-comparison with the subgraphs in Tier 1) — borderline at 12 GB; use indexed/sparse formats. |
+| 6 | **Fish1** (30M synapses, 7 dpf) | Region-limited pulls via the CAVE programmatic API / GCS; the only whole-larva **vertebrate** brain; **sensory/sensorimotor** circuits (lateral line, motion integrator). |
+| 7 | **MICrONS cubic mm** (523M synapses) | Subgraph extracts via the Allen portal / neuroglancer; **mammalian sensory/sensorimotor** reference at synapse resolution. |
+
+### Tier 3 — reference only (no runnable model; use for design and comparison)
+
+| # | Substrate | Use |
+|---|---|---|
+| 8 | **Bumblebee CC projectome** + honeybee (watch) | **Navigation** reference: the path-integrator neuropil across Hymenoptera. |
+| 9 | **Zebra finch HVC / Area X** | **Sensorimotor** sequence generation in a vertebrate. |
+| 10 | **Human 1 mm³** + mesoscale watch item | **Scale reference** for the long-term question; Ciona (Tier 1) is the chordate anchor in between. |
+
+### Task map (what to reach for first, per target computation)
+
+- **Memory:** *C. elegans* (habituation) → *Drosophila* mushroom bodies
+  (PAV) → *Ciona* (comparative) → octopus vertical lobe (distant reference).
+- **Navigation:** *Drosophila* central complex (compass/path integrator) →
+  *C. elegans* foraging/locomotion (open-loop path following, not map
+  navigation) → bumblebee/honeybee central complex (reference) → Fish1
+  lateral line (sensory, not map-based).
+- **Sensorimotor:** *C. elegans* whole body (best in catalog) → *Ciona* →
+  Fish1 motion integrator → zebra finch HVC (learned sequences).
+- **Learning:** *C. elegans* (habituation/PAV) → *Drosophila* larva +
+  adult MB → honeybee (behavioral literature only, no wiring).
+
+## Gaps and watch items
+
+- **No complete connectome exists for honeybee, moths, or ants.** The
+  honeybee alone is estimated at >10⁶ neurons — well beyond the current
+  invertebrate connectome frontier (the fly, ~10⁵ neurons, took a decade
+  of work); expect central-complex/regional releases first.
+- **Fish1 is in progress** — community proofreading is ongoing; synapse-
+  level completeness will improve with versions.
+- **Unverified in this session** (flagged inline): BICCN wiring-diagram
+  release details; machine-readable data access for *Ciona* and
+  *Platynereis*; honeybee nodulus project status; Kornfeld 2017 exact
+  eLife article ID.
+- **Watch list:** FAFB residual-gap closure; MaleCNS post-v1.0
+  corrections; a honeybee central-complex release; the human mesoscale
+  connectome (projected "within the next decade").
+
+## Sources consulted (2026-10-12)
+
+Direct fetches:
+
+- wormwiring.org (hermaphrodite, male, Pristionchus pages)
+- wormatlas.org/neuronalwiring.html
+- openworm.org
+- pmc.ncbi.nlm.nih.gov: PMC6889226 (Cook 2019), PMC5140270 (Ryan 2016),
+  PMC12387772 (Verasztó 2025)
+- nature.com/articles/s41586-024-07558-y (FlyWire, referenced)
+- flywire.ai
+- biorxiv.org/content/10.1101/2025.06.10.658982v1 (Fish1)
+- fish1-release.storage.googleapis.com (index, data policy)
+- microns-explorer.org/phase1
+- frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1911198/full
+- nature.com/articles/s41592-022-01621-0 (Svara 2022)
+
+Via search snippets (not full-text fetched):
+
+- pubmed.ncbi.nlm.nih.gov: 31270481 (Cook 2019), 27921996 (Ryan 2016),
+  40862480 (Verasztó 2025), 34523418 (Sayre 2021)
+- nature.com/articles/s41586-023-06569-5 (BICCN, Shi 2023)
+- biccn.org (cell-type counts)
+- phys.org / sciencedirect.com (Frank 2025, ant reference brain)
+- edge.org (Barron, honeybee scale)
+- en.wikipedia.org/wiki/Drosophila_connectome (larval counts cross-check)
+
+Primary papers cited (DOI in text): White 1986 (10.1098/rstb.1986.0051);
+Cook 2019 (10.1038/s41586-019-1352-7); Dorkenwald 2024
+(10.1038/s41586-024-07558-y); Berg 2026 (10.1016/j.cell.2026.08.015, via
+substrate.md); Shi 2021 (10.1038/s41586-020-3007-4); Winding 2023
+(10.1126/science.add9330); Petkova 2025 (bioRxiv 10.1101/2025.06.10.658982);
+Svara 2022 (10.1038/s41592-022-01621-0); Kasthuri 2015 (Cell
+162:648–661); MICrONS Consortium 2025 (10.1038/s41586-025-08790-w);
+Shi 2023 (10.1038/s41586-023-06569-5); Lee 2010 (10.1038/nature13186);
+Ryan 2016 (10.7554/eLife.16962); Verasztó 2025 (10.7554/eLife.97964);
+Sayre 2021 (10.7554/eLife.68911); Bidel 2023 (10.7554/eLife.84257);
+Shapson-Coe 2024 (Science 384:eadk4858).
