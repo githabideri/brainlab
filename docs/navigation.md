@@ -22,10 +22,10 @@ et al. 2021; the v783 EM reconstruction recovers 2,878 of them — measured).
 
 | Population | Structure | Function (status) |
 |---|---|---|
-| **ER ("ring") neurons** (278 in v783 — the whole brain; all from lineage `EBa1`; official FAFB v783 types ER1–ER6) | axons of the EL torus | the *input relay into* the compass: born from the bulb (TuBu — mechanosensory/antennal), they project into the EB, **including onto the EPG heading cells** (measured in v783: 11,847 ER→EPG pairs; Hulse 2021; Garner 2024). Historically called "the ring neurons" — the population Huet 2010/2015 recorded as heading/position tracking is, in modern nomenclature, the **EPG subset below, not the ER** (nomenclature clarification, 2026-10-12; Huet & Straube, *J Neurosci* 30:13930–13943, 2010; Huet et al., *eLife* 4:e10741, 2015) |
-| **EPG (E–PG) cells** (**51 in v783**: 47 EPG + 4 EPGt, 24/23 per side; official annotation, lineages DM1–4_CX) | wedge-localized EL columnar cells — each innervates a single EB wedge — projecting to PB/gall (Wolff 2015 "E to PG") | a **heading bump**: each EPG cell's activity peaks for one direction of body heading; a bump spanning adjacent wedges carries the current heading (measured: Seelig & Jayaraman 2015, *Nature* 521:186–191, DOI 10.1038/nature14446; Vela et al. 2014; Turner-Evans 2017). Recurrent with ER (2,691 EPG→ER pairs in v783) — the shift loop of §1.2 |
+| **ER ("ring") neurons** (278 in v783 — the whole brain; all from lineage `EBa1`; official FAFB v783 types ER1–ER6) | axons of the EL torus | the *input relay into* the compass: they arrive in the bulb **via TuBu (tuberculo-bulbar) neurons — a component of the anterior *visual* pathway** (AOT → bulb → ER; Omoto et al. 2017) and project into the EB, **including onto the EPG heading cells** (measured in v783: 11,847 ER→EPG pairs; Hulse 2021; Garner 2024). Historically called "the ring neurons" — the heading cells identified by Seelig & Jayaraman (2015), later catalogued as the official EPG/EPGt types, are, in modern nomenclature, the **EPG subset below, not the ER** (nomenclature clarification, 2026-10-12. *Second correction 2026-10-12 evening:* the earlier "TuBu — mechanosensory/antennal" wording was wrong — TuBu is part of the visual route — and the two "Huet 2010/2015" citations formerly here did not survive the citation audit; see References) |
+| **EPG (E–PG) cells** (**51 in v783**: 47 EPG + 4 EPGt, 24/23 per side; official annotation, lineages DM1–4_CX) | wedge-localized EL columnar cells — each innervates a single EB wedge — projecting to PB/gall (Wolff 2015 "E to PG") | a **heading bump**: each EPG cell's activity peaks for one direction of body heading; a bump spanning adjacent wedges carries the current heading (measured: Seelig & Jayaraman 2015, *Nature* 521:186–191, DOI 10.1038/nature14446 — the naming and the bump; Turner-Evans 2017; Green 2017. *The "Vela et al. 2014" citation formerly here did not survive the 2026-10-12 audit — see References.*) Recurrent with ER (2,691 EPG→ER pairs in v783) — the shift loop of §1.2 |
 | **P-EN1 / P-EN2** (42 in v783: `PEN_a(PEN1)` 20 + `PEN_b(PEN2)` 22) | PB cells whose EL projections are *anatomically shifted* relative to the EPG wedges (one P-EN tile overlaps two E-PG wedges) | the measured **angular-velocity update**: E-PG (EB) → P-EN (PB) → E-PG (EL) shifted recurrent loop; P-EN1/P-EN2 carry clockwise/counterclockwise signatures, so asymmetric input shifts the bump (measured: Turner-Evans et al. 2017, *eLife* 6:e23496, DOI 10.7554/eLife.23496; Green et al. 2017, *Nature* 546:101–106, DOI 10.1038/nature22343) |
-| **EIP cells (C1, C2, C3, …)** | FBB-like cells with a projection into the EL **and** into the peduncular lobe (Paff et al., *Neuron* 85:1188–1202, 2015; Omoto et al. 2017, DOI 10.1016/j.cub.2017.02.063) | the *antennal-lobe* input route: C1/C2 receive antennal-lobe input (measured anatomy + response properties, Paff 2015). **Clarification (2026-10-12):** the EIP cells are *not* the angular-velocity update pathway — that is the P-EN loop above; and the Paff-2015 C1/C2 are **not yet mapped to FAFB v783 types** (the v783 types named "C2"/"C3" are optic-lobe centrifugal cells — a different naming; B-02 preflight item) |
+| **EIP cells (C1, C2, C3, …)** | FBB-like cells with a projection into the EL **and** into the peduncular lobe (CC tangential-cell catalogs; *the specific "Paff et al., Neuron 85:1188–1202, 2015" citation did not survive the 2026-10-12 audit — see References*; Omoto et al. 2017, DOI 10.1016/j.cub.2017.02.063, is the verified anchor for the EL/PL tangential anatomy) | the *antennal-lobe* input route: EIP cells receive AL input (anatomically measured in the Hulse 2021 connectome; the specific C1/C2 response-property claim rests on the unverified Paff 2015 citation — treat as **unverified**). **Clarification (2026-10-12):** the EIP cells are *not* the angular-velocity update pathway — that is the P-EN loop above; and the Paff-2015 C1/C2 are **not yet mapped to FAFB v783 types** (the v783 types named "C2"/"C3" are optic-lobe centrifugal cells — a different naming; B-02 preflight item) |
 | **FBB cells** (~1,240 columnar neurons in v783) | the fan-shaped body itself | a subset is tuned to head direction and is read out during behavior (measured: Datta et al., *Cell* 178:744–758, 2019); the fan is densely recurrent on itself (measured in v783) |
 | **PL / PFL tangential cells** (~611 in v783) | protocerebral-lobe tangential arborizations | receive FBB/EL input (measured in v783: they are the main recipient of the antennal-lobe pathway, 455 of the 521 ALPN→CC pairs). **Steering output measured:** PFL3R/PFL3L/PFL2 transform the head-direction signal into a goal-oriented steering command (Westeinde et al. 2024, *Nature*, DOI 10.1038/s41586-024-07039-2); the full transform beyond these cells remains to be modeled |
 
@@ -39,14 +39,16 @@ a fixed angular shift, so that a left turn shifts the bump rightward and vice ve
 the structure-function match that made the *fly* the first invertebrate in which the
 circuit-level mechanism of an internal compass was measured (Green et al. 2017
 demonstrated the P-EN1/P-EN2 clockwise/counterclockwise signatures; Turner-Evans
-et al. 2020, *Neuron*, DOI 10.1016/j.neuron.2020.08.006, the ring-attractor ultrastructure). The upstream source of
-the velocity signal is the **antennal lobe (AL)**: antennae move when the head turns,
-AL glomerular processing extracts the motion, and AL projection neurons (ALPN) feed
-the EIP/PL side of the compass (measured anatomically: Paff et al. 2015). **Correction
-(2026-10-12):** this makes ALPN the *olfactory/antennal relay into the EIP side*, not
-a direct drive onto the EL heading ring — the B-01 brief's "ALPN→EL drive" was a
-collapse of this pathway and is the main design error to fix in B-02 (drive = P-EN,
-readout = EPG; both populations are inside the B-01 subgraph).
+et al. 2020, *Neuron*, DOI 10.1016/j.neuron.2020.08.006, the ring-attractor ultrastructure). **The upstream *source* of the velocity signal is not established** in the published circuit papers: TE17 and Green 2017 characterize the E-PG→P-EN→E-PG shift loop and the P-EN1/P-EN2 CW/CCW signatures, but neither identifies the afferent source of the velocity input (checked 2026-10-12 against the CC-BY TE17 text, which does not invoke the antennal lobe). **Correction
+(2026-10-12):** the B-01 brief's "ALPN→EL drive" was a pathway collapse and is the
+main design error to fix in B-02 (drive = P-EN, readout = EPG; both populations
+are inside the B-01 subgraph). **Second correction (2026-10-12 evening):** the
+sentence formerly here — "the velocity signal comes from the AL because antennae
+move when the head turns" — is **speculation, not measurement** (it was attributed
+to the unverifiable Paff 2015 citation); the only measured fact is that ALPN are
+the dominant anatomically measured input into the CC (Hulse 2021) and that the AL
+is an olfactory lobe. Candidate velocity afferents (proprioceptive, olfactory/
+antennal, visual) are a B-02 preflight question, not an assumption.
 
 A **visual** route also reaches the compass: Omoto et al. (2017, DOI
 10.1016/j.cub.2017.02.063) described the *anterior visual pathway* (AVP): visual
@@ -71,15 +73,20 @@ afferents are still partly an added interface.
 
 ### 1.3 Stability: drift, deprivation, and recalibration
 
-- **Drift in darkness is measured.** Huet et al. (2015, *eLife* 4:e10741): in
-  darkness the EL heading representation slowly shifts — a free-running integrator
-  with a small bias, exactly as a ring attractor is expected to do.
-- **The representation degrades without input and can be re-aligned.** Huet et al.
-  (2015) and Vela et al. (2014) show the bump is maintained by the recurrent circuit
-  (silencing input collapses the representation) and that visual context modulates
-  EL activity (measured); the *mechanism* by which a landmark realigns the bump —
-  the strength and timing of a visual correction — is **predicted** by circuit
-  models and **speculative** at the molecular level.
+- **Drift in darkness is measured.** In darkness the heading representation
+  slowly shifts — a free-running integrator with a small bias, exactly as a ring
+  attractor is expected to do (Seelig & Jayaraman 2015: the EPG bump free-runs and
+  drifts; Turner-Evans 2017: the drift persists without velocity input. *The
+  "Huet et al. 2015" citation formerly attached to this bullet did not survive
+  the 2026-10-12 audit — see References.*)
+- **The representation degrades without input and can be re-aligned.**
+  Seelig & Jayaraman (2015) show that the heading bump is maintained only with
+  the appropriate sensory input (it collapses in its absence) and that visual
+  context can realign it (measured); the *mechanism* by which a landmark realigns
+  the bump — the strength and timing of a visual correction — is **predicted** by
+  circuit models and **speculative** at the molecular level. (*The "Huet et al.
+  2015 / Vela et al. 2014" citations formerly attached to this bullet did not
+  survive the 2026-10-12 audit — see References.*)
 - The classical ring-attractor account (a single activity bump, sustained by
   recurrent inhibition, shifted by angular velocity) is a **predicted** account of
   the measured physiology; it is the design pattern of the control circuit in B-01.
@@ -198,17 +205,8 @@ connectome resolution, which is exactly why B-01 runs the fly first.
   27:1098–1110, 2017. DOI 10.1016/j.cub.2017.02.063.
 - Turner-Evans, D. et al. *Angular velocity integration in a fly heading circuit.*
   eLife 6:e23496, 2017. DOI 10.7554/eLife.23496.
-- Vela, J. et al. *A heading memory and an angular velocity sensor in the
-  Drosophila central complex.* eLife 3:e03898, 2014. (cited by journal/volume)
-- Huet, J. & Straube, R. *Neural correlates of fly body heading in a ring of
-  neurons.* J Neurosci 30:13930–13943, 2010. (cited by journal/volume)
-- Huet, J. et al. *Activity in a ring-shaped network of neurons tracks the
-  fly's position in its environment.* eLife 4:e10741, 2015. (cited by
-  journal/volume)
 - Datta, S.R. et al. *A central complex output circuit for prey capture in
   Drosophila.* Cell 178:744–758, 2019. (cited by journal/volume)
-- Paff, D.L. et al. *The fly central complex: architecture and function.*
-  Neuron 85:1188–1202, 2015. (cited by journal/volume)
 - A visual pathway for high-frequency motion-defined bars into the Drosophila
   central complex. *J Neurosci* 43:4821, 2023.
 - Seelig, J.D. & Jayaraman, V. *Neural dynamics for landmark orientation and
@@ -225,7 +223,8 @@ connectome resolution, which is exactly why B-01 runs the fly first.
 - Westeinde, E. et al. *Transforming a head direction signal into a goal-oriented
   steering command.* Nature, 2024. DOI 10.1038/s41586-024-07039-2.
 - Shiu, P.K. et al. *A Drosophila computational brain model reveals sensorimotor
-  processing.* Nature, 2024. DOI 10.1038/s41586-024-07763-9. (source of the LIF
+  processing.* Nature 634:210–219, 2024. DOI 10.1038/s41586-024-07763-9. (source
+  of the LIF
   parameter set used by B-01's `lif.py`; all values match exactly — see the
   B-01 review notes.)
 - Schlegel, M. et al. *Whole-brain annotation and multi-connectome cell typing
@@ -242,3 +241,34 @@ connectome resolution, which is exactly why B-01 runs the fly first.
   (1987); Wehner & Horst (2002); von Frisch (1967); Emlen (1967, 1971);
   Emlen & Emlen (2000); Srinivasan (1993); Mizrahi & Menashe (2018);
   Kawaguchi (2009); Bargmann (1998).
+
+### Unverified citations (2026-10-12 evening audit — do not cite from this document)
+
+The following appeared in the original version of this document. On 2026-10-12
+none could be substantiated against Crossref (DOI lookups and exact-title
+search), PubMed (author/title queries), OpenAlex (title and author searches),
+the CC-BY reference lists of the verified papers above, or the ChatGPT research
+pack (18 verified DOIs). Treat as **unverified — likely fabricated by the
+session that drafted this document** (that session's "Shi 2021" fabrication in
+the dataset catalog had already been caught by the same day's coordinator
+review):
+
+- "Vela, J. et al. *A heading memory and an angular velocity sensor in the
+  Drosophila central complex.* eLife 3:e03898, 2014" — DOI
+  10.7554/eLife.03898 does not exist in Crossref; no record found under the
+  title; not cited by TE17/Green/S&J; absent from the research pack.
+- "Huet, J. & Straube, R. *Neural correlates of fly body heading in a ring of
+  neurons.* J Neurosci 30:13930–13943, 2010" — no record found in Crossref,
+  PubMed, or OpenAlex.
+- "Huet, J. et al. *Activity in a ring-shaped network of neurons tracks the
+  fly's position in its environment.* eLife 4:e10741, 2015" — DOI
+  10.7554/eLife.10741 does not exist in Crossref.
+- "Paff, D.L. et al. *The fly central complex: architecture and function.*
+  Neuron 85:1188–1202, 2015" — no record found in Crossref, PubMed, or
+  OpenAlex (a guessed DOI resolves to an unrelated paper).
+
+The claims that relied on them have been re-anchored to the verified references
+above (Seelig & Jayaraman 2015; Turner-Evans 2017/2020; Green 2017; Hulse 2021;
+Garner 2024; Omoto 2017; Hanesch 1989). If any of these turns out to be a real
+paper, restore it with a verified DOI rather than re-introducing the bare
+citation.

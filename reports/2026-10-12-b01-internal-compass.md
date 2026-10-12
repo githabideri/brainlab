@@ -283,3 +283,25 @@ seeded, paired, precomputed stimulus streams; distinct stimulation
 semantics (current injection vs external synaptic events vs forced
 spikes) each unit-tested; and positive controls (calibrated EPG pulse →
 spiking; ER→EPG propagation).
+
+## Review note II — 2026-10-12 (evening; second external review of this report)
+
+Two citation corrections to the review note above (original experiment text
+still untouched):
+
+1. The Shiu et al. 2024 reference in item 6 is **Nature 634:210–219, 2024**
+   (DOI 10.1038/s41586-024-07763-9); "Nature 584:160" was a citation error.
+   The parameter-table comparison itself is unchanged.
+2. The TuBu route in item 2 is part of the **anterior visual pathway**
+   (anterior optic tubercle → bulb → ER; Omoto et al. 2017, DOI
+   10.1016/j.cub.2017.02.063; Garner et al. 2024, DOI
+   10.1038/s41586-024-07967-z), not a mechanosensory/antennal relay — the
+   corresponding wording in `docs/navigation.md` was corrected the same day.
+   The TuBu→ER→EPG route stands, as a *visual* route into the EPG.
+
+A further audit the same evening found four additional unverified
+citations in `docs/navigation.md` (Vela 2014; Huet & Straube 2010; Huet
+2015; Paff 2015 — none resolvable in Crossref/PubMed/OpenAlex); they are
+listed there under "Unverified citations" and the affected claims were
+re-anchored to verified references. The B-01 experiment, its data, and its
+conclusions as stated in review note I are unaffected by this.
