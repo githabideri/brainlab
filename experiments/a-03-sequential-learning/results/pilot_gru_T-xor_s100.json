@@ -1,0 +1,43 @@
+{
+  "experiment": "a-03-sequential-learning",
+  "phase": "pilot",
+  "dynamics": "gru",
+  "wiring": null,
+  "baseline": "gru",
+  "task": "T-xor",
+  "seed": 100,
+  "n_train": 96,
+  "n_test": 32,
+  "treatment": "conventional: 1 GRU layer (128 hidden), head at report steps",
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "epochs_run": 4,
+  "early_stopped": false,
+  "val_loss_best": 0.684859,
+  "train_loss_first": 0.692767,
+  "train_loss_last": 0.692764,
+  "train_loss_hist": [
+    0.692767,
+    0.692791,
+    0.69274,
+    0.692764
+  ],
+  "val_loss_hist": [
+    0.687394,
+    0.684859,
+    0.68717,
+    0.688814
+  ],
+  "wall_s": 0.1,
+  "held_out": {
+    "accuracy": 0.4883,
+    "nll": 0.6946,
+    "ceiling": 0.8586,
+    "chance": 0.5,
+    "efficiency": -0.0327
+  },
+  "weights_sha256": "808c5e9b59c925a9f7bc55bb4ad80c1fac4a714aa9efa31bc49ea93909d26eec",
+  "params_trained": 50433,
+  "peak_rss_mb": 1178
+}

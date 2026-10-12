@@ -334,6 +334,33 @@ failure shape; task determinism/split/ceilings; controls byte-identical
 to A-01 on the staged circuit; SeqCircuit persistence; Δw recorder;
 LIF mechanics; spike + tanh pipeline smokes; driver hash check).
 
-**Official pilot status:** *running via `run.py --phase pilot` (18
-runs, 1 seed; per-run wall in each JSON under results/) — filled in
-below on completion.*
+**Official pilot status: DONE — 18/18 runs, seed 100, 9 min total wall.**
+Sizing runs: 32-trial held-out *prefix*, 4 epochs — not the arbiter.
+Per-run held-out (results/pilot_*.json):
+
+| arm          | T-del (acc; ceiling .907) | T-ang (RMCE°; ceiling 45.5°) | T-xor (acc; ceiling .859) | wall s del/ang/xor |
+|--------------|---------------------------|------------------------------|---------------------------|--------------------|
+| tanh-fly     | 0.281 (nll 1.40)          | 87.4 (R² −0.07)              | 0.488                     | 6.7 / 8.9 / 8.4    |
+| tanh-degree  | 0.281 (nll 1.39)          | 86.7 (R² −0.05)              | 0.488                     | 3.4 / 4.7 / 4.5    |
+| spike-fly    | **1.000** (nll 0.75)      | **0.05** (R² 1.00)           | 0.547                     | 42 / 52 / 64       |
+| spike-degree | **1.000** (nll 0.74)      | **0.04** (R² 1.00)           | 0.520                     | 43 / 54 / 64       |
+| gru          | 0.250 (chance)            | 86.6 (chance 89.8)           | 0.488                     | <1                 |
+| mlp          | 0.250 (chance)            | 96.7                         | 0.863                     | <1                 |
+
+Pilot read-out (sizing-relevant, *not* claims): (1) the corrected
+spike mapping is **learnable**: T-del/T-ang saturate within the ridge's
+single pass at 32 train trials, while tanh (4 epochs) and gru are still
+near chance — the arms have very different learning curves, which is
+what the main grid's 20-epoch budget + val-LOSS checkpoints equalize.
+(2) mlp T-xor 0.863 *exceeds* the 0.859 ceiling: that ceiling bounds
+*linear* readouts (tangent-optimal); a nonlinear 5-window cascade is
+not bounded by it — the ceiling column is a linear reference, not a
+universal upper bound. (3) measured costs: spike 1.3–2.0 s/trial
+(the 200 ms readout window = 2 LIF substeps per report step; the
+earlier 0.71 s/trial figure was window-less), tanh 2-prop ≈ 0.02 s per
+epoch-trial. **Revised grid projection: ≈ 28 h of background wall**
+(90 spike runs ≈ 17 min each dominate; tanh ≈ 1 min each) — a
+scheduled post-heavy-lane campaign (~1.2 days), superseding the
+pre-registered 10–15 h projection, which rested on the wrong "1–3 min
+per tanh run" estimate; the lane's hard rules (≤2048 nodes, ≤20
+epochs, no heavy runs while B-02 is active) are met either way.

@@ -1,0 +1,1136 @@
+{
+  "pilot/gru/gru/T-ang": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 86.607,
+      "std": 0.0,
+      "per_seed": [
+        86.607
+      ]
+    },
+    "primary_lower_is_better": true,
+    "held_out": {
+      "ceiling": {
+        "mean": 45.464,
+        "std": 0.0,
+        "per_seed": [
+          45.464
+        ]
+      },
+      "chance": {
+        "mean": 89.804,
+        "std": 0.0,
+        "per_seed": [
+          89.804
+        ]
+      },
+      "efficiency": {
+        "mean": 0.5249,
+        "std": 0.0,
+        "per_seed": [
+          0.5249
+        ]
+      },
+      "r2": {
+        "mean": -0.0071,
+        "std": 0.0,
+        "per_seed": [
+          -0.0071
+        ]
+      },
+      "rmce_deg": {
+        "mean": 86.607,
+        "std": 0.0,
+        "per_seed": [
+          86.607
+        ]
+      }
+    },
+    "wall_s_mean": 0.1
+  },
+  "pilot/gru/gru/T-del": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.25,
+      "std": 0.0,
+      "per_seed": [
+        0.25
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "ceiling": {
+        "mean": 0.9073,
+        "std": 0.0,
+        "per_seed": [
+          0.9073
+        ]
+      },
+      "chance": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "efficiency": {
+        "mean": 0.0,
+        "std": 0.0,
+        "per_seed": [
+          0.0
+        ]
+      },
+      "nll": {
+        "mean": 1.3872,
+        "std": 0.0,
+        "per_seed": [
+          1.3872
+        ]
+      }
+    },
+    "wall_s_mean": 0.1
+  },
+  "pilot/gru/gru/T-xor": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.4883,
+      "std": 0.0,
+      "per_seed": [
+        0.4883
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.4883,
+        "std": 0.0,
+        "per_seed": [
+          0.4883
+        ]
+      },
+      "ceiling": {
+        "mean": 0.8586,
+        "std": 0.0,
+        "per_seed": [
+          0.8586
+        ]
+      },
+      "chance": {
+        "mean": 0.5,
+        "std": 0.0,
+        "per_seed": [
+          0.5
+        ]
+      },
+      "efficiency": {
+        "mean": -0.0327,
+        "std": 0.0,
+        "per_seed": [
+          -0.0327
+        ]
+      },
+      "nll": {
+        "mean": 0.6946,
+        "std": 0.0,
+        "per_seed": [
+          0.6946
+        ]
+      }
+    },
+    "wall_s_mean": 0.1
+  },
+  "pilot/mlp/mlp/T-ang": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 96.738,
+      "std": 0.0,
+      "per_seed": [
+        96.738
+      ]
+    },
+    "primary_lower_is_better": true,
+    "held_out": {
+      "ceiling": {
+        "mean": 45.464,
+        "std": 0.0,
+        "per_seed": [
+          45.464
+        ]
+      },
+      "chance": {
+        "mean": 89.804,
+        "std": 0.0,
+        "per_seed": [
+          89.804
+        ]
+      },
+      "efficiency": {
+        "mean": 0.47,
+        "std": 0.0,
+        "per_seed": [
+          0.47
+        ]
+      },
+      "r2": {
+        "mean": -0.0344,
+        "std": 0.0,
+        "per_seed": [
+          -0.0344
+        ]
+      },
+      "rmce_deg": {
+        "mean": 96.738,
+        "std": 0.0,
+        "per_seed": [
+          96.738
+        ]
+      }
+    },
+    "wall_s_mean": 0.0
+  },
+  "pilot/mlp/mlp/T-del": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.25,
+      "std": 0.0,
+      "per_seed": [
+        0.25
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "ceiling": {
+        "mean": 0.9073,
+        "std": 0.0,
+        "per_seed": [
+          0.9073
+        ]
+      },
+      "chance": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "efficiency": {
+        "mean": 0.0,
+        "std": 0.0,
+        "per_seed": [
+          0.0
+        ]
+      },
+      "nll": {
+        "mean": 1.3881,
+        "std": 0.0,
+        "per_seed": [
+          1.3881
+        ]
+      }
+    },
+    "wall_s_mean": 0.0
+  },
+  "pilot/mlp/mlp/T-xor": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.8633,
+      "std": 0.0,
+      "per_seed": [
+        0.8633
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.8633,
+        "std": 0.0,
+        "per_seed": [
+          0.8633
+        ]
+      },
+      "ceiling": {
+        "mean": 0.8586,
+        "std": 0.0,
+        "per_seed": [
+          0.8586
+        ]
+      },
+      "chance": {
+        "mean": 0.5,
+        "std": 0.0,
+        "per_seed": [
+          0.5
+        ]
+      },
+      "efficiency": {
+        "mean": 1.0131,
+        "std": 0.0,
+        "per_seed": [
+          1.0131
+        ]
+      },
+      "nll": {
+        "mean": 0.6546,
+        "std": 0.0,
+        "per_seed": [
+          0.6546
+        ]
+      }
+    },
+    "wall_s_mean": 0.1
+  },
+  "pilot/spike/degree/T-ang": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.042,
+      "std": 0.0,
+      "per_seed": [
+        0.042
+      ]
+    },
+    "primary_lower_is_better": true,
+    "held_out": {
+      "ceiling": {
+        "mean": 45.464,
+        "std": 0.0,
+        "per_seed": [
+          45.464
+        ]
+      },
+      "chance": {
+        "mean": 89.804,
+        "std": 0.0,
+        "per_seed": [
+          89.804
+        ]
+      },
+      "efficiency": {
+        "mean": 99.0,
+        "std": 0.0,
+        "per_seed": [
+          99.0
+        ]
+      },
+      "r2": {
+        "mean": 1.0,
+        "std": 0.0,
+        "per_seed": [
+          1.0
+        ]
+      },
+      "rmce_deg": {
+        "mean": 0.042,
+        "std": 0.0,
+        "per_seed": [
+          0.042
+        ]
+      }
+    },
+    "wall_s_mean": 54.0,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/spike/degree/T-del": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 1.0,
+      "std": 0.0,
+      "per_seed": [
+        1.0
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 1.0,
+        "std": 0.0,
+        "per_seed": [
+          1.0
+        ]
+      },
+      "ceiling": {
+        "mean": 0.9073,
+        "std": 0.0,
+        "per_seed": [
+          0.9073
+        ]
+      },
+      "chance": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "efficiency": {
+        "mean": 1.141,
+        "std": 0.0,
+        "per_seed": [
+          1.141
+        ]
+      },
+      "nll": {
+        "mean": 0.7452,
+        "std": 0.0,
+        "per_seed": [
+          0.7452
+        ]
+      }
+    },
+    "wall_s_mean": 43.0,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/spike/degree/T-xor": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.5195,
+      "std": 0.0,
+      "per_seed": [
+        0.5195
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.5195,
+        "std": 0.0,
+        "per_seed": [
+          0.5195
+        ]
+      },
+      "ceiling": {
+        "mean": 0.8586,
+        "std": 0.0,
+        "per_seed": [
+          0.8586
+        ]
+      },
+      "chance": {
+        "mean": 0.5,
+        "std": 0.0,
+        "per_seed": [
+          0.5
+        ]
+      },
+      "efficiency": {
+        "mean": 0.0545,
+        "std": 0.0,
+        "per_seed": [
+          0.0545
+        ]
+      },
+      "nll": {
+        "mean": 0.4993,
+        "std": 0.0,
+        "per_seed": [
+          0.4993
+        ]
+      }
+    },
+    "wall_s_mean": 63.8,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/spike/fly/T-ang": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.048,
+      "std": 0.0,
+      "per_seed": [
+        0.048
+      ]
+    },
+    "primary_lower_is_better": true,
+    "held_out": {
+      "ceiling": {
+        "mean": 45.464,
+        "std": 0.0,
+        "per_seed": [
+          45.464
+        ]
+      },
+      "chance": {
+        "mean": 89.804,
+        "std": 0.0,
+        "per_seed": [
+          89.804
+        ]
+      },
+      "efficiency": {
+        "mean": 99.0,
+        "std": 0.0,
+        "per_seed": [
+          99.0
+        ]
+      },
+      "r2": {
+        "mean": 1.0,
+        "std": 0.0,
+        "per_seed": [
+          1.0
+        ]
+      },
+      "rmce_deg": {
+        "mean": 0.048,
+        "std": 0.0,
+        "per_seed": [
+          0.048
+        ]
+      }
+    },
+    "wall_s_mean": 52.2,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/spike/fly/T-del": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 1.0,
+      "std": 0.0,
+      "per_seed": [
+        1.0
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 1.0,
+        "std": 0.0,
+        "per_seed": [
+          1.0
+        ]
+      },
+      "ceiling": {
+        "mean": 0.9073,
+        "std": 0.0,
+        "per_seed": [
+          0.9073
+        ]
+      },
+      "chance": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "efficiency": {
+        "mean": 1.141,
+        "std": 0.0,
+        "per_seed": [
+          1.141
+        ]
+      },
+      "nll": {
+        "mean": 0.7455,
+        "std": 0.0,
+        "per_seed": [
+          0.7455
+        ]
+      }
+    },
+    "wall_s_mean": 41.9,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/spike/fly/T-xor": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.5469,
+      "std": 0.0,
+      "per_seed": [
+        0.5469
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.5469,
+        "std": 0.0,
+        "per_seed": [
+          0.5469
+        ]
+      },
+      "ceiling": {
+        "mean": 0.8586,
+        "std": 0.0,
+        "per_seed": [
+          0.8586
+        ]
+      },
+      "chance": {
+        "mean": 0.5,
+        "std": 0.0,
+        "per_seed": [
+          0.5
+        ]
+      },
+      "efficiency": {
+        "mean": 0.1307,
+        "std": 0.0,
+        "per_seed": [
+          0.1307
+        ]
+      },
+      "nll": {
+        "mean": 0.4994,
+        "std": 0.0,
+        "per_seed": [
+          0.4994
+        ]
+      }
+    },
+    "wall_s_mean": 64.0,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/tanh/degree/T-ang": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 86.713,
+      "std": 0.0,
+      "per_seed": [
+        86.713
+      ]
+    },
+    "primary_lower_is_better": true,
+    "held_out": {
+      "ceiling": {
+        "mean": 45.464,
+        "std": 0.0,
+        "per_seed": [
+          45.464
+        ]
+      },
+      "chance": {
+        "mean": 89.804,
+        "std": 0.0,
+        "per_seed": [
+          89.804
+        ]
+      },
+      "efficiency": {
+        "mean": 0.5243,
+        "std": 0.0,
+        "per_seed": [
+          0.5243
+        ]
+      },
+      "r2": {
+        "mean": -0.0509,
+        "std": 0.0,
+        "per_seed": [
+          -0.0509
+        ]
+      },
+      "rmce_deg": {
+        "mean": 86.713,
+        "std": 0.0,
+        "per_seed": [
+          86.713
+        ]
+      }
+    },
+    "wall_s_mean": 4.7,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 6.781e-05,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.003495,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.001899,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/tanh/degree/T-del": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.2812,
+      "std": 0.0,
+      "per_seed": [
+        0.2812
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.2812,
+        "std": 0.0,
+        "per_seed": [
+          0.2812
+        ]
+      },
+      "ceiling": {
+        "mean": 0.9073,
+        "std": 0.0,
+        "per_seed": [
+          0.9073
+        ]
+      },
+      "chance": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "efficiency": {
+        "mean": 0.0475,
+        "std": 0.0,
+        "per_seed": [
+          0.0475
+        ]
+      },
+      "nll": {
+        "mean": 1.3928,
+        "std": 0.0,
+        "per_seed": [
+          1.3928
+        ]
+      }
+    },
+    "wall_s_mean": 3.4,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 8.676e-05,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.007665,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.002429,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/tanh/degree/T-xor": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.4883,
+      "std": 0.0,
+      "per_seed": [
+        0.4883
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.4883,
+        "std": 0.0,
+        "per_seed": [
+          0.4883
+        ]
+      },
+      "ceiling": {
+        "mean": 0.8586,
+        "std": 0.0,
+        "per_seed": [
+          0.8586
+        ]
+      },
+      "chance": {
+        "mean": 0.5,
+        "std": 0.0,
+        "per_seed": [
+          0.5
+        ]
+      },
+      "efficiency": {
+        "mean": -0.0327,
+        "std": 0.0,
+        "per_seed": [
+          -0.0327
+        ]
+      },
+      "nll": {
+        "mean": 0.6951,
+        "std": 0.0,
+        "per_seed": [
+          0.6951
+        ]
+      }
+    },
+    "wall_s_mean": 4.5,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 3.129e-05,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.000443,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.000876,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/tanh/fly/T-ang": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 87.372,
+      "std": 0.0,
+      "per_seed": [
+        87.372
+      ]
+    },
+    "primary_lower_is_better": true,
+    "held_out": {
+      "ceiling": {
+        "mean": 45.464,
+        "std": 0.0,
+        "per_seed": [
+          45.464
+        ]
+      },
+      "chance": {
+        "mean": 89.804,
+        "std": 0.0,
+        "per_seed": [
+          89.804
+        ]
+      },
+      "efficiency": {
+        "mean": 0.5203,
+        "std": 0.0,
+        "per_seed": [
+          0.5203
+        ]
+      },
+      "r2": {
+        "mean": -0.0741,
+        "std": 0.0,
+        "per_seed": [
+          -0.0741
+        ]
+      },
+      "rmce_deg": {
+        "mean": 87.372,
+        "std": 0.0,
+        "per_seed": [
+          87.372
+        ]
+      }
+    },
+    "wall_s_mean": 8.9,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 0.00010505,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.008481,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.002942,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/tanh/fly/T-del": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.2812,
+      "std": 0.0,
+      "per_seed": [
+        0.2812
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.2812,
+        "std": 0.0,
+        "per_seed": [
+          0.2812
+        ]
+      },
+      "ceiling": {
+        "mean": 0.9073,
+        "std": 0.0,
+        "per_seed": [
+          0.9073
+        ]
+      },
+      "chance": {
+        "mean": 0.25,
+        "std": 0.0,
+        "per_seed": [
+          0.25
+        ]
+      },
+      "efficiency": {
+        "mean": 0.0475,
+        "std": 0.0,
+        "per_seed": [
+          0.0475
+        ]
+      },
+      "nll": {
+        "mean": 1.4044,
+        "std": 0.0,
+        "per_seed": [
+          1.4044
+        ]
+      }
+    },
+    "wall_s_mean": 6.7,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 7.379e-05,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.00417,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.002067,
+        "std": 0.0
+      }
+    }
+  },
+  "pilot/tanh/fly/T-xor": {
+    "seeds": [
+      100
+    ],
+    "primary": {
+      "mean": 0.4883,
+      "std": 0.0,
+      "per_seed": [
+        0.4883
+      ]
+    },
+    "primary_lower_is_better": false,
+    "held_out": {
+      "accuracy": {
+        "mean": 0.4883,
+        "std": 0.0,
+        "per_seed": [
+          0.4883
+        ]
+      },
+      "ceiling": {
+        "mean": 0.8586,
+        "std": 0.0,
+        "per_seed": [
+          0.8586
+        ]
+      },
+      "chance": {
+        "mean": 0.5,
+        "std": 0.0,
+        "per_seed": [
+          0.5
+        ]
+      },
+      "efficiency": {
+        "mean": -0.0327,
+        "std": 0.0,
+        "per_seed": [
+          -0.0327
+        ]
+      },
+      "nll": {
+        "mean": 0.7073,
+        "std": 0.0,
+        "per_seed": [
+          0.7073
+        ]
+      }
+    },
+    "wall_s_mean": 8.4,
+    "dw": {
+      "mean_abs_dw": {
+        "mean": 8.652e-05,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-3": {
+        "mean": 0.005079,
+        "std": 0.0
+      },
+      "frac_abs_gt_1e-2": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "abs_dw_over_abs_w0": {
+        "mean": 0.002423,
+        "std": 0.0
+      }
+    }
+  }
+}

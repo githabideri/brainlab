@@ -154,7 +154,10 @@ def train_tanh(model, task: dict, n_train: int, seed: int, epochs: int,
     trajectories, held-out touched exactly once, Δw recorded."""
     tr_idx, val_idx = _val_split(task, n_train, seed)
     X = torch.tensor(task["x"], dtype=torch.float32)
-    Y = torch.tensor(task["y"].astype(np.float32), dtype=torch.float32)
+    if task["kind"] == "class":
+        Y = torch.tensor(task["y"], dtype=torch.long)
+    else:
+        Y = torch.tensor(task["y"].astype(np.float32), dtype=torch.float32)
     xtr, ytr = X[tr_idx], Y[tr_idx]
     xval, yval = X[val_idx], Y[val_idx]
 
@@ -214,7 +217,7 @@ def train_tanh(model, task: dict, n_train: int, seed: int, epochs: int,
         rec = circuit.dw_record()
         if rec["dw_eff"].size:
             npz = Path(_dw_dir()) / (
-                f"dw_{model._arm_name}_{task['key']}_s{seed}.npz")
+                f"dw_{getattr(model, '_arm_name', 'tanh')}_{task['key']}_s{seed}.npz")
             np.savez(npz, **{k: np.ascontiguousarray(v, dtype=np.float32)
                              for k, v in rec.items()})
             res["dw_npz_sha256"] = _npz_sha256(npz)

@@ -210,14 +210,14 @@ def main() -> None:
                         te_idx = te_idx[:test_prefix]
                     t0 = time.time()
                     dyn, wiring = (arm.split("-", 1) + [None])[:2] \
-                        if arm[:5] in ("tanh", "spike") else (arm, None)
+                        if arm.startswith(("tanh-", "spike-")) else (arm, None)
                     if dyn in ("tanh", "spike"):
                         if dyn == "spike":
                             r = run_spike(doc, wiring, wirings, task,
                                           cfg["spike"]["n_train"], te_idx,
                                           seed)
                         else:
-                            r = run_rate(wiring, doc, wirings, task,
+                            r = run_rate(arm, doc, wirings, task,
                                          cfg["tanh"]["n_train"], te_idx, seed,
                                          cfg["tanh"])
                         n_train = cfg[dyn]["n_train"]

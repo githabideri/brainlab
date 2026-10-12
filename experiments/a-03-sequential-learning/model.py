@@ -149,7 +149,8 @@ def make_rate_model(arm: str, doc: dict, wirings: dict, task: dict):
     if arm == "mlp":
         window = 5 if task["key"] == "T-xor" else 4
         return MLPCascade(task["d"], out_dim(task["key"]), task["report_steps"], window)
-    src, tgt, w = wirings[arm]
+    wiring = arm[5:] if arm.startswith("tanh-") else arm  # 'tanh-fly' -> 'fly'
+    src, tgt, w = wirings[wiring]
     return TanhSeq(doc, src, tgt, w, task["d"], out_dim(task["key"]),
                    task["report_steps"], enabled=len(src) > 0)
 
@@ -166,7 +167,7 @@ def task_loss(task: dict, logits: torch.Tensor, y: torch.Tensor) -> torch.Tensor
     """logits: (B, R, out_dim); y: (B, out_dim) for class/reg (R=1 tasks)
     or (B, R) for binary. Returns the mean over report steps."""
     if task["kind"] == "class":
-        return nn.functional.cross_entropy(logits[:, 0], y)
+        return nn.functional.cross_entropy(logits[:, 0], y.long())
     if task["kind"] == "binary":
         return nn.functional.binary_cross_entropy_with_logits(logits[:, :, 0], y)
     return nn.functional.mse_loss(logits[:, 0], y)
