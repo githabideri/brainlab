@@ -57,6 +57,7 @@ paywalled, the PubMed/PMC abstract was used and the paper cited by DOI.
 | *C. elegans* | Developmental series (2020) | L1 → adult hermaphrodite | nerve ring + ventral ganglion | 162 → 180 (brain) of 218/300 | `structural`, in progress (preprint) | preprint (bioRxiv) | medium | growth, maturation of learning circuits |
 | *D. melanogaster* | FAFB (2024) | adult female | whole brain | 139,255 / ~5×10⁷ | `structural`, near-complete | CC-BY (FlyWire) | medium (subgraphs only) | memory, navigation |
 | *D. melanogaster* | MaleCNS (2026) | adult male | whole brain | 166,691 / 312M PSDs | `structural`, near-complete | via FlyWire | low–medium | male-specific circuits |
+| *D. melanogaster* | BANC (v888, 2026) | adult female | brain **+ ventral nerve cord** ("CNS") | 158,262 / 3,037,361 pairs | `structural`, preview (no stable release record yet) | via FlyWire (Codex) | low | decision → motor-pathway linkage (Track B end-to-end) |
 | *D. melanogaster* | Fly hemibrain (FlyEM release) | adult, hemislice | central brain, one hemisphere | unverified (see section) | `structural`, near-complete | CC-BY (Janelia FlyEM) | medium | memory, navigation |
 | *D. melanogaster* | First-instar larva (2023) | 1st instar | whole larval brain + cord | 3,016 / 548,000 | `structural`, complete for larva | Janelia FlyEM | medium | learning, value computation |
 | *D. melanogaster* | Functional companion (2024) | adult female | central-complex region, 2P + EM | subset of cells (see paper) | `physiological` + `structural` | Janelia / paper | medium | memory (MB), sensorimotor |
@@ -225,6 +226,32 @@ cross-organism context and the other Drosophila releases.
 8. **Navigation and memory** comparatives (sex differences in the central
    complex and mushroom bodies); otherwise as FAFB.
 9. v1.0 release (2026) — young; expect corrections.
+
+### BANC — adult female brain + nerve cord (v888, 2026)
+
+1. **Organism / stage / sex.** Adult *female*; the first *Drosophila* release
+   covering **brain and ventral nerve cord in one reconstruction** ("CNS").
+2. **Coverage.** Whole brain + ventral nerve cord — unlike FAFB (brain only),
+   this reaches from central decision circuits down to the motor pathways.
+3. **Scale / completeness.** 158,262 neurons / 3,037,361 connection pairs.
+   *Verification note (2026-10-12):* figures read from the official FlyWire
+   Codex portal (live check: "BANC v888 (CNS) Female Adult Fly Brain and Nerve
+   Cord — 158,262 neurons, 3,037,361 connections"). **No stable DOI or final
+   release record is published yet** — treat as a preview; re-verify before
+   making data claims.
+4. **What else ships.** Same FlyWire infrastructure as FAFB (NeuPrint,
+   Neuroglancer, flywire Python API, Codex exploration).
+5–6. License/access as FAFB (CC-BY, FlyWire).
+7. **Simulation maturity.** Low — no models yet. The scale is inside the
+   demonstrated LIF regime (Shiu 2024 simulated a whole-brain FAFB (v630)
+   LIF model on the same model class — ~10⁵ neurons) but 4–5× the scope of
+   current subgraph work.
+8. **Best-fit computations.** The missing link for Track B: heading/decision
+   circuits (CX) to steering/locomotor output — Westeinde et al. 2024's
+   heading→steering transform can only be tested end-to-end once a release
+   includes the VNC. Cross-sex comparison with MaleCNS.
+9. **Release status.** v888 (2026) — preview; pin to a stable release before
+   production use.
 
 ### Fly hemibrain (Janelia FlyEM release)
 

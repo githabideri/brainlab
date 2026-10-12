@@ -15,32 +15,38 @@ protocerebral bridge (PB), the anterior body (AB), and the nodulus — together 
 projecting arborizations in the peduncular lobe (PL) and posterior fan (PFL) of the
 protocerebral lobe. In *Drosophila melanogaster* it contains roughly 2,800 neurons
 organized into about 257 morphological cell types (Hanesch, Fischbach & Heisenberg,
-*Cell Tissue Res* 1990; Wolff et al. 2015; Scheffer et al. 2020; Hulse et al. 2021;
-the v783 EM reconstruction recovers 2,878 of them — measured).
+*Cell Tissue Res* 257:343–366, 1989; Wolff et al. 2015; Scheffer et al. 2020; Hulse
+et al. 2021; the v783 EM reconstruction recovers 2,878 of them — measured).
 
 ### 1.1 The heading populations
 
 | Population | Structure | Function (status) |
 |---|---|---|
-| **Ring (R) neurons** (~278 in v783) | axons of the EL torus; all born from a single lineage (DALv2) (Omoto et al. 2017) | tuned to body heading; the torus acts as a recurrent ring (measured: Huet & Straube, *J Neurosci* 30:13930–13943, 2010, DOI-free here but see §4 for the drift data; Huet et al., *eLife* 4:e10741, 2015) |
-| **EPG (E–PG) cells** (~400) | FBB-columnar cells projecting to the EL and the protocerebral bridge/gall | a **heading bump**: each EPG cell's activity peaks for one direction of body heading; the population carries the current heading (measured: Vela et al., *eLife* 3:e03898, 2014, in freely walking head-fixed flies) |
-| **EIP cells (C1, C2, C3, …)** | FBB-like cells with a projection into the EL **and** into the peduncular lobe (Paff et al., *Neuron* 85:1188–1202, 2015; Omoto et al. 2017, DOI 10.1016/j.cub.2017.02.063) | the *input* side of the compass: C1 and C2 receive antennal-lobe input (measured anatomy + response properties, Paff 2015); they carry angular-velocity information into the EL/PL (measured: Turner-Evans et al., *eLife* 6:e23496, 2017, DOI 10.7554/eLife.23496) |
+| **ER ("ring") neurons** (278 in v783 — the whole brain; all from lineage `EBa1`; official FAFB v783 types ER1–ER6) | axons of the EL torus | the *input relay into* the compass: born from the bulb (TuBu — mechanosensory/antennal), they project into the EB, **including onto the EPG heading cells** (measured in v783: 11,847 ER→EPG pairs; Hulse 2021; Garner 2024). Historically called "the ring neurons" — the population Huet 2010/2015 recorded as heading/position tracking is, in modern nomenclature, the **EPG subset below, not the ER** (nomenclature clarification, 2026-10-12; Huet & Straube, *J Neurosci* 30:13930–13943, 2010; Huet et al., *eLife* 4:e10741, 2015) |
+| **EPG (E–PG) cells** (**51 in v783**: 47 EPG + 4 EPGt, 24/23 per side; official annotation, lineages DM1–4_CX) | wedge-localized EL columnar cells — each innervates a single EB wedge — projecting to PB/gall (Wolff 2015 "E to PG") | a **heading bump**: each EPG cell's activity peaks for one direction of body heading; a bump spanning adjacent wedges carries the current heading (measured: Seelig & Jayaraman 2015, *Nature* 521:186–191, DOI 10.1038/nature14446; Vela et al. 2014; Turner-Evans 2017). Recurrent with ER (2,691 EPG→ER pairs in v783) — the shift loop of §1.2 |
+| **P-EN1 / P-EN2** (42 in v783: `PEN_a(PEN1)` 20 + `PEN_b(PEN2)` 22) | PB cells whose EL projections are *anatomically shifted* relative to the EPG wedges (one P-EN tile overlaps two E-PG wedges) | the measured **angular-velocity update**: E-PG (EB) → P-EN (PB) → E-PG (EL) shifted recurrent loop; P-EN1/P-EN2 carry clockwise/counterclockwise signatures, so asymmetric input shifts the bump (measured: Turner-Evans et al. 2017, *eLife* 6:e23496, DOI 10.7554/eLife.23496; Green et al. 2017, *Nature* 546:101–106, DOI 10.1038/nature22343) |
+| **EIP cells (C1, C2, C3, …)** | FBB-like cells with a projection into the EL **and** into the peduncular lobe (Paff et al., *Neuron* 85:1188–1202, 2015; Omoto et al. 2017, DOI 10.1016/j.cub.2017.02.063) | the *antennal-lobe* input route: C1/C2 receive antennal-lobe input (measured anatomy + response properties, Paff 2015). **Clarification (2026-10-12):** the EIP cells are *not* the angular-velocity update pathway — that is the P-EN loop above; and the Paff-2015 C1/C2 are **not yet mapped to FAFB v783 types** (the v783 types named "C2"/"C3" are optic-lobe centrifugal cells — a different naming; B-02 preflight item) |
 | **FBB cells** (~1,240 columnar neurons in v783) | the fan-shaped body itself | a subset is tuned to head direction and is read out during behavior (measured: Datta et al., *Cell* 178:744–758, 2019); the fan is densely recurrent on itself (measured in v783) |
-| **PL / PFL tangential cells** (~611 in v783) | protocerebral-lobe tangential arborizations | receive FBB/EL input (measured in v783: they are the main recipient of the antennal-lobe pathway, 455 of the 521 ALPN→CC pairs); function: steering/locomotor output — the *specific* steering computations are **predicted/speculative** |
+| **PL / PFL tangential cells** (~611 in v783) | protocerebral-lobe tangential arborizations | receive FBB/EL input (measured in v783: they are the main recipient of the antennal-lobe pathway, 455 of the 521 ALPN→CC pairs). **Steering output measured:** PFL3R/PFL3L/PFL2 transform the head-direction signal into a goal-oriented steering command (Westeinde et al. 2024, *Nature*, DOI 10.1038/s41586-024-07039-2); the full transform beyond these cells remains to be modeled |
 
 ### 1.2 How the bump moves: angular velocity
 
 The compass is not set by vision; it is **integrated from self-motion**. Turner-Evans
 et al. (2017, DOI 10.7554/eLife.23496) showed that the heading cells receive a
 direction-selective angular-velocity signal and that the anatomy implements the update:
-a recurrent loop from the heading population to its own input cells with a fixed
-angular shift, so that a left turn shifts the bump rightward and vice versa — the
-structure-function match that made the *fly* the first invertebrate in which the
-circuit-level mechanism of an internal compass was measured. The upstream source of
+a recurrent loop from the heading population (E-PG) to its own input cells (P-EN) with
+a fixed angular shift, so that a left turn shifts the bump rightward and vice versa —
+the structure-function match that made the *fly* the first invertebrate in which the
+circuit-level mechanism of an internal compass was measured (Green et al. 2017
+demonstrated the P-EN1/P-EN2 clockwise/counterclockwise signatures; Turner-Evans
+et al. 2020, *Neuron*, DOI 10.1016/j.neuron.2020.08.006, the ring-attractor ultrastructure). The upstream source of
 the velocity signal is the **antennal lobe (AL)**: antennae move when the head turns,
-AL glomerular processing extracts the motion, and AL projection neurons (ALPN) drive
-the EIP/PL side of the compass (measured anatomically: Paff et al. 2015; in v783 the
-ALPN→CC projection is the dominant external input to the CC — measured wiring).
+AL glomerular processing extracts the motion, and AL projection neurons (ALPN) feed
+the EIP/PL side of the compass (measured anatomically: Paff et al. 2015). **Correction
+(2026-10-12):** this makes ALPN the *olfactory/antennal relay into the EIP side*, not
+a direct drive onto the EL heading ring — the B-01 brief's "ALPN→EL drive" was a
+collapse of this pathway and is the main design error to fix in B-02 (drive = P-EN,
+readout = EPG; both populations are inside the B-01 subgraph).
 
 A **visual** route also reaches the compass: Omoto et al. (2017, DOI
 10.1016/j.cub.2017.02.063) described the *anterior visual pathway* (AVP): visual
@@ -49,10 +55,19 @@ with receptive-field properties (bright objects, hemifield sign) that make it a
 plausible sky-compass channel (the comparison to the bee sky-compass is the paper's
 own — **speculative** as a functional claim). A further visual pathway for
 high-frequency motion-defined features was mapped into the CC
-(*J Neurosci* 43:4821, 2023). **Important caveat for this lab:** in the v783
-connectome no optic→CC connection pair is proven (0 pairs in the release) — the AVP
-exists in the light-EM literature but not in the proven EM graph, so any visual
-drive in a v783-based model is an *added interface*, not measured wiring.
+(*J Neurosci* 43:4821, 2023). Garner et al. (2024, *Nature*, DOI
+10.1038/s41586-024-07967-z) used the connectome itself to show the anterior visual
+route terminating **on EPG** (TuBu→ER→EPG). **Correction (2026-10-12) of the caveat
+that used to stand here:** the claim "in the v783 connectome no optic→CC connection
+pair is proven (0 pairs in the release)" was **false** — counted against the full
+v783 release (15,091,983 pair rows), **434,005 optic-ish → central-class pairs exist**,
+and the ER→EPG compass input is directly proven (11,847 pairs, dominated by ER2/ER3d/
+ER1/ER3w/ER4d; reciprocal EPG→ER branch 2,691). The original zero was an artefact of
+the class filter used in the earlier search. Visual drive in a v783 model is therefore
+*partly measured wiring* (the ER/EPG branch), not purely an added interface — though
+the specific AVP → ER afferents from the optic lobe themselves remain sparse in v783
+(17 visual_projection + 4 visual_centrifugal pairs onto ER), so the upstream visual
+afferents are still partly an added interface.
 
 ### 1.3 Stability: drift, deprivation, and recalibration
 
@@ -196,11 +211,30 @@ connectome resolution, which is exactly why B-01 runs the fly first.
   Neuron 85:1188–1202, 2015. (cited by journal/volume)
 - A visual pathway for high-frequency motion-defined bars into the Drosophila
   central complex. *J Neurosci* 43:4821, 2023.
+- Seelig, J.D. & Jayaraman, V. *Neural dynamics for landmark orientation and
+  angular path integration.* Nature 521:186–191, 2015. DOI 10.1038/nature14446.
+- Green, J. et al. *A neural circuit architecture for angular integration in
+  Drosophila.* Nature 546:101–106, 2017. DOI 10.1038/nature22343.
+- Turner-Evans, D. et al. *The neuroanatomical ultrastructure and function of a
+  biological ring attractor.* Neuron, 2020. DOI 10.1016/j.neuron.2020.08.006.
+- Hulse, B.K. et al. *A connectome of the Drosophila central complex reveals
+  network motifs suitable for flexible navigation and context-dependent action
+  selection.* eLife 10:e66039, 2021. DOI 10.7554/eLife.66039.
+- Garner, D. et al. *Connectomic reconstruction predicts visual features used for
+  navigation.* Nature, 2024. DOI 10.1038/s41586-024-07967-z.
+- Westeinde, E. et al. *Transforming a head direction signal into a goal-oriented
+  steering command.* Nature, 2024. DOI 10.1038/s41586-024-07039-2.
+- Shiu, P.K. et al. *A Drosophila computational brain model reveals sensorimotor
+  processing.* Nature, 2024. DOI 10.1038/s41586-024-07763-9. (source of the LIF
+  parameter set used by B-01's `lif.py`; all values match exactly — see the
+  B-01 review notes.)
+- Schlegel, M. et al. *Whole-brain annotation and multi-connectome cell typing
+  of Drosophila.* Nature, 2024. DOI 10.1038/s41586-024-07686-5. (official FAFB
+  v783 neuron-type annotation; the source for the EPG/P-EN/ER identifications
+  above — `flyconnectome/flywire_annotations`.)
 - Hanesch, U., Fischbach, K.-F. & Heisenberg, M. *Neuronal architecture of the
-  central complex in Drosophila melanogaster.* Cell Tissue Res, 1990.
+  central complex in Drosophila melanogaster.* Cell Tissue Res 257:343–366, 1989.
   DOI 10.1007/BF00261838.
-- Wolff, C. et al. (2015); Scheffer, T. et al. (2020); Hulse, S.A. et al. (2021) —
-  CC cell-type catalogs (~257 types, ~2,800 neurons).
 - White, J.G., Southgate, E., Thomson, J.N., Brenner, S. *The structure of
   the nervous system of the nematode Caenorhabditis elegans.*
   Phil. Trans. R. Soc. B 314:1–340, 1986. DOI 10.1098/rstb.1986.0056.

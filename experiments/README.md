@@ -70,12 +70,15 @@ fit its own weights. The MLP/GRU re-runs replicate A-01 exactly
   semantic deviation disclosed (declared 15 mV never applied; spike-
   source delivery is the weaker, conservative realization). Report:
   `../reports/2026-10-12-b01-internal-compass.md`.
-- **b-02-design** (the drive-semantics question B-01 left open: direct
-  g-injection vs spike-source delivery, a drive-strength sweep, an
-  alternative *measured* path into the EL ring, self-inhibition vs
-  traveling wave, and the bio-vs-shuffle bulk-activity finding)
-  — designed after B-01; the five questions are in the B-01 report's
-  Interpretation §4 (protocol not yet written).
+- **b-02-design** (the drive-semantics question B-01 left open) — **redesigned
+  2026-10-12 after the primary-source audit** (see the B-01 report's review
+  notes): readout = the 51 official EPG/EPGt heading cells (present in the
+  B-01 subgraph), drive = P-EN1/P-EN2 under the Turner-Evans asymmetric
+  velocity input, weight-magnitude-matched and population-preserving
+  controls, seeded paired precomputed stimuli, distinct stimulation
+  semantics (current injection vs external events vs forced spikes) with
+  unit tests and positive controls. Preflight stages 0–5 planned (private
+  campaign file); protocol not yet written.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling

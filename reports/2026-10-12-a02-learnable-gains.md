@@ -255,3 +255,29 @@ date: 2026-10-12.
    effect for any control family, a shaped curriculum (separate lr /
    schedule for the 42,921 gains vs the head) is the next control to
    add before claiming the effect is wiring-specific.
+
+## Review note — 2026-10-12 (post-hoc; the original text above is unmodified)
+
+Independent review confirmed the control battery (the `weight` control
+preserves the per-edge magnitude multiset, so none of the B-01 control
+confounds apply here) but flagged two limitations to the "stronger
+null" reading:
+
+1. **Checkpoint rule.** `run.py` keeps the first internal-validation
+   *accuracy* maximum (`best_val` on val-acc; early stop at patience 30
+   without val-acc improvement). On these near-saturated tasks (clean
+   accuracies ≈ 99.8%) the evaluated model is the *first* one to reach
+   the maximum; any later learning — in the 42,921 gains, the head, or
+   the optimizer's trajectory — is discarded and never evaluated.
+2. **Metric saturation.** With the primary metric already at ≈ 99.8%,
+   there is little headroom for an advantage to appear; absence of a
+   measured difference is underpowered, not a strong demonstration.
+
+**Defensible statement:** under this protocol (easy tasks, val-accuracy
+checkpointing), *training did not improve the reported evaluations*, and
+no criterion flipped. It is **not** justified to conclude that
+trainability makes no difference in general, or that the A-01 null is
+conclusively training-independent. A-03 addresses both: genuinely
+sequential tasks (delayed cue, angular integration, temporal XOR,
+noisy evidence accumulation), validation-**loss**-based checkpointing,
+and direct measurement of how much the edge gains actually changed.

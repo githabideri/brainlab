@@ -207,3 +207,12 @@ role). Report date: 2026-10-12.
    on the generated tasks: the first-campaign's 3.7× is stimulus-response
    only; whether the wiring advantage survives *learning* in the
    spiking regime is the open corner of the 2×2 (dynamics × task type).
+
+## Review note — 2026-10-12 (post-hoc)
+
+Independently reviewed: the protocol and the five matched controls were
+confirmed as declared — in particular the `weight` control preserves the
+per-edge magnitude multiset (global and per-source), so this battery is
+**not** affected by the weight-distribution confound found in B-01's
+2-switch shuffle, and the zero-init frozen design makes weight handling
+explicit. No corrections; the null stands as written.

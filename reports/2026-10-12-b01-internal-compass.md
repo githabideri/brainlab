@@ -209,3 +209,77 @@ so the null is read at the realized drive level.
 - Results: `results/<variant>-seed<s>.json` (15 files, each with circuit
   file, torch/python versions, all phase metrics) + `results/summary.json`.
 - Run date 2026-10-12 (CEST); hardware role: 4-core CPU, no GPU.
+
+## Review notes — 2026-10-12 (post-hoc; the original text above is unmodified)
+
+Independent review of this experiment against the primary literature
+(Seelig & Jayaraman 2015; Turner-Evans 2017/2020; Green 2017; Hulse 2021;
+Garner 2024; Shiu 2024) and the **official FAFB v783 annotation**
+(`flyconnectome/flywire_annotations`, Schlegel et al. 2024,
+DOI 10.1038/s41586-024-07686-5) found that the declared drive and readout
+were not the populations the literature describes. The recorded results
+stand as written; the interpretation below supersedes where it conflicts.
+Full source pack: `notes/CRITICAL_B01_AUDIT.md` (private, 2026-10-12).
+
+1. **The readout population was the wrong cells.** The 278 "ring_neuron"
+   readout neurons are the official FAFB v783 **ER** types (ER1–ER6; 278 in
+   the whole brain, all from lineage `EBa1`). ER neurons are the *input
+   relay into* the compass (bulb/TuBu → ER → EB; Hulse 2021; the
+   TuBu→ER→EPG route, Garner 2024) — not the heading population. The
+   actual heading population, **EPG (E–PG)**, is a distinct set of
+   **47 EPG + 4 EPGt** wedge-localized EL columnar neurons (24/23 per
+   side, lineages DM1–4_CX) — **all 51 are present in this subgraph but
+   were not used** (Seelig & Jayaraman 2015, Nature 521:186; Turner-Evans
+   2017, eLife 6:e23496).
+2. **The drive population was the wrong cells.** The 685 ALPN
+   (CB olfactory-pathway types) drive is not the angular-velocity
+   pathway. The measured update circuit is the **shifted recurrent loop
+   E-PG → P-EN (PB) → E-PG (EL)** with P-EN1/P-EN2 showing
+   clockwise/counterclockwise signatures (Turner-Evans 2017; Green 2017,
+   Nature 546:101). The official **PEN_a(PEN1)/PEN_b(PEN2)** types
+   (20 + 22) are present in this subgraph. The navigation review's
+   "ALPN drives the compass" sentence described the *antennal-lobe →
+   C1/C2 (EIP)* route (Paff 2015) — a different pathway — and was
+   misread in the B-01 brief as a direct EL drive.
+3. **The shuffled control is confounded.** The 2-switch shuffle set every
+   edge to `psd = 1` (recorded in `data/manifest.json`) while the
+   biological circuit retained `min(PSD, 17)`. The 134k–156k vs 0
+   bulk-activity contrast therefore mixes topology, sign localization and
+   the weight distribution; it cannot be attributed to topology alone.
+   It remains a real *wiring + weights* effect; a **weight-magnitude-
+   matched shuffle** (preserving the PSD multiset, as A-01/A-02's `weight`
+   control does) is required before any attribution.
+4. **The stimulus is not reproducible from the recorded seed.** `run.py`
+   seeds NumPy (the rotation schedule) but the Poisson drives draw from
+   PyTorch's **unseeded global RNG**; paired bio/shuffle runs received
+   unpaired, unreproducible noise realizations. The declared
+   `W_DRIVE`/`W_CUE` = 15 mV were never applied — drive events were
+   delivered as the drive neurons' own outgoing synaptic weights
+   (≤ 4.675 mV/event; disclosed above).
+5. **"No optic→CC pairs in the release" is false.** Counted against the
+   **full v783 connectivity parquet** (15,091,983 pair rows; sha256 in
+   `data/manifest.json`): **434,005 optic-ish** (`optic` /
+   `visual_projection` / `visual_centrifugal` super-classes) **→
+   central-class pairs exist**, and the ER→EPG compass input is directly
+   proven (**11,847 central→EPG pairs**, dominated by ER2/ER3d/ER1/ER3w/
+   ER4d, with a reciprocal EPG→ER branch of 2,691 pairs). The zero in the
+   navigation review was an artefact of the class filter used, not of the
+   data (navigation.md corrected the same day).
+6. **The LIF implementation is faithful to Shiu 2024.** All parameters
+   (V_rest = V_reset = −52 mV, V_th = −45 mV, T_refr = 2.2 ms,
+   T_m = C·R = 20 ms, τ = 5 ms, T_delay = 1.8 ms, W_syn = 0.275 mV ×
+   sign × PSD) match the published model (Shiu et al. 2024, Nature
+   584:160, Methods, via the fly-brain toolkit) exactly. This is the
+   reusable asset for B-02.
+
+**Net.** B-01 asked "does a declared (but anatomically misplaced) drive
+activate a declared (but upstream-relay) readout" — it answered *no*, for
+the measurable reasons above (items 1, 2, 4), and its one positive
+contrast (item 3) is confounded. It does **not** test the biological
+compass. B-02 (see `experiments/README.md`) re-preflights with:
+drive = P-EN under the Turner-Evans asymmetric velocity input; readout =
+EPG/EPGt; weight-magnitude-matched and population-preserving controls;
+seeded, paired, precomputed stimulus streams; distinct stimulation
+semantics (current injection vs external synaptic events vs forced
+spikes) each unit-tested; and positive controls (calibrated EPG pulse →
+spiking; ER→EPG propagation).
