@@ -28,6 +28,19 @@ One directory per experiment. Each directory carries:
   first campaign's activity-structure result into an information
   result; reuses the same three arms and driver.
 - **scorer** (the frozen 1,536-node olfactory circuit as a decision-scoring unit: learned state drive + readout + candidate-list heads, argmax with abstention) — `scorer/`. **First measurements in (2026-10-05):** one decision ≈ 1.2 ms p50 on a 4-core CPU; the 3-class toy learns through the pure-wiring passthrough at epoch 25 (100/100). **S2 in (2026-10-05, the polis decision corpus):** 92.91% on the 141-row held-out val (100% on the stuck→wait abstain slice), zero damaging choices, ~1.1 ms/decision; the shuffled-wiring control is null (92.20) — on this tanh-rate corpus the gain is in the encoder, not the connectome. **S3 in (2026-10-06, live A/B in the polis decision loop):** 10 matched episodes, scorer on/off — the decider-tier pre-veto is a *structural* null: the 27B judge sits downstream of the hook and overwrites it (scorer 91% vs judge 53%; 5 of the judge's 7 wrong picks were already right in the scorer; zero damaging in all 80 rows). The hook is specified as a **pre-judge veto** (S4, with a pre-registered re-run prediction). Reports: `../reports/2026-10-05-scorer-first-measurements.md`, `../reports/2026-10-05-scorer-polis-s2-screen.md`, `../reports/2026-10-06-scorer-polis-s3-ab-pilot.md`; numbers: `scorer/results/`.
+- **a-01-connectome-advantage** (does the FlyWire-derived olfactory
+  wiring win on *learnable* tasks?) — `a-01-connectome-advantage/`.
+  **Done 2026-10-12: null.** Generated 3- and 6-class odor tasks, 105
+  runs: fly vs degree/sign/weight/population/disconnected controls and
+  MLP/GRU baselines, 5 seeds — every non-disconnected arm (and both
+  baselines) sits at the same ceiling (T1 clean 99.6–99.9%, T2
+  95.2–96.3%); the pre-registered criteria (a) wiring matters, (b) data
+  efficiency, (c) noise robustness all fail; the disconnected floor
+  lands at the 33.3% majority bound as predicted. Together with the S2
+  corpus null, the tanh-rate learning regime is null for the wiring
+  while the spiking stimulus-response regime is not (~3.7×, first
+  campaign) — the wiring effect is dynamics-dependent. Report:
+  `../reports/2026-10-12-a01-connectome-advantage.md`.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling
