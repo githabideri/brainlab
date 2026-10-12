@@ -1,0 +1,105 @@
+{
+ "dataset": "FlyWire FAFB v783 (2025 release; Dorkenwald et al., Nature 2024, https://www.nature.com/articles/s41586-024-07558-y)",
+ "files": {
+  "connectivity_parquet": {
+   "path_arg": "2025_Connectivity_783.parquet",
+   "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+   "rows": 15091983
+  },
+  "classification": {
+   "url": "https://raw.githubusercontent.com/snedea/flybrain/refs/heads/main/data/classification.csv.gz",
+   "sha256": "d941a74188476d60a06dfef7c5130871edbfe9fca77cda571f81f7b9726a184c",
+   "rows": 139255
+  }
+ },
+ "selection": {
+  "rule": "class in {CX, ALPN}; all proven pairs with both endpoints in set",
+  "neurons": 3563,
+  "by_class": {
+   "CX": 2878,
+   "ALPN": 685
+  },
+  "by_subclass": {
+   "columnar": 1244,
+   "NaN": 753,
+   "tangential": 611,
+   "multiglomerular": 399,
+   "ring_neuron": 278,
+   "uniglomerular": 278
+  },
+  "al_by_side": {
+   "right": 344,
+   "left": 341
+  },
+  "edges": 315268,
+  "sign_balance": {
+   "excitatory": 176210,
+   "inhibitory": 139058
+  },
+  "psd_quantiles": {
+   "0.5": 2,
+   "0.9": 10,
+   "0.95": 17,
+   "0.99": 39
+  },
+  "psd_max": 322
+ },
+ "transform": {
+  "script": "build_circuit.py (this experiment dir; version = git sha at run time)",
+  "weight_rule": "sign * min(PSD, p95=17) * 0.275 mV (p95 cap declared in README)",
+  "ring_control": {
+   "file": "ring_control.npz",
+   "sha256": "ecc506833b5054a429c3bf3bbc355f57990f7c50db17f7cc02636af04952c1c2",
+   "seed": 42,
+   "weight_table_mV": {
+    "ring_self": 0.7,
+    "ring_lateral_inh": 0.35,
+    "fbb_fbb": 0.3,
+    "fbb_ring": 0.6,
+    "fbb_drive_shifted": 0.5,
+    "drive_ring": 5.0,
+    "g_ring": 0.25
+   },
+   "note": "synthetic; matched population sizes; declared weights (README \u00a7Dynamics)"
+  },
+  "shuffles": {
+   "seed 0": {
+    "sha256": "b0fd1eaec2e8f219ec8124eb16e38c5e5002a01ebbdac2ef4c107716cccfad12",
+    "method": "2-switch chain",
+    "attempts": 712600,
+    "accepted": 603987,
+    "accepted_frac": 0.848
+   },
+   "seed 1": {
+    "sha256": "227ff175b646150bffb52fbf4aea888a03786c472240fa46025574b82402d175",
+    "method": "2-switch chain",
+    "attempts": 712600,
+    "accepted": 603747,
+    "accepted_frac": 0.847
+   },
+   "seed 2": {
+    "sha256": "6076ee4782b4a5e551212e16f72e4e9cfa6238e04243b8f83c06c20c63d10eec",
+    "method": "2-switch chain",
+    "attempts": 712600,
+    "accepted": 604370,
+    "accepted_frac": 0.848
+   },
+   "seed 3": {
+    "sha256": "d45a3707c6025ebc6287bb3deb0a8cd8864de61f810b9e4f3ad9d806452b9f2f",
+    "method": "2-switch chain",
+    "attempts": 712600,
+    "accepted": 604711,
+    "accepted_frac": 0.849
+   },
+   "seed 4": {
+    "sha256": "1dafac9cbce82ba8dc6d207c62843c3a7b3284bbb14101e7a6cb98500263a267",
+    "method": "2-switch chain",
+    "attempts": 712600,
+    "accepted": 603991,
+    "accepted_frac": 0.848
+   },
+   "note": "2-switch chain (Micali\u2013Spirakis style); preserved: in/out degree per node, edge count, global sign counts; broken: population pairing, per-node sign balance, PSD magnitudes (all 1)"
+  }
+ },
+ "elapsed_s": 37.7
+}
