@@ -1,0 +1,120 @@
+{
+  "experiment": "a-01-connectome-advantage",
+  "circuit": {
+    "dataset": "FlyWire FAFB v783 (via FlyBridge public atlas, MIT)",
+    "entry": "circuits/flywire-fafb-olfactory-1536.md",
+    "sha256": "ef6a6c1dd520b461b3beaca3859f0c5de4fb3fccb94336c180016d6ef0017227",
+    "verified": true
+  },
+  "controls": {
+    "degree": {
+      "control": "degree",
+      "seed": 20261013,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "edge-magnitude multiset"
+      ],
+      "breaks": [
+        "specific source->target pairing",
+        "per-source magnitude profile",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "8ca4d58ef7ef0084b1f229a72f1c2de453eb7b091493395e7af6223c4f3f43da"
+    },
+    "sign": {
+      "control": "sign",
+      "seed": 20261014,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per-node E/I balance (in and out)",
+        "per-source outgoing magnitude multiset"
+      ],
+      "breaks": [
+        "specific source->target pairing"
+      ],
+      "edge_sha256": "b4e51fab2a1de7da96a6cdd84afa8c97b1e943e215e1a89960a87aeb5a8ff1be"
+    },
+    "weight": {
+      "control": "weight",
+      "seed": 20261015,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per-edge magnitude multiset (global and per-source outgoing)"
+      ],
+      "breaks": [
+        "specific source->target pairing of strong edges",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "177b44606356ddc68bea6fefdb97519f7e0a8f0ab31ad8ff29e9e347cc194d2f"
+    },
+    "population": {
+      "control": "population",
+      "seed": 20261016,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per population-pair edge counts",
+        "per-block magnitude multiset"
+      ],
+      "breaks": [
+        "node-level source->target pairing",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "062289318fcbdc9f4217dd15be55d9684f31987e56339696b03680c62d3a6426"
+    },
+    "disconnected": {
+      "control": "disconnected",
+      "seed": null,
+      "preserves": [
+        "nodes only"
+      ],
+      "breaks": [
+        "all edges (the readout sees no circuit activity -> majority-class floor)"
+      ],
+      "edge_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "master_seed": 20261012,
+  "run_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "tasks": {
+    "T1": {
+      "n_classes": 3,
+      "n_total": 2048,
+      "n_test": 1024,
+      "declared": "generated (random prototypes + gaussian noise)"
+    },
+    "T2": {
+      "n_classes": 6,
+      "n_total": 2048,
+      "n_test": 1024,
+      "declared": "generated (random prototypes + gaussian noise)"
+    }
+  },
+  "noise_levels": [
+    0.0,
+    0.75,
+    1.5
+  ],
+  "epoch_cap": 300,
+  "patience": 30,
+  "batch": 256,
+  "lr": 0.0025,
+  "data_fractions": [
+    1.0,
+    0.5,
+    0.1
+  ],
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "git_head": "f7f4caae5395a254e0a68e53b98c8a38cd57ca08"
+}

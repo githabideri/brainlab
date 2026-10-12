@@ -1,0 +1,26 @@
+{
+  "arm": "population",
+  "task": "T2",
+  "seed": 102,
+  "data_fraction": 1.0,
+  "n_classes": 6,
+  "n_train": 922,
+  "n_internal_val": 102,
+  "n_test": 1024,
+  "params_trained": 185519,
+  "held_out": {
+    "sigma_000": 0.953125,
+    "sigma_075": 0.837890625,
+    "sigma_150": 0.64453125
+  },
+  "train_acc": 0.9837,
+  "internal_val_best": 1.0,
+  "epochs_run": 35,
+  "early_stopped": true,
+  "wall_s": 197.8,
+  "peak_rss_mb": 1033,
+  "weights_sha256": "4653b4878dfdae26c328a44ddd6ab2fadbe3b76e0fd3f88390bf21c79fb73dce",
+  "torch_version": "2.14.1+cu130",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "experiment": "a-01-connectome-advantage"
+}
