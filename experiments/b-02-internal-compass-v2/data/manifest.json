@@ -1,0 +1,108 @@
+{
+ "experiment": "b-02-internal-compass-v2",
+ "stage": "0 (anatomical preflight)",
+ "dataset": "FlyWire FAFB v783 (female adult brain; Dorkenwald et al., Nature 2024, https://www.nature.com/articles/s41586-024-07558-y); official FAFB v783 annotation (flyconnectome/flywire_annotations, Schlegel et al., Nature 2024, DOI 10.1038/s41586-024-07686-5)",
+ "files": {
+  "connectivity_parquet": {
+   "basename": "2025_Connectivity_783.parquet",
+   "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+   "rows": 15091983
+  },
+  "classification_csv": {
+   "url": "https://raw.githubusercontent.com/snedea/flybrain/refs/heads/main/data/classification.csv.gz",
+   "sha256": "d941a74188476d60a06dfef7c5130871edbfe9fca77cda571f81f7b9726a184c",
+   "rows": 139255,
+   "note": "same file/hash as B-01; provides the CX/ALPN split"
+  },
+  "annotation_tsv": {
+   "basename": "flywire_annotations_783.tsv",
+   "sha256": "b214970b55d2fbe0853bba536fdcb9e28730f4eb7ab06f600491df795da683cd",
+   "rows": 139248,
+   "join_key": "root_id (supervoxel_id does not match parquet ids)"
+  }
+ },
+ "selection": {
+  "rule": "node set = flybrain classification class == CX (exactly the B-01 subgraph minus ALPN); all proven pairs with both endpoints in the set",
+  "neurons": 2878,
+  "edges": 300521,
+  "annotation_matched": 2868,
+  "annotation_unmatched": 10,
+  "sign_balance": {
+   "excitatory": 163537,
+   "inhibitory": 136984
+  },
+  "psd_quantiles": {
+   "0.5": 2,
+   "0.9": 10,
+   "0.95": 18,
+   "0.99": 39
+  },
+  "psd_max": 319,
+  "populations": {
+   "EPG": {
+    "n": 47
+   },
+   "EPGt": {
+    "n": 4
+   },
+   "PEN_a": {
+    "n": 20
+   },
+   "PEN_b": {
+    "n": 22
+   },
+   "ER": {
+    "n": 278
+   },
+   "EL": {
+    "n": 17
+   },
+   "ExR": {
+    "n": 26
+   },
+   "PEG": {
+    "n": 20
+   },
+   "Delta7": {
+    "n": 42
+   },
+   "PFL1": {
+    "n": 14
+   },
+   "PFL2": {
+    "n": 12
+   },
+   "PFL3": {
+    "n": 24
+   },
+   "PEN": {
+    "n": 42
+   },
+   "PFL": {
+    "n": 50
+   },
+   "CX_all": {
+    "n": 2878
+   }
+  },
+  "shift_loop": {
+   "EPG_EPGt_to_PEN_a": 313,
+   "EPG_EPGt_to_PEN_b": 269,
+   "PEN_a_to_EPG_EPGt": 356,
+   "PEN_b_to_EPG_EPGt": 252,
+   "EPG_EPGt_self": 535,
+   "expected (audit-manifest-2026-10-12)": {
+    "EPG_EPGt_to_PEN_a": 313,
+    "EPG_EPGt_to_PEN_b": 269,
+    "PEN_a_to_EPG_EPGt": 356,
+    "PEN_b_to_EPG_EPGt": 252
+   }
+  }
+ },
+ "transform": {
+  "script": "build_circuit.py (this directory)",
+  "weight_rule": "sign * min(PSD, p95) * 0.275 mV (p95 of THIS subgraph's PSD distribution, declared)",
+  "subgraph_file_sha256": "52081937dfc0b2df6fdfc14984cab7ca9481954557e898053e7d74a9e155ff35"
+ },
+ "elapsed_s": 18.2
+}
