@@ -57,7 +57,7 @@ paywalled, the PubMed/PMC abstract was used and the paper cited by DOI.
 | *C. elegans* | Developmental series (2020) | L1 → adult hermaphrodite | nerve ring + ventral ganglion | 162 → 180 (brain) of 218/300 | `structural`, in progress (preprint) | preprint (bioRxiv) | medium | growth, maturation of learning circuits |
 | *D. melanogaster* | FAFB (2024) | adult female | whole brain | 139,255 / ~5×10⁷ | `structural`, near-complete | CC-BY (FlyWire) | medium (subgraphs only) | memory, navigation |
 | *D. melanogaster* | MaleCNS (2026) | adult male | whole brain | 166,691 / 312M PSDs | `structural`, near-complete | via FlyWire | low–medium | male-specific circuits |
-| *D. melanogaster* | Fly hemibrain (2021) | adult, hemislice | central brain, one hemisphere | ~25,000 / ~10⁶ | `structural`, near-complete | CC-BY (Janelia FlyEM) | medium | memory, navigation |
+| *D. melanogaster* | Fly hemibrain (FlyEM release) | adult, hemislice | central brain, one hemisphere | unverified (see section) | `structural`, near-complete | CC-BY (Janelia FlyEM) | medium | memory, navigation |
 | *D. melanogaster* | First-instar larva (2023) | 1st instar | whole larval brain + cord | 3,016 / 548,000 | `structural`, complete for larva | Janelia FlyEM | medium | learning, value computation |
 | *D. melanogaster* | Functional companion (2024) | adult female | central-complex region, 2P + EM | subset of cells (see paper) | `physiological` + `structural` | Janelia / paper | medium | memory (MB), sensorimotor |
 | *Zebrafish* | Fish1 (2025) | 7 dpf larva | brain + anterior spinal cord | >180,000 somas / 30M synapses | `structural`, in progress, open platform | open access (GCS, CAVE) | low | sensory, sensorimotor, comparative |
@@ -226,23 +226,26 @@ cross-organism context and the other Drosophila releases.
    complex and mushroom bodies); otherwise as FAFB.
 9. v1.0 release (2026) — young; expect corrections.
 
-### Fly hemibrain (Shi et al. 2021)
+### Fly hemibrain (Janelia FlyEM release)
 
-1. **Organism / stage / sex.** Adult, one hemisphere of the central brain
-   (the historical "hemibrain", ~25,000 neurons, >4,000 cell types).
-2. **Coverage.** Central brain of one hemisphere — excludes parts of the
-   peripheral nerves and half the brain.
-3. **Scale / completeness.** ~25,000 neurons, ~10⁶ synapses
-   (Shi et al., *Nature* 592:123–128, 2021, doi:10.1038/s41586-020-3007-4).
-4. **What else ships.** Cell-type annotations; the substrate for many
+1. **Organism / stage / sex.** Adult, one hemisphere of the central brain.
+2. **Coverage.** Central brain of one hemisphere — excludes the peripheral
+   nerves and half the brain.
+3. **Scale / completeness.** *(unverified — a 2025-10-12 coordinator check
+   found the originally cited paper and DOI do not resolve; the neuron/synapse
+   scale needs re-verification against the FlyEM release notes before this row
+   is trusted.)* The FlyEM portal releases a hemibrain reconstruction with
+   connectivity and cell-type annotations.
+4. **What else ships.** Cell-type annotations; used as the substrate for
    circuit-level models (central complex in particular).
 5. **Access.** Janelia FlyEM (flyem.janelia.org); CC-BY; CATMAID-derived.
-6. **Cost.** Graph-level, tens–hundreds of MB.
-7. **Simulation.** Medium — the hemibrain's central complex is the most
-   modeled neuropil in the insect field.
-8. **Task fit.** Navigation (central complex) first; memory (mushroom body
+6. **Cost.** Graph-level, tens–hundreds of MB (check release before
+   downloading; budget ~2 GB on this box).
+7. **Simulation.** Medium — the central complex is the most modeled
+   neuropil in the insect field.
+8. **Task fit.** Navigation (central complex) first; memory (mushroom-body
    arm in one hemisphere).
-9. Superseded by FAFB for completeness; still the reference for some
+9. Superseded by FAFB for completeness; still a reference for some
    circuit-model work.
 
 ### First-instar larva (Winding et al. 2023)
@@ -651,10 +654,12 @@ actually runnable here*, mapped to the target computations
   of work); expect central-complex/regional releases first.
 - **Fish1 is in progress** — community proofreading is ongoing; synapse-
   level completeness will improve with versions.
-- **Unverified in this session** (flagged inline): BICCN wiring-diagram
-  release details; machine-readable data access for *Ciona* and
-  *Platynereis*; honeybee nodulus project status; Kornfeld 2017 exact
-  eLife article ID.
+- **Unverified in this session** (flagged inline): the hemibrain row's
+  original paper citation did not resolve (2026-10-12 coordinator check) and
+  was removed — the row now cites the FlyEM release with the scale marked
+  unverified; BICCN wiring-diagram release details; machine-readable data
+  access for *Ciona* and *Platynereis*; honeybee nodulus project status;
+  Kornfeld 2017 exact eLife article ID.
 - **Watch list:** FAFB residual-gap closure; MaleCNS post-v1.0
   corrections; a honeybee central-complex release; the human mesoscale
   connectome (projected "within the next decade").
@@ -689,7 +694,7 @@ Via search snippets (not full-text fetched):
 Primary papers cited (DOI in text): White 1986 (10.1098/rstb.1986.0051);
 Cook 2019 (10.1038/s41586-019-1352-7); Dorkenwald 2024
 (10.1038/s41586-024-07558-y); Berg 2026 (10.1016/j.cell.2026.08.015, via
-substrate.md); Shi 2021 (10.1038/s41586-020-3007-4); Winding 2023
+substrate.md)Winding 2023
 (10.1126/science.add9330); Petkova 2025 (bioRxiv 10.1101/2025.06.10.658982);
 Svara 2022 (10.1038/s41592-022-01621-0); Kasthuri 2015 (Cell
 162:648–661); MICrONS Consortium 2025 (10.1038/s41586-025-08790-w);
