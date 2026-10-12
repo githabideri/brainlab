@@ -33,6 +33,9 @@ class MLP(nn.Module):
     def forward(self, x):
         return self.head(self.net(x))
 
+    def trainable(self):
+        return list(self.parameters())
+
 
 class GRU(nn.Module):
     """One GRU(16 -> 256) time step -> 256-d state -> K."""
@@ -45,6 +48,9 @@ class GRU(nn.Module):
     def forward(self, x):
         h, _ = self.rnn(x.unsqueeze(1))
         return self.head(h[:, -1])
+
+    def trainable(self):
+        return list(self.parameters())
 
 
 def param_budget(model: nn.Module) -> int:
