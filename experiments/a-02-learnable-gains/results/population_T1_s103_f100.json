@@ -1,0 +1,28 @@
+{
+  "arm": "population",
+  "task": "T1",
+  "seed": 103,
+  "data_fraction": 1.0,
+  "n_classes": 3,
+  "n_train": 922,
+  "n_internal_val": 102,
+  "n_test": 1024,
+  "params_trained": 184364,
+  "per_epoch_s": 6.247,
+  "treatment": "trainable edge gains + per-node leaks + biases (zero-init: gain 1.0, leak 0.5, bias 0), topology + base magnitudes frozen",
+  "held_out": {
+    "sigma_000": 0.998046875,
+    "sigma_075": 0.966796875,
+    "sigma_150": 0.82421875
+  },
+  "train_acc": 0.9957,
+  "internal_val_best": 1.0,
+  "epochs_run": 31,
+  "early_stopped": true,
+  "wall_s": 193.6,
+  "peak_rss_mb": 1065,
+  "weights_sha256": "fa5d35870da33e26a9935c7cd448f5e76e0da2e454af2e76cd61f21f38cab788",
+  "torch_version": "2.14.1+cu130",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "experiment": "a-02-learnable-gains"
+}
