@@ -1,0 +1,253 @@
+# A-03 — spiking + learning on sequential tasks (design lane)
+
+*Pre-registration: this README (question, tasks, dynamics, learning rule,
+controls, seeds, grid, acceptance criteria) is frozen BEFORE any A-03 run.
+Changes after the first evaluation are findings to report, not silent
+corrections. A-03 is the open corner of the campaign 2×2 grid —
+dynamics (tanh-rate vs spiking) × learning (frozen vs trainable) — on
+tasks that **cannot saturate**.*
+
+**Why these tasks.** A-01 (frozen, tanh-rate) and A-02 (trainable, tanh-rate)
+both used 16-d Gaussian-blob classification that near-saturates (≈99.8%
+clean held-out accuracy), so "no difference" was underpowered there, and
+A-02's checkpoint rule (first internal-val *accuracy* maximum) discards any
+later learning. The external review of A-02 therefore qualified its
+"stronger null". A-03 removes both caveats: (1) tasks whose achievable
+ceiling is *provably below 1* (noise floor in the input, integration over
+time, a past cue that must be held), so headroom exists for a wiring
+effect to appear; (2) validation-**loss** checkpointing with full loss
+trajectories; (3) mandatory measurement of *how much* learning changed the
+wiring (Δw per edge, per arm) — the review required the report to answer
+"how much did learning actually change the wiring", not just "did accuracy
+change".
+
+**Circuit.** `flywire-fafb-olfactory-1536`
+([`../../circuits/flywire-fafb-olfactory-1536.md`](../../circuits/flywire-fafb-olfactory-1536.md)):
+1,536 nodes (≤ the 2,048-node lane cap), 42,921 signed edges (FlyWire FAFB
+v783 via the public FlyBridge atlas, MIT); 256 sensory (OLF_ORN_FOOD) drive
+nodes, 384 readout nodes (MB-output + lateral-horn appositions). The
+staged copy is verified at sha256
+`ef6a6c1dd520b461b3beaca3859f0c5de4fb3fccb94336c180016d6ef0017227` before
+any run; the hash is recorded in `results/manifest.json`.
+
+**Dynamics & learning (the design decisions).**
+
+Two dynamics arms; the learning treatment is the *declared* one per
+regime, identical for every wiring arm within a dynamics:
+
+| Arm | Dynamics | Learning |
+|---|---|---|
+| `tanh` | A-02's tanh-rate core, run **sequentially** (persistent hidden state across trial steps; 4 internal propagation steps per input step — BPTT) | **A-02 treatment**: edge gains (42,921, zero-init → gain 1.0), per-node leak (1,536 → 0.5), per-node bias (1,536 → 0) plus encoder/drive/readout/head all trainable; topology + base magnitudes frozen. **Checkpoint = best internal-val LOSS (never accuracy)**, patience 5, epoch cap 20. Full per-epoch train/val loss trajectories recorded. **Δw recorder mandatory** (below). |
+| `spike` | `lif.py` **verbatim from `../b-01-internal-compass/lif.py`** — the Shiu et al. 2024 model (v0 = v_rst = −52 mV, v_th = −45 mV, τ_m = 20 ms, synaptic current τ = 5 ms, 1.8 ms = 2-step delay, 2.2 ms refractory; spike-driven, O(delivered spikes × fan-out)) | **B-01 treatment**: circuit frozen (no learning in the spiking network); the only learned object is a linear ridge readout (α = 1.0, no tuning). **Δw = 0 by construction** — recorded explicitly, so the "how much did learning change the wiring" question is answered per arm with a real number on both sides. |
+
+*Rejected alternatives (recorded):* (i) surrogate-gradient learning of LIF
+weights (ATan-family): `lif.py` is event-driven and not differentiable;
+rewriting it into a batched differentiable simulator is a new simulator,
+out of this lane's scope, and B-02 Stage 1 is differentially testing the
+pinned `lif.py` anyway; (ii) reward-modulated plasticity (STDP): no
+standard in-ecosystem reference implementation, would be a third new
+mechanism on top of two dynamics; (iii) a *frozen* tanh arm: A-01 already
+covers frozen-tanh; A-03's job is the learning corner. The two arms
+therefore answer the 2×2 as: `tanh` = "learning, rate dynamics", `spike` =
+"spiking dynamics, learning at the readout" — the last unmeasured corner
+pair. **Dependency note:** the spike arm pins `lif.py` by sha256
+(recorded in the manifest, from this repo at the branch base commit). If
+B-02 Stage 1's differential test finds and fixes a defect in `lif.py`,
+A-03's spike results must be re-verified against the fixed file before
+publication; the report carries this as an explicit open dependency.
+
+**Δw measurement (mandatory per the A-02 review).** Every `tanh` run
+records, at the checkpointed state: per-edge Δw_eff = w_eff(final) −
+w_eff(initial) with w_eff = base_magnitude · sign · 2·σ(gain) (zero-init
+⇒ w_eff(initial) = base·sign); per-node Δleak, Δbias. Compact stats in the
+run JSON (mean, std, mean/max |Δw|, fraction of edges with |Δw| > 1e-3
+and 1e-2, correlation of |Δw| with base magnitude, top-20 edges by |Δw|);
+raw arrays (float32 npz, sha256-recorded) under `results/dw/`.
+Interpretation threshold (pre-registered): a cell's mean
+|Δw| / mean|w_init| **> 0.1** is "substantial rewiring"; below is
+"marginal" — the number is reported either way. The `spike` arm records
+the zero array and its stats (all zeros); this is the designed answer to
+the same question in that regime, not an omission.
+
+**Tasks (generated, declared — all three cannot saturate).** Sequences of
+T discrete input steps; per-trial batched; one task = one stimulus stream,
+**identical across all arms** (same trials, same order; per-arm trial
+*counts* may differ as declared). Master seed **20261020** (task
+generation), **20261021** (ceiling Monte Carlo), run seeds
+**100–104** (model init + data split — same convention as A-01/A-02).
+Held-out test fold: 512 trials per task, first 512 of the master-seed
+trial permutation, **never** used for training or selection. Internal val:
+10% of the training fold, split by the run seed.
+
+- **T-del — delayed-cue report.** T = 8 steps, K = 4 classes. Cue onset
+  at step τ ~ U{1, 2, 3} (after 1–3 steps of floor noise); the cue is
+  one-hot(c) + N(0, 0.4²·I₄); all other steps are floor noise
+  N(0, 0.15²·I₄); the report is required at the fixed final step 7.
+  Metric: report accuracy (chance 0.25). **Ceiling** (computed at init,
+  fixed MC seed, recorded in the manifest): Bayes accuracy of a
+  *perfect-memory* decoder of the noisy cue observation alone < 1 — so
+  the top of the table is provably below 1, and the fixed report step
+  makes the last input useless (floor noise) — the cue must be *held*
+  for 4–6 steps through the recurrent state.
+- **T-ang — angular integration** (the rate-regime echo of B-02's task).
+  T = 10 steps. Angular velocity ω ~ U[−180, +180] °/step, constant per
+  trial; input x_t = ω/360 + N(0, 0.05²) (a rate code in turns/step).
+  Target: (sin H, cos H) with H = 360°·Σ x_true, mod 360. Metric:
+  circular RMCE (degrees) + R² on (sin, cos). **Ceiling:** the optimal
+  linear estimator (constant-ω ⇒ average of the 10 observations) has
+  irreducible error ≈ 360°·0.05·√10 ≈ 57° ⇒ RMCE floor ≈ 40°;
+  the ceiling RMCE is computed by MC at the fixed seed. Cannot
+  saturate: even the optimal system is far from 0° error.
+- **T-xor — temporal XOR.** T = 12 steps. Underlying stream x_t ∈ {0,1},
+  i.i.d. p = 0.5; observed z_t = x_t + N(0, 0.35²), clipped to [0, 1]
+  (a rate code). Target at step t ≥ 4: y_t = x_t ⊕ x_{t−4}; reported at
+  the 8 steps 4–11. Metric: accuracy + NLL (chance 0.5). **Ceiling:**
+  Bayes accuracy of XOR given the two noisy observations (z_t, z_{t−4}),
+  computed by MC at the fixed seed, < 1.
+
+The fourth candidate, **noisy evidence accumulation**, is deliberately
+*not* implemented here: T-ang is already a noisy-evidence integrator
+(rate-coded input, integrate-over-time, ceiling < 1), so a fourth task
+would add near-duplicate cells to the budget without a new mechanism.
+This is recorded as a scope decision, not a drop under pressure.
+
+**Controls (A-01's five, verbatim; same construction, same recorded
+seeds — `controls.py` is a verbatim copy of A-01's).** The `weight`
+control preserves the per-edge magnitude multiset — the taxonomy A-01
+had and B-01 lacked; it stands.
+
+| Control | Seed | Preserves (asserted) | Breaks (intended) |
+|---|---|---|---|
+| `degree` | 20261013 | per-node in/out degree, edge count, edge-magnitude multiset | source→target pairing, per-source magnitude profile, per-node E/I balance |
+| `sign` | 20261014 | degree + per-node E/I balance (in & out), per-source outgoing magnitude multiset, edge count | specific source→target pairing |
+| `weight` | 20261015 | degree + per-edge magnitude multiset (global and per-source), edge count | per-node E/I balance, pairing of strong edges |
+| `population` | 20261016 | degree + per population-pair edge counts, per-block magnitude multiset | node-level pairing, per-node E/I balance |
+| `disconnected` | — | nodes only | all edges; null floor per task (run on **all three** tasks here, since the three tasks have different floors, unlike A-01's one task family) |
+
+A-03's unit tests assert that each control's edge-array sha256 equals the
+value recorded in A-01's `results/manifest.json` (byte-identical
+reconstruction, same seeds).
+
+**Spike-arm drive declaration (identical for every spike wiring arm;
+assumptions, not measurements).** One task step = 100 ms (dt = 1 ms);
+the LIF state resets per trial (trials are independent sequences).
+Input → 256 sensory nodes via a **fixed** master-seed random projection
+W_x (d_task × 256, Gaussian 1/√d rows — declared, identical for both
+dynamics as the input encoding); each sensory node s fires Poisson at
+r_s(t) = R0 + RMAX·clip(0, 1, (z_t,s − m_s)/(M_s − m_s)), with
+R0 = 2 Hz, RMAX = 48 Hz and m_s, M_s = min/max of z over the training
+fold (declared normalization; the B-01 convention of Poisson spike-source
+drive is used, including its disclosed deviation-5 semantics). Tonic
+depolarizing offset of 4 mV on the 384 output nodes (declared background
+drive so the readout population can stay alive; value to be confirmed by
+the pilot smoke runs — a silence finding is a finding, as in B-01).
+No drive to any other population. Readout: per-node rates (Hz) of the
+384 outputs over a 200 ms window ending at the report step(s) → ridge
+(S-del: 4-class; T-ang: (sin, cos) regression; T-xor: one binary ridge
+per report step, 8 total). Decoder training: 80% of the training fold
+(standardize, α = 1.0, no tuning); held-out evaluation on the same 512
+test trials as every other arm.
+
+**Conventional baselines (tanh regime, trainable, same interface).**
+GRU: 1 layer, 128 hidden, per-task input dim, batched over the sequence.
+MLP: feedforward on the last W steps (W = 4 for T-del/T-ang, W = 5 for
+T-xor so it can *see* both XOR operands), 256 ReLU → 256 ReLU → head —
+the declared no-long-memory comparator (for T-ang it cannot integrate the
+10-step history; that is the point of the arm).
+
+**Training protocol (identical for every arm and seed of the same
+dynamics).** Adam, lr = 2.5e-3, 4 CPU threads, `torch.manual_seed(seed)`
+for init and shuffling. `tanh`: batch 64 trials, epoch cap **20** (lane
+hard rule), early stop at patience **5** epochs without internal-val-
+**loss** improvement, best-internal-val-**loss** state kept; the per-
+epoch train/val loss trajectories are recorded in full in the run JSON.
+`spike`: circuit frozen; the ridge readout is fit once on its declared
+training windows. Held-out test fold: touched exactly **once** per model
+per task (final evaluation). Every run writes one JSON to `results/`.
+
+**Grid (pre-registered; run after this lane, by the coordinator, once
+the heavy lane is done).**
+
+- Main: wirings {fly, degree, sign, weight, population, disconnected} ×
+  tasks {T-del, T-ang, T-xor} × seeds {100…104} × dynamics {tanh (1024
+  train trials), spike (256 train trials)} = 180 runs.
+- Baselines: {GRU, MLP} × 3 tasks × 5 seeds (1024 train trials) = 30 runs.
+- **210 runs total.** Wall estimate (to be refined by the pilot sizing
+  runs below): tanh ≈ 1–3 min/run (BPTT over ≤10 steps of 4 propagations
+  of 42,921 edges, ≤20 epochs), spike ≈ 20–60 s/run, baselines ≈ 10–30 s.
+
+**Shrink ladder (pre-registered, applied in order if the pilot projection
+overruns ~4 h on a 4-core host; the final grid is recorded in the
+"Sizing outcome" section and in the report):** (1) drop `sign` +
+`weight` from both dynamics; (2) halve tanh trials (1024 → 512); (3) halve
+spike trials (256 → 128); (4) 5 → 3 seeds (criterion (a) then stands on
+"≥3 of 3"); (5) drop T-xor (the criteria then stand on T-del + T-ang;
+"generalizes across task mechanisms" becomes untestable for the
+XOR-type).
+
+**This lane runs nothing heavy (hard rule from the review).** While B-02
+is active, A-03 runs **small** jobs only: ≤ 2,048 nodes (the circuit is
+1,536), ≤ 20 epochs, **seconds per run** — the unit tests and a
+per-arm smoke/pilot (1 seed, ≤ 96 train / 32 test trials, ≤ 4 epochs),
+sized by the ladder above. Their numbers are **pilots**, labelled as
+such; the campaign grid is pre-registered and scripted (`run-all.sh`)
+but executed by the coordinator, not this lane.
+
+**Acceptance criteria (frozen; the held-out test fold is the only
+arbiter; per dynamics and per task; all 5 seeds reported, no
+cherry-picking).**
+
+- **(a) "wiring matters":** for each dynamics, `fly` beats the **best
+  control** by **>2 accuracy points in ≥4 of 5 seeds** (T-del, T-xor) or
+  **>10% lower circular RMCE** (T-ang), *and* `fly`'s mean beats both
+  conventional baselines on that task. "Best control" = highest mean
+  held-out value among the control wirings of that dynamics (tie-break:
+  population > weight > sign > degree > disconnected, as in A-01).
+- **(b) "learning changed the wiring" (new; the review's mandatory
+  question):** per (wiring, task) tanh cell: report the Δw stats
+  pre/post; **pass** if the cell's mean |Δw|/mean|w_init| > 0.1
+  (substantial rewiring); below is reported as marginal. Additionally
+  report (descriptively, no threshold): the Spearman correlation
+  between per-arm mean |Δw| and held-out performance across the six
+  wirings. The spike arm reports its (zero) Δw stats on the same
+  footing.
+- **(c) "the 2×2":** for each task, the fly-vs-best-control gap in the
+  tanh arm vs the gap in the spike arm; any sign difference (an effect
+  that appears or disappears when the dynamics change) is the headline
+  result, reported with per-seed distributions. Nulls in either arm are
+  reported on equal footing.
+- **(d) "ceiling efficiency":** per cell, efficiency =
+  (model − chance)/(ceiling − chance) (accuracy tasks) and
+  ceil_RMCE/model_RMCE (T-ang), so the results are stated relative to
+  the provable optimum, not relative to 1.
+
+A null is a valid, publishable outcome: "on these non-saturating
+sequential tasks, the wiring added no measurable signal beyond its
+matched controls — in either dynamics, with or without learning" is a
+stronger result than any of A-01/A-02's nulls, because here a wiring
+effect *could have appeared*.
+
+**What a pass does not establish.** Biological function of the olfactory
+circuit; that the Shiu-2024 parameters are the right spiking model for
+this circuit (they are the standard model on a graph, per
+`docs/substrate.md`); that the tanh dynamics are the right rate model;
+that the fly is "faithfully emulated" (it is a graph plus assumed
+biophysics and, in the tanh arm, learned gains on top); or anything
+beyond "driven and read out this way, on these generated tasks".
+
+**Files.** `README.md` (this pre-registration + sizing outcome),
+`tasks.py` (the three generators + ceilings, master-seed-determined),
+`controls.py` (verbatim A-01 copy), `circuit.py` (A-02 dynamics,
+sequential/persistent-hidden variant with the Δw accessor), `lif.py`
+(verbatim B-01 copy, pinned by sha256), `model.py` (tanh seq model,
+GRU/MLP baselines, spike-arm drive + ridge readout), `learner.py`
+(val-loss checkpointing, loss trajectories, Δw recorder), `run.py`
+(driver: pilot/main/summary/manifest phases), `run-all.sh`
+(pre-registered campaign budget + hash check), `tests/test_a03.py`
+(unit tests, small runs only), `results/` (per-run JSON,
+`summary.json`, `manifest.json`, `results/dw/` Δw npz files).
+
+---
+
+*Section added by the sizing procedure pre-registered above ("Sizing
+outcome") after the pilot runs; everything above is as frozen.*
