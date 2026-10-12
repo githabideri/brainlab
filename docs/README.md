@@ -8,6 +8,7 @@ carry) a supersede pointer.
 | Doc | Owns |
 |-----|------|
 | [substrate.md](substrate.md) | What brains exist as open data, the modelling standard, how a circuit file is built and provenanced |
+| [datasets.md](datasets.md) | The multi-organism dataset catalog: what nervous systems exist as data, in which status category, and the prioritized shortlist for this lab's hardware |
 | [evaluation.md](evaluation.md) | How a claim is earned here: frozen checks, retention, negative labels, worksheets, hidden exams, the control-wiring bar |
 | [benchmarks.md](benchmarks.md) | How a number is measured: the decision-throughput protocol, the hardware envelope table |
 | [architecture.md](architecture.md) | The minimal organism-independent contract: circuit records, control taxonomy, the run contract, task interface |
@@ -15,7 +16,9 @@ carry) a supersede pointer.
 ## Fact ownership (one owner per volatile fact class)
 
 - **Dataset facts** (neuron/synapse counts, versions, hashes) →
-  `substrate.md` + `../circuits/README.md` index rows only.
+  `substrate.md` + `../circuits/README.md` index rows only (Drosophila);
+  multi-organism catalog rows → `datasets.md` (which references substrate.md,
+  never restates its numbers).
 - **Measured performance** (ms/step, decisions/s, per hardware) →
   `benchmarks.md` table; reports cite it, never restate drifting copies.
 - **Protocol parameters** (check counts, pass thresholds) → `evaluation.md`.
