@@ -249,5 +249,91 @@ GRU/MLP baselines, spike-arm drive + ridge readout), `learner.py`
 
 ---
 
-*Section added by the sizing procedure pre-registered above ("Sizing
-outcome") after the pilot runs; everything above is as frozen.*
+## Sizing outcome (added by the declared pilot procedure; the frozen
+## text above is unchanged)
+
+The frozen declaration says the pilot "confirms or refutes activity — a
+silence finding is a finding". The declared drive/mapping was probed on
+a few trials before the official pilot grid, and the probe found the
+frozen values produce a **silent network**. Measured, not assumed:
+
+1. **The frozen 0.275 mV mapping (per-target-normalized log1p|w| ×
+   0.275) is dynamically inert on this circuit.** The flywire signed
+   weights are small integers (|w| ≈ 1–14); per-target normalization
+   across ~28 inputs crushes each edge to ~0.01 mV. Measured over a
+   full T-del trial (1,536 nodes, 42,921 edges, declared Poisson
+   sensory drive): max g received by **any** node = 0.045 mV; **zero
+   spikes anywhere**; all 384 readout outputs silent. (B-01's mapping
+   was sign × min(PSD, p95=17) × 0.275 on *PSD counts* — up to 4.7 mV
+   per edge — no per-target normalization; the regime, not the
+   formula, is what B-01 used.)
+2. **The frozen 4 mV readout tonic cannot fire the readout population
+   at all.** v_ss = v0 + tonic = −48 mV < v_th = −45 mV, even before
+   any synaptic input; with g = 0 the outputs are permanently
+   sub-threshold. A readout that cannot fire has no rate to read out.
+3. **Performance (measured, not projected):** one propagation on the
+   42,921-edge circuit costs ~95 ms at batch 64 (48 ms edge scatter +
+   35 ms tanh/leak update + 12 ms allocation) — batch size does not
+   amortize it (scatter cost scales with B). 4 propagations per input
+   step (A-02's value) ≈ 0.75 s/step → a full main tanh run would be
+   ~30–60 min each and the 210-run grid ≈ 70 h: **~5x over the
+   pre-registered 10–15 h projection** (which had assumed 1–3 min/run).
+   The verbatim LIF loop is 10x faster single-threaded than at the
+   campaign's 4 threads (1,536-element kernels are launch-bound; 71 µs
+   vs 820 µs per step). One spike trial (800 ms sim, 134k spikes under
+   the corrected mapping) = 0.71 s single-threaded → a main spike run
+   (640 trials) ≈ 8 min; the 90 spike runs ≈ 12 h.
+4. **`lif.py` (verbatim B-01 pin) has a latent bug in `reset()`:**
+   `self.v.fill_(self.v0v)` with a 1-d value tensor raises on any call.
+   B-01's single-session run never called `reset()`, so the bug never
+   fired there. A-03 needs a per-trial reset; it does **not** patch
+   the pinned file — the per-trial reset is a fresh `LIFNet`
+   construction (constructor initial state = B-01's initial state). The
+   defect is handed to B-02 Stage 1 as a logged finding; if B-02 fixes
+   `lif.py`, A-03's spike results are re-verified against the fixed
+   file (the declared open dependency, now with a concrete instance).
+
+**Declared corrections in force for the official pilot and the grid**
+(declared *because the frozen values were measured inert*; this is the
+purpose of the pilot, recorded here so the frozen text stays the
+frozen text):
+
+- efficacy: **sign × min(log1p|w|, c) × k with the p95 per-edge effect
+  scaled to 4.7 mV** (B-01's own capped maximum: min(PSD, p95=17) ×
+  0.275 mV) — the same efficacy *regime* as B-01, not its PSD formula
+  (this circuit file is the signed atlas, A-01's).
+- readout tonic: **10 mV** on the 384 output nodes (v_ss = −42 mV, a
+  live ~refractory-limited population; the ridge standardization
+  removes the baseline). Verified live under the corrected mapping:
+  134,217 spikes in one T-del trial (520 sensory, 35k outputs), 351 of
+  384 outputs receiving synaptic input.
+- **tanh propagations: 2 per input step instead of A-02's 4** (the
+  minimal revision that brings the grid back inside the pre-registered
+  budget; 2 settling propagations per 100 ms step, T × 2 propagations
+  per trial — more total depth than A-02's 4-per-decision, distributed
+  over time). Measured: a batch of 64 (T-ang) drops from 15 s (4-prop)
+  to ~6 s (2-prop); unit-test tanh smoke 60 s → 4.7 s.
+- per-trial reset = fresh `LIFNet` construction (see finding 4).
+- LIF loop runs single-threaded (finding 3); the tanh arm keeps 4
+  threads.
+- **shrink-ladder step (2) applied to the tanh arm: 256 → 128 train
+  trials** (declared application of the pre-registered ladder; the
+  held-out fold is untouched). With 2-prop: a main tanh run ≈
+  4–6 min, so the 90 tanh runs ≈ 7 h; with the spike arm ≈ 12 h:
+  **full 210-run grid ≈ 19 h of background wall.** The pre-registered
+  "10–15 h" projection was based on the (wrong, projected) "1–3 min
+  per tanh run" estimate and is superseded by this measurement —
+  the lane's hard rules (≤2048 nodes, ≤20 epochs, no heavy runs while
+  B-02 is active) are still met: the grid is a *scheduled*
+  post-heavy-lane campaign on background CPUs, exactly the class of
+  run the brief anticipates ("this is a scheduled campaign, not a
+  same-day run"), and each individual run is minutes, not hours.
+
+**Unit tests:** 15/15 pass (checkpoint rule incl. the exact A-02
+failure shape; task determinism/split/ceilings; controls byte-identical
+to A-01 on the staged circuit; SeqCircuit persistence; Δw recorder;
+LIF mechanics; spike + tanh pipeline smokes; driver hash check).
+
+**Official pilot status:** *running via `run.py --phase pilot` (18
+runs, 1 seed; per-run wall in each JSON under results/) — filled in
+below on completion.*
