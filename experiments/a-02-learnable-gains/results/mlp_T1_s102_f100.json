@@ -1,0 +1,28 @@
+{
+  "arm": "mlp",
+  "task": "T1",
+  "seed": 102,
+  "data_fraction": 1.0,
+  "n_classes": 3,
+  "n_train": 922,
+  "n_internal_val": 102,
+  "n_test": 1024,
+  "params_trained": 272899,
+  "per_epoch_s": 0.098,
+  "treatment": "no circuit (baseline)",
+  "held_out": {
+    "sigma_000": 0.998046875,
+    "sigma_075": 0.9736328125,
+    "sigma_150": 0.853515625
+  },
+  "train_acc": 0.9989,
+  "internal_val_best": 1.0,
+  "epochs_run": 31,
+  "early_stopped": true,
+  "wall_s": 3.0,
+  "peak_rss_mb": 1065,
+  "weights_sha256": "0e94db6b0f3f8efb26d413d1eacb6eac428d53a406297500caa3e8879db126bd",
+  "torch_version": "2.14.1+cu130",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "experiment": "a-02-learnable-gains"
+}

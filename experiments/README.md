@@ -41,6 +41,20 @@ One directory per experiment. Each directory carries:
   while the spiking stimulus-response regime is not (~3.7×, first
   campaign) — the wiring effect is dynamics-dependent. Report:
   `../reports/2026-10-12-a01-connectome-advantage.md`.
+- **a-02-learnable-gains** (same battery, FlyBridge full-curriculum
+treatment: the 42,921 edge gains + leaks + biases **trainable**
+instead of frozen) — `a-02-learnable-gains/`. **Done 2026-10-12:
+stronger null.** 45 runs (T1; the pre-registered shrink ladder
+removed T2 and sign/weight on the 3 h budget): no criterion flipped
+vs A-01 — (a) wiring matters fail (0/5 seeds >2 pp over best control
+degree; mean below MLP/GRU), (b) data efficiency fail (fly@10% 0.9855
+< degree@50% 0.9975), (c) noise robustness fail (16.9 pp drop vs
+15.2); same-seed frozen→trainable deltas all inside the per-seed
+spread. The A-01 null was not a freeze artifact: on this task family
+and dynamics the wiring carries no learnable signal even when it may
+fit its own weights. The MLP/GRU re-runs replicate A-01 exactly
+(GRU bit-identical), the disconnected floor is unchanged. Report:
+`../reports/2026-10-12-a02-learnable-gains.md`.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling
