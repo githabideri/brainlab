@@ -1,0 +1,84 @@
+{
+ "variant": "ring",
+ "seed": 2,
+ "circuit_file": "ring_control.npz",
+ "n_neurons": 3563,
+ "n_el": 278,
+ "torch": "2.14.1+cu130",
+ "python": "3.12.3",
+ "total_spikes": 2097773,
+ "elapsed_s": 489.8,
+ "decoder": {
+  "held_out_R2": -44.5857951036499,
+  "held_out_mae_deg": 110.6131958556017,
+  "n_train_windows": 50,
+  "n_hold_windows": 50
+ },
+ "c1": {
+  "drift_deg_s": -49.288439206858946,
+  "abs_drift_deg_s": 49.288439206858946,
+  "stability_frac": 0.19,
+  "mean_abs_err_deg": 61.51439656381569,
+  "el_mean_hz": 35.72906474820144,
+  "silent": false
+ },
+ "c2": {
+  "drift_deg_s": 42.226364568168414,
+  "abs_drift_deg_s": 42.226364568168414,
+  "stability_frac": 0.08333333333333333,
+  "mean_abs_err_deg": 85.07920438937643,
+  "el_mean_hz": 84.85601518784972,
+  "silent": false,
+  "segment_errs_deg": [
+   74.61,
+   96.09,
+   88.25,
+   83.95,
+   88.44,
+   79.14
+  ]
+ },
+ "c3": {
+  "drift_deg_s": -1.006706819259781,
+  "abs_drift_deg_s": 1.006706819259781,
+  "stability_frac": 0.025,
+  "mean_abs_err_deg": 125.61459091894032,
+  "el_mean_hz": 34.16654676258993,
+  "silent": false
+ },
+ "c4": {
+  "recovery_s": null,
+  "final_err_deg": 171.0671216044101,
+  "err_series_deg": [
+   34.0,
+   29.0,
+   43.1,
+   53.9,
+   90.9,
+   44.1,
+   85.8,
+   77.0,
+   14.5,
+   88.9,
+   99.1,
+   27.0,
+   25.9,
+   27.3,
+   47.6,
+   32.8,
+   80.4,
+   47.4,
+   78.0,
+   76.3
+  ],
+  "pre_cue_err_deg": 33.9931241850266
+ },
+ "c4_drift_phase": {
+  "drift_deg_s": -5.758403848060764,
+  "abs_drift_deg_s": 5.758403848060764,
+  "stability_frac": 0.05,
+  "mean_abs_err_deg": 126.47954518829064,
+  "el_mean_hz": 34.02158273381295,
+  "silent": false
+ }
+}

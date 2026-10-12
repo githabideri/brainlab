@@ -73,12 +73,12 @@ def load_circuit(args, data):
         n = int(z["n"])
         w = (sign * np.clip(psd, 1, PSD_CAP) * W_SYN).astype(np.float32)
         cl = pd.read_csv(os.path.join(data, "neurons.csv"))
-        el = np.where(cl["sub_class"].to_numpy() == "ring_neuron")[0]
-        al = np.where(cl["class"].to_numpy() == "ALPN")[0]
-        pos = np.where(cl["class"].to_numpy() == "ALPN"
-                       & (cl["side"].to_numpy() == "left"))[0]
-        neg = np.where(cl["class"].to_numpy() == "ALPN"
-                       & (cl["side"].to_numpy() == "right"))[0]
+        sub_cls = np.asarray(cl["sub_class"].to_list())
+        cls = np.asarray(cl["class"].to_list())
+        side = np.asarray(cl["side"].to_list())
+        el = np.where(sub_cls == "ring_neuron")[0]
+        pos = np.where((cls == "ALPN") & (side == "left"))[0]
+        neg = np.where((cls == "ALPN") & (side == "right"))[0]
         file = "circuit_cc_b01.npz"
     elif args.variant == "shuffle":
         z = np.load(os.path.join(data, f"circuit_shuffle_{args.seed}.npz"))
@@ -86,11 +86,12 @@ def load_circuit(args, data):
         n = int(z["n"])
         w = (sign * np.clip(psd, 1, PSD_CAP) * W_SYN).astype(np.float32)
         cl = pd.read_csv(os.path.join(data, "neurons.csv"))
-        el = np.where(cl["sub_class"].to_numpy() == "ring_neuron")[0]
-        pos = np.where(cl["class"].to_numpy() == "ALPN"
-                       & (cl["side"].to_numpy() == "left"))[0]
-        neg = np.where(cl["class"].to_numpy() == "ALPN"
-                       & (cl["side"].to_numpy() == "right"))[0]
+        sub_cls = np.asarray(cl["sub_class"].to_list())
+        cls = np.asarray(cl["class"].to_list())
+        side = np.asarray(cl["side"].to_list())
+        el = np.where(sub_cls == "ring_neuron")[0]
+        pos = np.where((cls == "ALPN") & (side == "left"))[0]
+        neg = np.where((cls == "ALPN") & (side == "right"))[0]
         file = f"circuit_shuffle_{args.seed}.npz"
     elif args.variant == "ring":
         z = np.load(os.path.join(data, "ring_control.npz"))
