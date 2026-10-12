@@ -1,0 +1,52 @@
+{
+ "params": {
+  "W_SYN": 0.275,
+  "PSD_CAP": 17,
+  "tonic_ring_mV": 6.0,
+  "duration_s": 10.0,
+  "window_ms": 5.0,
+  "drive": "precomputed B-02 paired streams, B-01-style delivery (P-EN cells spike externally; measured edges carry it)",
+  "acceptance": "dominant frequency 45-75 Hz in every seed (B-01 observed 47-77, mean 56)"
+ },
+ "seeds": {
+  "0": {
+   "freq": 33.1,
+   "peak_frac": 0.007,
+   "mean_hz": 196.5,
+   "ring_spikes_10s": 1965,
+   "spikes_all_neurons": 4746
+  },
+  "1": {
+   "freq": 15.0,
+   "peak_frac": 0.007,
+   "mean_hz": 271.2,
+   "ring_spikes_10s": 2712,
+   "spikes_all_neurons": 7645
+  },
+  "2": {
+   "freq": 77.9,
+   "peak_frac": 0.006,
+   "mean_hz": 418.5,
+   "ring_spikes_10s": 4185,
+   "spikes_all_neurons": 14146
+  },
+  "3": {
+   "freq": 59.900000000000006,
+   "peak_frac": 0.009,
+   "mean_hz": 322.3,
+   "ring_spikes_10s": 3223,
+   "spikes_all_neurons": 9952
+  },
+  "4": {
+   "freq": 76.80000000000001,
+   "peak_frac": 0.009,
+   "mean_hz": 303.5,
+   "ring_spikes_10s": 3035,
+   "spikes_all_neurons": 9414
+  }
+ },
+ "all_in_band": false,
+ "mean_freq_hz": 52.5,
+ "sha256_of_output": "5e82e04b16702338578753aa9087a78909c2e0dacb29af9dcb0b7d471e5bcc56",
+ "elapsed_s": 87.5
+}
