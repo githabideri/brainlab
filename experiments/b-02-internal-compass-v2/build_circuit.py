@@ -171,14 +171,15 @@ def main():
         assert pop_idx[k], k
     pmap = {}
     for k, idx in pop_idx.items():
-        pmap[k] = dict(
-            n=len(idx),
-            idx=idx,
-            root_ids=[int(x) for x in nodes["flywire_id"][idx]],
-            sides={str(k2): int(v2) for k2, v2 in
-                   nodes["side"][idx].value_counts(dropna=False).items()}
-                    if len(idx) else {},
-        )
+        # per-cell side labels, aligned with `idx` (drives are split by
+        # these); counts kept for quick inspection
+        sl = [str(x) for x in nodes["side"][idx]] if len(idx) else []
+        sc = {str(k2): int(v2) for k2, v2 in
+              nodes["side"][idx].value_counts(dropna=False).items()} \
+            if len(idx) else {}
+        pmap[k] = dict(n=len(idx), idx=idx,
+                       root_ids=[int(x) for x in nodes["flywire_id"][idx]],
+                       sides=sl, side_counts=sc)
     with open(os.path.join(args.out, "populations.json"), "w") as f:
         json.dump(pmap, f, indent=1)
     print("populations:", {k: p["n"] for k, p in pmap.items()})
