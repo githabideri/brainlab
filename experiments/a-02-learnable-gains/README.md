@@ -192,3 +192,43 @@ controls on this task family.
 invariants), `tasks.py` (verbatim A-01), `baselines.py` (verbatim
 A-01), `run.py` (grid driver + summary/manifest), `results/`
 (per-run JSON, `summary.json` incl. A-01 reference, `manifest.json`).
+
+---
+
+## Sizing outcome (recorded after the sizing runs, per the pre-
+registered ladder)
+
+- **50-epoch fly/T1 benchmark:** 304.5 s wall → **6.09 s/epoch = 3.0×
+  the A-01 reference** (A-01 measured 2.06 s/epoch frozen on the same
+  box) — *below* the 4× rule, so **5 seeds stand** (step 1 not
+  triggered).
+- **Full-cap sizing run (fly/T1/s100):** early stop at **31 epochs**
+  (identical to A-01's T1 convergence; internal val reaches 1.0
+  early and the patience-30 tail is 30 flat epochs), **189.6 s wall**.
+  Held-out: 0.9980 / 0.9727 / 0.8457.
+- **Projection with measured per-run walls** (T1 circuit ≈ 190 s,
+  T2 circuit ≈ 250–280 s by A-01's T2 ratio, T1 deff ≈ 120–190 s,
+  baselines ≈ 5 s, × 1.3 shared-host factor):
+  full 105-run grid ≈ 6–7 h → over budget; drop sign+weight →
+  ≈ 5–6 h → over; drop T2-deff → ≈ 4–5 h → over; **drop T2 from
+  the main grid → ≈ 2.2 h → within budget**. (The conservative
+  ×100-epoch projection of the ladder points the same way at every
+  step; the measured per-run wall is used for the final number.)
+
+**Final grid (frozen now, before the remaining runs):**
+{fly, degree, population, disconnected-on-T1-only, MLP, GRU} × **T1**
+× seeds 100–104 (30 runs; fly/T1/s100 is the sizing run) + data-
+efficiency T1: fly@10%, fly@50%, degree@50% × 5 seeds (15 runs).
+**45 runs total.**
+
+Consequences, stated up front (they enter the report):
+- criteria (a), (c), (d) stand on T1 (as pre-registered, they are T1
+  criteria); criterion (b) stands on T1 (pre-registered on T1) — the
+  T2 clause of (b) and any T2 fly-vs-controls comparison are
+  **untestable in this run** and are reported as such; the A-01
+  frozen T2 numbers remain the T2 reference of record.
+- `sign` and `weight` are absent from the trainable grid; the
+  "best control" resolves among {degree, population, disconnected},
+  which includes A-01's actual best control (degree).
+- the 1.3× factor also covers the observed contention (a sibling
+  campaign process at ~90% of one core during sizing).
