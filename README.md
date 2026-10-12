@@ -30,6 +30,7 @@ checks, retention tests, numbers on the hardware.
 | [`docs/`](docs/README.md) | The maintained surface: the substrate (which brains exist, how they're modelled), the evaluation method (how a claim here is earned), the benchmarking method (how a number is measured) |
 | [`circuits/`](circuits/README.md) | Index of circuit files and their provenance (the "hardware" of this lab) |
 | [`experiments/`](experiments/README.md) | Runnable experiment code — one directory per experiment, each with its own protocol |
+| [`scripts/`](scripts/) | Reproducible data-audit tools (e.g. `fafb-cc-audit.py` — the executable source of the FAFB v783 CC population and connection counts; outputs a checksummed JSON manifest into `data/`) |
 | [`reports/`](reports/README.md) | Dated, frozen snapshots: what we ran, what we found, what we couldn't |
 
 ## What actually matters (current state)

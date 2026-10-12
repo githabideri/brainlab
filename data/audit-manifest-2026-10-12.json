@@ -1,0 +1,145 @@
+{
+  "audit": "fafb-v783-central-complex-populations-and-connections",
+  "date": "2026-10-12",
+  "wall_s": 34.0,
+  "inputs": {
+    "tsv": {
+      "path": "flywire_annotations_783.tsv",
+      "sha256": "b214970b55d2fbe0853bba536fdcb9e28730f4eb7ab06f600491df795da683cd",
+      "rows": 139248,
+      "source": "flyconnectome/flywire_annotations \u2014 Supplemental_file1_neuron_annotations.tsv (official FAFB v783 neuron-type annotation, CC-BY)"
+    },
+    "parquet": {
+      "path": "2025_Connectivity_783.parquet",
+      "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+      "pair_rows": 15091983,
+      "source": "FlyWire FAFB v783 connectivity release (one row per connection pair)"
+    },
+    "join_key": "root_id (stable FlyWire id); TSV supervoxel_id does NOT match parquet IDs",
+    "matched_pair_rows": 15090883
+  },
+  "filters": {
+    "optic-ish (pre super_class)": [
+      "optic",
+      "visual_projection",
+      "visual_centrifugal"
+    ],
+    "central (super_class)": "central",
+    "EPG (cell_type)": [
+      "EPG",
+      "EPGt"
+    ],
+    "ER (cell_type startswith 'ER')": [
+      "ER1",
+      "ER2",
+      "ER3a_a,ER3a_d",
+      "ER3a_b,ER3a_c",
+      "ER3d",
+      "ER3m",
+      "ER3p_a",
+      "ER3p_b",
+      "ER3w",
+      "ER4d",
+      "ER4m",
+      "ER5",
+      "ER6"
+    ]
+  },
+  "populations": {
+    "EPG": 47,
+    "EPGt": 4,
+    "PEN_a(PEN1)": 20,
+    "PEN_b(PEN2)": 22,
+    "ER_total": 278,
+    "ER_by_type": {
+      "ER1": 29,
+      "ER2": 43,
+      "ER3a_a,ER3a_d": 23,
+      "ER3a_b,ER3a_c": 14,
+      "ER3d": 47,
+      "ER3m": 15,
+      "ER3p_a": 17,
+      "ER3p_b": 5,
+      "ER3w": 25,
+      "ER4d": 24,
+      "ER4m": 11,
+      "ER5": 21,
+      "ER6": 4
+    },
+    "EL": 17,
+    "ExR_total": 26,
+    "PEG": 20,
+    "Delta7": 42,
+    "PFL1": 14,
+    "PFL2": 12,
+    "PFL3": 24,
+    "PFN_total": 443,
+    "FS_total": 293,
+    "whole_brain_neurons": 139248
+  },
+  "connections": {
+    "optic-ish_to_central": 434005,
+    "central_to_EPG_EPGt": 11847,
+    "central_to_EPG_EPGt_by_source_type": {
+      "ER2": 1653,
+      "ER3d": 1286,
+      "ER1": 1158,
+      "ER3w": 1016,
+      "ER4d": 942,
+      "ER3p_a": 699,
+      "EPG": 526,
+      "ER4m": 471,
+      "ER3m": 459,
+      "ER5": 426,
+      "Delta7": 363,
+      "PEN_a(PEN1)": 356,
+      "PEN_b(PEN2)": 252,
+      "PEG": 194,
+      "ExR5": 189,
+      "ExR1": 182,
+      "EL": 170,
+      "ER3p_b": 166,
+      "ER3a_a,ER3a_d": 115,
+      "LPsP": 102
+    },
+    "EPG_self_within_central_to_EPG": 535,
+    "optic-ish_to_EPG_EPGt": 49,
+    "all_to_ER_by_source_super_class": {
+      "central": 22867,
+      "visual_projection": 17,
+      "ascending": 7,
+      "visual_centrifugal": 4,
+      "descending": 1
+    },
+    "central_to_ER": 22867,
+    "central_to_ER_by_source_type": {
+      "ER2": 2855,
+      "EPG": 2691,
+      "EL": 2318,
+      "ER3d": 1980,
+      "ER3a_a,ER3a_d": 1066,
+      "ER3w": 1047,
+      "ER4d": 943,
+      "PEN_b(PEN2)": 867,
+      "ER3m": 842,
+      "ER4m": 830,
+      "ER3p_a": 687,
+      "PEN_a(PEN1)": 683,
+      "ER1": 675,
+      "ExR1": 607,
+      "ER3a_b,ER3a_c": 525,
+      "ER5": 516,
+      "AOTU046": 318,
+      "ExR3": 308,
+      "ExR5": 298,
+      "ER3p_b": 229
+    },
+    "EPG_to_ER": 2691,
+    "EPGt_to_ER": 5,
+    "EPG_EPGt_to_central": 8414,
+    "PEN_a_to_EPG_EPGt": 356,
+    "PEN_b_to_EPG_EPGt": 252,
+    "EPG_EPGt_to_PEN_a": 313,
+    "EPG_EPGt_to_PEN_b": 269
+  }
+}

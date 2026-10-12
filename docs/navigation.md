@@ -200,6 +200,16 @@ connectome resolution, which is exactly why B-01 runs the fly first.
 
 ## 5. References (verified citations; see §1–4 for context)
 
+**Reproducible counts.** Every population size and connection count stated in
+this document is produced by [`scripts/fafb-cc-audit.py`](../scripts/fafb-cc-audit.py),
+whose run of 2026-10-12 is recorded in
+[`data/audit-manifest-2026-10-12.json`](../data/audit-manifest-2026-10-12.json)
+(input files pinned by sha256). The manifest is the authoritative record; if
+prose and manifest ever disagree, the manifest wins. Notably it verifies the
+Turner-Evans shifted loop in the measured wiring in **both** directions:
+EPG→PEN_a 313 / EPG→PEN_b 269 pairs, and the shifted recurrent
+PEN_a→EPG 356 / PEN_b→EPG 252 pairs.
+
 - Omoto, J.J. et al. *Visual input to the Drosophila central complex by
   developmentally and functionally distinct neuronal populations.* Curr Biol
   27:1098–1110, 2017. DOI 10.1016/j.cub.2017.02.063.
