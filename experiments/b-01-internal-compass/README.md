@@ -179,3 +179,14 @@ protocol, metrics or criteria changed):
    uses the six rotation segments (the shipped code included the ω = 0 phase
    boundary segment), and a leftover placeholder in the held-out R²
    computation was removed.
+5. **Drive delivery semantics (`run.py`, pre-existing, disclosed).** The
+   declared "15 mV per delivered event" magnitude (`W_DRIVE`, `W_CUE`) is
+   defined in the shipped code but **never applied**: a drive event is
+   delivered as a spike-source event — the driven neuron's *outgoing* edges
+   fire with their circuit-normalized weights (max 17 × 0.275 = 4.7 mV per
+   edge, typically ≤ 1.1 mV), not as a 15 mV direct depolarization of the
+   driven cell. The effective drive is therefore *weaker* than declared —
+   the null result holds at the more conservative of the two semantics. Which
+   semantics a drive should have (direct g-injection vs spike-source) is a
+   declared-parameter decision left to B-02; the 6 mV EL tonic is applied as
+   declared (steady-state offset on the membrane).
