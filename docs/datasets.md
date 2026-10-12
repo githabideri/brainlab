@@ -94,7 +94,7 @@ ordinary hardware.
 2. **Anatomical coverage.** Whole animal nervous system: head, nerve ring,
    ventral nerve cord, tail — the full 3D EM reconstruction basis of the
    series that defined the field (White et al., *Phil. Trans. R. Soc. B*
-   314:1–340, doi:10.1098/rstb.1986.0051).
+   314:1–340, doi:10.1098/rstb.1986.0056).
 3. **Scale / completeness.** 302 neurons; 5,590 chemical synapses (original
    counting basis); plus gap junctions and motor-neuron → muscle connections.
    Complete for the stage.
@@ -718,7 +718,7 @@ Via search snippets (not full-text fetched):
 - edge.org (Barron, honeybee scale)
 - en.wikipedia.org/wiki/Drosophila_connectome (larval counts cross-check)
 
-Primary papers cited (DOI in text): White 1986 (10.1098/rstb.1986.0051);
+Primary papers cited (DOI in text): White 1986 (10.1098/rstb.1986.0056);
 Cook 2019 (10.1038/s41586-019-1352-7); Dorkenwald 2024
 (10.1038/s41586-024-07558-y); Berg 2026 (10.1016/j.cell.2026.08.015, via
 substrate.md)Winding 2023

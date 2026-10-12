@@ -79,6 +79,21 @@ fit its own weights. The MLP/GRU re-runs replicate A-01 exactly
   semantics (current injection vs external events vs forced spikes) with
   unit tests and positive controls. Preflight stages 0–5 planned (private
   campaign file); protocol not yet written.
+- **worm-pilot** (multi-organism expansion: does the *measured* C. elegans
+  connectome route a textbook sensorimotor computation?) —
+  `worm-pilot/`. **Done 2026-10-12: bounded pilot, one positive wiring
+  finding + one documented null.** 300-neuron LIF network on the Cook
+  2019 hermaphrodite connectome (3,618 chemical + 2,130 gap-junction
+  neuron–neuron edges, sha256-pinned SI workbooks), nociceptive
+  withdrawal (ASH pulse → command pool → body-wall motors) vs a
+  degree/weight-matched shuffle, 5 seeds. Lab 5 ms integration: honest
+  null with a calculable mechanism (w·λ·τ_syn ≈ 1.5 mV « 7 mV threshold
+  gap); widened 50 ms variant (declared after A's diagnostics): measured
+  wiring sustains a ~5× denser sparse rest than the shuffle and routes
+  the pulse to the command pool (ri ≈ +0.9) and motor classes (ri ≈
+  +0.86); the shuffle does not respond. Non-claims binding (no muscles,
+  no signs in the release, spiking ≠ movement). Report:
+  `../reports/2026-10-12-worm-pilot.md`.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling
