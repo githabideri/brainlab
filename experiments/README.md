@@ -55,6 +55,27 @@ and dynamics the wiring carries no learnable signal even when it may
 fit its own weights. The MLP/GRU re-runs replicate A-01 exactly
 (GRU bit-identical), the disconnected floor is unchanged. Report:
 `../reports/2026-10-12-a02-learnable-gains.md`.
+- **b-01-internal-compass** (can a *measured* central-complex subgraph
+  run a decodable heading attractor?) — `b-01-internal-compass/`.
+  **Done 2026-10-12: clean null at the declared drive point.** 15 runs
+  (bio / conventional-ring / degree-matched-shuffle × 5 seeds, LIF on
+  the measured FAFB v783 CC+ALPN subgraph, 3,563 neurons / 315,268
+  pairs): measured wiring and shuffle are both EL-silent (0 Hz) — the
+  declared ALPN drive path has only 2 excitatory edges into the EL
+  ring, so the declared readout cannot separate "wiring does it" from
+  "drive is too weak" (A2–A5 fail; A1 passes only trivially and is
+  flagged as such); the conventional ring saturates (2.1M spikes, R²
+  strongly negative). First clean bulk-activity wiring effect of the
+  campaign: bio 134k–156k spikes/session vs shuffle 0. One pre-existing
+  semantic deviation disclosed (declared 15 mV never applied; spike-
+  source delivery is the weaker, conservative realization). Report:
+  `../reports/2026-10-12-b01-internal-compass.md`.
+- **b-02-design** (the drive-semantics question B-01 left open: direct
+  g-injection vs spike-source delivery, a drive-strength sweep, an
+  alternative *measured* path into the EL ring, self-inhibition vs
+  traveling wave, and the bio-vs-shuffle bulk-activity finding)
+  — designed after B-01; the five questions are in the B-01 report's
+  Interpretation §4 (protocol not yet written).
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling

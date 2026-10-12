@@ -35,3 +35,20 @@ and what the numbers do not show).
   judge sits downstream of the decider-tier hook and overwrites a
   91%-accurate scorer; the hook's correct position is specified as a
   pre-judge veto (S4).
+- [2026-10-12-a01-connectome-advantage](2026-10-12-a01-connectome-advantage.md) — A-01: does the
+  FlyWire-derived olfactory wiring win on *learnable* tasks? 105 runs
+  (fly vs 5 matched controls + MLP/GRU, 2 generated tasks, 3 noise
+  levels, 5 seeds): honest null — all three pre-registered criteria
+  fail; the wiring is indistinguishable from shuffled in the tanh-rate
+  learning regime.
+- [2026-10-12-a02-learnable-gains](2026-10-12-a02-learnable-gains.md) — A-02: the same
+  battery with the 42,921 edge gains trainable (FlyBridge full
+  curriculum, all arms under the same treatment): a *stronger* null,
+  no criterion flipped — the A-01 null was not a freeze artifact.
+- [2026-10-12-b01-internal-compass](2026-10-12-b01-internal-compass.md) — B-01: the measured
+  FAFB v783 CC+ALPN subgraph, driven exactly as pre-registered, is EL-
+silent (A2–A5 fail): the declared ALPN drive path has only 2
+  excitatory edges into the EL ring, so the declared readout is blind
+  to the wiring at this drive. First clean bulk-activity wiring effect
+  of the campaign (bio 134k–156k spikes vs shuffle 0); the pathway
+  audit is the concrete input to B-02.
