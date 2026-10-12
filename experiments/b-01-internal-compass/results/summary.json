@@ -1,0 +1,383 @@
+{
+ "variants": {
+  "bio": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_neurons": 3563,
+   "total_spikes": [
+    141996,
+    134348,
+    137061,
+    135001,
+    156261
+   ],
+   "elapsed_s": [
+    127.0,
+    112.4,
+    118.2,
+    108.1,
+    93.4
+   ],
+   "drift_c1_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "drift_c1_signed_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "drift_c3_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "drift_c3_signed_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "c2_mean_abs_err_deg": [
+    89.67,
+    89.69,
+    93.84,
+    87.39,
+    89.51
+   ],
+   "c2_stability_frac": [
+    0.097,
+    0.083,
+    0.076,
+    0.083,
+    0.056
+   ],
+   "c4_recovery_s": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "c4_final_err_deg": [
+    24.73,
+    16.88,
+    83.45,
+    53.16,
+    103.8
+   ],
+   "c4_pre_cue_err_deg": [
+    24.73,
+    16.88,
+    83.45,
+    53.16,
+    103.8
+   ],
+   "decoder_held_out_R2": [
+    -0.002,
+    -0.0,
+    -0.0,
+    -0.002,
+    -0.0
+   ],
+   "decoder_held_out_mae_deg": [
+    86.75,
+    89.74,
+    90.32,
+    88.08,
+    87.14
+   ],
+   "el_mean_hz_c1": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "el_silent_c1": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ring": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_neurons": 3563,
+   "total_spikes": [
+    2110837,
+    2092975,
+    2097773,
+    2094182,
+    2160685
+   ],
+   "elapsed_s": [
+    106.7,
+    123.5,
+    489.8,
+    135.2,
+    134.2
+   ],
+   "drift_c1_deg_s": [
+    0.153,
+    0.2,
+    49.288,
+    0.479,
+    0.011
+   ],
+   "drift_c1_signed_deg_s": [
+    0.153,
+    0.2,
+    -49.288,
+    0.479,
+    -0.011
+   ],
+   "drift_c3_deg_s": [
+    0.134,
+    52.297,
+    1.007,
+    8.69,
+    0.507
+   ],
+   "drift_c3_signed_deg_s": [
+    0.134,
+    -52.297,
+    -1.007,
+    8.69,
+    0.507
+   ],
+   "c2_mean_abs_err_deg": [
+    87.61,
+    91.94,
+    85.08,
+    93.34,
+    89.39
+   ],
+   "c2_stability_frac": [
+    0.097,
+    0.104,
+    0.083,
+    0.083,
+    0.076
+   ],
+   "c4_recovery_s": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "c4_final_err_deg": [
+    58.68,
+    175.64,
+    171.07,
+    27.99,
+    26.56
+   ],
+   "c4_pre_cue_err_deg": [
+    52.1,
+    40.79,
+    33.99,
+    115.82,
+    68.44
+   ],
+   "decoder_held_out_R2": [
+    -123.156,
+    -57.859,
+    -44.586,
+    -55.43,
+    -31.494
+   ],
+   "decoder_held_out_mae_deg": [
+    110.99,
+    96.64,
+    110.61,
+    103.29,
+    107.29
+   ],
+   "el_mean_hz_c1": [
+    35.7,
+    36.08,
+    35.73,
+    35.97,
+    35.72
+   ],
+   "el_silent_c1": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ]
+  },
+  "shuffle": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_neurons": 3563,
+   "total_spikes": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "elapsed_s": [
+    81.4,
+    75.9,
+    74.3,
+    75.6,
+    73.3
+   ],
+   "drift_c1_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "drift_c1_signed_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "drift_c3_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "drift_c3_signed_deg_s": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "c2_mean_abs_err_deg": [
+    89.67,
+    89.69,
+    93.84,
+    87.39,
+    89.51
+   ],
+   "c2_stability_frac": [
+    0.097,
+    0.083,
+    0.076,
+    0.083,
+    0.056
+   ],
+   "c4_recovery_s": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "c4_final_err_deg": [
+    24.73,
+    16.88,
+    83.45,
+    53.16,
+    103.8
+   ],
+   "c4_pre_cue_err_deg": [
+    24.73,
+    16.88,
+    83.45,
+    53.16,
+    103.8
+   ],
+   "decoder_held_out_R2": [
+    -0.002,
+    -0.0,
+    -0.0,
+    -0.002,
+    -0.0
+   ],
+   "decoder_held_out_mae_deg": [
+    86.75,
+    89.74,
+    90.32,
+    88.08,
+    87.14
+   ],
+   "el_mean_hz_c1": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "el_silent_c1": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  }
+ },
+ "acceptance": {
+  "bio": {
+   "A1_c1_drift": {
+    "pass": true,
+    "median_abs_drift_deg_s": 0.0
+   },
+   "A2_c3_deprivation_drift_positive": {
+    "pass": false
+   },
+   "A3_c2_tracking_under_15deg": {
+    "pass": false,
+    "n_seeds_passing": 0
+   },
+   "A4_c4_recovery_under_10s": {
+    "pass": false,
+    "n_seeds_passing": 0
+   }
+  },
+  "A5_comparative": {
+   "bio_vs_shuffle_c3_drift": {
+    "bio": 0.0,
+    "shuffle": 0.0,
+    "bio_better": false
+   },
+   "bio_vs_shuffle_c2_tracking": {
+    "bio": 90.02000000000001,
+    "shuffle": 90.02000000000001,
+    "bio_better": false
+   },
+   "pass": false,
+   "note": "ring variant reported wherever it falls (not part of the pass condition)"
+  }
+ },
+ "runs": {}
+}

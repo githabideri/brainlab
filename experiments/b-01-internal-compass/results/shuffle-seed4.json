@@ -1,0 +1,84 @@
+{
+ "variant": "shuffle",
+ "seed": 4,
+ "circuit_file": "circuit_shuffle_4.npz",
+ "n_neurons": 3563,
+ "n_el": 278,
+ "torch": "2.14.1+cu130",
+ "python": "3.12.3",
+ "total_spikes": 0,
+ "elapsed_s": 73.3,
+ "decoder": {
+  "held_out_R2": -0.00030063959371351423,
+  "held_out_mae_deg": 87.137461925906,
+  "n_train_windows": 50,
+  "n_hold_windows": 50
+ },
+ "c1": {
+  "drift_deg_s": 0.0,
+  "abs_drift_deg_s": 0.0,
+  "stability_frac": 0.0,
+  "mean_abs_err_deg": 87.74176023130563,
+  "el_mean_hz": 0.0,
+  "silent": true
+ },
+ "c2": {
+  "drift_deg_s": 0.0,
+  "abs_drift_deg_s": 0.0,
+  "stability_frac": 0.05555555555555555,
+  "mean_abs_err_deg": 89.50841212779022,
+  "el_mean_hz": 0.0,
+  "silent": true,
+  "segment_errs_deg": [
+   89.67,
+   92.1,
+   85.97,
+   88.92,
+   88.75,
+   91.63
+  ]
+ },
+ "c3": {
+  "drift_deg_s": 0.0,
+  "abs_drift_deg_s": 0.0,
+  "stability_frac": 0.0,
+  "mean_abs_err_deg": 103.79602147510602,
+  "el_mean_hz": 0.0,
+  "silent": true
+ },
+ "c4": {
+  "recovery_s": null,
+  "final_err_deg": 103.79602147510603,
+  "err_series_deg": [
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8,
+   103.8
+  ],
+  "pre_cue_err_deg": 103.79602147510603
+ },
+ "c4_drift_phase": {
+  "drift_deg_s": 0.0,
+  "abs_drift_deg_s": 0.0,
+  "stability_frac": 0.0,
+  "mean_abs_err_deg": 103.79602147510602,
+  "el_mean_hz": 0.0,
+  "silent": true
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "experiment": "b-01-internal-compass",
+ "run_date": "2026-10-12",
+ "timezone": "CEST",
+ "hardware_role": "4-core CPU, no GPU, single process, sequential runs (no parallel jobs)",
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.14.1+cu130"
+ },
+ "circuit": {
+  "dataset": "FlyWire FAFB v783 (2025 release; Dorkenwald et al., Nature 2024, https://www.nature.com/articles/s41586-024-07558-y)",
+  "files": {
+   "connectivity_parquet": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+   "classification": "d941a74188476d60a06dfef7c5130871edbfe9fca77cda571f81f7b9726a184c"
+  },
+  "ring_control_sha256": "ecc506833b5054a429c3bf3bbc355f57990f7c50db17f7cc02636af04952c1c2",
+  "shuffle_sha256": {
+   "seed 0": "b0fd1eaec2e8f219ec8124eb16e38c5e5002a01ebbdac2ef4c107716cccfad12",
+   "seed 1": "227ff175b646150bffb52fbf4aea888a03786c472240fa46025574b82402d175",
+   "seed 2": "6076ee4782b4a5e551212e16f72e4e9cfa6238e04243b8f83c06c20c63d10eec",
+   "seed 3": "d45a3707c6025ebc6287bb3deb0a8cd8864de61f810b9e4f3ad9d806452b9f2f",
+   "seed 4": "1dafac9cbce82ba8dc6d207c62843c3a7b3284bbb14101e7a6cb98500263a267"
+  }
+ },
+ "protocol": {
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "variants": [
+   "bio",
+   "ring",
+   "shuffle"
+  ],
+  "session_s": 126,
+  "dt_ms": 1,
+  "delay_ms": 1.8,
+  "note": "see README.md (frozen pre-registration); deviations recorded there"
+ },
+ "runs": {
+  "bio-seed0": {
+   "sha256": "c84accd8ce3c0acc4b3b56c2c307a78c7eda341916e021a9203b7cc4b1cad7e7",
+   "total_spikes": 141996,
+   "elapsed_s": 127.0,
+   "el_silent_c1": true
+  },
+  "bio-seed1": {
+   "sha256": "64aecaed9c970486678d5a2c08046f15d900b23e56bebb955c0db00cd9d0a332",
+   "total_spikes": 134348,
+   "elapsed_s": 112.4,
+   "el_silent_c1": true
+  },
+  "bio-seed2": {
+   "sha256": "b0b0fca952b6c3208bb2fff3d9fd93ca3750263fbf7de95dfdf1a7456f855dfb",
+   "total_spikes": 137061,
+   "elapsed_s": 118.2,
+   "el_silent_c1": true
+  },
+  "bio-seed3": {
+   "sha256": "00db8ebce9c09a9d23d08cf6b4e1c03e41ff2ab49100916d4dada763794a6c45",
+   "total_spikes": 135001,
+   "elapsed_s": 108.1,
+   "el_silent_c1": true
+  },
+  "bio-seed4": {
+   "sha256": "de52b37f97684a0e328691a0555cf77b3015f65f7e60026efb4884bacfab6d85",
+   "total_spikes": 156261,
+   "elapsed_s": 93.4,
+   "el_silent_c1": true
+  },
+  "ring-seed0": {
+   "sha256": "fc8883778b534d604c0cda36f1ed07ede73e6364ceb59f92422a44a3e6999514",
+   "total_spikes": 2110837,
+   "elapsed_s": 106.7,
+   "el_silent_c1": false
+  },
+  "ring-seed1": {
+   "sha256": "c2ef892024136757d752aecda75099115f4c2a433df617a8ec1a39d32db729ee",
+   "total_spikes": 2092975,
+   "elapsed_s": 123.5,
+   "el_silent_c1": false
+  },
+  "ring-seed2": {
+   "sha256": "19baf836b7d0b58cc3f4762f38231db7d343e9ec84f93f0e7d47af2caa84ef53",
+   "total_spikes": 2097773,
+   "elapsed_s": 489.8,
+   "el_silent_c1": false
+  },
+  "ring-seed3": {
+   "sha256": "fa39435e61d3f96a54af3989de33db4dbfb2c70909b6ccdab5a2423d1c70a57d",
+   "total_spikes": 2094182,
+   "elapsed_s": 135.2,
+   "el_silent_c1": false
+  },
+  "ring-seed4": {
+   "sha256": "a5b6108eb37c54462c3267182353ea89455b9fa653c84d5f13d13518ed4adff1",
+   "total_spikes": 2160685,
+   "elapsed_s": 134.2,
+   "el_silent_c1": false
+  },
+  "shuffle-seed0": {
+   "sha256": "0336471f0fc187dc70abe80a82fa441b698bb0746bd312ead283674e2b08b749",
+   "total_spikes": 0,
+   "elapsed_s": 81.4,
+   "el_silent_c1": true
+  },
+  "shuffle-seed1": {
+   "sha256": "5206530d269c4a0ad72a163bee3210efaa12ce6d083d40799373a9b4373fd770",
+   "total_spikes": 0,
+   "elapsed_s": 75.9,
+   "el_silent_c1": true
+  },
+  "shuffle-seed2": {
+   "sha256": "4dbf5492677b1bea4495b59011dc32909924a0da38ad3b7cf80291879866640f",
+   "total_spikes": 0,
+   "elapsed_s": 74.3,
+   "el_silent_c1": true
+  },
+  "shuffle-seed3": {
+   "sha256": "334776ad37eb5853369f5c4689c77f99e68fcd0c0178c03c54825908b2a41ec9",
+   "total_spikes": 0,
+   "elapsed_s": 75.6,
+   "el_silent_c1": true
+  },
+  "shuffle-seed4": {
+   "sha256": "71db9088049ef73e566825a63b1366c40f7be887b593e3c9d1009b64d853b247",
+   "total_spikes": 0,
+   "elapsed_s": 73.3,
+   "el_silent_c1": true
+  }
+ },
+ "note": "ring-seed2 elapsed_s includes a temporary two-process CPU contention window; deterministic simulation, data unaffected"
+}
