@@ -235,7 +235,7 @@ def main() -> None:
                     ("summary.json", "manifest.json"))
 
     if args.phase in ("main", "all"):
-        for arm in WIRINGS:
+        for arm in WIRINGS + ["mlp", "gru"]:  # the two conventional baselines
             for task_key in task_keys:
                 if arm == "disconnected" and task_key != "T1":
                     continue  # pre-registered: the null floor is T1-only
