@@ -55,6 +55,22 @@ and dynamics the wiring carries no learnable signal even when it may
 fit its own weights. The MLP/GRU re-runs replicate A-01 exactly
 (GRU bit-identical), the disconnected floor is unchanged. Report:
 `../reports/2026-10-12-a02-learnable-gains.md`.
+- **a-03-sequential-learning** (the 2×2 grid's open corner: spiking
+  dynamics × learning, on *sequential* tasks that cannot saturate —
+  delayed-cue T-del, angular integration T-ang, temporal XOR; 6
+  wiring controls byte-identical to A-01's; val-**LOSS** checkpointing;
+  measured Δw per arm) — `a-03-sequential-learning/`. **Design lane
+done 2026-10-12** (pre-registration committed before any run; 15/15
+unit tests; 18/18 official pilot in 9 min): the pilot is a sizing
+read-out, not a claim — the frozen spiking circuit saturates T-del/T-ang
+in one pass at 32 trials while tanh/GRU are near chance at 4 epochs, so
+the 20-epoch budget + val-loss checkpoint rule equalizes the arms before
+comparison. Two load-bearing design defects were caught by measurement
+(the declared spike mapping was dynamically inert; B-01's `lif.py`
+`reset()` is latent-broken — sanctioned reset is fresh construction).
+The 210-run main grid (≈28 h background, resumable per cell) is
+pre-registered and scheduled after the heavy lane. Report:
+`../reports/2026-10-12-a03-design.md`.
 - **b-01-internal-compass** (can a *measured* central-complex subgraph
   run a decodable heading attractor?) — `b-01-internal-compass/`.
   **Done 2026-10-12: clean null at the declared drive point.** 15 runs
