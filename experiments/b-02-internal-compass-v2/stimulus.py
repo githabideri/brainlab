@@ -21,9 +21,11 @@ Declared drive parameters (frozen at pre-registration, Stage 3):
   official annotation side into right (21) and left (21). Per-cell
   rate r(t) = base + scale * max(+/-omega(t), 0) / 300,
   base = 2 Hz, scale = 40 Hz (peak 42 Hz at |omega| = 300 deg/s).
-  Delivery in the runs is via API 2 (external events onto the target
-  cell, declared weight W_DRIVE = 3 mV/event) — the event STREAM
-  computed here is delivery-mechanism independent.
+  Delivery in the runs is via API 3 (forced P-EN spikes — B-01's actual
+  mechanism, renamed in lif2.py): Stage 1's draft had declared API 2 @
+  3 mV/event, superseded at Stage 3 after the efficacy analysis (see
+  data/manifest.json: stimuli.drive.api). The event STREAM computed
+  here is delivery-mechanism independent either way.
   Visual cue: during c4 only, 30 Hz Poisson events onto the
   EPG/EPGt cells in the 45-deg wedge bin containing the true
   integrated heading theta(116 s) at cue onset (the command is the

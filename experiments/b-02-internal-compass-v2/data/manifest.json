@@ -110,7 +110,7 @@
   "drive": {
    "base_hz": 2.0,
    "scale_hz": 40.0,
-   "api": "external events (API 2), declared weight W_DRIVE = 3 mV/event (frozen at Stage 3)",
+   "api": "API 3 forced spikes (B-01's actual mechanism, renamed in lif2.py): the stream counts are delivered as forced P-EN spikes; downstream efficacy = measured edge weights sign*min(PSD,17)*0.275 mV (the transduction under test). AMENDMENT frozen at Stage 3: Stage 1's draft had declared API 2 @ 3 mV/event, which the efficacy analysis flags as a guaranteed null (3 mV x 42 Hz sums to ~0.03 mV effective dv at rest). The stream files themselves are unchanged (mechanism-independent counts); hashes below remain valid.",
    "pen_right_cells": [
     176,
     312,
@@ -161,7 +161,9 @@
   "cue": {
    "rate_hz": 30,
    "phase": "c4 (116..126 s)",
-   "wedge_map_sha256": "ee5b98c96805c0f046bbaae7267414e1ccf28d8c5d9bc1bb96978fb3d93db468"
+   "wedge_map_sha256": "ee5b98c96805c0f046bbaae7267414e1ccf28d8c5d9bc1bb96978fb3d93db468",
+   "weight_mV": 60.0,
+   "api": "API 2 external events onto EPG/EPGt cue-bin cells, declared W_CUE = 60 mV/event (frozen at Stage 3; v783 has no optic->CC edge, the cue is a declared added interface)"
   },
   "streams": {
    "seed0": {
