@@ -359,3 +359,30 @@ or the comparison structure.
   2015 (E-PG tuning); Paff et al. 2015 (C1/C2 EIP).
 - This session: `sessions/pi/2026-10-12_016.*` (plan / findings /
   progress sidecars).
+
+## Post-hoc note — 2026-10-13 (cross-lane input from the A-03 coordinator;
+## the original text above is unmodified)
+
+Two items from the A-03 lane, recorded against the B-02 artifacts:
+
+1. **The pinned B-01 `lif.py` `reset()` is latently broken** (A-03's
+   audit): it calls `fill_` with a value whose dimensionality follows
+   the `v0` argument on state fields that are multi-dim when `v0` is;
+   B-01 never called it, so it never surfaced. B-02's code never
+   called it either — every re-run here is a **fresh `LIFNet`
+   construction**, which the A-03 lane pinned (byte-identical copy)
+   and verified to be the constructor's initial state. The Stage 1
+   artifacts now say this explicitly: `lif2.reset()` is a B-02-local
+   rebuild that does not call the broken inherited primitive, and
+   `lif_np.reset()` is the independent reference's own reset
+   (verified: both rebuild the exact constructor state; the T1–T4
+   re-run is byte-identical to the committed
+   `data/stage1-tests.json`, sha `6a2782f6…`).
+2. **Corroboration of the transduction null.** A-03's design report
+   (`wt-a3/reports/2026-10-12-a03-design.md`) measured that the lab's
+   5 ms `tau_syn` makes fast trains unroutable — the same class of
+   mechanism as the B-02/Stage-4 null and as the worm lane's
+   `w·λ·τ_syn` finding: at the declared small weights and 5 ms
+   integration, convergent spike trains sum to sub-threshold
+   depolarization. This is a cross-lane consistency point, not new
+   B-02 data; no numbers in the report change.

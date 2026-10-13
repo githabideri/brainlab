@@ -20,6 +20,16 @@ T4  differential test: independent plain-numpy implementation
 Also runs the reachability matrix (source populations {PEN_a, PEN_b}
 to target populations {EPG+EPGt, PEN, ER, EL}, <= 3 directed hops on
 the measured wiring) and writes data/reachability.json.
+
+RE-RUN IDIOM (A-03, 2026-10-12, pinned B-01 lif.py audit): NEVER call
+LIFNet.reset() to re-run a network. The pinned B-01 reset() is
+LATENT-BROKEN (it fill_'s state fields with a value whose dimension
+follows the v0 argument; B-01 never called it, so it never surfaced).
+The sanctioned reset is FRESH CONSTRUCTION — constructor state ==
+B-01's initial state (A-03 pinned a byte-identical copy and
+verified it). lif2.reset() is a B-02-local rebuild (does not call
+the broken inherited primitive); lif_np.reset() is this reference
+implementation's own. None of the T tests below call reset().
 """
 import argparse
 import hashlib

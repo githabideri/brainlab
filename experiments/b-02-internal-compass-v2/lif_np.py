@@ -119,6 +119,19 @@ class NumpyLIF:
         self.queue.append(np.concatenate([idx, ext]) if len(idx) else ext)
         return idx if len(idx) > 0 else None
 
+    def reset(self):
+        """This reference implementation's own reset primitive (A-03,
+        2026-10-12: the pinned B-01 torch engine's reset() is
+        latently broken and must not be called; the sanctioned
+        re-run idiom for the torch engine is fresh construction).
+        Rebuilds the exact constructor state."""
+        self.v = self.v0v.copy()  # matches the constructor exactly
+        self.g = np.zeros(self.n, dtype=self.g.dtype)
+        self.rf = np.zeros(self.n, dtype=self.rf.dtype)
+        self.queue = [[] for _ in range(self.delay_steps)]
+        self.t = 0.0
+        self.total_spikes = 0
+
     def spike_train(self, steps, **per_step_kwargs):
         """Run `steps` steps; per_step_kwargs maps step -> kwargs dict
         for step(). Returns list of (t_ms, ids) spike events."""

@@ -143,5 +143,21 @@ class LIFNet(LIFNetB01):
         return idx if len(idx) > 0 else None
 
     def reset(self):
-        super().reset()
+        """B-02-local reset. The pinned B-01 reset() (inherited here)
+        is LATENT-BROKEN per the A-03 lane (2026-10-12): it calls
+        fill_ with a value whose dimensionality follows the v0 argument
+        on state fields that are multi-dim when v0 is — B-01 never
+        called it, so it never surfaced. IDIOM: never call reset() to
+        re-run a network — the sanctioned reset is FRESH LIFNet
+        construction (constructor state == B-01's initial state; A-03
+        pinned and verified a byte-identical copy). This override
+        exists so the class does not expose the broken inherited
+        primitive; it rebuilds the initial state directly."""
+        self.v = torch.full((self.n,), self.v0)
+        self.g = torch.zeros(self.n)
+        self.rf = torch.zeros(self.n)
+        self.queue = [torch.zeros(0, dtype=torch.int64)
+                      for _ in range(self.delay_steps)]
         self.wqueue = [None] * self.delay_steps
+        self.t = 0.0
+        self.total_spikes = 0
