@@ -1,0 +1,1242 @@
+{
+ "derived_from": "results-exact.json (committed; no rerun)",
+ "definition": "paired_delta_hz = stim_run.stim_window_hz - rest_run.stim_window_hz, same (variant, wiring, sim seed, group); window = [stim_end, stim_end + 5000) in both runs. The same-run delta_hz stored in results-exact.json is a diagnostic (window minus the same run's whole-15-s mean) and is NOT a stimulus effect.",
+ "variants": {
+  "5ms": {
+   "ash_ashj": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    }
+   },
+   "body_wall_motors": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    }
+   },
+   "command_pool": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    }
+   },
+   "other": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.00186,
+       "stim_window_hz": 0.00186,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.003721,
+       "stim_window_hz": 0.003721,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.002791,
+       "stim_window_hz": 0.002791,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.004651,
+       "stim_window_hz": 0.004651,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.0,
+       "stim_window_hz": 0.0,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    }
+   }
+  },
+  "50ms": {
+   "ash_ashj": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.65,
+       "stim_window_hz": 0.6,
+       "paired_delta_hz": -0.05
+      },
+      "102": {
+       "rest_window_hz": 0.15,
+       "stim_window_hz": 0.2,
+       "paired_delta_hz": 0.05
+      },
+      "103": {
+       "rest_window_hz": 0.75,
+       "stim_window_hz": 0.65,
+       "paired_delta_hz": -0.1
+      },
+      "104": {
+       "rest_window_hz": 0.3,
+       "stim_window_hz": 0.3,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.4,
+       "stim_window_hz": 0.4,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      -0.04999999999999993,
+      0.04999999999999999,
+      -0.09999999999999987,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": -0.02,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 1.1,
+       "stim_window_hz": 1.1,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.85,
+       "stim_window_hz": 0.85,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 1.35,
+       "stim_window_hz": 1.35,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.75,
+       "stim_window_hz": 0.7,
+       "paired_delta_hz": -0.05
+      },
+      "105": {
+       "rest_window_hz": 1.05,
+       "stim_window_hz": 1.05,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      -0.04999999999999993,
+      0.0
+     ],
+     "mean_paired_delta_hz": -0.01,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.65,
+       "stim_window_hz": 0.6,
+       "paired_delta_hz": -0.05
+      },
+      "102": {
+       "rest_window_hz": 0.4,
+       "stim_window_hz": 0.4,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 1.05,
+       "stim_window_hz": 1.0,
+       "paired_delta_hz": -0.05
+      },
+      "104": {
+       "rest_window_hz": 0.5,
+       "stim_window_hz": 0.5,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.65,
+       "stim_window_hz": 0.65,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      -0.04999999999999993,
+      0.0,
+      -0.050000000000000044,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": -0.02,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.3,
+       "stim_window_hz": 0.3,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.2,
+       "stim_window_hz": 0.2,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.5,
+       "stim_window_hz": 0.5,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.15,
+       "stim_window_hz": 0.15,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.3,
+       "stim_window_hz": 0.3,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.0,
+     "all_same_sign": false
+    }
+   },
+   "body_wall_motors": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 1.077922,
+       "stim_window_hz": 1.090909,
+       "paired_delta_hz": 0.012987
+      },
+      "102": {
+       "rest_window_hz": 0.85974,
+       "stim_window_hz": 0.880519,
+       "paired_delta_hz": 0.020779
+      },
+      "103": {
+       "rest_window_hz": 1.168831,
+       "stim_window_hz": 1.187013,
+       "paired_delta_hz": 0.018182
+      },
+      "104": {
+       "rest_window_hz": 0.942857,
+       "stim_window_hz": 0.953247,
+       "paired_delta_hz": 0.01039
+      },
+      "105": {
+       "rest_window_hz": 0.911688,
+       "stim_window_hz": 0.911688,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.012987012987013102,
+      0.020779220779220675,
+      0.0181818181818183,
+      0.010389610389610393,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.012468,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.662338,
+       "stim_window_hz": 0.667532,
+       "paired_delta_hz": 0.005195
+      },
+      "102": {
+       "rest_window_hz": 0.545455,
+       "stim_window_hz": 0.548052,
+       "paired_delta_hz": 0.002597
+      },
+      "103": {
+       "rest_window_hz": 0.664935,
+       "stim_window_hz": 0.667532,
+       "paired_delta_hz": 0.002597
+      },
+      "104": {
+       "rest_window_hz": 0.581818,
+       "stim_window_hz": 0.584416,
+       "paired_delta_hz": 0.002597
+      },
+      "105": {
+       "rest_window_hz": 0.587013,
+       "stim_window_hz": 0.587013,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0051948051948053076,
+      0.0025974025974027093,
+      0.0025974025974027093,
+      0.0025974025974025983,
+      1.1102230246251565e-16
+     ],
+     "mean_paired_delta_hz": 0.002597,
+     "all_same_sign": true
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.727273,
+       "stim_window_hz": 0.72987,
+       "paired_delta_hz": 0.002597
+      },
+      "102": {
+       "rest_window_hz": 0.612987,
+       "stim_window_hz": 0.615584,
+       "paired_delta_hz": 0.002597
+      },
+      "103": {
+       "rest_window_hz": 0.763636,
+       "stim_window_hz": 0.761039,
+       "paired_delta_hz": -0.002597
+      },
+      "104": {
+       "rest_window_hz": 0.672727,
+       "stim_window_hz": 0.672727,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.654545,
+       "stim_window_hz": 0.649351,
+       "paired_delta_hz": -0.005195
+      }
+     },
+     "deltas": [
+      0.0025974025974025983,
+      0.0025974025974025983,
+      -0.0025974025974024872,
+      0.0,
+      -0.0051948051948051965
+     ],
+     "mean_paired_delta_hz": -0.000519,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 0.651948,
+       "stim_window_hz": 0.657143,
+       "paired_delta_hz": 0.005195
+      },
+      "102": {
+       "rest_window_hz": 0.612987,
+       "stim_window_hz": 0.612987,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 0.675325,
+       "stim_window_hz": 0.675325,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 0.605195,
+       "stim_window_hz": 0.605195,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 0.581818,
+       "stim_window_hz": 0.581818,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.0051948051948053076,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.001039,
+     "all_same_sign": false
+    }
+   },
+   "command_pool": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 5.3,
+       "stim_window_hz": 5.425,
+       "paired_delta_hz": 0.125
+      },
+      "102": {
+       "rest_window_hz": 3.475,
+       "stim_window_hz": 3.625,
+       "paired_delta_hz": 0.15
+      },
+      "103": {
+       "rest_window_hz": 5.25,
+       "stim_window_hz": 5.275,
+       "paired_delta_hz": 0.025
+      },
+      "104": {
+       "rest_window_hz": 4.225,
+       "stim_window_hz": 4.325,
+       "paired_delta_hz": 0.1
+      },
+      "105": {
+       "rest_window_hz": 5.65,
+       "stim_window_hz": 5.7,
+       "paired_delta_hz": 0.05
+      }
+     },
+     "deltas": [
+      0.125,
+      0.1499999999999999,
+      0.024999999999999467,
+      0.10000000000000053,
+      0.04999999999999982
+     ],
+     "mean_paired_delta_hz": 0.09,
+     "all_same_sign": true
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 2.7,
+       "stim_window_hz": 2.7,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 1.775,
+       "stim_window_hz": 1.775,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 2.9,
+       "stim_window_hz": 2.9,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 2.6,
+       "stim_window_hz": 2.6,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 2.875,
+       "stim_window_hz": 2.85,
+       "paired_delta_hz": -0.025
+      }
+     },
+     "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.025000000000000355
+     ],
+     "mean_paired_delta_hz": -0.005,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 2.075,
+       "stim_window_hz": 2.1,
+       "paired_delta_hz": 0.025
+      },
+      "102": {
+       "rest_window_hz": 1.625,
+       "stim_window_hz": 1.625,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 2.3,
+       "stim_window_hz": 2.3,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 2.0,
+       "stim_window_hz": 2.0,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 2.0,
+       "stim_window_hz": 2.05,
+       "paired_delta_hz": 0.05
+      }
+     },
+     "deltas": [
+      0.02499999999999991,
+      0.0,
+      0.0,
+      0.0,
+      0.04999999999999982
+     ],
+     "mean_paired_delta_hz": 0.015,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 1.675,
+       "stim_window_hz": 1.725,
+       "paired_delta_hz": 0.05
+      },
+      "102": {
+       "rest_window_hz": 1.3,
+       "stim_window_hz": 1.3,
+       "paired_delta_hz": 0.0
+      },
+      "103": {
+       "rest_window_hz": 1.825,
+       "stim_window_hz": 1.825,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 1.5,
+       "stim_window_hz": 1.5,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 2.225,
+       "stim_window_hz": 2.225,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.04999999999999982,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.01,
+     "all_same_sign": false
+    }
+   },
+   "other": {
+    "measured": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 2.606512,
+       "stim_window_hz": 2.626047,
+       "paired_delta_hz": 0.019535
+      },
+      "102": {
+       "rest_window_hz": 2.213953,
+       "stim_window_hz": 2.263256,
+       "paired_delta_hz": 0.049302
+      },
+      "103": {
+       "rest_window_hz": 2.423256,
+       "stim_window_hz": 2.429767,
+       "paired_delta_hz": 0.006512
+      },
+      "104": {
+       "rest_window_hz": 2.388837,
+       "stim_window_hz": 2.413023,
+       "paired_delta_hz": 0.024186
+      },
+      "105": {
+       "rest_window_hz": 2.792558,
+       "stim_window_hz": 2.786977,
+       "paired_delta_hz": -0.005581
+      }
+     },
+     "deltas": [
+      0.019534883720930374,
+      0.04930232558139558,
+      0.006511627906977235,
+      0.02418604651162859,
+      -0.0055813953488375034
+     ],
+     "mean_paired_delta_hz": 0.018791,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 1.16,
+       "stim_window_hz": 1.16186,
+       "paired_delta_hz": 0.00186
+      },
+      "102": {
+       "rest_window_hz": 0.901395,
+       "stim_window_hz": 0.902326,
+       "paired_delta_hz": 0.00093
+      },
+      "103": {
+       "rest_window_hz": 1.099535,
+       "stim_window_hz": 1.098605,
+       "paired_delta_hz": -0.00093
+      },
+      "104": {
+       "rest_window_hz": 1.023256,
+       "stim_window_hz": 1.023256,
+       "paired_delta_hz": 0.0
+      },
+      "105": {
+       "rest_window_hz": 1.261395,
+       "stim_window_hz": 1.262326,
+       "paired_delta_hz": 0.00093
+      }
+     },
+     "deltas": [
+      0.0018604651162790198,
+      0.0009302325581393989,
+      -0.0009302325581395099,
+      2.220446049250313e-16,
+      0.0009302325581392878
+     ],
+     "mean_paired_delta_hz": 0.000558,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 1.128372,
+       "stim_window_hz": 1.128372,
+       "paired_delta_hz": 0.0
+      },
+      "102": {
+       "rest_window_hz": 0.923721,
+       "stim_window_hz": 0.922791,
+       "paired_delta_hz": -0.00093
+      },
+      "103": {
+       "rest_window_hz": 1.116279,
+       "stim_window_hz": 1.11814,
+       "paired_delta_hz": 0.00186
+      },
+      "104": {
+       "rest_window_hz": 1.027907,
+       "stim_window_hz": 1.028837,
+       "paired_delta_hz": 0.00093
+      },
+      "105": {
+       "rest_window_hz": 1.236279,
+       "stim_window_hz": 1.242791,
+       "paired_delta_hz": 0.006512
+      }
+     },
+     "deltas": [
+      0.0,
+      -0.0009302325581396209,
+      0.0018604651162792418,
+      0.0009302325581395099,
+      0.006511627906976347
+     ],
+     "mean_paired_delta_hz": 0.001674,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": {
+       "rest_window_hz": 1.135814,
+       "stim_window_hz": 1.143256,
+       "paired_delta_hz": 0.007442
+      },
+      "102": {
+       "rest_window_hz": 0.992558,
+       "stim_window_hz": 0.993488,
+       "paired_delta_hz": 0.00093
+      },
+      "103": {
+       "rest_window_hz": 1.069767,
+       "stim_window_hz": 1.069767,
+       "paired_delta_hz": 0.0
+      },
+      "104": {
+       "rest_window_hz": 1.03814,
+       "stim_window_hz": 1.044651,
+       "paired_delta_hz": 0.006512
+      },
+      "105": {
+       "rest_window_hz": 1.254884,
+       "stim_window_hz": 1.254884,
+       "paired_delta_hz": 0.0
+      }
+     },
+     "deltas": [
+      0.007441860465116301,
+      0.0009302325581396209,
+      0.0,
+      0.006511627906976569,
+      0.0
+     ],
+     "mean_paired_delta_hz": 0.002977,
+     "all_same_sign": false
+    }
+   }
+  }
+ }
+}

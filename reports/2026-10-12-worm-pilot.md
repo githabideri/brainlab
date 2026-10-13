@@ -295,3 +295,113 @@ whole-animal emulation or a behavior demonstration.
   `c-elegans-inventory.json` / `c-elegans-neurons-male.json`.
 - `circuits/c-elegans-substrate.md` — correction note and v2 parse
   table.
+
+---
+
+## Addendum (2026-10-13, second) — the stim−rest metric was a
+## within-run quantity; the correct paired contrast is positive in
+## the measured wiring (review round 4)
+
+### (i) The metric defect
+
+The `delta_hz` in `results-exact.json` is **not** a stimulus effect:
+it is the 5-s post-stimulus window rate minus the **same run's**
+whole-15-s average. In a stimulated run that 15-s average *includes*
+the post-stimulus window, so the "delta" is a within-run
+self-comparison, not a contrast against the no-stimulus condition.
+The earlier addendum's statement that "the stim−rest delta is ≤ 0 in
+every wiring" is therefore **superseded**: it was computed on a
+metric that cannot answer the question.
+
+The correct primary metric — already fully contained in the committed
+80-run data, no rerun — is the **paired** contrast:
+
+    paired_delta_hz = stim-run 5-s window rate
+                      − paired rest-run 5-s window rate
+    (same wiring, same sim seed, same bg seed; window = [stim_end,
+     stim_end + 5000))
+
+Recomputed from `results-exact.json` and frozen as
+`data/paired-stim-effect.json` (`src/reanalyze_paired.py`).
+
+### (ii) Corrected paired numbers
+
+**50 ms, command pool** (per-seed / mean over 5 seeds):
+
+| wiring    | per-seed (Hz)                     | mean    |
+|-----------|-----------------------------------|---------|
+| measured  | +0.125 / +0.150 / +0.025 / +0.100 / +0.050 | **+0.090** |
+| shuf-42   | 0 / 0 / 0 / 0 / −0.025            | −0.005  |
+| shuf-43   | +0.025 / 0 / 0 / 0 / +0.050       | +0.015  |
+| shuf-44   | +0.050 / 0 / 0 / 0 / 0            | +0.010  |
+
+The measured wiring is positive in **all five seeds**; the three
+exact-invariant shuffle graphs are ~zero (max +0.015). Body-wall
+motors: measured +0.0125 Hz (per-seed 0.013/0.021/0.018/0.010/0.000)
+vs shuffles ≤ +0.0026 — small and not clearly above the shuffles.
+**5 ms:** all paired deltas 0.000 in every wiring and group (the
+documented null stands on the corrected metric too).
+
+### (iii) Time-resolved response (new data, 40 runs)
+
+`data/timecourse-50ms.json` (`src/timecourse.py`): the 50 ms variant
+re-run for all 4 wirings × 5 seeds × rest/stim with per-group rates in
+short windows (1 s pre-pulse, the 500 ms pulse, then 250/250/500/
+1000/3000 ms post-pulse). Paired contrasts (stim − paired rest, Hz):
+
+- **command pool**: during the pulse, measured **+1.75** vs shuffles
+  +0.75 / +0.25 / +0.40; post-pulse the measured wiring stays
+  positive (+0.05 to +0.18) while all shuffles decay to ~0 by ~1 s.
+- **body-wall motors**: pulse contrast ~+0.1 in *all* wirings (not
+  wiring-specific); post-pulse ~0.
+- **ash_ashj** (the driven receptor group): fires in all wirings
+  during the pulse (the injected current), no post-pulse effect.
+- **other**: measured mildly higher in the first post-pulse windows.
+
+So the response is **not** a brief transient cancelled inside the
+5-s window: if anything, the largest wiring-specific contrast is
+*during* the pulse, and it persists at a small magnitude afterwards.
+
+### (iv) Interpretation and scope
+
+On the corrected substrate and controls, the measured C. elegans
+wiring shows a **small, wiring-specific response to the ASH
+nociceptive pulse in the command neuron pool** (≈ +0.09 Hz in the
+5-s window, all seeds positive; ≈ +1.75 Hz during the pulse, ~2–4×
+the shuffle graphs), which does not reach the body-wall motor group.
+The 5-s window's ~5 Hz command-pool baseline makes the effect
+≈ +1.8% relative. This is a **candidate sensorimotor lead, not a
+demonstration of withdrawal**: 5 seeds, one 300-neuron circuit,
+all-excitatory signs (the release carries no transmitter sign — the
+resting-state bifurcation may itself be an all-excitatory artifact),
+and the 50 ms timescale is post-hoc. The 5 ms lab convention remains
+a clean null under every metric.
+
+### (v) Proposed bounded follow-up (for authorization; NOT run)
+
+1. **More independent rewirings**: 8 further exact-invariant shuffles
+   (seeds 45–52) to tighten the shuffle baseline of the command-pool
+   contrast.
+2. **Sign sensitivity**: assign glycinergic/GABAergic signs from the
+   Cook 2019 receptor-expression data (or a literature-derived
+   partial assignment) and re-test whether the command-pool response
+   survives (and whether the resting-state bifurcation persists).
+3. **Timescale sensitivity**: the same 4-wiring battery at
+   τ_syn ∈ {10, 25, 100} ms.
+4. **Real ASH transduction** (graded receptor model) instead of the
+   constant depolarization.
+
+Each is a few hours or less; a pre-registered stop rule would mirror
+the A-03 decision-pilot pattern (declared before execution).
+
+### Artifacts (this addendum)
+
+- `experiments/worm-pilot/src/reanalyze_paired.py`,
+  `data/paired-stim-effect.json` (frozen recompute; no rerun).
+- `experiments/worm-pilot/src/timecourse.py`,
+  `data/timecourse-50ms.json` (40 new runs; all prior artifacts
+  untouched).
+- `experiments/worm-pilot/src/run_campaign.py` — the campaign now
+  records the paired contrast as its primary metric (the within-run
+  `delta_hz` is retained as a diagnostic); applies to future runs
+  only, the frozen `results-exact.json` is unchanged.
