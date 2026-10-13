@@ -40,6 +40,8 @@ the README "Sizing outcome" section and the report):
 """
 from __future__ import annotations
 
+import hashlib
+
 import numpy as np
 import torch
 from torch import nn
@@ -184,6 +186,18 @@ STEP_MS = 100    # one task step = 100 ms of LIF
 WINDOW_MS = 200  # readout window ending at the report step
 
 
+def _trial_seed(task_key: str, row: int) -> int:
+    """Paired sensory RNG (2026-10-13 fix, review P0): the per-trial
+    torch seed is a deterministic function of (task id, trial master-
+    order index) ONLY — never the arm/wiring id, run seed, or phase —
+    so every wiring arm draws the IDENTICAL sensory Poisson spike
+    train for a given trial. v1 never seeded `torch.poisson`, which
+    gave each arm a different sensory train for the same trial."""
+    h = hashlib.sha256(f"a03-spike-drive:{task_key}:{row}".encode()) \
+        .digest()
+    return int.from_bytes(h[:4], "big") & 0x7FFFFFFF
+
+
 def w_x_projection(task: dict) -> np.ndarray:
     """Fixed master-seed input projection d -> 256 sensory nodes (the
     declared input encoding of the spike arm)."""
@@ -228,11 +242,22 @@ class SpikeArm:
         self._n = len(doc["neurons"])
         self._tonic = self._tonic_arr(doc)
         self.lif = self._new_lif()
+        # Explicit sensory addressing (2026-10-13 fix, review P0): the
+        # Poisson drive's channel c maps to neuron sensory_idx[c]
+        # (group == 6, the 256 olfactory sensory nodes). Identity on
+        # the staged atlas (group-6 neurons sit at indices 0..255),
+        # but the mapping is explicit — no implicit dependency on
+        # atlas ordering.
+        self.sensory_idx = np.array([i for i, n in enumerate(doc["neurons"])
+                                     if n["group"] == 6], dtype=np.int64)
+        self.Wx = w_x_projection(task)
+        assert len(self.sensory_idx) == self.Wx.shape[1], (
+            f"sensory population ({len(self.sensory_idx)}) and drive "
+            f"width ({self.Wx.shape[1]}) disagree")
         self.outputs = np.array(
             [i for i, n in enumerate(doc["neurons"]) if n["group"] in (19, 23)])
         self.pos = np.full(len(doc["neurons"]), -1, dtype=np.int64)
         self.pos[self.outputs] = np.arange(len(self.outputs))
-        self.Wx = w_x_projection(task)
         self.task = task
         # per-(step, sensory-node) min/max of the encoded input over the
         # training fold (declared normalization of the Poisson drive)
@@ -255,11 +280,41 @@ class SpikeArm:
                 tonic[i] = TONIC_OUT
         return tonic
 
+    def drive_events(self, x: np.ndarray, row: int) -> list:
+        """The trial's EXTERNAL Poisson drive as (neuron id, time_ms)
+        events, replayed with the exact per-trial seed protocol of
+        run_features. This is the pure function of (task id, trial
+        index) that every wiring arm must see identically — the
+        paired-RNG evidence (paired_rng_evidence.py) replays it for
+        two arms and asserts equality. `row`: the trial's index in
+        the master order."""
+        torch.manual_seed(_trial_seed(self.task["key"], int(row)))
+        ev = []
+        for s in range(x.shape[0]):
+            z = x[s] @ self.Wx
+            u = np.clip((z - self.m[s]) / (self.M[s] - self.m[s]), 0.0, 1.0)
+            lam = torch.tensor(((R0 + RMAX * u).astype(np.float32)) / 1000.0)
+            for ms in range(STEP_MS):
+                c = torch.poisson(lam)
+                nz = c.nonzero().flatten()
+                for ch, cnt in zip(nz.tolist(), c[c > 0].tolist()):
+                    for _ in range(int(cnt)):
+                        ev.append([int(self.sensory_idx[ch]),
+                                   s * STEP_MS + ms])
+        return ev
+
     def run_features(self, X: np.ndarray, rows: np.ndarray) -> np.ndarray:
         """X: (n_trials, T, d); rows: the trial indices of X in the
         master order (retained so the ridge targets align row-wise).
         Returns features (n_trials, R, 384): output-node spike rates
-        (Hz) over the window ending at each report step."""
+        (Hz) over the window ending at each report step.
+
+        Paired sensory RNG (2026-10-13 fix): before each trial's step
+        loop, the global torch RNG is seeded from (task id, trial
+        master-order index) only — so all wiring arms see identical
+        sensory spike trains for a given trial. The Poisson channel
+        c maps to neuron self.sensory_idx[c] (explicit, see __init__).
+        """
         self.feat_rows = rows  # caller also sets train_rows/test_rows
         rep = self.task["report_steps"]
         window_steps = WINDOW_MS // STEP_MS
@@ -268,6 +323,7 @@ class SpikeArm:
         torch.set_num_threads(1)  # declared: 10x faster on these kernels
         try:
             for i, x in enumerate(X):
+                torch.manual_seed(_trial_seed(self.task["key"], int(rows[i])))
                 net = self._new_lif()  # per-trial reset = fresh construction
                 step_counts = []
                 for s in range(x.shape[0]):
@@ -281,7 +337,9 @@ class SpikeArm:
                         c = torch.poisson(lam)
                         k = int(c.sum())
                         if k > 0:
-                            sp = net.step((c.nonzero().flatten().to(torch.int64),
+                            ch = c.nonzero().flatten().numpy().astype(np.int64)
+                            ids = self.sensory_idx[ch]  # channel -> neuron
+                            sp = net.step((torch.from_numpy(ids),
                                            c[c > 0].to(torch.int64)))
                         else:
                             sp = net.step()
