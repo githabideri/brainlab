@@ -357,8 +357,6 @@ or the comparison structure.
 - Turner-Evans et al. 2017 (shift loop); Shiu et al. 2024 (LIF
   standard); Dorkenwald et al. 2024 (FAFB v783); Turner-Evans et al.
   2015 (E-PG tuning); Paff et al. 2015 (C1/C2 EIP).
-- This session: `sessions/pi/2026-10-12_016.*` (plan / findings /
-  progress sidecars).
 
 ## Post-hoc note — 2026-10-13 (cross-lane input from the A-03 coordinator;
 ## the original text above is unmodified)
@@ -378,8 +376,8 @@ Two items from the A-03 lane, recorded against the B-02 artifacts:
    (verified: both rebuild the exact constructor state; the T1–T4
    re-run is byte-identical to the committed
    `data/stage1-tests.json`, sha `6a2782f6…`).
-2. **Corroboration of the transduction null.** A-03's design report
-   (`wt-a3/reports/2026-10-12-a03-design.md`) measured that the lab's
+2. **Corroboration of the transduction null.** The A-03 design report
+   (`reports/2026-10-12-a03-design.md`) measured that the lab's
    5 ms `tau_syn` makes fast trains unroutable — the same class of
    mechanism as the B-02/Stage-4 null and as the worm lane's
    `w·λ·τ_syn` finding: at the declared small weights and 5 ms
