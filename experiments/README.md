@@ -71,11 +71,20 @@ spiking reservoir at pilot budget (T-ang RMCE 75.8–95.4° vs chance
 89.8°). Renamed per review: this is a **spiking-reservoir benchmark
 with a learned readout** (frozen LIF + trainable ridge), not
 spiking+synaptic learning; the genuinely plastic variant is a separate
-future experiment. The 210-run main grid is re-estimated at ≈19–21 h,
-remains **not run**, and needs the two noted one-line fixes (W_SCALE
-manifest crash; version the Δw result paths) plus the independent
-re-review before it may start. Report:
-`../reports/2026-10-12-a03-design.md` (addendum is authoritative).
+future experiment. **Review round 4 (2026-10-13) closed the lane**:
+preflight fixes (seed-before-construction with bit-identity/same-init
+tests, manifest repair, versioned artifacts, version-aware summary,
+single-eval path, 24/24 tests) plus a **pre-registered 24-run decision
+pilot** (4 arms × 2 tasks × 3 seeds, declared stopping rule) returned
+**STOP** — no dynamics satisfies both clauses (tanh: T-del not
+same-signed across seeds, T-ang never ≥ 5°; spike: T-del +2.3 pt <
+5 pt, though T-ang passes at −7.8°) — so the final result is
+declared: *no biological advantage of the measured wiring over matched
+controls at this budget*; the 210-run main grid was **not run**.
+The one sub-threshold positive (spike T-ang 84.95° vs degree 92.77°)
+is logged as a candidate for the separate plastic/timescale study.
+Report:
+`../reports/2026-10-12-a03-design.md` (addenda are authoritative).
 - **b-01-internal-compass** (can a *measured* central-complex subgraph
   run a decodable heading attractor?) — `b-01-internal-compass/`.
   **Done 2026-10-12: clean null at the declared drive point.** 15 runs
@@ -126,10 +135,23 @@ re-review before it may start. Report:
   is a clean null in every wiring; the 50 ms variant (reasserted
   **exploratory**, post-hoc) shows a **resting-state** effect (measured
   rest ≈ 2.2 Hz vs ≈ 1.0–1.1 Hz in all three shuffle graphs) but the
-  stim−rest delta is ≤ 0 in every wiring — **v1's positive "routed"
-  verdict does not reproduce** and is superseded by the report's dated
-  addendum. Non-claims binding (no muscles, no signs in the release,
-  spiking ≠ movement). Report:
+  stim−rest "delta" turned out (review round 4, 2026-10-13) to be a
+  within-run quantity, not a stimulus effect. The **corrected paired
+  contrast** (stim-run minus paired rest-run, same window;
+  recomputed from the frozen 80 runs, no rerun) is **positive in the
+  measured wiring and ~zero in all three shuffles**: command pool
+  +0.090 Hz (all 5 seeds positive; shuffles −0.005/+0.015/+0.010),
+  body-wall motors +0.0125 Hz (not clearly above shuffles); 5 ms
+  stays a clean null. A 40-run time-resolved subset puts the largest
+  wiring-specific contrast **during** the 500 ms pulse (command pool
+  +1.75 Hz vs ≤ +0.75 in shuffles), with a small sustained post-pulse
+  remnant and no motor-level effect — a candidate sensorimotor lead,
+  exploratory (5 seeds, one 300-neuron circuit, all-excitatory signs,
+  post-hoc 50 ms timescale). A bounded follow-up (8 more independent
+  shuffles, transmitter-sign sensitivity, τ_syn sensitivity, real ASH
+  transduction) is proposed in the report and **not run**, pending
+  authorization. Non-claims binding (no muscles, no signs in the
+  release, spiking ≠ movement). Report:
   `../reports/2026-10-12-worm-pilot.md` (addendum is authoritative).
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
