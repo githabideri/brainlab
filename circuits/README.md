@@ -12,7 +12,7 @@ the provenance fields (see [../docs/substrate.md](../docs/substrate.md)).
 |------|-------------------|-----------|---------|-------------|------|---------|
 | [flywire-fafb-olfactory-1536](flywire-fafb-olfactory-1536.md) | FlyWire FAFB v783, via the FlyBridge atlas (`dist/data/circuit.json`) | degree-based olfactory subgraph (256 sensory / 128 local / 256 projection / 512 KC / 96 MB-out / 288 LH) | 1,536 | 42,921 | `ef6a6c1d…` (full hash in the entry) | `experiments/scorer/` |
 | [fafb-cc-b01](fafb-cc-b01.md) | FlyWire FAFB v783 (measured; source parquet sha256 in `experiments/b-01-internal-compass/data/manifest.json`) | CC+ALPN subgraph (the EL/EL′ ring readout populations + ALPN drive population + surrounding CX context) | 3,563 | 315,268 pairs | see entry | `experiments/b-01-internal-compass/` |
-| [c-elegans-substrate](c-elegans-substrate.md) | Cook 2019 whole-animal connectomes (SI6/SI7/SI8/SI9 workbooks, sha256-pinned in `experiments/worm-pilot/data/`) | complete hermaphrodite nervous system (both synapse classes: chemical + gap junction) | 300 (of 302) | 3,618 chemical + 2,130 gap-junction edges | see entry | `experiments/worm-pilot/` |
+| [c-elegans-substrate](c-elegans-substrate.md) | Cook 2019 whole-animal connectomes (SI6/SI7/SI8/SI9 workbooks, sha256-pinned in `experiments/worm-pilot/data/`) | complete hermaphrodite nervous system (both synapse classes: chemical + gap junction) | 300 (of 302) | 3,669 chemical + 1,089 canonical gap junctions (herm); 3,986 + 1,278 (male) — the SI9 sym/asym sheets are the same physical junctions, modelled once (v3, review round 5) | see entry | `experiments/worm-pilot/` |
 
 ## Upstream sources
 

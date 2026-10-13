@@ -78,13 +78,18 @@ single-eval path, 24/24 tests) plus a **pre-registered 24-run decision
 pilot** (4 arms × 2 tasks × 3 seeds, declared stopping rule) returned
 **STOP** — no dynamics satisfies both clauses (tanh: T-del not
 same-signed across seeds, T-ang never ≥ 5°; spike: T-del +2.3 pt <
-5 pt, though T-ang passes at −7.8°) — so the final result is
-declared: *no biological advantage of the measured wiring over matched
-controls at this budget*; the 210-run main grid was **not run**.
-The one sub-threshold positive (spike T-ang 84.95° vs degree 92.77°)
-is logged as a candidate for the separate plastic/timescale study.
+5 pt, though T-ang passes at −7.8°) — the 210-run main grid was
+**not run** per the declared rule. **Review round 5 narrowed the
+wording** (revision note in the report): the verdict is *the pre-
+defined expansion criteria were not met at this budget*, not "no
+biological advantage" — the tanh T-del fly ≥ degree difference (all 3
+seeds, two clearly positive) is seed-unstable and preserved as a
+candidate; the spike arm's three per-seed values are one deterministic
+evaluation re-labelled, never three replicates; `results/summary.json`
+now indexes all 44 cells (18 pilot/v1, 18 pilot/v2, 8 main/v3-dec).
 Report:
-`../reports/2026-10-12-a03-design.md` (addenda are authoritative).
+`../reports/2026-10-12-a03-design.md` (revision note is
+authoritative).
 - **b-01-internal-compass** (can a *measured* central-complex subgraph
   run a decodable heading attractor?) — `b-01-internal-compass/`.
   **Done 2026-10-12: clean null at the declared drive point.** 15 runs
@@ -122,37 +127,44 @@ Report:
   `../reports/2026-10-12-b02-internal-compass-v2.md`.
 - **worm-pilot** (multi-organism expansion: does the *measured* C. elegans
   connectome route a textbook sensorimotor computation?) —
-  `worm-pilot/`. **Corrected 2026-10-13 (external review P1)**: the v1
-  substrate was **corrupted** — the parser mapped spreadsheet cells by
-  list position, shifting every value one label column left (fabricated
-  self-edges; the v1 counts 3,618 chem / 2,130 gap are wrong). The v2
-  column-reference parse is cross-validated against the independent SI6
-  raw-EM book (99.8% pair overlap): **herm 3,669 chemical + 2,178
-  electrical** (1,089 sym + 1,089 asym) neuron–neuron edges. Re-run on
-  the corrected substrate with 3 independent exact-invariant shuffles
-  (34 asserted invariants: degrees, weight multisets, record counts,
-  zero drops), paired byte-identical stimuli, 80 runs: the 5 ms variant
-  is a clean null in every wiring; the 50 ms variant (reasserted
-  **exploratory**, post-hoc) shows a **resting-state** effect (measured
-  rest ≈ 2.2 Hz vs ≈ 1.0–1.1 Hz in all three shuffle graphs) but the
-  stim−rest "delta" turned out (review round 4, 2026-10-13) to be a
-  within-run quantity, not a stimulus effect. The **corrected paired
-  contrast** (stim-run minus paired rest-run, same window;
-  recomputed from the frozen 80 runs, no rerun) is **positive in the
-  measured wiring and ~zero in all three shuffles**: command pool
-  +0.090 Hz (all 5 seeds positive; shuffles −0.005/+0.015/+0.010),
-  body-wall motors +0.0125 Hz (not clearly above shuffles); 5 ms
-  stays a clean null. A 40-run time-resolved subset puts the largest
-  wiring-specific contrast **during** the 500 ms pulse (command pool
-  +1.75 Hz vs ≤ +0.75 in shuffles), with a small sustained post-pulse
-  remnant and no motor-level effect — a candidate sensorimotor lead,
-  exploratory (5 seeds, one 300-neuron circuit, all-excitatory signs,
-  post-hoc 50 ms timescale). A bounded follow-up (8 more independent
-  shuffles, transmitter-sign sensitivity, τ_syn sensitivity, real ASH
-  transduction) is proposed in the report and **not run**, pending
-  authorization. Non-claims binding (no muscles, no signs in the
+  `worm-pilot/`. **CLOSED 2026-10-13 (review round 5).** The lane went
+  through three substrate corrections: (1) v1 parse corruption
+  (positional reading of sparse spreadsheet rows — fabricated
+  self-edges; counts 3,618/2,130 wrong) → v2 column-reference parse,
+  cross-validated against the independent SI6 raw-EM book (99.8% pair
+  overlap). (2) Review round 4: the recorded stim−rest "delta" was a
+  within-run quantity, not a stimulus effect; the corrected *paired*
+  contrast (recomputed from the frozen 80 runs) looked positive in the
+  measured wiring (+0.090 Hz 5-s; +1.75 Hz during the 500 ms pulse in
+  a 40-run time-resolved subset) — flagged exploratory. (3) Review
+  round 5 found the v2 electrical layer **double-counted**: the SI9
+  "symmetric" and "asymmetric" gap-junction sheets are two
+  representations of the *same* ~1,089 physical junctions (every asym
+  pair occurs in the sym sheet, same weight; corroborated by the SI7
+  synapse list, which lists each junction exactly once), and the
+  background Poisson events additionally propagated as forced presynaptic
+  spikes (a second, unlabelled behaviour). The corrected **v3
+  substrate** (one canonical undirected junction layer, 1,089 herm /
+  1,278 male; explicit background Model A = pure external current vs
+  Model B = historical forced propagation) was re-measured without
+  parameter changes (160 runs): the round-4 positive contrasts **do
+  not survive** — 5 ms is a silent network under Model A (the +0.090
+  Hz was a few-spike difference in a pool kept barely alive by doubled
+  conductance); 50 ms Model A shows 0.0 paired contrast in every
+  window and wiring; 50 ms Model B shows a small, not-beating-all-
+  shuffles response (+0.040 Hz, 4/5 seeds positive, shuf-44 ≥
+  measured). What survives: a **resting-state** activity difference
+  (measured command pool above all shuffles: 9.03 vs 5.4–6.1 Hz under
+  Model B; weak and non-decisive under Model A). Net: the original
+  v1 "no positive ASH response in any wiring" null is reinstated on a
+  defensible substrate; the +0.090/+1.75 Hz are recorded as a
+  substrate artifact (not revalidated). The bounded follow-up
+  (more shuffles, transmitter signs, τ sensitivity, real ASH
+  transduction) remains **not run** — re-authorization would apply to
+  the v3 substrate. Non-claims binding (no muscles, no signs in the
   release, spiking ≠ movement). Report:
-  `../reports/2026-10-12-worm-pilot.md` (addendum is authoritative).
+  `../reports/2026-10-12-worm-pilot.md` (third addendum is
+  authoritative).
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling
