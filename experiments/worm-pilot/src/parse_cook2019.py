@@ -14,18 +14,24 @@ data/README for URLs + sha256):
                                 (no extrapolation, synapse counts not sized)
 
 The workbook was hand-assembled: the leading columns of each block are
-inconsistent (one stray banner/empty column here, two there). The parser
-detects the label row (the row containing 'I1L') and the name column
-(from the I1L data row) per sheet, then maps data columns to labels with
-the resulting offset. Residual artifacts are handled explicitly and
-counted, not silently dropped:
+inconsistent (one stray banner/empty column here, two there) AND data rows
+are SPARSE — the sheet XML omits empty cells entirely. The parser therefore
+must NOT map values by list position: it reads each cell's explicit column
+reference (the XML `r` attribute, e.g. "F4") and aligns data cells to the
+label row by true column index. (A 2026-10-12 version of this parser mapped
+positionally and shifted every value one label column left — it produced
+fake self-edges and a connectome that failed the SI6-⊆-SI9 cross-check;
+see the 2026-10-13 correction note in circuits/c-elegans-substrate.md.)
+The label row (the one containing 'I1L') supplies the column→name map; the
+name column comes from the I1L data row. Residual artifacts are handled
+explicitly and counted, not silently dropped:
 
   * region-banner rows and count rows are skipped (they never name a cell)
   * self-connections are zeroed (C. elegans neurons do not synapse onto
-    themselves; non-zero diagonal entries are workbook shift artifacts)
+    themselves; residual non-zero diagonal entries are workbook artifacts)
   * for the 'gap jn symmetric' sheets the two triangles of the matrix do
     not agree everywhere; the value is symmetrised by taking the max and
-    disagreements are counted
+    disagreements are counted; a pair present in only one triangle is kept
   * a row that repeats the header (trailing block) terminates the sheet
 
 Outputs (JSON, stable schema):
@@ -46,61 +52,106 @@ BANNERS = {
 }
 
 
+def _col_of(ref):
+    """Excel column reference ('F4') -> 0-based column index."""
+    s = "".join(ch for ch in ref if ch.isalpha())
+    n = 0
+    for ch in s:
+        n = n * 26 + (ord(ch) - 64)
+    return n - 1
+
+
 def load_xlsx(path):
+    """{sheet name: {row index: {column index: cell value}}}.
+
+    Cells are placed at the column index from their XML `r` reference,
+    so sparse rows (omitted empty cells) line up with the label row's
+    columns. (Rows without references fall back to sequential order; the
+    Cook 2019 sheets all carry references.)
+    """
     z = zipfile.ZipFile(path)
     ss = []
     if "xl/sharedStrings.xml" in z.namelist():
         r = ET.fromstring(z.read("xl/sharedStrings.xml"))
-        for si in r.findall(NS + "si"):
-            ss.append("".join(t.text or "" for t in si.iter(NS + "t")))
+        ss = ["".join(t.text or "" for t in si.iter(NS + "t"))
+              for si in r.findall(NS + "si")]
     wb = ET.fromstring(z.read("xl/workbook.xml"))
     sheets = [s.get("name") for s in wb.find(NS + "sheets")]
     out = {}
     for i, name in enumerate(sheets, 1):
         r = ET.fromstring(z.read("xl/worksheets/sheet%d.xml" % i))
-        rows = []
+        rows = {}
+        ridx = 0
         for row in r.iter(NS + "row"):
-            vals = []
+            d = {}
             for c in row.findall(NS + "c"):
                 v = c.find(NS + "v")
                 if v is None:
                     t = c.find(NS + "is")
-                    vals.append("".join(x.text or "" for x in t.iter(NS + "t"))
-                                if t is not None else "")
+                    val = ("".join(x.text or "" for x in t.iter(NS + "t"))
+                           if t is not None else "")
                 else:
-                    vals.append(ss[int(v.text)] if c.get("t") == "s" else v.text)
-            rows.append([str(x).strip() for x in vals])
-        out[name] = rows
+                    val = ss[int(v.text)] if c.get("t") == "s" else v.text
+                col = _col_of(c.get("r")) if c.get("r") else max(d) + 1
+                if val is not None:
+                    d[col] = str(val).strip()
+            if row.get("r"):
+                ridx = int("".join(ch for ch in row.get("r") if ch.isdigit())) - 1
+            rows[ridx] = d
+            ridx += 1
+        # dense row list, in order
+        out[name] = [rows.get(i, {})
+                     for i in range(max(rows) + 1) if i in rows]
     return out
+
+
+def _dense(r):
+    """{col: value} -> dense list (column-index addressed)."""
+    n = max(r) + 1 if r else 0
+    return [r.get(i, "") for i in range(n)]
 
 
 def parse_matrix(sheet):
     """Return (cols, M, stats) for one adjacency-matrix sheet.
 
-    cols: ordered column (postsynaptic) node names.
+    cols: ordered column (postsynaptic) node names (from the label row,
+          aligned by true column index).
     M: {presynaptic name: {postsynaptic name: value(str)}} for rows that
-       name a real cell.
+       name a real cell; value cells are matched to labels by the column
+       the cell actually sits in (never by list position).
     """
     rows = sheet
-    nrow = next(i for i, r in enumerate(rows[:6])
-                if "I1L" in [c.strip() for c in r])
-    k0 = next(i for i, c in enumerate(rows[nrow]) if c.strip() == "I1L")
-    cols = [c.strip() for c in rows[nrow][k0:]]
+    # label row: the first row holding a wide stretch of node-name labels
+    # (the hand-assembled sheets start with different regions per sex —
+    # I1L in the herm books, ASIL in the male raw-adjacency book)
+    nrow = None
+    for i, r in enumerate(rows[:10]):
+        if len([v for v in r.values() if v]) >= 100:
+            nrow = i
+            break
+    if nrow is None:
+        raise ValueError("no label row found")
+    label = rows[nrow]
+    labels = {c: v for c, v in label.items() if v}
+    cols = [v for _, v in sorted(labels.items())]
+    first_col = min(labels)
+    first_val = labels[first_col]
     namecol = None
-    for r in rows[nrow + 1:]:
-        cells = [c.strip() for c in r]
-        if "I1L" in cells:
-            namecol = cells.index("I1L")
+    for i in range(nrow + 1, len(rows)):
+        hits = sorted(c for c, v in rows[i].items() if v == first_val)
+        if hits:
+            namecol = hits[0]
             break
     if namecol is None:
-        raise ValueError("no I1L data row found")
+        raise ValueError("no data row matching the label row found")
     M, stats = {}, {"rows_seen": 0, "rows_skipped_banner": 0,
                     "rows_skipped_number": 0, "rows_skipped_noname": 0,
                     "header_repeat_rows": 0}
-    for r in rows[nrow + 1:]:
-        cells = [c.strip() for c in r]
-        nm = cells[namecol] if namecol < len(cells) else ""
-        nonempty = [c for c in cells if c]
+    labelset = set(labels.values())
+    for i in range(nrow + 1, len(rows)):
+        r = rows[i]
+        nm = r.get(namecol, "")
+        nonempty = [v for v in r.values() if v]
         stats["rows_seen"] += 1
         if not nm:
             stats["rows_skipped_noname"] += 1
@@ -111,14 +162,14 @@ def parse_matrix(sheet):
         if nm in ("1", "2", "3", "4", "5"):
             stats["rows_skipped_number"] += 1
             continue
-        if nm == "I1L" and len(nonempty) >= 20:
+        # a row that repeats the column labels (trailing block) terminates
+        # the sheet; data rows carry at most a handful of name values, a
+        # repeated label row carries hundreds
+        if sum(1 for v in nonempty if v in labelset) >= 20:
             stats["header_repeat_rows"] += 1
             break
-        M[nm] = {}
-        for j, v in enumerate(cells[namecol + 1:]):
-            li = k0 + (j - namecol - 1)
-            if 0 <= li < len(cols) and v:
-                M[nm][cols[li]] = v
+        M[nm] = {labels[c]: v for c, v in r.items()
+                 if v and c in labels and labels[c] != nm}
     return cols, M, stats
 
 
@@ -136,7 +187,8 @@ def parse_cell_lists(xlsx):
         if "TITLE" in name.upper():
             continue
         for r in rows[1:]:
-            cells = [c.strip() for c in r]
+            dense = _dense(r)
+            cells = [c.strip() for c in dense]
             if not cells or not cells[0]:
                 continue
             if cells[0] in BANNERS:
@@ -208,9 +260,12 @@ def main(data_dir):
                     if iv == 0:
                         nonnumeric += 1
                         continue
+                    if kind == "symmetric" and pre > post:
+                        # undirected: the pair may live in either triangle;
+                        # handled in a second pass after both directions are
+                        # seen (see below)
+                        continue
                     if kind == "symmetric":
-                        if pre > post:  # undirected edge, keep one direction
-                            continue
                         other = M.get(post, {}).get(pre, "0")
                         io = int(other) if other.isdigit() else 0
                         if io and io != iv:
@@ -219,6 +274,32 @@ def main(data_dir):
                     kept += 1
                     edges.append({"pre": pre, "post": post, "w": iv,
                                   "kind": key})
+            if kind == "symmetric":
+                # pairs present only in the lower triangle (pre > post) were
+                # skipped above; recover them so no record is lost
+                seen_pairs = {(e["pre"], e["post"]) for e in edges
+                              if e["kind"] == key}
+                for pre, row in M.items():
+                    if pre not in nodes:
+                        continue
+                    for post, v in row.items():
+                        if post not in nodes or pre <= post or pre == post:
+                            continue
+                        if (post, pre) in seen_pairs:
+                            continue
+                        iv = int(v) if v.isdigit() else 0
+                        if iv == 0:
+                            nonnumeric += 1
+                            continue
+                        other = M.get(pre, {}).get(post, "0")
+                        io = int(other) if other.isdigit() else 0
+                        if io and io != iv:
+                            asym += 1
+                        iv = max(iv, io)
+                        kept += 1
+                        edges.append({"pre": post, "post": pre, "w": iv,
+                                      "kind": key})
+                        seen_pairs.add((post, pre))
             stats["sheets"][key] = {
                 "sheet": sheetname, "mode": kind,
                 "nodes_in_columns": len(nodes),

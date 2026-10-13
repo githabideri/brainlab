@@ -67,7 +67,7 @@ were computed from the released data files in
 - **measured** (SI8 cell lists): 451 shared cells, 24 hermaphrodite-
   specific, 149 male-specific.
 - **measured** (neuron-only edge sets below): hermaphrodite 300
-  neurons, male 380 — two shy of the reported 302/385 (see parsing
+  neurons, male 378 — a few shy of the reported 302/385 (see parsing
   notes); the male carries ~80 additional neurons (cephalic + tail
   complement) and the hermaphrodite a small sex-specific set (HSN,
   vulval and egg-laying cells) absent from the male.
@@ -90,40 +90,73 @@ from. Re-downloaded 2026-10-12 (UTC) from the publisher's media host
 
 ## Parsing the released matrices
 
-The SI9 workbook was hand-assembled: each block's leading columns are
-inconsistent (a stray banner column here, a count row there).
-`experiments/worm-pilot/src/parse_cook2019.py` detects the label row
-(the one containing `I1L`) and the name column (from the `I1L` data row)
-per sheet and maps data columns to labels with the resulting offset.
-Residual artifacts are handled explicitly and **counted, not silently
-dropped**: region-banner/count rows skipped; self-connections zeroed
-(C. elegans neurons do not synapse onto themselves — non-zero diagonal
-entries are shift artifacts); the "symmetric" gap-junction sheets are
-symmetrised by max with disagreements counted; trailing header repeats
+The SI9/SI6 workbooks were hand-assembled: each block's leading columns
+are inconsistent (a stray banner column here, a count row there), AND
+the data rows are **sparse** — the spreadsheet XML omits empty cells
+entirely, so a row's value list is shorter than its column span. The
+parser (`experiments/worm-pilot/src/parse_cook2019.py`) therefore maps
+every cell to its label by the cell's explicit column reference (the
+XML `r` attribute), never by list position; the label row (the one
+holding the wide stretch of node names) supplies the column→name map
+and the name column comes from the first data row. Residual artifacts
+are handled explicitly and **counted, not silently dropped**:
+region-banner/count rows skipped; self-connections zeroed (C. elegans
+neurons do not synapse onto themselves — residual non-zero diagonal
+entries would be workbook artifacts); the "symmetric" gap-junction
+sheets are symmetrised by max with disagreements counted (a pair
+present in only one triangle is kept); trailing header repeats
 terminate each block.
 
-**measured** parse results (neuron-to-neuron edges after filtering to
-the SI8 neuron lists, SI9 basis = section-weighted, extrapolation
+> **Correction, 2026-10-13** (supersedes the 2026-10-12 parse counts
+> below; the 2026-10-12 pilot report's shuffle comparisons are
+> invalidated accordingly — see that report's addendum). The 2026-10-12
+> v1 parser mapped data-cell *list positions* to label positions.
+> Because the label row is missing the leading columns while the data
+> rows keep them, every value was attributed to the label **one column
+> left**: the v1 files contained fabricated self-edges (e.g.
+> AVAL→AVAL = 21), lost shifted values, and wrong counts (herm
+> 3,618 chem / 2,130 gap — including 2,030 "asymmetric" gap-junction
+> records, a number that cannot be reproduced from the workbook under
+> any counting rule). The v2 column-reference parse is validated two
+> ways: (a) the independent SI6 raw-EM-only book, parsed the same way,
+> agrees with SI9 on 99.8% (herm) / 99.5% (male) of neuron→neuron
+> chemical pairs, the disagreements being SI9's declared extrapolated
+> insertions; (b) the corrected matrices contain **zero** self-edges
+> and **zero** non-numeric cells — v1's signature of the shift — while
+> known weights (e.g. the AVAL→AVAR entry) read correctly.
+
+**measured** parse results, v2 (neuron-to-neuron edges after filtering
+to the SI8 neuron lists, SI9 basis = section-weighted, extrapolation
 included):
 
-| Sex | Neurons in sim | Chemical edges | Gap junctions (sym) | Gap junctions (asym) |
-|---|---|---|---|---|
-| hermaphrodite | 300 of 302 listed | 3,618 | 980 | 1,150 |
-| male | 380 of 383 listed | 3,986 | 1,257 | 1,262 |
+| Sex | Neurons in sim | Chemical edges | Gap junctions (sym, undirected) | Gap junctions (asym, directed) | Electrical total |
+|---|---|---|---|---|---|
+| hermaphrodite | 300 of 302 listed | 3,669 | 1,089 | 1,089 | 2,178 |
+| male | 378 of 383 listed | 3,986 | 1,278 | 1,278 | 2,556 |
+
+(The male chemical count 3,986 is unchanged from v1 — that sheet
+parsed correctly even positionally; the male *neuron* count moves
+380 → 378 because three listed neurons lose their only, shifted edge.)
 
 Against the authors' **reported** herm totals (4,887 chemical + 1,447
-gap, on 460 nodes incl. muscles/end organs): our chemical count splits
-as 3,618 neuron→neuron + ~1,182 neuron→muscle/end-organ (the matrices
-list 4,800 non-zero neuron-source entries in total; the remainder of the
-gap-junction sheets is consumed by non-neuron nodes and by the
-sym/asym double representation). The two missing neurons per sex are
-listed cells that carry no neuron–neuron edge in the matrices.
+gap, on 460 nodes incl. muscles/end organs): our 3,669 neuron→neuron
+chemical edges sit inside 4,841 non-zero neuron-source entries (the
+~1,172 remainder is neuron→muscle/end-organ; 4,841 vs the reported
+4,887 is the authors' own counting-basis difference); the 2,178
+neuron–neuron electrical records sit inside 2,865 non-zero gap-sheet
+entries (the remainder touches muscles/end organs; the sym and asym
+sheets are separate record lists, not two views of one set). The few
+missing neurons per sex are listed cells that carry no neuron–neuron
+edge in the matrices.
 
-**Known parse artifacts** (all small; none touches the nociceptive
-circuit's trunk — verified by direct inspection of every ASH/AVJ/AVA/
-AVB/AVD row): 52/60 zeroed diagonal entries per sex; 135/70 symmetric
-gap-junction disagreements (max kept); hundreds of non-numeric cells in
-shifted rows (skipped and counted).
+**Known parse artifacts, v2** (all small; none touches the
+nociceptive circuit's trunk — verified by direct inspection of every
+ASH/AVJ/AVA/AVB/AVD row): 1 symmetric gap-junction triangle
+disagreement per sex (max kept; v1's 135/70 were the shift's
+artefact); 0 non-numeric cells, 0 non-zero diagonals; a handful of
+one-triangle-only symmetric pairs kept. The 52 (herm) / 2 (male)
+chemical SI6 vs SI9 pair disagreements are the paper's declared
+extrapolated connections.
 
 ## Modelling decisions imposed by the substrate
 

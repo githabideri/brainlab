@@ -14,11 +14,11 @@ better than a degree-matched random wiring does — or is the answer
 - Nodes: the 300 hermaphrodite neurons with ≥ 1 neuron–neuron edge
   (`data/c-elegans-neurons-herm.json`); 2 listed neurons carry no
   neuron–neuron edge and drop out.
-- Chemical synapses: 3,618 directed edges, weight `w = α·√(section
+- Chemical synapses: 3,669 directed edges, weight `w = α·√(section
   count)`, **all excitatory** (the released data carry no signs or
   transmitters; see `circuits/c-elegans-substrate.md`).
-- Gap junctions: 2,130 neuron–neuron junctions (980 symmetric,
-  stored once; 1,150 asymmetric, directed). Modelled as **shared
+- Gap junctions: 2,178 neuron–neuron junctions (1,089 symmetric,
+  stored once; 1,089 asymmetric, directed). Modelled as **shared
   conductance** — linear current `g·(V_j − V_i)` per released EM
   section of the junction, folded into the per-neuron membrane time
   constant and solved exactly per step (per the Cook 2019 treatment
