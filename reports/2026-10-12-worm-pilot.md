@@ -405,3 +405,149 @@ the A-03 decision-pilot pattern (declared before execution).
   records the paired contrast as its primary metric (the within-run
   `delta_hz` is retained as a diagnostic); applies to future runs
   only, the frozen `results-exact.json` is unchanged.
+
+## Addendum (2026-10-13, third) — the electrical layer was double-counted
+## and the background drive was doing double duty; the round-4 positive
+## contrasts do NOT survive the corrected substrate (review round 5)
+
+Two P0 defects in the v2 substrate were found in the fifth external
+review (2026-10-13) and are now resolved. Both concern the electrical
+(coupled) part of the network, not the chemistry.
+
+### (i) P0 — the two gap-junction sheets are the same physical junctions
+
+The SI9 workbook carries the electrical connections in two sheets,
+"symmetric" (1,089 rows, herm) and "asymmetric" (1,089 rows). The v2
+treatment modelled them as **two independent edge classes**, so 2,178
+electrical records were included in the simulation and the shuffle
+randomized the two classes independently.
+
+Verified against the workbook's other sheets:
+
+- Every asymmetric pair appears in the symmetric sheet as the same
+  unordered neuron pair with the **identical weight** (herm:
+  1,086/1,086, 0 weight mismatches; male: 1,276/1,276, 1 mismatch —
+  VB06/VB07, sym 5 vs asym 1; the canonical weight takes the symmetric
+  value). Three herm pairs (DD06/PDB, M2R/M3R, M4/M5) and one male pair
+  (M1R/M2R) occur **only** in the symmetric sheet.
+- The **SI7 synapse list** (one row per physical synapse,
+  type = "electrical"; each junction exactly once, partner = 1)
+  corroborates: 948 herm neuron–neuron EM rows (939 in the union, 150
+  in SI7 but absent from both gap sheets, 2 in the gap sheets but not
+  EM-verified). SI6 raw adjacency agrees (overlap 99–100%).
+- The paper itself (Fig. 1) draws gap junctions as undirected
+  connections; the SI6 book has a single gap-junction adjacency.
+
+So the sheets are **alternative representations of the same ~1,089
+physical junctions** (the asym sheet additionally records which
+end was the "pre" cell in the EM stack), not additive edge classes.
+The v2 network carried roughly double the electrical conductance of
+the real circuit, and its "invariant-matched" shuffles broke the
+sheets' correspondence.
+
+**Fix.** `parse_cook2019.py` now emits a canonical electrical file
+(`c-elegans-electrical-<sex>.json`): one undirected record per
+physical junction (union of the sheets; symmetric weight preferred),
+with provenance fields per record (`em_verified`,
+`in_sym/asym_sheet`, both section counts). The simulator builds a
+single undirected conductance layer from it, and the exact shuffle
+rewires that single layer (endpoint-pairing model, self-edge
+rejection, weight multiset + per-neuron junction degree preserved).
+New test `test_invariants.py` section asserts the sheet relationship
+and the SI7 cross-check; all invariants pass.
+
+### (ii) P0 — background events propagated as forced spikes
+
+In `WormNet.step()`, every background Poisson event (a) injected
+external current into its neuron **and** (b) was enqueued as a
+presynaptic spike, so the event travelled through the neuron's
+chemical output fan-out in the next step **even when the neuron never
+crossed threshold** — a second, unlabelled behaviour of the v2.
+
+**Fix.** The two models are now explicit: `cfg["bg_propagate"] =
+False` (Model A, default) is pure external current — only
+genuine threshold-crossing spikes propagate; `True` (Model B) is the
+historical v2 behaviour. `test_bg_models.py` demonstrates the
+difference on a minimal network (A: 0 spikes; B: 124 spikes from
+forced propagation alone) and asserts that the background event
+trains are byte-identical across models (paired-input is
+model-independent). Historical artifacts were left untouched; new
+runs carry the model label in every record.
+
+### (iii) Minimal re-run on the corrected substrate (pre-registered
+question: do the round-4 effects survive?)
+
+160 runs, frozen v2 parameters (no re-calibration, no new
+gains/timescales), canonical substrate:
+
+- **5 ms variant, Model A (80 runs):** the network is essentially
+  silent at rest (0 spikes in all 40 rest runs; ≤0.025 Hz under
+  stimulation). The round-4 +0.090 Hz 5-s paired contrast **does not
+  reappear** (all paired contrasts are 0.0). Note that even the v2
+  5 ms network was near-silent (47 total rest spikes in the measured
+  wiring), so the round-4 5 ms "effect" was a few-spike difference in
+  a silent pool that the doubled conductance layer had kept barely
+  alive — it is not reproducible on the corrected substrate.
+- **50 ms variant, Model A (80 runs):** sparse but alive (all-neuron
+  rest 0.17–0.20 Hz; command pool ~0.02 Hz). The time-resolved
+  paired contrasts are 0.0 in every window and wiring: the round-4
+  **+1.75 Hz during-pulse and the small sustained post-pulse positives
+  do not survive.**
+- **50 ms variant, Model B (40 runs):** alive (measured rest 2.97 Hz
+  vs ~1.78 in all three shuffles). The **resting-state** wiring-
+  specific difference survives (measured command pool 9.03 Hz vs
+  5.4–6.1 in the shuffles — the same direction as the v2 4.95 vs
+  1.8–2.7), but the ASH **response** contrast is +0.040 Hz with 4/5
+  seeds positive and shuf-44 (+0.050) at or above the measured mean —
+  i.e. it no longer satisfies "beats all shuffles, all seeds
+  positive".
+
+**Conclusion.** The round-4 "wiring-specific ASH nociceptive
+response" (+0.090 Hz 5-s, +1.75 Hz during-pulse) was an artifact of
+the double-counted electrical layer and/or the forced background
+propagation: it disappears under **both** corrected background
+models. The round-1/2 "no positive response in any wiring" null is
+thereby substantively reinstated — now on a substrate whose
+electrical graph matches the published physical junctions, so it is a
+stronger null than the v1. The resting-state activity difference
+(measured above shuffles) survives in Model B (and weakly,
+non-decisively, in Model A) and remains the one wiring-specific
+observation, with the round-4 caveats (single network per variant,
+5 seeds, all-excitatory chemistry, constant depolarization rather
+than a graded receptor model).
+
+### (iv) Status changes
+
+- The round-4 "pending revalidation" result is now **resolved: not
+  revalidated** (artifact of the v2 substrate). The +0.090/+1.75 Hz
+  numbers remain in the frozen artifacts with that label.
+- The bounded follow-up proposed in the second addendum (8 more
+  shuffles, glycinergic/GABAergic signs, τ sensitivity, real ASH
+  transduction) was NOT run — review round 5 explicitly withheld
+  authorization pending this correction. Re-authorization would
+  apply to the v3 substrate (canonical electrical graph, Model A
+  default, Model B comparison retained).
+- The original multi-track campaign is closed as of 2026-10-13;
+  this lane is its final state.
+
+### Artifacts (this addendum)
+
+- `src/parse_cook2019.py` — `electrical_si7()` /
+  `canonical_electrical()`; new files `data/c-elegans-electrical-
+  herm.json`, `data/c-elegans-electrical-male.json`; inventory
+  extended with the sheet-relationship and SI7 cross-check numbers.
+- `src/sim.py` — single canonical conductance layer;
+  `cfg["bg_propagate"]` (Model A default / Model B historical);
+  exact shuffle rewires the single junction layer.
+- `src/test_invariants.py` (canonical-graph section),
+  `src/test_bg_models.py` (new).
+- `config-5ms-v2-dual-electrical.json` /
+  `config-50ms-v2-dual-electrical.json` (frozen v2 configs,
+  renamed); `config-5ms.json` / `config-50ms.json` (v3: same frozen
+  parameters, `bg_propagate: false`); `config-50ms-v3-modelB.json`.
+- `src/run_v3.py` (driver), `results-v3-canonical.json` (80 runs,
+  Model A, both variants), `results-v3-modelB-50ms.json` (40 runs,
+  Model B), `data/timecourse-50ms-v3.json` (40 runs, Model A).
+  All v1/v2 artifacts (`results.json`, `results-exact.json`,
+  `data/timecourse-50ms.json`, `data/paired-stim-effect.json`,
+  calibration logs) are untouched.

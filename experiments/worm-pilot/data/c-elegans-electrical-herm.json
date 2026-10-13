@@ -1,0 +1,18509 @@
+[
+{
+"pre": "ADAL",
+"post": "ADAR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ADAL",
+"ADAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ADAL",
+"post": "ADFL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"ADFL",
+"ADAL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "ADAL",
+"post": "ASHL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASHL",
+"ADAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADAL",
+"post": "AVDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ADAL",
+"AVDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "ADAL",
+"post": "OLQVL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"OLQVL",
+"ADAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "ADAL",
+"post": "PVQL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVQL",
+"ADAL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "ADAR",
+"post": "ADFR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"ADFR",
+"ADAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "ADAR",
+"post": "ASHR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASHR",
+"ADAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ADAR",
+"post": "AVDL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ADAR",
+"AVDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "ADAR",
+"post": "PVQR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVQR",
+"ADAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADEL",
+"post": "AINL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ADEL",
+"AINL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADEL",
+"post": "IL2L",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ADEL",
+"IL2L"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "ADEL",
+"post": "RIGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADEL",
+"RIGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADEL",
+"post": "RMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADEL",
+"RMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADEL",
+"post": "RMER",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADEL",
+"RMER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADEL",
+"post": "SIBDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADEL",
+"SIBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADEL",
+"post": "SIBVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADEL",
+"SIBVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADER",
+"post": "AINR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"ADER",
+"AINR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "ADER",
+"post": "ALNR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ALNR",
+"ADER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADER",
+"post": "AVJR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADER",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADER",
+"post": "AVKL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"ADER",
+"AVKL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "ADER",
+"post": "FLPR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"FLPR",
+"ADER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "ADER",
+"post": "PVM",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVM",
+"ADER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADER",
+"post": "PVQR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ADER",
+"PVQR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADFL",
+"post": "AFDL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ADFL",
+"AFDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "ADFL",
+"post": "AIZL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADFL",
+"AIZL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFL",
+"post": "ASHL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADFL",
+"ASHL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFL",
+"post": "AWCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADFL",
+"AWCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFL",
+"post": "RIAL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADFL",
+"RIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFL",
+"post": "RIPL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ADFL",
+"RIPL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADFL",
+"post": "URBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADFL",
+"URBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFR",
+"post": "AFDR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"ADFR",
+"AFDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "ADFR",
+"post": "AIAR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"ADFR",
+"AIAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "ADFR",
+"post": "ASGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASGR",
+"ADFR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFR",
+"post": "AWAR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AWAR",
+"ADFR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ADFR",
+"post": "AWBR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWBR",
+"ADFR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFR",
+"post": "RIH",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADFR",
+"RIH"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFR",
+"post": "SMBVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ADFR",
+"SMBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADFR",
+"post": "SMDVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ADFR",
+"SMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADLL",
+"post": "ADLR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"ADLL",
+"ADLR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "ADLL",
+"post": "AVDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ADLL",
+"AVDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ADLL",
+"post": "AWAL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWAL",
+"ADLL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADLL",
+"post": "RMGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ADLL",
+"RMGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ADLR",
+"post": "ASGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASGR",
+"ADLR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ADLR",
+"post": "ASKR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASKR",
+"ADLR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AFDL",
+"post": "AFDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AFDL",
+"AFDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AFDL",
+"post": "AIBL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AFDL",
+"AIBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AFDL",
+"post": "AIYL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AFDL",
+"AIYL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AFDL",
+"post": "ASEL",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"ASEL",
+"AFDL"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "AFDL",
+"post": "AVEL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AFDL",
+"AVEL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AFDL",
+"post": "URBL",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AFDL",
+"URBL"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 9
+},
+{
+"pre": "AFDR",
+"post": "AIBR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AFDR",
+"AIBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AFDR",
+"post": "ASEL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASEL",
+"AFDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AFDR",
+"post": "ASER",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASER",
+"AFDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AFDR",
+"post": "ASHR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AFDR",
+"ASHR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "AFDR",
+"post": "AWCR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AFDR",
+"AWCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AFDR",
+"post": "RMDVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AFDR",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AFDR",
+"post": "URBR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AFDR",
+"URBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIAL",
+"post": "AIAR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AIAL",
+"AIAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 7
+},
+{
+"pre": "AIAL",
+"post": "AIBL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AIAL",
+"AIBL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AIAL",
+"post": "ASIL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASIL",
+"AIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIAL",
+"post": "ASIR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASIR",
+"AIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIAL",
+"post": "ASJL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASJL",
+"AIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIAL",
+"post": "ASKL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASKL",
+"AIAL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AIAL",
+"post": "AWAL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWAL",
+"AIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIAL",
+"post": "AWBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWBL",
+"AIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIAL",
+"post": "AWCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWCR",
+"AIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIAR",
+"post": "ASGR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASGR",
+"AIAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AIAR",
+"post": "ASHR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASHR",
+"AIAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIAR",
+"post": "ASIR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASIR",
+"AIAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AIAR",
+"post": "ASKR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASKR",
+"AIAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIAR",
+"post": "AWAR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AWAR",
+"AIAR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AIAR",
+"post": "AWCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWCR",
+"AIAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "AIZR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AIZR",
+"AIBL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "AIBL",
+"post": "ASKL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASKL",
+"AIBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "DVC",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AIBL",
+"DVC"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIBL",
+"post": "FLPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"FLPL",
+"AIBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "RIGR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIGR",
+"AIBL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AIBL",
+"post": "RIMR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIBL",
+"RIMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "RIS",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIS",
+"AIBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "RIVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIBL",
+"RIVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "RMED",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AIBL",
+"RMED"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIBL",
+"post": "SDQR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQR",
+"AIBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "SIADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIBL",
+"SIADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBL",
+"post": "SMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIBL",
+"SMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBR",
+"post": "AIZL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AIZL",
+"AIBR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AIBR",
+"post": "ASKR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASKR",
+"AIBR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AIBR",
+"post": "DVC",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AIBR",
+"DVC"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 9
+},
+{
+"pre": "AIBR",
+"post": "PVPL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVPL",
+"AIBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIBR",
+"post": "PVT",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIBR",
+"PVT"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBR",
+"post": "RICR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIBR",
+"RICR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBR",
+"post": "RIGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIGL",
+"AIBR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AIBR",
+"post": "RIML",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AIBR",
+"RIML"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIBR",
+"post": "RIS",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIS",
+"AIBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AIBR",
+"post": "RIVR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AIBR",
+"RIVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIBR",
+"post": "SIAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIBR",
+"SIAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AIBR",
+"post": "SMDDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AIBR",
+"SMDDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AIML",
+"post": "ASGL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASGL",
+"AIML"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIML",
+"post": "SIBDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AIML",
+"SIBDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIMR",
+"post": "ASJR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASJR",
+"AIMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIMR",
+"post": "AVKR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AIMR",
+"AVKR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AIMR",
+"post": "CEPVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"CEPVR",
+"AIMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIMR",
+"post": "SMBVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIMR",
+"SMBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AINL",
+"post": "AINR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AINL",
+"AINR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AINL",
+"post": "ASGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASGR",
+"AINL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AINL",
+"post": "AUAR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AINL",
+"AUAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AINR",
+"post": "ASGL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASGL",
+"AINR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AINR",
+"post": "ASIL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASIL",
+"AINR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AINR",
+"post": "AUAL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AINR",
+"AUAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AINR",
+"post": "BAGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"BAGL",
+"AINR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AINR",
+"post": "RIAL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AINR",
+"RIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIYL",
+"post": "AIYR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AIYL",
+"AIYR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AIYL",
+"post": "AVKL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIYL",
+"AVKL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIYL",
+"post": "RIML",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AIYL",
+"RIML"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "AIYR",
+"post": "ASIR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASIR",
+"AIYR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIYR",
+"post": "AUAR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIYR",
+"AUAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIYR",
+"post": "RIMR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AIYR",
+"RIMR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AIZL",
+"post": "AIZR",
+"w": 18,
+"w_sym": 18,
+"w_asym": [
+18
+],
+"directions": [
+[
+"AIZL",
+"AIZR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 18
+},
+{
+"pre": "AIZL",
+"post": "ASGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASGL",
+"AIZL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AIZL",
+"post": "ASHL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASHL",
+"AIZL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AIZL",
+"post": "AWAL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AWAL",
+"AIZL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AIZL",
+"post": "RIGL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AIZL",
+"RIGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIZL",
+"post": "RIH",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIH",
+"AIZL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIZR",
+"post": "ASGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASGR",
+"AIZR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AIZR",
+"post": "ASHR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"ASHR",
+"AIZR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "AIZR",
+"post": "AWAR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AWAR",
+"AIZR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ALA",
+"post": "ASJL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASJL",
+"ALA"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ALA",
+"post": "ASKR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASKR",
+"ALA"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ALA",
+"post": "AVER",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ALA",
+"AVER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ALA",
+"post": "HSNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ALA",
+"HSNL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ALA",
+"post": "HSNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ALA",
+"HSNR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ALA",
+"post": "PVDL",
+"w": 250,
+"w_sym": 250,
+"w_asym": [
+250
+],
+"directions": [
+[
+"PVDL",
+"ALA"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ALA",
+"post": "PVDR",
+"w": 250,
+"w_sym": 250,
+"w_asym": [
+250
+],
+"directions": [
+[
+"PVDR",
+"ALA"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ALA",
+"post": "RID",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"ALA",
+"RID"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "ALML",
+"post": "AVM",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"ALML",
+"AVM"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 7
+},
+{
+"pre": "ALML",
+"post": "PVR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ALML",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ALML",
+"post": "RMDDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ALML",
+"RMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ALML",
+"post": "RMGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ALML",
+"RMGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ALML",
+"post": "SMBDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ALML",
+"SMBDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ALMR",
+"post": "AVDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ALMR",
+"AVDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "ALMR",
+"post": "AVM",
+"w": 16,
+"w_sym": 16,
+"w_asym": [
+16
+],
+"directions": [
+[
+"ALMR",
+"AVM"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 16
+},
+{
+"pre": "ALMR",
+"post": "PVR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ALMR",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ALMR",
+"post": "SDQR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SDQR",
+"ALMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ALNL",
+"post": "SMBDR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ALNL",
+"SMBDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "ALNL",
+"post": "SMDDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ALNL",
+"SMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ALNL",
+"post": "SMDVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ALNL",
+"SMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ALNR",
+"post": "PVR",
+"w": 16,
+"w_sym": 16,
+"w_asym": [
+16
+],
+"directions": [
+[
+"ALNR",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ALNR",
+"post": "RMGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ALNR",
+"RMGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ALNR",
+"post": "SMDDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ALNR",
+"SMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AQR",
+"post": "AVBL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AQR",
+"AVBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AQR",
+"post": "AVKL",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AQR",
+"AVKL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 7
+},
+{
+"pre": "AQR",
+"post": "AVKR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AQR",
+"AVKR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AQR",
+"post": "PVPL",
+"w": 41,
+"w_sym": 41,
+"w_asym": [
+41
+],
+"directions": [
+[
+"AQR",
+"PVPL"
+]
+],
+"si7_synapses": 12,
+"si7_sections": 51
+},
+{
+"pre": "AQR",
+"post": "PVPR",
+"w": 61,
+"w_sym": 61,
+"w_asym": [
+61
+],
+"directions": [
+[
+"AQR",
+"PVPR"
+]
+],
+"si7_synapses": 20,
+"si7_sections": 61
+},
+{
+"pre": "AQR",
+"post": "RIGR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AQR",
+"RIGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AS01",
+"post": "AVEL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVEL",
+"AS01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AS01",
+"post": "AVER",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVER",
+"AS01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS01",
+"post": "FLPR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"FLPR",
+"AS01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS01",
+"post": "VA03",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AS01",
+"VA03"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "AS01",
+"post": "VA05",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AS01",
+"VA05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AS02",
+"post": "DA02",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DA02",
+"AS02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AS02",
+"post": "VA03",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AS02",
+"VA03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AS02",
+"post": "VA04",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AS02",
+"VA04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 9
+},
+{
+"pre": "AS03",
+"post": "AVAR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVAR",
+"AS03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS03",
+"post": "DA02",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA02",
+"AS03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS03",
+"post": "PVDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDR",
+"AS03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS04",
+"post": "DA03",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"DA03",
+"AS04"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "AS05",
+"post": "AVAR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVAR",
+"AS05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AS05",
+"post": "AVBR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVBR",
+"AS05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AS06",
+"post": "AVAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAR",
+"AS06"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AS06",
+"post": "AVBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVBL",
+"AS06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS06",
+"post": "AVBR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVBR",
+"AS06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS06",
+"post": "DA05",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DA05",
+"AS06"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 5
+},
+{
+"pre": "AS10",
+"post": "AVAL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAL",
+"AS10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS10",
+"post": "AVAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAR",
+"AS10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AS10",
+"post": "AVHL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVHL",
+"AS10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS10",
+"post": "AVKL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKL",
+"AS10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS10",
+"post": "DA07",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA07",
+"AS10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AS10",
+"post": "DB07",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB07",
+"AS10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS10",
+"post": "VA12",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AS10",
+"VA12"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AS11",
+"post": "AVFL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVFL",
+"AS11"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AS11",
+"post": "AVG",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVG",
+"AS11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS11",
+"post": "AVHL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVHL",
+"AS11"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AS11",
+"post": "AVHR",
+"w": 17,
+"w_sym": 17,
+"w_asym": [
+17
+],
+"directions": [
+[
+"AVHR",
+"AS11"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 17
+},
+{
+"pre": "AS11",
+"post": "AVKL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKL",
+"AS11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS11",
+"post": "DA08",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA08",
+"AS11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS11",
+"post": "DVA",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"AS11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS11",
+"post": "DVB",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"DVB",
+"AS11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AS11",
+"post": "PDB",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AS11",
+"PDB"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AS11",
+"post": "PVPL",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"PVPL",
+"AS11"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 6
+},
+{
+"pre": "AS11",
+"post": "RID",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RID",
+"AS11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AS11",
+"post": "VB11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AS11",
+"VB11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASEL",
+"post": "ASGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASGL",
+"ASEL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ASEL",
+"post": "AWCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASEL",
+"AWCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASEL",
+"post": "AWCR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASEL",
+"AWCR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "ASER",
+"post": "ASGR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASGR",
+"ASER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ASER",
+"post": "AWBR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWBR",
+"ASER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASER",
+"post": "PVQR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASER",
+"PVQR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASGL",
+"post": "AWBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASGL",
+"AWBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASGL",
+"post": "SMDDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASGL",
+"SMDDR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ASGR",
+"post": "ASIR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"ASIR",
+"ASGR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "ASGR",
+"post": "AWCR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASGR",
+"AWCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ASHL",
+"post": "ASHR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"ASHL",
+"ASHR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 7
+},
+{
+"pre": "ASHL",
+"post": "ASKL",
+"w": 18,
+"w_sym": 18,
+"w_asym": [
+18
+],
+"directions": [
+[
+"ASKL",
+"ASHL"
+]
+],
+"si7_synapses": 7,
+"si7_sections": 18
+},
+{
+"pre": "ASHL",
+"post": "RICL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"ASHL",
+"RICL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "ASHL",
+"post": "RMGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASHL",
+"RMGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ASHR",
+"post": "ASKR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASKR",
+"ASHR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ASHR",
+"post": "AVAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASHR",
+"AVAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "ASHR",
+"post": "AVER",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASHR",
+"AVER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASHR",
+"post": "AVHL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"ASHR",
+"AVHL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "ASHR",
+"post": "RICR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"ASHR",
+"RICR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "ASHR",
+"post": "RMGR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASHR",
+"RMGR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "ASIL",
+"post": "ASIR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASIL",
+"ASIR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "ASJL",
+"post": "ASJR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"ASJL",
+"ASJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 7
+},
+{
+"pre": "ASJL",
+"post": "IL2L",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1,
+1
+],
+"directions": [
+[
+"ASJL",
+"IL2L"
+],
+[
+"IL2L",
+"ASJL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASJL",
+"post": "PVQL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASJL",
+"PVQL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASJL",
+"post": "SMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASJL",
+"SMDDR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ASJR",
+"post": "PVQR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"ASJR",
+"PVQR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "ASKL",
+"post": "ASKR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"ASKL",
+"ASKR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 9
+},
+{
+"pre": "ASKL",
+"post": "AVHL",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"ASKL",
+"AVHL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 8
+},
+{
+"pre": "ASKL",
+"post": "HSNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASKL",
+"HSNL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "ASKL",
+"post": "PVQL",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"ASKL",
+"PVQL"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 8
+},
+{
+"pre": "ASKR",
+"post": "AVHR",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"ASKR",
+"AVHR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 10
+},
+{
+"pre": "ASKR",
+"post": "HSNL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASKR",
+"HSNL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "ASKR",
+"post": "HSNR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"ASKR",
+"HSNR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "ASKR",
+"post": "PVQR",
+"w": 25,
+"w_sym": 25,
+"w_asym": [
+25
+],
+"directions": [
+[
+"ASKR",
+"PVQR"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 25
+},
+{
+"pre": "ASKR",
+"post": "RMGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"ASKR",
+"RMGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AUAL",
+"post": "AUAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AUAL",
+"AUAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AUAL",
+"post": "AWBL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AWBL",
+"AUAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AUAL",
+"post": "AWCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWCL",
+"AUAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AUAL",
+"post": "RMDVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AUAL",
+"RMDVL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AUAR",
+"post": "AWBR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AWBR",
+"AUAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AUAR",
+"post": "URXR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"URXR",
+"AUAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVAL",
+"post": "AVAR",
+"w": 18,
+"w_sym": 18,
+"w_asym": [
+18
+],
+"directions": [
+[
+"AVAL",
+"AVAR"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 18
+},
+{
+"pre": "AVAL",
+"post": "AVDL",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVDL",
+"AVAL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 6
+},
+{
+"pre": "AVAL",
+"post": "AVDR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AVDR",
+"AVAL"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 7
+},
+{
+"pre": "AVAL",
+"post": "AVEL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVEL",
+"AVAL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "AVJL",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVJL",
+"AVAL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 7
+},
+{
+"pre": "AVAL",
+"post": "AVJR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVJR",
+"AVAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "DA01",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAL",
+"DA01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "DA02",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVAL",
+"DA02"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 7
+},
+{
+"pre": "AVAL",
+"post": "DA03",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVAL",
+"DA03"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 6
+},
+{
+"pre": "AVAL",
+"post": "DA04",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAL",
+"DA04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "DA05",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAL",
+"DA05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "DA06",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVAL",
+"DA06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAL",
+"post": "DA07",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"AVAL",
+"DA07"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 7
+},
+{
+"pre": "AVAL",
+"post": "DA08",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"AVAL",
+"DA08"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 7
+},
+{
+"pre": "AVAL",
+"post": "DA09",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVAL",
+"DA09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAL",
+"post": "LUAL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"LUAL",
+"AVAL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "LUAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"LUAR",
+"AVAL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "PHCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHCL",
+"AVAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAL",
+"post": "PHCR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PHCR",
+"AVAL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "AVAL",
+"post": "PLML",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PLML",
+"AVAL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAL",
+"post": "PLMR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PLMR",
+"AVAL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAL",
+"post": "PVCL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAL",
+"PVCL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "AVAL",
+"post": "PVCR",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"AVAL",
+"PVCR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "AVAL",
+"post": "PVDR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"PVDR",
+"AVAL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAL",
+"post": "PVNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVNL",
+"AVAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAL",
+"post": "PVPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPL",
+"AVAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAL",
+"post": "PVPR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVPR",
+"AVAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "RIMR",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"RIMR",
+"AVAL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 11
+},
+{
+"pre": "AVAL",
+"post": "SABD",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVAL",
+"SABD"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 7
+},
+{
+"pre": "AVAL",
+"post": "SABVR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"AVAL",
+"SABVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 8
+},
+{
+"pre": "AVAL",
+"post": "URYDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"URYDL",
+"AVAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "URYVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"URYVR",
+"AVAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "VA01",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAL",
+"VA01"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVAL",
+"post": "VA02",
+"w": 13,
+"w_sym": 13,
+"w_asym": [
+13
+],
+"directions": [
+[
+"AVAL",
+"VA02"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 13
+},
+{
+"pre": "AVAL",
+"post": "VA03",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVAL",
+"VA03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "AVAL",
+"post": "VA04",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVAL",
+"VA04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 7
+},
+{
+"pre": "AVAL",
+"post": "VA06",
+"w": 13,
+"w_sym": 13,
+"w_asym": [
+13
+],
+"directions": [
+[
+"AVAL",
+"VA06"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 13
+},
+{
+"pre": "AVAL",
+"post": "VA07",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAL",
+"VA07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "VA08",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAL",
+"VA08"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "VA09",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAL",
+"VA09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAL",
+"post": "VA10",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVAL",
+"VA10"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "AVAL",
+"post": "VA11",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAL",
+"VA11"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAL",
+"post": "VB11",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAL",
+"VB11"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "AVBL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBL",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "AVDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVDL",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAR",
+"post": "AVDR",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"AVDR",
+"AVAR"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 11
+},
+{
+"pre": "AVAR",
+"post": "AVER",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVER",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "AVJR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVJR",
+"AVAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVAR",
+"post": "DA01",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AVAR",
+"DA01"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 9
+},
+{
+"pre": "AVAR",
+"post": "DA02",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVAR",
+"DA02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVAR",
+"post": "DA03",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVAR",
+"DA03"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 7
+},
+{
+"pre": "AVAR",
+"post": "DA04",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAR",
+"DA04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "DA05",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAR",
+"DA05"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVAR",
+"post": "DA06",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVAR",
+"DA06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAR",
+"post": "DA08",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAR",
+"DA08"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVAR",
+"post": "DA09",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVAR",
+"DA09"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVAR",
+"post": "LUAR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"LUAR",
+"AVAR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "AVAR",
+"post": "PHBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHBL",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAR",
+"post": "PHCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHCR",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAR",
+"post": "PLML",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PLML",
+"AVAR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAR",
+"post": "PQR",
+"w": 17,
+"w_sym": 17,
+"w_asym": [
+17
+],
+"directions": [
+[
+"PQR",
+"AVAR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAR",
+"post": "PVCL",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"AVAR",
+"PVCL"
+]
+],
+"si7_synapses": 7,
+"si7_sections": 9
+},
+{
+"pre": "AVAR",
+"post": "PVCR",
+"w": 22,
+"w_sym": 22,
+"w_asym": [
+22
+],
+"directions": [
+[
+"AVAR",
+"PVCR"
+]
+],
+"si7_synapses": 11,
+"si7_sections": 15
+},
+{
+"pre": "AVAR",
+"post": "PVDL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVDL",
+"AVAR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAR",
+"post": "PVT",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVT",
+"AVAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "PVWR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVWR",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "RIML",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"RIML",
+"AVAR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 8
+},
+{
+"pre": "AVAR",
+"post": "RIMR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIMR",
+"AVAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "RMDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAR",
+"RMDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "RMDVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVAR",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAR",
+"post": "SAAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAAVR",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAR",
+"post": "SABVL",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"AVAR",
+"SABVL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 15
+},
+{
+"pre": "AVAR",
+"post": "SABVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAR",
+"SABVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "SIBDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVAR",
+"SIBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAR",
+"post": "URYDR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"URYDR",
+"AVAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVAR",
+"post": "URYVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"URYVL",
+"AVAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVAR",
+"post": "VA01",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVAR",
+"VA01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 7
+},
+{
+"pre": "AVAR",
+"post": "VA03",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVAR",
+"VA03"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVAR",
+"post": "VA04",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVAR",
+"VA04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVAR",
+"post": "VA05",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAR",
+"VA05"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 7
+},
+{
+"pre": "AVAR",
+"post": "VA07",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAR",
+"VA07"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 8
+},
+{
+"pre": "AVAR",
+"post": "VA08",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVAR",
+"VA08"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVAR",
+"post": "VA09",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVAR",
+"VA09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAR",
+"post": "VA10",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVAR",
+"VA10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVAR",
+"post": "VA11",
+"w": 16,
+"w_sym": 16,
+"w_asym": [
+16
+],
+"directions": [
+[
+"AVAR",
+"VA11"
+]
+],
+"si7_synapses": 10,
+"si7_sections": 15
+},
+{
+"pre": "AVAR",
+"post": "VA12",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVAR",
+"VA12"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVAR",
+"post": "VD11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVAR",
+"VD11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVBL",
+"post": "AVBR",
+"w": 18,
+"w_sym": 18,
+"w_asym": [
+18
+],
+"directions": [
+[
+"AVBL",
+"AVBR"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 18
+},
+{
+"pre": "AVBL",
+"post": "DB03",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AVBL",
+"DB03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 9
+},
+{
+"pre": "AVBL",
+"post": "DB04",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBL",
+"DB04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AVBL",
+"post": "DB05",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBL",
+"DB05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBL",
+"post": "DB06",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBL",
+"DB06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVBL",
+"post": "DB07",
+"w": 13,
+"w_sym": 13,
+"w_asym": [
+13
+],
+"directions": [
+[
+"AVBL",
+"DB07"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 13
+},
+{
+"pre": "AVBL",
+"post": "DVA",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"DVA",
+"AVBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 11
+},
+{
+"pre": "AVBL",
+"post": "PVNR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PVNR",
+"AVBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVBL",
+"post": "RIBL",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"RIBL",
+"AVBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "AVBL",
+"post": "RIBR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBR",
+"AVBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVBL",
+"post": "RID",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RID",
+"AVBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVBL",
+"post": "SDQR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQR",
+"AVBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVBL",
+"post": "SIBVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVBL",
+"SIBVL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVBL",
+"post": "VB01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVBL",
+"VB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVBL",
+"post": "VB02",
+"w": 14,
+"w_sym": 14,
+"w_asym": [
+14
+],
+"directions": [
+[
+"AVBL",
+"VB02"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 14
+},
+{
+"pre": "AVBL",
+"post": "VB04",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBL",
+"VB04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBL",
+"post": "VB05",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBL",
+"VB05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBL",
+"post": "VB06",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBL",
+"VB06"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVBL",
+"post": "VB07",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBL",
+"VB07"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVBL",
+"post": "VB08",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBL",
+"VB08"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AVBL",
+"post": "VB09",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBL",
+"VB09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVBL",
+"post": "VB10",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBL",
+"VB10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVBL",
+"post": "VB11",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVBL",
+"VB11"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "AVBR",
+"post": "DB01",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"AVBR",
+"DB01"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 15
+},
+{
+"pre": "AVBR",
+"post": "DB02",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBR",
+"DB02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "AVBR",
+"post": "DB03",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVBR",
+"DB03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVBR",
+"post": "DB04",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVBR",
+"DB04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVBR",
+"post": "DB05",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBR",
+"DB05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVBR",
+"post": "DB06",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBR",
+"DB06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVBR",
+"post": "DB07",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBR",
+"DB07"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVBR",
+"post": "DVA",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVA",
+"AVBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBR",
+"post": "PVNL",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"PVNL",
+"AVBR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "AVBR",
+"post": "PVNR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVNR",
+"AVBR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVBR",
+"post": "RIBL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIBL",
+"AVBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBR",
+"post": "RIBR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIBR",
+"AVBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBR",
+"post": "RID",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"RID",
+"AVBR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 7
+},
+{
+"pre": "AVBR",
+"post": "SIBVL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBR",
+"SIBVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AVBR",
+"post": "SIBVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVBR",
+"SIBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVBR",
+"post": "VB02",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVBR",
+"VB02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "AVBR",
+"post": "VB03",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVBR",
+"VB03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 7
+},
+{
+"pre": "AVBR",
+"post": "VB04",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVBR",
+"VB04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "AVBR",
+"post": "VB05",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBR",
+"VB05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBR",
+"post": "VB06",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBR",
+"VB06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AVBR",
+"post": "VB07",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVBR",
+"VB07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVBR",
+"post": "VB08",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBR",
+"VB08"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVBR",
+"post": "VB09",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVBR",
+"VB09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVBR",
+"post": "VB11",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVBR",
+"VB11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "AVDL",
+"post": "AVDR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVDL",
+"AVDR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "AVDL",
+"post": "AVHL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVHL",
+"AVDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVDL",
+"post": "AVJR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVJR",
+"AVDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDL",
+"post": "AVM",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"AVM",
+"AVDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 8
+},
+{
+"pre": "AVDL",
+"post": "FLPL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"FLPL",
+"AVDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVDL",
+"post": "FLPR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"FLPR",
+"AVDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 9
+},
+{
+"pre": "AVDL",
+"post": "PLML",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PLML",
+"AVDL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVDL",
+"post": "PQR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PQR",
+"AVDL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVDL",
+"post": "PVNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVNR",
+"AVDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDL",
+"post": "PVT",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVT",
+"AVDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDL",
+"post": "RIFL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIFL",
+"AVDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDL",
+"post": "VA10",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVDL",
+"VA10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDR",
+"post": "AVJL",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVJL",
+"AVDR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "AVDR",
+"post": "FLPR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"FLPR",
+"AVDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVDR",
+"post": "PLML",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PLML",
+"AVDR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVDR",
+"post": "PQR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PQR",
+"AVDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDR",
+"post": "PVCR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVDR",
+"PVCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVDR",
+"post": "PVNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVNL",
+"AVDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDR",
+"post": "PVNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVNR",
+"AVDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDR",
+"post": "PVWR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVDR",
+"PVWR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDR",
+"post": "SIADL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVDR",
+"SIADL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVDR",
+"post": "SIBDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVDR",
+"SIBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVEL",
+"post": "AVER",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVEL",
+"AVER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "AVEL",
+"post": "AVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVL",
+"AVEL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVEL",
+"post": "BAGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"BAGR",
+"AVEL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVEL",
+"post": "PVPR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPR",
+"AVEL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVEL",
+"post": "RIML",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"RIML",
+"AVEL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 10
+},
+{
+"pre": "AVEL",
+"post": "RIMR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"RIMR",
+"AVEL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 7
+},
+{
+"pre": "AVEL",
+"post": "RIS",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIS",
+"AVEL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "AVEL",
+"post": "RMDVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVEL",
+"RMDVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVEL",
+"post": "RMEV",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVEL",
+"RMEV"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVEL",
+"post": "RMGL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RMGL",
+"AVEL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVEL",
+"post": "SMDVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVEL",
+"SMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVER",
+"post": "AVKR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKR",
+"AVER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVER",
+"post": "DA01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVER",
+"DA01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVER",
+"post": "RIFL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIFL",
+"AVER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVER",
+"post": "RIML",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"RIML",
+"AVER"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 11
+},
+{
+"pre": "AVER",
+"post": "RIMR",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"RIMR",
+"AVER"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 11
+},
+{
+"pre": "AVER",
+"post": "RMDDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVER",
+"RMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVER",
+"post": "RMDR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVER",
+"RMDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVER",
+"post": "RMDVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVER",
+"RMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVER",
+"post": "RMDVR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVER",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 7
+},
+{
+"pre": "AVER",
+"post": "RMEV",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVER",
+"RMEV"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVER",
+"post": "SMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVER",
+"SMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVFL",
+"post": "AVFR",
+"w": 31,
+"w_sym": 31,
+"w_asym": [
+31
+],
+"directions": [
+[
+"AVFL",
+"AVFR"
+]
+],
+"si7_synapses": 17,
+"si7_sections": 30
+},
+{
+"pre": "AVFL",
+"post": "AVG",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFL",
+"AVG"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVFL",
+"post": "AVHL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVFL",
+"AVHL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "AVFL",
+"post": "AVHR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVFL",
+"AVHR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "AVFL",
+"post": "PVCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFL",
+"PVCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVFL",
+"post": "PVNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFL",
+"PVNR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVFL",
+"post": "PVPL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVFL",
+"PVPL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVFL",
+"post": "PVQR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PVQR",
+"AVFL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVFL",
+"post": "VC04",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFL",
+"VC04"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVFL",
+"post": "VC05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFL",
+"VC05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVFL",
+"post": "VD12",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVFL",
+"VD12"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVFR",
+"post": "AVHL",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"AVFR",
+"AVHL"
+]
+],
+"si7_synapses": 7,
+"si7_sections": 10
+},
+{
+"pre": "AVFR",
+"post": "AVHR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"AVFR",
+"AVHR"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 7
+},
+{
+"pre": "AVFR",
+"post": "PVPL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVFR",
+"PVPL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVFR",
+"post": "PVQL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVQL",
+"AVFR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVFR",
+"post": "RMGL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFR",
+"RMGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVFR",
+"post": "VB01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFR",
+"VB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVFR",
+"post": "VC04",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFR",
+"VC04"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVFR",
+"post": "VC05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVFR",
+"VC05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVG",
+"post": "AVHR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVHR",
+"AVG"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVG",
+"post": "AVJR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVG",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVG",
+"post": "DD06",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVG",
+"DD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVG",
+"post": "DVC",
+"w": 12,
+"w_sym": 12,
+"w_asym": [
+12
+],
+"directions": [
+[
+"AVG",
+"DVC"
+]
+],
+"si7_synapses": 9,
+"si7_sections": 11
+},
+{
+"pre": "AVG",
+"post": "PHAL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PHAL",
+"AVG"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVG",
+"post": "PHAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PHAR",
+"AVG"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVG",
+"post": "PHCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHCR",
+"AVG"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVG",
+"post": "PVDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDL",
+"AVG"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVG",
+"post": "PVPL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVPL",
+"AVG"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVG",
+"post": "PVT",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVG",
+"PVT"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVG",
+"post": "RIFR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIFR",
+"AVG"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVHL",
+"post": "AVHR",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"AVHL",
+"AVHR"
+]
+],
+"si7_synapses": 9,
+"si7_sections": 12
+},
+{
+"pre": "AVHL",
+"post": "AVJR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVHL",
+"AVJR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "AVHL",
+"post": "DB07",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVHL",
+"DB07"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "AVHL",
+"post": "LUAL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVHL",
+"LUAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVHL",
+"post": "PHAL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHAL",
+"AVHL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVHL",
+"post": "PHBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHBL",
+"AVHL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVHL",
+"post": "PHBR",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"PHBR",
+"AVHL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 10
+},
+{
+"pre": "AVHL",
+"post": "PVNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVHL",
+"PVNL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVHL",
+"post": "PVPR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVHL",
+"PVPR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "AVHL",
+"post": "VD12",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"AVHL",
+"VD12"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 8
+},
+{
+"pre": "AVHR",
+"post": "AVJL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVHR",
+"AVJL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVHR",
+"post": "AVJR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVHR",
+"AVJR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVHR",
+"post": "DA08",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVHR",
+"DA08"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "AVHR",
+"post": "DD06",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVHR",
+"DD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVHR",
+"post": "DVC",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVHR",
+"DVC"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVHR",
+"post": "PHAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PHAR",
+"AVHR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVHR",
+"post": "PHBL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PHBL",
+"AVHR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVHR",
+"post": "PHBR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PHBR",
+"AVHR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVHR",
+"post": "PVPL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVHR",
+"PVPL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AVHR",
+"post": "PVPR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVHR",
+"PVPR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVHR",
+"post": "PVQL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVQL",
+"AVHR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVHR",
+"post": "PVQR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVQR",
+"AVHR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVHR",
+"post": "SIAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVHR",
+"SIAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVHR",
+"post": "VD12",
+"w": 13,
+"w_sym": 13,
+"w_asym": [
+13
+],
+"directions": [
+[
+"AVHR",
+"VD12"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 13
+},
+{
+"pre": "AVJL",
+"post": "AVJR",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"AVJL",
+"AVJR"
+]
+],
+"si7_synapses": 7,
+"si7_sections": 10
+},
+{
+"pre": "AVJL",
+"post": "LUAL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"LUAL",
+"AVJL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVJL",
+"post": "LUAR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"LUAR",
+"AVJL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJL",
+"post": "PDB",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVJL",
+"PDB"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVJL",
+"post": "PQR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PQR",
+"AVJL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "AVJL",
+"post": "PVCL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVJL",
+"PVCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AVJL",
+"post": "PVCR",
+"w": 19,
+"w_sym": 19,
+"w_asym": [
+19
+],
+"directions": [
+[
+"AVJL",
+"PVCR"
+]
+],
+"si7_synapses": 9,
+"si7_sections": 19
+},
+{
+"pre": "AVJL",
+"post": "PVNL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PVNL",
+"AVJL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVJL",
+"post": "PVPR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPR",
+"AVJL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJL",
+"post": "PVT",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVJL",
+"PVT"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJL",
+"post": "PVWL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVJL",
+"PVWL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVJL",
+"post": "PVWR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVJL",
+"PVWR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVJL",
+"post": "RIFR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIFR",
+"AVJL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJL",
+"post": "RIS",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"RIS",
+"AVJL"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 15
+},
+{
+"pre": "AVJR",
+"post": "LUAR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"LUAR",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJR",
+"post": "PHBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHBL",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJR",
+"post": "PHCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHCR",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJR",
+"post": "PQR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PQR",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVJR",
+"post": "PVCL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVJR",
+"PVCL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVJR",
+"post": "PVCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVJR",
+"PVCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJR",
+"post": "PVNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVNL",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVJR",
+"post": "PVNR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PVNR",
+"AVJR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKL",
+"post": "AVKR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AVKL",
+"AVKR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 9
+},
+{
+"pre": "AVKL",
+"post": "AVL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVKL",
+"AVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVKL",
+"post": "DVA",
+"w": 18,
+"w_sym": 18,
+"w_asym": [
+18
+],
+"directions": [
+[
+"DVA",
+"AVKL"
+]
+],
+"si7_synapses": 7,
+"si7_sections": 9
+},
+{
+"pre": "AVKL",
+"post": "PDER",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PDER",
+"AVKL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVKL",
+"post": "PVM",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVM",
+"AVKL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVKL",
+"post": "PVPL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVPL",
+"AVKL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVKL",
+"post": "PVPR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"PVPR",
+"AVKL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "AVKL",
+"post": "PVT",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVKL",
+"PVT"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "AVKL",
+"post": "RICR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RICR",
+"AVKL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKL",
+"post": "RIGL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIGL",
+"AVKL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKL",
+"post": "RIGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIGR",
+"AVKL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVKL",
+"post": "SMBDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVKL",
+"SMBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKL",
+"post": "SMBDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVKL",
+"SMBDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKL",
+"post": "SMBVL",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVKL",
+"SMBVL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "AVKL",
+"post": "SMBVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVKL",
+"SMBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKL",
+"post": "VB10",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKL",
+"VB10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVKL",
+"post": "VB11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKL",
+"VB11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVKR",
+"post": "PDEL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PDEL",
+"AVKR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AVKR",
+"post": "PVPL",
+"w": 22,
+"w_sym": 22,
+"w_asym": [
+22
+],
+"directions": [
+[
+"PVPL",
+"AVKR"
+]
+],
+"si7_synapses": 16,
+"si7_sections": 25
+},
+{
+"pre": "AVKR",
+"post": "PVQL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVQL",
+"AVKR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKR",
+"post": "PVT",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKR",
+"PVT"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVKR",
+"post": "RICL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"RICL",
+"AVKR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AVKR",
+"post": "RIGR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIGR",
+"AVKR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AVKR",
+"post": "RIMR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKR",
+"RIMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVKR",
+"post": "SMBDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVKR",
+"SMBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVKR",
+"post": "SMBDR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"AVKR",
+"SMBDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 9
+},
+{
+"pre": "AVKR",
+"post": "SMBVR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"AVKR",
+"SMBVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "AVL",
+"post": "DA09",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVL",
+"DA09"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "AVL",
+"post": "DD06",
+"w": 28,
+"w_sym": 28,
+"w_asym": [
+28
+],
+"directions": [
+[
+"AVL",
+"DD06"
+]
+],
+"si7_synapses": 15,
+"si7_sections": 18
+},
+{
+"pre": "AVL",
+"post": "DVB",
+"w": 14,
+"w_sym": 14,
+"w_asym": [
+14
+],
+"directions": [
+[
+"DVB",
+"AVL"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 12
+},
+{
+"pre": "AVL",
+"post": "DVC",
+"w": 22,
+"w_sym": 22,
+"w_asym": [
+22
+],
+"directions": [
+[
+"DVC",
+"AVL"
+]
+],
+"si7_synapses": 10,
+"si7_sections": 17
+},
+{
+"pre": "AVL",
+"post": "PDA",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVL",
+"PDA"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 5
+},
+{
+"pre": "AVL",
+"post": "PVPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPL",
+"AVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVL",
+"post": "PVPR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PVPR",
+"AVL"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 7
+},
+{
+"pre": "AVL",
+"post": "PVT",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"PVT",
+"AVL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "AVL",
+"post": "PVWR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AVL",
+"PVWR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVL",
+"post": "VD11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AVL",
+"VD11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AVL",
+"post": "VD12",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AVL",
+"VD12"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "AVL",
+"post": "VD13",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"AVL",
+"VD13"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "AVM",
+"post": "PVR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AVM",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "AWAL",
+"post": "AWAR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"AWAL",
+"AWAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "AWBL",
+"post": "AWBR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"AWBL",
+"AWBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "AWBL",
+"post": "RMGL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWBL",
+"RMGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "AWBR",
+"post": "RICL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"AWBR",
+"RICL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "AWBR",
+"post": "RMGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"AWBR",
+"RMGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "BAGL",
+"post": "BAGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"BAGL",
+"BAGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "BAGL",
+"post": "RIGL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"BAGL",
+"RIGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "BAGL",
+"post": "RIGR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"BAGL",
+"RIGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "BAGL",
+"post": "RIR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"BAGL",
+"RIR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "BAGR",
+"post": "RIR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"BAGR",
+"RIR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "BDUL",
+"post": "PLML",
+"w": 23,
+"w_sym": 23,
+"w_asym": [
+23
+],
+"directions": [
+[
+"PLML",
+"BDUL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "BDUL",
+"post": "PVNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"BDUL",
+"PVNL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "BDUR",
+"post": "HSNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"BDUR",
+"HSNL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "BDUR",
+"post": "HSNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"BDUR",
+"HSNR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "BDUR",
+"post": "PLMR",
+"w": 23,
+"w_sym": 23,
+"w_asym": [
+23
+],
+"directions": [
+[
+"PLMR",
+"BDUR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "BDUR",
+"post": "PVR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"BDUR",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "CEPDL",
+"post": "OLQDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"CEPDL",
+"OLQDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "CEPDR",
+"post": "OLQDR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"CEPDR",
+"OLQDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 8
+},
+{
+"pre": "CEPVL",
+"post": "OLQVL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"CEPVL",
+"OLQVL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "CEPVL",
+"post": "RIH",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"CEPVL",
+"RIH"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "CEPVL",
+"post": "URAVL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"CEPVL",
+"URAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "CEPVR",
+"post": "IL2VR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL2VR",
+"CEPVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "CEPVR",
+"post": "OLQVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"CEPVR",
+"OLQVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA01",
+"post": "DA02",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA01",
+"DA02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA01",
+"post": "FLPR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"FLPR",
+"DA01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "DA01",
+"post": "SABVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SABVR",
+"DA01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA02",
+"post": "DA05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA02",
+"DA05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA02",
+"post": "FLPR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"FLPR",
+"DA02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "DA02",
+"post": "VA01",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"DA02",
+"VA01"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 9
+},
+{
+"pre": "DA02",
+"post": "VA05",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DA02",
+"VA05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "DA03",
+"post": "DA04",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA03",
+"DA04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA03",
+"post": "DA05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA03",
+"DA05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA03",
+"post": "FLPR",
+"w": 16,
+"w_sym": 16,
+"w_asym": [
+16
+],
+"directions": [
+[
+"FLPR",
+"DA03"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 16
+},
+{
+"pre": "DA03",
+"post": "PVDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDL",
+"DA03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA03",
+"post": "VA02",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA03",
+"VA02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA03",
+"post": "VA06",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA03",
+"VA06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA04",
+"post": "PVCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCL",
+"DA04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA04",
+"post": "VA03",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA04",
+"VA03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA05",
+"post": "PVDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDL",
+"DA05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA06",
+"post": "DB01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA06",
+"DB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA07",
+"post": "DA08",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA07",
+"DA08"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DA07",
+"post": "PVCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCL",
+"DA07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA07",
+"post": "PVCR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVCR",
+"DA07"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "DA08",
+"post": "DA09",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"DA08",
+"DA09"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 13
+},
+{
+"pre": "DA08",
+"post": "DD06",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DA08",
+"DD06"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DA08",
+"post": "DVB",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DVB",
+"DA08"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "DA08",
+"post": "PDA",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA08",
+"PDA"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA08",
+"post": "PVCL",
+"w": 17,
+"w_sym": 17,
+"w_asym": [
+17
+],
+"directions": [
+[
+"PVCL",
+"DA08"
+]
+],
+"si7_synapses": 11,
+"si7_sections": 12
+},
+{
+"pre": "DA08",
+"post": "PVQL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVQL",
+"DA08"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA08",
+"post": "VA10",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DA08",
+"VA10"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DA08",
+"post": "VA12",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"DA08",
+"VA12"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "DA09",
+"post": "DVA",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVA",
+"DA09"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "DA09",
+"post": "PDA",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"DA09",
+"PDA"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "DA09",
+"post": "PHCR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"PHCR",
+"DA09"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "DA09",
+"post": "PVCR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVCR",
+"DA09"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "DA09",
+"post": "PVR",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"PVR",
+"DA09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DA09",
+"post": "RID",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RID",
+"DA09"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA09",
+"post": "VA11",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DA09",
+"VA11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DA09",
+"post": "VA12",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA09",
+"VA12"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA09",
+"post": "VB11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DA09",
+"VB11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DA09",
+"post": "VD13",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DA09",
+"VD13"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DB01",
+"post": "DB02",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DB01",
+"DB02"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 5
+},
+{
+"pre": "DB01",
+"post": "DVA",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVA",
+"DB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "DB01",
+"post": "PVDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDL",
+"DB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB01",
+"post": "RID",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RID",
+"DB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DB01",
+"post": "VB03",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DB01",
+"VB03"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "DB02",
+"post": "DB03",
+"w": 14,
+"w_sym": 14,
+"w_asym": [
+14
+],
+"directions": [
+[
+"DB02",
+"DB03"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 14
+},
+{
+"pre": "DB02",
+"post": "VB01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB02",
+"VB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB02",
+"post": "VB04",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB02",
+"VB04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB03",
+"post": "DB04",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB03",
+"DB04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB03",
+"post": "DD03",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB03",
+"DD03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB03",
+"post": "PVM",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVM",
+"DB03"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DB03",
+"post": "RID",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RID",
+"DB03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB03",
+"post": "VB06",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB03",
+"VB06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB04",
+"post": "DB05",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DB04",
+"DB05"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DB04",
+"post": "DD03",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB04",
+"DD03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB04",
+"post": "VB07",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB04",
+"VB07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB05",
+"post": "DB06",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DB05",
+"DB06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DB06",
+"post": "DB07",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DB06",
+"DB07"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DB07",
+"post": "DVA",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVA",
+"DB07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB07",
+"post": "PDB",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DB07",
+"PDB"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DB07",
+"post": "PVCL",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PVCL",
+"DB07"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 6
+},
+{
+"pre": "DB07",
+"post": "PVCR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVCR",
+"DB07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DB07",
+"post": "PVR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVR",
+"DB07"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DB07",
+"post": "VA10",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DB07",
+"VA10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD01",
+"post": "DD02",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"DD01",
+"DD02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "DD01",
+"post": "FLPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"FLPL",
+"DD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD01",
+"post": "HSNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD01",
+"HSNR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD01",
+"post": "RIFR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIFR",
+"DD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DD01",
+"post": "SABVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SABVR",
+"DD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD01",
+"post": "VC01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD01",
+"VC01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD01",
+"post": "VD01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD01",
+"VD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD01",
+"post": "VD02",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DD01",
+"VD02"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "DD01",
+"post": "VD03",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"DD01",
+"VD03"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 5
+},
+{
+"pre": "DD02",
+"post": "DD03",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD02",
+"DD03"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DD02",
+"post": "VD03",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD02",
+"VD03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD02",
+"post": "VD04",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD02",
+"VD04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DD02",
+"post": "VD05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD02",
+"VD05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD03",
+"post": "DD04",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DD03",
+"DD04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "DD03",
+"post": "VD05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD03",
+"VD05"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD03",
+"post": "VD06",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD03",
+"VD06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD03",
+"post": "VD07",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD03",
+"VD07"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD04",
+"post": "DD05",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DD04",
+"DD05"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD04",
+"post": "VC02",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD04",
+"VC02"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD04",
+"post": "VC03",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD04",
+"VC03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DD04",
+"post": "VD07",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD04",
+"VD07"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD04",
+"post": "VD08",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD04",
+"VD08"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD04",
+"post": "VD09",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD04",
+"VD09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD05",
+"post": "DD06",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DD05",
+"DD06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD05",
+"post": "VD09",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD05",
+"VD09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD05",
+"post": "VD10",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD05",
+"VD10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD05",
+"post": "VD11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DD05",
+"VD11"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD06",
+"post": "DVB",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVB",
+"DD06"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DD06",
+"post": "DVC",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVC",
+"DD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD06",
+"post": "PDA",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PDA",
+"DD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD06",
+"post": "PDB",
+"w": 2,
+"w_sym": 2,
+"w_asym": null,
+"directions": null,
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DD06",
+"post": "PVCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCL",
+"DD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DD06",
+"post": "PVPL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVPL",
+"DD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DD06",
+"post": "PVPR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"PVPR",
+"DD06"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 9
+},
+{
+"pre": "DD06",
+"post": "PVT",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVT",
+"DD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "DD06",
+"post": "VA12",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"DD06",
+"VA12"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 7
+},
+{
+"pre": "DD06",
+"post": "VD11",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DD06",
+"VD11"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "DD06",
+"post": "VD12",
+"w": 14,
+"w_sym": 14,
+"w_asym": [
+14
+],
+"directions": [
+[
+"DD06",
+"VD12"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 5
+},
+{
+"pre": "DD06",
+"post": "VD13",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DD06",
+"VD13"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DVA",
+"post": "DVC",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"DVC"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "PDA",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"PDA"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "PDEL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVA",
+"PDEL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DVA",
+"post": "PDER",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"DVA",
+"PDER"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "DVA",
+"post": "PVCL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVA",
+"PVCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "PVCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"PVCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "PVM",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVM",
+"DVA"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DVA",
+"post": "PVPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"PVPL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "PVR",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"DVA",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DVA",
+"post": "PVT",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"DVA",
+"PVT"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 8
+},
+{
+"pre": "DVA",
+"post": "SAAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"SAAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "SDQL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQL",
+"DVA"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "SDQR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQR",
+"DVA"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "SIADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"SIADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "SIAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"SIAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVA",
+"post": "VA11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVA",
+"VA11"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DVB",
+"post": "DVC",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"DVB",
+"DVC"
+]
+],
+"si7_synapses": 7,
+"si7_sections": 10
+},
+{
+"pre": "DVB",
+"post": "PVPL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVPL",
+"DVB"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "DVB",
+"post": "PVPR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVPR",
+"DVB"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "DVB",
+"post": "PVQR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVQR",
+"DVB"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVB",
+"post": "PVT",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"DVB",
+"PVT"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "DVB",
+"post": "VD13",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"DVB",
+"VD13"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 5
+},
+{
+"pre": "DVC",
+"post": "PVDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDR",
+"DVC"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DVC",
+"post": "PVNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVNR",
+"DVC"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVC",
+"post": "PVPL",
+"w": 20,
+"w_sym": 20,
+"w_asym": [
+20
+],
+"directions": [
+[
+"PVPL",
+"DVC"
+]
+],
+"si7_synapses": 13,
+"si7_sections": 18
+},
+{
+"pre": "DVC",
+"post": "PVPR",
+"w": 34,
+"w_sym": 34,
+"w_asym": [
+34
+],
+"directions": [
+[
+"PVPR",
+"DVC"
+]
+],
+"si7_synapses": 20,
+"si7_sections": 24
+},
+{
+"pre": "DVC",
+"post": "PVQR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"PVQR",
+"DVC"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "DVC",
+"post": "PVT",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"DVC",
+"PVT"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 7
+},
+{
+"pre": "DVC",
+"post": "VC05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVC",
+"VC05"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "DVC",
+"post": "VC06",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVC",
+"VC06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVC",
+"post": "VD01",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"DVC",
+"VD01"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 5
+},
+{
+"pre": "DVC",
+"post": "VD11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVC",
+"VD11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "DVC",
+"post": "VD13",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"DVC",
+"VD13"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "FLPL",
+"post": "FLPR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"FLPL",
+"FLPR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 6
+},
+{
+"pre": "FLPL",
+"post": "RIH",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"FLPL",
+"RIH"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "FLPL",
+"post": "SDQL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQL",
+"FLPL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "FLPL",
+"post": "SIADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"FLPL",
+"SIADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "HSNL",
+"post": "HSNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"HSNL",
+"HSNR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "HSNL",
+"post": "PVNR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVNR",
+"HSNL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "HSNL",
+"post": "PVPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPL",
+"HSNL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "HSNL",
+"post": "RIFL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIFL",
+"HSNL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "HSNR",
+"post": "PVNR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVNR",
+"HSNR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "HSNR",
+"post": "PVPR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPR",
+"HSNR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I1L",
+"post": "I2L",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"I1L",
+"I2L"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "I1L",
+"post": "M3L",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"I1L",
+"M3L"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I1L",
+"post": "MCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I1L",
+"MCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I1L",
+"post": "NSML",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"I1L",
+"NSML"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "I1L",
+"post": "RIPL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2,
+2
+],
+"directions": [
+[
+"I1L",
+"RIPL"
+],
+[
+"RIPL",
+"I1L"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "I1R",
+"post": "I2R",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I1R",
+"I2R"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "I1R",
+"post": "I3",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I1R",
+"I3"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I1R",
+"post": "MCR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"I1R",
+"MCR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "I1R",
+"post": "NSMR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"I1R",
+"NSMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "I1R",
+"post": "RIPR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2,
+2
+],
+"directions": [
+[
+"I1R",
+"RIPR"
+],
+[
+"RIPR",
+"I1R"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "I2L",
+"post": "I4",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I2L",
+"I4"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "I2L",
+"post": "M2L",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I2L",
+"M2L"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I2R",
+"post": "M1",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I2R",
+"M1"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I2R",
+"post": "M2R",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I2R",
+"M2R"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I2R",
+"post": "MCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I2R",
+"MCR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "I2R",
+"post": "NSMR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"I2R",
+"NSMR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "I3",
+"post": "M1",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I3",
+"M1"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I3",
+"post": "M2R",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I3",
+"M2R"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "I3",
+"post": "MI",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I3",
+"MI"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I4",
+"post": "M2R",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"I4",
+"M2R"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "I4",
+"post": "M4",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I4",
+"M4"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I5",
+"post": "M2L",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I5",
+"M2L"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I5",
+"post": "M2R",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I5",
+"M2R"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "I5",
+"post": "M5",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"I5",
+"M5"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "I6",
+"post": "M4",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"I6",
+"M4"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "IL1DL",
+"post": "IL1DR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"IL1DL",
+"IL1DR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "IL1DL",
+"post": "IL1L",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"IL1DL",
+"IL1L"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "IL1DL",
+"post": "RMEV",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL1DL",
+"RMEV"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL1DR",
+"post": "IL1R",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"IL1DR",
+"IL1R"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 8
+},
+{
+"pre": "IL1DR",
+"post": "RMDVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL1DR",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL1DR",
+"post": "RMEV",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"IL1DR",
+"RMEV"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "IL1L",
+"post": "IL1VL",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"IL1L",
+"IL1VL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 8
+},
+{
+"pre": "IL1L",
+"post": "RIPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL1L",
+"RIPL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL1L",
+"post": "RMER",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL1L",
+"RMER"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL1L",
+"post": "URBL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"IL1L",
+"URBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "IL1R",
+"post": "IL1VR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"IL1R",
+"IL1VR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 8
+},
+{
+"pre": "IL1VL",
+"post": "IL1VR",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"IL1VL",
+"IL1VR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 11
+},
+{
+"pre": "IL1VL",
+"post": "RMDDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL1VL",
+"RMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL1VL",
+"post": "RMED",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"IL1VL",
+"RMED"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "IL1VR",
+"post": "IL2VR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL2VR",
+"IL1VR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL1VR",
+"post": "URAVR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"IL1VR",
+"URAVR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "IL2DL",
+"post": "URADL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL2DL",
+"URADL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "IL2DR",
+"post": "RMED",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL2DR",
+"RMED"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL2DR",
+"post": "URADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL2DR",
+"URADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL2L",
+"post": "OLLL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"IL2L",
+"OLLL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "IL2L",
+"post": "RMDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"IL2L",
+"RMDL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "IL2L",
+"post": "RMER",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"IL2L",
+"RMER"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "IL2L",
+"post": "RMGL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"IL2L",
+"RMGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "IL2L",
+"post": "URAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL2L",
+"URAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "IL2L",
+"post": "URBL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"IL2L",
+"URBL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "IL2L",
+"post": "URXL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"URXL",
+"IL2L"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL2R",
+"post": "RMGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"IL2R",
+"RMGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "IL2R",
+"post": "URBR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"IL2R",
+"URBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "IL2R",
+"post": "URXR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"URXR",
+"IL2R"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "IL2VL",
+"post": "URAVL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"IL2VL",
+"URAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "LUAL",
+"post": "PLML",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PLML",
+"LUAL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "LUAL",
+"post": "PVCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"LUAL",
+"PVCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "LUAL",
+"post": "PVNL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"LUAL",
+"PVNL"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "LUAL",
+"post": "PVR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"PVR",
+"LUAL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "LUAR",
+"post": "PLMR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"PLMR",
+"LUAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 9
+},
+{
+"pre": "LUAR",
+"post": "PVNR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"LUAR",
+"PVNR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "LUAR",
+"post": "PVR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"PVR",
+"LUAR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "LUAR",
+"post": "PVT",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"LUAR",
+"PVT"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "LUAR",
+"post": "PVWL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"LUAR",
+"PVWL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "LUAR",
+"post": "PVWR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"LUAR",
+"PVWR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "M2L",
+"post": "M4",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"M2L",
+"M4"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "M2L",
+"post": "MCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"M2L",
+"MCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "M2R",
+"post": "M3R",
+"w": 1,
+"w_sym": 1,
+"w_asym": null,
+"directions": null,
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "M2R",
+"post": "MCR",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"M2R",
+"MCR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 9
+},
+{
+"pre": "M2R",
+"post": "MI",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"M2R",
+"MI"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "M3L",
+"post": "NSMR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"M3L",
+"NSMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "M3R",
+"post": "NSMR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"M3R",
+"NSMR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "M4",
+"post": "M5",
+"w": 2,
+"w_sym": 2,
+"w_asym": null,
+"directions": null,
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "NSML",
+"post": "NSMR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"NSML",
+"NSMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "OLLL",
+"post": "OLLR",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"OLLL",
+"OLLR"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 11
+},
+{
+"pre": "OLLL",
+"post": "RIGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"OLLL",
+"RIGL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "OLLR",
+"post": "RIGR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"OLLR",
+"RIGR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "OLQDL",
+"post": "RIBL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"OLQDL",
+"RIBL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "OLQDL",
+"post": "RIGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"OLQDL",
+"RIGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "OLQDL",
+"post": "RMDVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"OLQDL",
+"RMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "OLQDL",
+"post": "URBL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"OLQDL",
+"URBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "OLQDR",
+"post": "RIBR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"OLQDR",
+"RIBR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "OLQDR",
+"post": "RIGR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"OLQDR",
+"RIGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "OLQDR",
+"post": "RIH",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"OLQDR",
+"RIH"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "OLQDR",
+"post": "RMDVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"OLQDR",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "OLQDR",
+"post": "URBR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"OLQDR",
+"URBR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 7
+},
+{
+"pre": "OLQVL",
+"post": "RIBL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"OLQVL",
+"RIBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "OLQVL",
+"post": "RIGL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"OLQVL",
+"RIGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "OLQVL",
+"post": "RMDDL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"OLQVL",
+"RMDDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "OLQVR",
+"post": "RIBR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"OLQVR",
+"RIBR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "OLQVR",
+"post": "RIGR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"OLQVR",
+"RIGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "OLQVR",
+"post": "RMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"OLQVR",
+"RMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "OLQVR",
+"post": "RMDVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"OLQVR",
+"RMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "OLQVR",
+"post": "RMHR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"OLQVR",
+"RMHR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "OLQVR",
+"post": "URBR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"OLQVR",
+"URBR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "PDA",
+"post": "PDB",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PDA",
+"PDB"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "PDA",
+"post": "PHAR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHAR",
+"PDA"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDA",
+"post": "PVQR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVQR",
+"PDA"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PDB",
+"post": "PVPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPL",
+"PDB"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PDB",
+"post": "PVR",
+"w": 13,
+"w_sym": 13,
+"w_asym": [
+13
+],
+"directions": [
+[
+"PVR",
+"PDB"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDB",
+"post": "RID",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RID",
+"PDB"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "PDB",
+"post": "VD13",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PDB",
+"VD13"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "PDEL",
+"post": "PDER",
+"w": 25,
+"w_sym": 25,
+"w_asym": [
+25
+],
+"directions": [
+[
+"PDEL",
+"PDER"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDEL",
+"post": "PLML",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PLML",
+"PDEL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDEL",
+"post": "PLMR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PLMR",
+"PDEL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDEL",
+"post": "PVCL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PDEL",
+"PVCL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PDEL",
+"post": "PVM",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"PVM",
+"PDEL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDEL",
+"post": "PVR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PDEL",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDEL",
+"post": "VB10",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PDEL",
+"VB10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDEL",
+"post": "VD06",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PDEL",
+"VD06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "PDER",
+"post": "PLML",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PLML",
+"PDER"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "PLMR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PLMR",
+"PDER"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "PVCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PDER",
+"PVCL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "PVCR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PDER",
+"PVCR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PDER",
+"post": "PVDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDR",
+"PDER"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "PVM",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PVM",
+"PDER"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "PVR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"PDER",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "VB09",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"PDER",
+"VB09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "VB10",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PDER",
+"VB10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PDER",
+"post": "VD09",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PDER",
+"VD09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PHAL",
+"post": "PHAR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"PHAL",
+"PHAR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PHAL",
+"post": "PHCL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHAL",
+"PHCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PHAL",
+"post": "PLNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PLNL",
+"PHAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PHAL",
+"post": "PVPR",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"PHAL",
+"PVPR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 7
+},
+{
+"pre": "PHAR",
+"post": "PHCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHAR",
+"PHCR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PHAR",
+"post": "PLNR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"PLNR",
+"PHAR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PHAR",
+"post": "PVPL",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"PHAR",
+"PVPL"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 13
+},
+{
+"pre": "PHAR",
+"post": "PVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PHAR",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PHBL",
+"post": "PHBR",
+"w": 17,
+"w_sym": 17,
+"w_asym": [
+17
+],
+"directions": [
+[
+"PHBL",
+"PHBR"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 17
+},
+{
+"pre": "PHBL",
+"post": "PLNL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PLNL",
+"PHBL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PHBL",
+"post": "PVCL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PHBL",
+"PVCL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PHBL",
+"post": "PVQL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PHBL",
+"PVQL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PHBR",
+"post": "PHCR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHBR",
+"PHCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PHBR",
+"post": "PVPL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHBR",
+"PVPL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PHBR",
+"post": "PVT",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHBR",
+"PVT"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PHCL",
+"post": "PHCR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PHCL",
+"PHCR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "PHCL",
+"post": "PLNL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PLNL",
+"PHCL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PHCL",
+"post": "VA12",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PHCL",
+"VA12"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PHCR",
+"post": "PVCR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PHCR",
+"PVCR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "PLML",
+"post": "PVCL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PLML",
+"PVCL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "PLML",
+"post": "PVR",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"PLML",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PLMR",
+"post": "PLNR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PLNR",
+"PLMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PLMR",
+"post": "PVCR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PLMR",
+"PVCR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "PLMR",
+"post": "PVR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PLMR",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PLNR",
+"post": "VA02",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PLNR",
+"VA02"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PQR",
+"post": "PVCL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PQR",
+"PVCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PQR",
+"post": "PVNL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PQR",
+"PVNL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PQR",
+"post": "PVNR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PQR",
+"PVNR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PQR",
+"post": "PVPL",
+"w": 16,
+"w_sym": 16,
+"w_asym": [
+16
+],
+"directions": [
+[
+"PQR",
+"PVPL"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 16
+},
+{
+"pre": "PQR",
+"post": "PVPR",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"PQR",
+"PVPR"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 9
+},
+{
+"pre": "PVCL",
+"post": "PVCR",
+"w": 67,
+"w_sym": 67,
+"w_asym": [
+67
+],
+"directions": [
+[
+"PVCL",
+"PVCR"
+]
+],
+"si7_synapses": 27,
+"si7_sections": 42
+},
+{
+"pre": "PVCL",
+"post": "PVNL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVNL",
+"PVCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCL",
+"post": "PVWL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVWL",
+"PVCL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCL",
+"post": "VA12",
+"w": 18,
+"w_sym": 18,
+"w_asym": [
+18
+],
+"directions": [
+[
+"PVCL",
+"VA12"
+]
+],
+"si7_synapses": 12,
+"si7_sections": 18
+},
+{
+"pre": "PVCL",
+"post": "VB10",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVCL",
+"VB10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCL",
+"post": "VB11",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVCL",
+"VB11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCL",
+"post": "VD13",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCL",
+"VD13"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCR",
+"post": "PVDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDL",
+"PVCR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVCR",
+"post": "PVDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVDR",
+"PVCR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVCR",
+"post": "PVR",
+"w": 19,
+"w_sym": 19,
+"w_asym": [
+19
+],
+"directions": [
+[
+"PVR",
+"PVCR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVCR",
+"post": "PVT",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVT",
+"PVCR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "PVCR",
+"post": "PVWL",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"PVWL",
+"PVCR"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 9
+},
+{
+"pre": "PVCR",
+"post": "PVWR",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"PVWR",
+"PVCR"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 12
+},
+{
+"pre": "PVCR",
+"post": "SIBDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCR",
+"SIBDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCR",
+"post": "SIBVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCR",
+"SIBVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCR",
+"post": "SIBVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCR",
+"SIBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCR",
+"post": "VA09",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVCR",
+"VA09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVCR",
+"post": "VA11",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVCR",
+"VA11"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "PVCR",
+"post": "VA12",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PVCR",
+"VA12"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 7
+},
+{
+"pre": "PVCR",
+"post": "VB10",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVCR",
+"VB10"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVCR",
+"post": "VB11",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVCR",
+"VB11"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "PVDL",
+"post": "PVDR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVDL",
+"PVDR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVDL",
+"post": "VA10",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDL",
+"VA10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVDR",
+"post": "VD09",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVDR",
+"VD09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVM",
+"post": "PVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVM",
+"PVR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVM",
+"post": "VD09",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVM",
+"VD09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVNL",
+"post": "PVNR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVNL",
+"PVNR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "PVNL",
+"post": "PVPL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVPL",
+"PVNL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "PVNL",
+"post": "PVT",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVNL",
+"PVT"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "PVNR",
+"post": "PVPR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVPR",
+"PVNR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "PVNR",
+"post": "PVR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"PVR",
+"PVNR"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVNR",
+"post": "PVT",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVNR",
+"PVT"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "PVNR",
+"post": "PVWR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"PVNR",
+"PVWR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVNR",
+"post": "VD13",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVNR",
+"VD13"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVPL",
+"post": "PVPR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVPL",
+"PVPR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "PVPL",
+"post": "PVQL",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"PVQL",
+"PVPL"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 6
+},
+{
+"pre": "PVPL",
+"post": "PVT",
+"w": 14,
+"w_sym": 14,
+"w_asym": [
+14
+],
+"directions": [
+[
+"PVPL",
+"PVT"
+]
+],
+"si7_synapses": 9,
+"si7_sections": 14
+},
+{
+"pre": "PVPL",
+"post": "RIGL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVPL",
+"RIGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "PVPL",
+"post": "VA12",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPL",
+"VA12"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVPL",
+"post": "VD13",
+"w": 11,
+"w_sym": 11,
+"w_asym": [
+11
+],
+"directions": [
+[
+"PVPL",
+"VD13"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 11
+},
+{
+"pre": "PVPR",
+"post": "PVT",
+"w": 17,
+"w_sym": 17,
+"w_asym": [
+17
+],
+"directions": [
+[
+"PVPR",
+"PVT"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 6
+},
+{
+"pre": "PVPR",
+"post": "PVWL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPR",
+"PVWL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVPR",
+"post": "RMGR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVPR",
+"RMGR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "PVPR",
+"post": "VC01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVPR",
+"VC01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVPR",
+"post": "VD12",
+"w": 35,
+"w_sym": 35,
+"w_asym": [
+35
+],
+"directions": [
+[
+"PVPR",
+"VD12"
+]
+],
+"si7_synapses": 18,
+"si7_sections": 35
+},
+{
+"pre": "PVQL",
+"post": "PVQR",
+"w": 46,
+"w_sym": 46,
+"w_asym": [
+46
+],
+"directions": [
+[
+"PVQL",
+"PVQR"
+]
+],
+"si7_synapses": 16,
+"si7_sections": 37
+},
+{
+"pre": "PVQR",
+"post": "PVT",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVQR",
+"PVT"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVQR",
+"post": "PVWR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVQR",
+"PVWR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVR",
+"post": "PVWR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVR",
+"PVWR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "PVR",
+"post": "VD13",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVR",
+"VD13"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVT",
+"post": "PVWR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVT",
+"PVWR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PVT",
+"post": "RMEV",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVT",
+"RMEV"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVT",
+"post": "URAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVT",
+"URAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVT",
+"post": "VC02",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVT",
+"VC02"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVT",
+"post": "VC03",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVT",
+"VC03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVT",
+"post": "VC05",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVT",
+"VC05"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "PVT",
+"post": "VC06",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVT",
+"VC06"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PVT",
+"post": "VD11",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"PVT",
+"VD11"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PVT",
+"post": "VD12",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"PVT",
+"VD12"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "PVT",
+"post": "VD13",
+"w": 17,
+"w_sym": 17,
+"w_asym": [
+17
+],
+"directions": [
+[
+"PVT",
+"VD13"
+]
+],
+"si7_synapses": 12,
+"si7_sections": 17
+},
+{
+"pre": "PVWL",
+"post": "PVWR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVWL",
+"PVWR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "PVWL",
+"post": "VD13",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"PVWL",
+"VD13"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "PVWR",
+"post": "VD13",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"PVWR",
+"VD13"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "RIAL",
+"post": "RIBL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIBL",
+"RIAL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIAL",
+"post": "SMDVL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"RIAL",
+"SMDVL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "RIAR",
+"post": "RMDDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIAR",
+"RMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIAR",
+"post": "RMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIAR",
+"RMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIAR",
+"post": "SAAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAAVR",
+"RIAR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIAR",
+"post": "SIAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIAR",
+"SIAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "RIAR",
+"post": "SIAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIAR",
+"SIAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIAR",
+"post": "SMDDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIAR",
+"SMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIAR",
+"post": "SMDVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIAR",
+"SMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIBL",
+"post": "RIBR",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"RIBL",
+"RIBR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 15
+},
+{
+"pre": "RIBL",
+"post": "RIGL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIBL",
+"RIGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "RIBL",
+"post": "RMEV",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBL",
+"RMEV"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIBL",
+"post": "SIADL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBL",
+"SIADL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "RIBL",
+"post": "SIAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIBL",
+"SIAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "RIBL",
+"post": "SIBDL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"RIBL",
+"SIBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "RIBL",
+"post": "SIBVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBL",
+"SIBVR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 6
+},
+{
+"pre": "RIBL",
+"post": "SMDDL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIBL",
+"SMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "RIBR",
+"post": "RIGR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBR",
+"RIGR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "RIBR",
+"post": "SIADR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIBR",
+"SIADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "RIBR",
+"post": "SIAVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBR",
+"SIAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIBR",
+"post": "SIBDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBR",
+"SIBDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 7
+},
+{
+"pre": "RIBR",
+"post": "SIBVR",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"RIBR",
+"SIBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "RIBR",
+"post": "SMBDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBR",
+"SMBDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "RIBR",
+"post": "SMDDL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"RIBR",
+"SMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "RIBR",
+"post": "SMDDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIBR",
+"SMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RICR",
+"post": "RMHR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RICR",
+"RMHR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RICR",
+"post": "URXR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"URXR",
+"RICR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIFL",
+"post": "VD01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIFL",
+"VD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIFR",
+"post": "RMGR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIFR",
+"RMGR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIGL",
+"post": "RIGR",
+"w": 81,
+"w_sym": 81,
+"w_asym": [
+81
+],
+"directions": [
+[
+"RIGL",
+"RIGR"
+]
+],
+"si7_synapses": 9,
+"si7_sections": 81
+},
+{
+"pre": "RIGL",
+"post": "RMEL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIGL",
+"RMEL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "RIGL",
+"post": "RMFL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIGL",
+"RMFL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIGL",
+"post": "URYDL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"URYDL",
+"RIGL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "RIGL",
+"post": "URYVL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"URYVL",
+"RIGL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "RIGL",
+"post": "VD01",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIGL",
+"VD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "RIGR",
+"post": "RMFL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIGR",
+"RMFL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIGR",
+"post": "URYDR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"URYDR",
+"RIGR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "RIGR",
+"post": "VD01",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIGR",
+"VD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIML",
+"post": "RIS",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIS",
+"RIML"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIML",
+"post": "RMDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIML",
+"RMDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIML",
+"post": "RMFL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RIML",
+"RMFL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "RIML",
+"post": "SIADL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIML",
+"SIADL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIMR",
+"post": "RIS",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIS",
+"RIMR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIMR",
+"post": "SIADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIMR",
+"SIADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIPL",
+"post": "RIPR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIPL",
+"RIPR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIPL",
+"post": "RMED",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIPL",
+"RMED"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIPL",
+"post": "URAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIPL",
+"URAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "RIPR",
+"post": "RMED",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"RIPR",
+"RMED"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "RIS",
+"post": "RMDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIS",
+"RMDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIS",
+"post": "RMEV",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIS",
+"RMEV"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIS",
+"post": "SMDDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIS",
+"SMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIS",
+"post": "SMDDR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"RIS",
+"SMDDR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "RIS",
+"post": "SMDVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIS",
+"SMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIVL",
+"post": "RIVR",
+"w": 28,
+"w_sym": 28,
+"w_asym": [
+28
+],
+"directions": [
+[
+"RIVL",
+"RIVR"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 28
+},
+{
+"pre": "RIVL",
+"post": "SAADR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SAADR",
+"RIVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIVL",
+"post": "SDQR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"SDQR",
+"RIVL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "RIVL",
+"post": "SIBDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RIVL",
+"SIBDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIVL",
+"post": "SMDVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RIVL",
+"SMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RIVR",
+"post": "SAADL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAADL",
+"RIVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RIVR",
+"post": "SDQR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"SDQR",
+"RIVR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "RIVR",
+"post": "SMDVR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"RIVR",
+"SMDVR"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 7
+},
+{
+"pre": "RMDDL",
+"post": "RMDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDDL",
+"RMDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDDL",
+"post": "RMDVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RMDDL",
+"RMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RMDDL",
+"post": "SIBVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RMDDL",
+"SIBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "RMDDL",
+"post": "SMDDL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RMDDL",
+"SMDDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "RMDDR",
+"post": "RMDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDDR",
+"RMDL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "RMDDR",
+"post": "RMDVR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"RMDDR",
+"RMDVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "RMDDR",
+"post": "RMGL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMGL",
+"RMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDDR",
+"post": "SAADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAADR",
+"RMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDDR",
+"post": "SIADL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDDR",
+"SIADL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDDR",
+"post": "SMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDDR",
+"SMDDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDL",
+"post": "RMDVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDL",
+"RMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDL",
+"post": "RMER",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMER",
+"RMDL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "RMDL",
+"post": "SIAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDL",
+"SIAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDL",
+"post": "SIBVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RMDL",
+"SIBVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "RMDL",
+"post": "SMDDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"RMDL",
+"SMDDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "RMDR",
+"post": "RMDVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDR",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDVL",
+"post": "SAAVL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"SAAVL",
+"RMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "RMDVL",
+"post": "SIAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDVL",
+"SIAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDVL",
+"post": "SIBVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDVL",
+"SIBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDVL",
+"post": "SMDVL",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"RMDVL",
+"SMDVL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 5
+},
+{
+"pre": "RMDVR",
+"post": "SAADL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAADL",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMDVR",
+"post": "SAAVR",
+"w": 9,
+"w_sym": 9,
+"w_asym": [
+9
+],
+"directions": [
+[
+"SAAVR",
+"RMDVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 9
+},
+{
+"pre": "RMDVR",
+"post": "SIAVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMDVR",
+"SIAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "RMDVR",
+"post": "SMDVR",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"RMDVR",
+"SMDVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 8
+},
+{
+"pre": "RMED",
+"post": "RMEV",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"RMED",
+"RMEV"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 6
+},
+{
+"pre": "RMEL",
+"post": "RMEV",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"RMEL",
+"RMEV"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "RMER",
+"post": "RMEV",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMER",
+"RMEV"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMEV",
+"post": "SMDVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMEV",
+"SMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMFL",
+"post": "SAADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAADR",
+"RMFL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMFL",
+"post": "SAAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAAVR",
+"RMFL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMGL",
+"post": "RMHL",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"RMGL",
+"RMHL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 6
+},
+{
+"pre": "RMGL",
+"post": "URXL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"URXL",
+"RMGL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "RMGR",
+"post": "RMHL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMGR",
+"RMHL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "RMGR",
+"post": "RMHR",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"RMGR",
+"RMHR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 4
+},
+{
+"pre": "RMGR",
+"post": "SMBVR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RMGR",
+"SMBVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "RMGR",
+"post": "URXR",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"URXR",
+"RMGR"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 5
+},
+{
+"pre": "RMHL",
+"post": "SIBVR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"RMHL",
+"SIBVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "RMHL",
+"post": "SMDDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"RMHL",
+"SMDDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SAADL",
+"post": "SDQR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQR",
+"SAADL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SAADL",
+"post": "SMBDL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"SAADL",
+"SMBDL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "SAAVL",
+"post": "SAAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAAVL",
+"SAAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SAAVL",
+"post": "SMBDR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SAAVL",
+"SMBDR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "SAAVL",
+"post": "SMBVR",
+"w": 17,
+"w_sym": 17,
+"w_asym": [
+17
+],
+"directions": [
+[
+"SAAVL",
+"SMBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 17
+},
+{
+"pre": "SAAVL",
+"post": "SMDVL",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"SAAVL",
+"SMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "SAAVR",
+"post": "SMBDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAAVR",
+"SMBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SAAVR",
+"post": "SMBVL",
+"w": 16,
+"w_sym": 16,
+"w_asym": [
+16
+],
+"directions": [
+[
+"SAAVR",
+"SMBVL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 17
+},
+{
+"pre": "SAAVR",
+"post": "SMDDL",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"SAAVR",
+"SMDDL"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 4
+},
+{
+"pre": "SAAVR",
+"post": "VB01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SAAVR",
+"VB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SABD",
+"post": "VA02",
+"w": 12,
+"w_sym": 12,
+"w_asym": [
+12
+],
+"directions": [
+[
+"SABD",
+"VA02"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 12
+},
+{
+"pre": "SABD",
+"post": "VA03",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SABD",
+"VA03"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "SABD",
+"post": "VB01",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"SABD",
+"VB01"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "SDQL",
+"post": "SDQR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SDQL",
+"SDQR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "SDQL",
+"post": "SIADR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQL",
+"SIADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SDQR",
+"post": "SIAVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SDQR",
+"SIAVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SDQR",
+"post": "SIBVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SDQR",
+"SIBVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "SIADL",
+"post": "SMBDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SMBDL",
+"SIADL"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "SIADR",
+"post": "SMBDR",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"SMBDR",
+"SIADR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "SIADR",
+"post": "SMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SMDDR",
+"SIADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SIAVL",
+"post": "SIBDL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SIBDL",
+"SIAVL"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "SIAVL",
+"post": "SIBVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SIBVL",
+"SIAVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "SIBDL",
+"post": "SIBVL",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"SIBDL",
+"SIBVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 13
+},
+{
+"pre": "SIBDL",
+"post": "SMBDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SMBDL",
+"SIBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SIBDL",
+"post": "SMBVL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"SMBVL",
+"SIBDL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 3
+},
+{
+"pre": "SIBDL",
+"post": "SMDDL",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"SMDDL",
+"SIBDL"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "SIBDR",
+"post": "SIBVR",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"SIBDR",
+"SIBVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 11
+},
+{
+"pre": "SIBDR",
+"post": "SMBVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SMBVR",
+"SIBDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SIBVL",
+"post": "SIBVR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SIBVL",
+"SIBVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 4
+},
+{
+"pre": "SIBVL",
+"post": "SMBVL",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SMBVL",
+"SIBVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 2
+},
+{
+"pre": "SIBVR",
+"post": "SMBDL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SMBDL",
+"SIBVR"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 4
+},
+{
+"pre": "SMBDR",
+"post": "SMBVR",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"SMBDR",
+"SMBVR"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "SMBDR",
+"post": "SMDDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SMDDR",
+"SMBDR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SMBVR",
+"post": "URBR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"URBR",
+"SMBVR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SMDDR",
+"post": "SMDVL",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"SMDDR",
+"SMDVL"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "SMDDR",
+"post": "VD01",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"SMDDR",
+"VD01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 5
+},
+{
+"pre": "SMDVL",
+"post": "VB01",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"SMDVL",
+"VB01"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 6
+},
+{
+"pre": "URADR",
+"post": "URYDR",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"URYDR",
+"URADR"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VA02",
+"post": "VA06",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VA02",
+"VA06"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VA02",
+"post": "VD02",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VA02",
+"VD02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VA03",
+"post": "VD03",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VA03",
+"VD03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VA04",
+"post": "VA07",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VA04",
+"VA07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VA04",
+"post": "VB03",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VA04",
+"VB03"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VA09",
+"post": "VB08",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"VA09",
+"VB08"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VA11",
+"post": "VA12",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VA11",
+"VA12"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VA11",
+"post": "VB10",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"VA11",
+"VB10"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "VA12",
+"post": "VB11",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"VA12",
+"VB11"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 5
+},
+{
+"pre": "VA12",
+"post": "VD12",
+"w": 8,
+"w_sym": 8,
+"w_asym": [
+8
+],
+"directions": [
+[
+"VA12",
+"VD12"
+]
+],
+"si7_synapses": 3,
+"si7_sections": 3
+},
+{
+"pre": "VA12",
+"post": "VD13",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VA12",
+"VD13"
+]
+],
+"si7_synapses": 5,
+"si7_sections": 6
+},
+{
+"pre": "VB01",
+"post": "VB02",
+"w": 2,
+"w_sym": 2,
+"w_asym": [
+2
+],
+"directions": [
+[
+"VB01",
+"VB02"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "VB02",
+"post": "VB03",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"VB02",
+"VB03"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 10
+},
+{
+"pre": "VB02",
+"post": "VB04",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VB02",
+"VB04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VB02",
+"post": "VB07",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VB02",
+"VB07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VB03",
+"post": "VB04",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VB03",
+"VB04"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VB04",
+"post": "VB05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VB04",
+"VB05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VB05",
+"post": "VB06",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"VB05",
+"VB06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VB06",
+"post": "VB07",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"VB06",
+"VB07"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VB07",
+"post": "VB08",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"VB07",
+"VB08"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VB08",
+"post": "VB09",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"VB08",
+"VB09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VB09",
+"post": "VB10",
+"w": 5,
+"w_sym": 5,
+"w_asym": [
+5
+],
+"directions": [
+[
+"VB09",
+"VB10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VB10",
+"post": "VD11",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VB10",
+"VD11"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VB10",
+"post": "VD12",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VB10",
+"VD12"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 2
+},
+{
+"pre": "VB11",
+"post": "VD12",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VB11",
+"VD12"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VC01",
+"post": "VC02",
+"w": 12,
+"w_sym": 12,
+"w_asym": [
+12
+],
+"directions": [
+[
+"VC01",
+"VC02"
+]
+],
+"si7_synapses": 7,
+"si7_sections": 13
+},
+{
+"pre": "VC01",
+"post": "VC03",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"VC01",
+"VC03"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 7
+},
+{
+"pre": "VC01",
+"post": "VD01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VD01",
+"VC01"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VC02",
+"post": "VC03",
+"w": 3,
+"w_sym": 3,
+"w_asym": [
+3
+],
+"directions": [
+[
+"VC02",
+"VC03"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 3
+},
+{
+"pre": "VC02",
+"post": "VD01",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VD01",
+"VC02"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VC03",
+"post": "VC04",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"VC03",
+"VC04"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VC04",
+"post": "VC05",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"VC04",
+"VC05"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VC05",
+"post": "VC06",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"VC05",
+"VC06"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VD01",
+"post": "VD02",
+"w": 4,
+"w_sym": 4,
+"w_asym": [
+4
+],
+"directions": [
+[
+"VD01",
+"VD02"
+]
+],
+"si7_synapses": 8,
+"si7_sections": 26
+},
+{
+"pre": "VD02",
+"post": "VD03",
+"w": 7,
+"w_sym": 7,
+"w_asym": [
+7
+],
+"directions": [
+[
+"VD02",
+"VD03"
+]
+],
+"si7_synapses": 6,
+"si7_sections": 8
+},
+{
+"pre": "VD03",
+"post": "VD04",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VD03",
+"VD04"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 6
+},
+{
+"pre": "VD04",
+"post": "VD05",
+"w": 1,
+"w_sym": 1,
+"w_asym": [
+1
+],
+"directions": [
+[
+"VD04",
+"VD05"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+},
+{
+"pre": "VD05",
+"post": "VD06",
+"w": 10,
+"w_sym": 10,
+"w_asym": [
+10
+],
+"directions": [
+[
+"VD05",
+"VD06"
+]
+],
+"si7_synapses": 4,
+"si7_sections": 10
+},
+{
+"pre": "VD06",
+"post": "VD07",
+"w": 15,
+"w_sym": 15,
+"w_asym": [
+15
+],
+"directions": [
+[
+"VD06",
+"VD07"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 8
+},
+{
+"pre": "VD07",
+"post": "VD08",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VD07",
+"VD08"
+]
+],
+"si7_synapses": 2,
+"si7_sections": 5
+},
+{
+"pre": "VD08",
+"post": "VD09",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VD08",
+"VD09"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VD09",
+"post": "VD10",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VD09",
+"VD10"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VD10",
+"post": "VD11",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VD10",
+"VD11"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VD11",
+"post": "VD12",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VD11",
+"VD12"
+]
+],
+"si7_synapses": null,
+"si7_sections": null
+},
+{
+"pre": "VD12",
+"post": "VD13",
+"w": 6,
+"w_sym": 6,
+"w_asym": [
+6
+],
+"directions": [
+[
+"VD12",
+"VD13"
+]
+],
+"si7_synapses": 1,
+"si7_sections": 1
+}
+]

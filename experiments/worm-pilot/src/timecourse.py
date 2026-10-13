@@ -15,10 +15,10 @@ firing rates in short windows:
     w4    : [7500, 10500)  rest of the declared 5-s window
 
 Paired contrast per window = stim-run rate - paired rest-run rate
-(same wiring, seed, bg seed). Writes data/timecourse-50ms.json
+(same wiring, seed, bg seed). Writes data/timecourse-50ms-<tag>.json
 (append-only; the frozen campaign results are untouched).
 
-Usage:  python src/timecourse.py
+Usage:  python src/timecourse.py [tag]   (default tag: v3)
 """
 import json
 import os
@@ -45,7 +45,7 @@ def win_rates(spikes, a, b):
             for i in sorted(spikes)]
 
 
-def main():
+def main(tag="v3"):
     cfg = json.load(open(os.path.join(HERE, f"config-{VARIANT}.json")))
     t0p, d = cfg["stim_start_ms"], cfg["stim_dur_ms"]
     t1 = t0p + d
@@ -73,6 +73,11 @@ def main():
               [(f"shuf-{s}", shuf_nets[s]) for s in shuf_seeds]
 
     out = {"variant": VARIANT,
+           "substrate": cfg.get("substrate", "v2-dual-electrical"),
+           "bg_model": ("B (forced propagation; historical v2 behaviour)"
+                        if cfg.get("bg_propagate", False)
+                        else "A (pure external current; only threshold-"
+                             "crossing spikes propagate; default)"),
            "windows": {w[0]: [w[1], w[2]] for w in WINDOWS},
            "paired_contrast_definition":
                "stim-run window rate - paired rest-run rate, same "
@@ -91,6 +96,8 @@ def main():
                     w.run(DUR)
                 rec = {"wiring": wname, "seed": seed, "cond": cond,
                        "bg_seed": bg_seed(seed, VARIANT_IDX),
+                       "bg_model": out["bg_model"],
+                       "substrate": out["substrate"],
                        "groups": {}}
                 for gname, ids in groups.items():
                     if not ids:
@@ -127,10 +134,10 @@ def main():
                 for win, v in contrast[gname][wname].items()}
     out["paired_contrast"] = contrast
 
-    p = os.path.join(DATA, "timecourse-50ms.json")
+    p = os.path.join(DATA, f"timecourse-50ms-{tag}.json")
     with open(p, "w") as f:
         json.dump(out, f, indent=1)
-    print(f"\nwrote {os.path.relpath(p, HERE)}")
+    print(f"\nwrote {os.path.relpath(p, HERE)} (bg_model={out['bg_model']})")
     cp = contrast.get("command_pool", {})
     for wname in sorted(cp):
         line = ", ".join(f"{win} {cp[wname][win]['mean']:+.4f}"
@@ -140,4 +147,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys as _s
+    main(_s.argv[1] if len(_s.argv) > 1 else "v3")

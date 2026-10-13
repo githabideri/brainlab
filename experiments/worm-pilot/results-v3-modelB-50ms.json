@@ -1,0 +1,2488 @@
+{
+ "50ms": {
+  "config": {
+   "dt": 1.0,
+   "tau_m": 20.0,
+   "tau_syn": 50.0,
+   "v0": -52.0,
+   "v_th": -45.0,
+   "v_rst": -52.0,
+   "refractory_ms": 2.2,
+   "delay_ms": 1.8,
+   "delay_steps": 2,
+   "lambda_bg": 4,
+   "w_bg": 7.0,
+   "duration_ms": 15000,
+   "stim_start_ms": 5000,
+   "stim_dur_ms": 500,
+   "stim_ids": [
+    "ASHL",
+    "ASHR"
+   ],
+   "alpha": 0.4,
+   "beta": 0.00096159557648134,
+   "S": 8,
+   "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+   ],
+   "shuffle_seeds": [
+    42,
+    43,
+    44
+   ],
+   "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)",
+   "bg_propagate": true,
+   "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]"
+  },
+  "runs": [
+   {
+    "wiring": "measured",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 13279,
+    "mean_rate_hz": 2.9508888888888887,
+    "max_rate_hz": 28.933333333333334,
+    "nan": false,
+    "wall_s": 1.63,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 8.808333333333334,
+      "stim_window_hz": 8.95,
+      "delta_hz": 0.14166666666666572,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.7186147186147183,
+      "stim_window_hz": 1.7272727272727273,
+      "delta_hz": 0.008658008658009031,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 3.1742635658914735,
+      "stim_window_hz": 3.252093023255813,
+      "delta_hz": 0.07782945736433966,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6833333333333333,
+      "stim_window_hz": 0.75,
+      "delta_hz": 0.06666666666666665,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 13346,
+    "mean_rate_hz": 2.965777777777778,
+    "max_rate_hz": 28.866666666666667,
+    "nan": false,
+    "wall_s": 1.67,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 8.933333333333334,
+      "stim_window_hz": 8.75,
+      "delta_hz": -0.18333333333333357,
+      "n": 8,
+      "paired_rest_window_hz": 8.95,
+      "paired_delta_hz": -0.1999999999999993
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.7290043290043289,
+      "stim_window_hz": 1.7142857142857142,
+      "delta_hz": -0.014718614718614687,
+      "n": 77,
+      "paired_rest_window_hz": 1.7272727272727273,
+      "paired_delta_hz": -0.012987012987013102
+     },
+     "other": {
+      "rest_hz": 3.186666666666667,
+      "stim_window_hz": 3.226046511627907,
+      "delta_hz": 0.03937984496123992,
+      "n": 215,
+      "paired_rest_window_hz": 3.252093023255813,
+      "paired_delta_hz": -0.026046511627906277
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0166666666666666,
+      "stim_window_hz": 0.7,
+      "delta_hz": -0.31666666666666665,
+      "n": 4,
+      "paired_rest_window_hz": 0.75,
+      "paired_delta_hz": -0.050000000000000044
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 12564,
+    "mean_rate_hz": 2.792,
+    "max_rate_hz": 27.666666666666668,
+    "nan": false,
+    "wall_s": 1.67,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 8.316666666666666,
+      "stim_window_hz": 7.2749999999999995,
+      "delta_hz": -1.041666666666667,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.6069264069264069,
+      "stim_window_hz": 1.3999999999999997,
+      "delta_hz": -0.20692640692640718,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 3.010852713178295,
+      "stim_window_hz": 2.866046511627907,
+      "delta_hz": -0.14480620155038793,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6,
+      "stim_window_hz": 0.44999999999999996,
+      "delta_hz": -0.15000000000000002,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 12697,
+    "mean_rate_hz": 2.821555555555556,
+    "max_rate_hz": 27.8,
+    "nan": false,
+    "wall_s": 1.69,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 8.458333333333332,
+      "stim_window_hz": 7.3,
+      "delta_hz": -1.1583333333333323,
+      "n": 8,
+      "paired_rest_window_hz": 7.2749999999999995,
+      "paired_delta_hz": 0.025000000000000355
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.6277056277056277,
+      "stim_window_hz": 1.4285714285714286,
+      "delta_hz": -0.19913419913419905,
+      "n": 77,
+      "paired_rest_window_hz": 1.3999999999999997,
+      "paired_delta_hz": 0.028571428571428914
+     },
+     "other": {
+      "rest_hz": 3.039379844961241,
+      "stim_window_hz": 2.885581395348837,
+      "delta_hz": -0.15379844961240385,
+      "n": 215,
+      "paired_rest_window_hz": 2.866046511627907,
+      "paired_delta_hz": 0.01953488372092993
+     },
+     "ash_ashj": {
+      "rest_hz": 0.9166666666666666,
+      "stim_window_hz": 0.44999999999999996,
+      "delta_hz": -0.4666666666666667,
+      "n": 4,
+      "paired_rest_window_hz": 0.44999999999999996,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 14228,
+    "mean_rate_hz": 3.161777777777778,
+    "max_rate_hz": 30.266666666666666,
+    "nan": false,
+    "wall_s": 1.66,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 9.991666666666667,
+      "stim_window_hz": 9.7,
+      "delta_hz": -0.29166666666666785,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.9151515151515155,
+      "stim_window_hz": 1.8701298701298699,
+      "delta_hz": -0.04502164502164563,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 3.3541085271317836,
+      "stim_window_hz": 3.145116279069767,
+      "delta_hz": -0.20899224806201655,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7333333333333333,
+      "stim_window_hz": 1.0,
+      "delta_hz": 0.2666666666666667,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 14250,
+    "mean_rate_hz": 3.1666666666666665,
+    "max_rate_hz": 30.4,
+    "nan": false,
+    "wall_s": 1.68,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 10.058333333333334,
+      "stim_window_hz": 9.85,
+      "delta_hz": -0.20833333333333393,
+      "n": 8,
+      "paired_rest_window_hz": 9.7,
+      "paired_delta_hz": 0.15000000000000036
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.9186147186147184,
+      "stim_window_hz": 1.8623376623376624,
+      "delta_hz": -0.05627705627705604,
+      "n": 77,
+      "paired_rest_window_hz": 1.8701298701298699,
+      "paired_delta_hz": -0.007792207792207462
+     },
+     "other": {
+      "rest_hz": 3.357209302325581,
+      "stim_window_hz": 3.1488372093023256,
+      "delta_hz": -0.20837209302325554,
+      "n": 215,
+      "paired_rest_window_hz": 3.145116279069767,
+      "paired_delta_hz": 0.0037209302325584837
+     },
+     "ash_ashj": {
+      "rest_hz": 0.9833333333333333,
+      "stim_window_hz": 0.9500000000000001,
+      "delta_hz": -0.033333333333333215,
+      "n": 4,
+      "paired_rest_window_hz": 1.0,
+      "paired_delta_hz": -0.04999999999999993
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 13334,
+    "mean_rate_hz": 2.9631111111111115,
+    "max_rate_hz": 28.866666666666667,
+    "nan": false,
+    "wall_s": 1.73,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 8.975,
+      "stim_window_hz": 7.824999999999999,
+      "delta_hz": -1.1500000000000004,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.7134199134199135,
+      "stim_window_hz": 1.5064935064935066,
+      "delta_hz": -0.20692640692640696,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 3.186976744186046,
+      "stim_window_hz": 3.028837209302326,
+      "delta_hz": -0.15813953488372023,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6333333333333333,
+      "stim_window_hz": 0.39999999999999997,
+      "delta_hz": -0.23333333333333334,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 13439,
+    "mean_rate_hz": 2.9864444444444445,
+    "max_rate_hz": 28.933333333333334,
+    "nan": false,
+    "wall_s": 1.72,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 9.208333333333332,
+      "stim_window_hz": 7.949999999999999,
+      "delta_hz": -1.2583333333333329,
+      "n": 8,
+      "paired_rest_window_hz": 7.824999999999999,
+      "paired_delta_hz": 0.125
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.72987012987013,
+      "stim_window_hz": 1.5194805194805194,
+      "delta_hz": -0.21038961038961057,
+      "n": 77,
+      "paired_rest_window_hz": 1.5064935064935066,
+      "paired_delta_hz": 0.01298701298701288
+     },
+     "other": {
+      "rest_hz": 3.204961240310077,
+      "stim_window_hz": 3.0074418604651156,
+      "delta_hz": -0.19751937984496148,
+      "n": 215,
+      "paired_rest_window_hz": 3.028837209302326,
+      "paired_delta_hz": -0.021395348837210282
+     },
+     "ash_ashj": {
+      "rest_hz": 0.9833333333333334,
+      "stim_window_hz": 0.39999999999999997,
+      "delta_hz": -0.5833333333333335,
+      "n": 4,
+      "paired_rest_window_hz": 0.39999999999999997,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 13412,
+    "mean_rate_hz": 2.9804444444444442,
+    "max_rate_hz": 29.733333333333334,
+    "nan": false,
+    "wall_s": 1.67,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 9.033333333333335,
+      "stim_window_hz": 9.725,
+      "delta_hz": 0.6916666666666647,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.6225108225108225,
+      "stim_window_hz": 1.579220779220779,
+      "delta_hz": -0.04329004329004338,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 3.241550387596899,
+      "stim_window_hz": 3.5348837209302326,
+      "delta_hz": 0.29333333333333345,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7666666666666666,
+      "stim_window_hz": 0.65,
+      "delta_hz": -0.11666666666666659,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 13588,
+    "mean_rate_hz": 3.0195555555555558,
+    "max_rate_hz": 29.8,
+    "nan": false,
+    "wall_s": 1.74,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 9.175,
+      "stim_window_hz": 9.825,
+      "delta_hz": 0.6499999999999986,
+      "n": 8,
+      "paired_rest_window_hz": 9.725,
+      "paired_delta_hz": 0.09999999999999964
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.6476190476190475,
+      "stim_window_hz": 1.5584415584415585,
+      "delta_hz": -0.08917748917748902,
+      "n": 77,
+      "paired_rest_window_hz": 1.579220779220779,
+      "paired_delta_hz": -0.020779220779220564
+     },
+     "other": {
+      "rest_hz": 3.281860465116279,
+      "stim_window_hz": 3.510697674418605,
+      "delta_hz": 0.2288372093023261,
+      "n": 215,
+      "paired_rest_window_hz": 3.5348837209302326,
+      "paired_delta_hz": -0.0241860465116277
+     },
+     "ash_ashj": {
+      "rest_hz": 1.1,
+      "stim_window_hz": 0.6,
+      "delta_hz": -0.5000000000000001,
+      "n": 4,
+      "paired_rest_window_hz": 0.65,
+      "paired_delta_hz": -0.050000000000000044
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8051,
+    "mean_rate_hz": 1.789111111111111,
+    "max_rate_hz": 11.333333333333334,
+    "nan": false,
+    "wall_s": 1.6,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.458333333333334,
+      "stim_window_hz": 5.5,
+      "delta_hz": 0.041666666666666075,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2432900432900433,
+      "stim_window_hz": 1.2545454545454542,
+      "delta_hz": 0.011255411255410852,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.8480620155038756,
+      "stim_window_hz": 1.84,
+      "delta_hz": -0.00806201550387553,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.1333333333333333,
+      "stim_window_hz": 1.0999999999999999,
+      "delta_hz": -0.03333333333333344,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8075,
+    "mean_rate_hz": 1.7944444444444445,
+    "max_rate_hz": 11.6,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.425,
+      "stim_window_hz": 5.324999999999999,
+      "delta_hz": -0.10000000000000053,
+      "n": 8,
+      "paired_rest_window_hz": 5.5,
+      "paired_delta_hz": -0.1750000000000007
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.244155844155844,
+      "stim_window_hz": 1.2519480519480517,
+      "delta_hz": 0.007792207792207684,
+      "n": 77,
+      "paired_rest_window_hz": 1.2545454545454542,
+      "paired_delta_hz": -0.0025974025974024872
+     },
+     "other": {
+      "rest_hz": 1.8564341085271316,
+      "stim_window_hz": 1.8390697674418603,
+      "delta_hz": -0.017364341085271295,
+      "n": 215,
+      "paired_rest_window_hz": 1.84,
+      "paired_delta_hz": -0.0009302325581397319
+     },
+     "ash_ashj": {
+      "rest_hz": 1.4166666666666665,
+      "stim_window_hz": 1.2999999999999998,
+      "delta_hz": -0.1166666666666667,
+      "n": 4,
+      "paired_rest_window_hz": 1.0999999999999999,
+      "paired_delta_hz": 0.19999999999999996
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7181,
+    "mean_rate_hz": 1.5957777777777777,
+    "max_rate_hz": 10.133333333333333,
+    "nan": false,
+    "wall_s": 1.57,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 4.633333333333333,
+      "stim_window_hz": 3.775,
+      "delta_hz": -0.858333333333333,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.091774891774892,
+      "stim_window_hz": 1.0,
+      "delta_hz": -0.09177489177489195,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.6632558139534885,
+      "stim_window_hz": 1.455813953488372,
+      "delta_hz": -0.20744186046511648,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.8833333333333334,
+      "stim_window_hz": 0.7000000000000001,
+      "delta_hz": -0.18333333333333335,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7261,
+    "mean_rate_hz": 1.6135555555555556,
+    "max_rate_hz": 10.2,
+    "nan": false,
+    "wall_s": 1.65,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 4.683333333333334,
+      "stim_window_hz": 3.725,
+      "delta_hz": -0.9583333333333335,
+      "n": 8,
+      "paired_rest_window_hz": 3.775,
+      "paired_delta_hz": -0.04999999999999982
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1038961038961042,
+      "stim_window_hz": 1.0025974025974027,
+      "delta_hz": -0.10129870129870144,
+      "n": 77,
+      "paired_rest_window_hz": 1.0,
+      "paired_delta_hz": 0.0025974025974027093
+     },
+     "other": {
+      "rest_hz": 1.681860465116279,
+      "stim_window_hz": 1.4604651162790698,
+      "delta_hz": -0.22139534883720913,
+      "n": 215,
+      "paired_rest_window_hz": 1.455813953488372,
+      "paired_delta_hz": 0.0046511627906977715
+     },
+     "ash_ashj": {
+      "rest_hz": 1.1500000000000001,
+      "stim_window_hz": 0.7000000000000001,
+      "delta_hz": -0.45000000000000007,
+      "n": 4,
+      "paired_rest_window_hz": 0.7000000000000001,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8670,
+    "mean_rate_hz": 1.9266666666666667,
+    "max_rate_hz": 12.133333333333333,
+    "nan": false,
+    "wall_s": 1.69,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.066666666666667,
+      "stim_window_hz": 5.7,
+      "delta_hz": -0.36666666666666714,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.3064935064935066,
+      "stim_window_hz": 1.1974025974025972,
+      "delta_hz": -0.10909090909090935,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.9947286821705428,
+      "stim_window_hz": 1.8511627906976744,
+      "delta_hz": -0.14356589147286836,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0999999999999999,
+      "stim_window_hz": 1.4500000000000002,
+      "delta_hz": 0.3500000000000003,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8732,
+    "mean_rate_hz": 1.9404444444444449,
+    "max_rate_hz": 12.133333333333333,
+    "nan": false,
+    "wall_s": 1.7,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.083333333333333,
+      "stim_window_hz": 5.85,
+      "delta_hz": -0.2333333333333334,
+      "n": 8,
+      "paired_rest_window_hz": 5.7,
+      "paired_delta_hz": 0.14999999999999947
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.3047619047619048,
+      "stim_window_hz": 1.2,
+      "delta_hz": -0.10476190476190483,
+      "n": 77,
+      "paired_rest_window_hz": 1.1974025974025972,
+      "paired_delta_hz": 0.0025974025974027093
+     },
+     "other": {
+      "rest_hz": 2.013953488372093,
+      "stim_window_hz": 1.8837209302325582,
+      "delta_hz": -0.13023255813953472,
+      "n": 215,
+      "paired_rest_window_hz": 1.8511627906976744,
+      "paired_delta_hz": 0.032558139534883734
+     },
+     "ash_ashj": {
+      "rest_hz": 1.4333333333333333,
+      "stim_window_hz": 1.5,
+      "delta_hz": 0.06666666666666665,
+      "n": 4,
+      "paired_rest_window_hz": 1.4500000000000002,
+      "paired_delta_hz": 0.04999999999999982
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8385,
+    "mean_rate_hz": 1.8633333333333333,
+    "max_rate_hz": 11.666666666666666,
+    "nan": false,
+    "wall_s": 1.68,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.775,
+      "stim_window_hz": 4.8999999999999995,
+      "delta_hz": -0.8750000000000009,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2562770562770562,
+      "stim_window_hz": 1.161038961038961,
+      "delta_hz": -0.09523809523809512,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.9351937984496126,
+      "stim_window_hz": 1.7004651162790698,
+      "delta_hz": -0.23472868217054277,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.1500000000000001,
+      "stim_window_hz": 0.7500000000000001,
+      "delta_hz": -0.4,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8463,
+    "mean_rate_hz": 1.8806666666666667,
+    "max_rate_hz": 11.733333333333333,
+    "nan": false,
+    "wall_s": 1.63,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.85,
+      "stim_window_hz": 5.025,
+      "delta_hz": -0.8249999999999993,
+      "n": 8,
+      "paired_rest_window_hz": 4.8999999999999995,
+      "paired_delta_hz": 0.1250000000000009
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2597402597402598,
+      "stim_window_hz": 1.1636363636363638,
+      "delta_hz": -0.09610389610389602,
+      "n": 77,
+      "paired_rest_window_hz": 1.161038961038961,
+      "paired_delta_hz": 0.0025974025974027093
+     },
+     "other": {
+      "rest_hz": 1.9553488372093029,
+      "stim_window_hz": 1.7088372093023254,
+      "delta_hz": -0.24651162790697745,
+      "n": 215,
+      "paired_rest_window_hz": 1.7004651162790698,
+      "paired_delta_hz": 0.008372093023255589
+     },
+     "ash_ashj": {
+      "rest_hz": 1.4666666666666668,
+      "stim_window_hz": 0.7500000000000001,
+      "delta_hz": -0.7166666666666667,
+      "n": 4,
+      "paired_rest_window_hz": 0.7500000000000001,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7874,
+    "mean_rate_hz": 1.7497777777777779,
+    "max_rate_hz": 10.933333333333334,
+    "nan": false,
+    "wall_s": 1.57,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.308333333333334,
+      "stim_window_hz": 5.85,
+      "delta_hz": 0.5416666666666661,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1489177489177491,
+      "stim_window_hz": 1.1220779220779222,
+      "delta_hz": -0.026839826839826886,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.8325581395348838,
+      "stim_window_hz": 1.9609302325581397,
+      "delta_hz": 0.12837209302325592,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0333333333333332,
+      "stim_window_hz": 1.0,
+      "delta_hz": -0.033333333333333215,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7933,
+    "mean_rate_hz": 1.7628888888888885,
+    "max_rate_hz": 10.933333333333334,
+    "nan": false,
+    "wall_s": 1.61,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.324999999999999,
+      "stim_window_hz": 5.775,
+      "delta_hz": 0.45000000000000107,
+      "n": 8,
+      "paired_rest_window_hz": 5.85,
+      "paired_delta_hz": -0.07499999999999929
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1601731601731602,
+      "stim_window_hz": 1.1402597402597403,
+      "delta_hz": -0.019913419913419883,
+      "n": 77,
+      "paired_rest_window_hz": 1.1220779220779222,
+      "paired_delta_hz": 0.018181818181818077
+     },
+     "other": {
+      "rest_hz": 1.8462015503875973,
+      "stim_window_hz": 1.96,
+      "delta_hz": 0.11379844961240271,
+      "n": 215,
+      "paired_rest_window_hz": 1.9609302325581397,
+      "paired_delta_hz": -0.0009302325581397319
+     },
+     "ash_ashj": {
+      "rest_hz": 1.35,
+      "stim_window_hz": 0.95,
+      "delta_hz": -0.40000000000000013,
+      "n": 4,
+      "paired_rest_window_hz": 1.0,
+      "paired_delta_hz": -0.050000000000000044
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7749,
+    "mean_rate_hz": 1.722,
+    "max_rate_hz": 10.6,
+    "nan": false,
+    "wall_s": 1.66,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.733333333333333,
+      "stim_window_hz": 5.85,
+      "delta_hz": 0.11666666666666625,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1428571428571426,
+      "stim_window_hz": 1.187012987012987,
+      "delta_hz": 0.044155844155844504,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.78015503875969,
+      "stim_window_hz": 1.8139534883720927,
+      "delta_hz": 0.03379844961240264,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.6166666666666667,
+      "stim_window_hz": 1.7999999999999998,
+      "delta_hz": 0.18333333333333313,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7861,
+    "mean_rate_hz": 1.7468888888888887,
+    "max_rate_hz": 10.733333333333333,
+    "nan": false,
+    "wall_s": 1.72,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.775,
+      "stim_window_hz": 5.800000000000001,
+      "delta_hz": 0.025000000000000355,
+      "n": 8,
+      "paired_rest_window_hz": 5.85,
+      "paired_delta_hz": -0.049999999999998934
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1575757575757577,
+      "stim_window_hz": 1.1922077922077923,
+      "delta_hz": 0.03463203463203457,
+      "n": 77,
+      "paired_rest_window_hz": 1.187012987012987,
+      "paired_delta_hz": 0.0051948051948051965
+     },
+     "other": {
+      "rest_hz": 1.808062015503876,
+      "stim_window_hz": 1.8186046511627907,
+      "delta_hz": 0.010542635658914667,
+      "n": 215,
+      "paired_rest_window_hz": 1.8139534883720927,
+      "paired_delta_hz": 0.0046511627906979935
+     },
+     "ash_ashj": {
+      "rest_hz": 2.0833333333333335,
+      "stim_window_hz": 1.75,
+      "delta_hz": -0.3333333333333335,
+      "n": 4,
+      "paired_rest_window_hz": 1.7999999999999998,
+      "paired_delta_hz": -0.04999999999999982
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7323,
+    "mean_rate_hz": 1.627333333333333,
+    "max_rate_hz": 11.066666666666666,
+    "nan": false,
+    "wall_s": 1.59,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.583333333333334,
+      "stim_window_hz": 4.975,
+      "delta_hz": -0.6083333333333343,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.0701298701298698,
+      "stim_window_hz": 1.0000000000000002,
+      "delta_hz": -0.0701298701298696,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.67968992248062,
+      "stim_window_hz": 1.487441860465116,
+      "delta_hz": -0.19224806201550404,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.2,
+      "stim_window_hz": 1.0,
+      "delta_hz": -0.19999999999999996,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7454,
+    "mean_rate_hz": 1.6564444444444442,
+    "max_rate_hz": 11.133333333333333,
+    "nan": false,
+    "wall_s": 1.63,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.683333333333334,
+      "stim_window_hz": 5.050000000000001,
+      "delta_hz": -0.6333333333333329,
+      "n": 8,
+      "paired_rest_window_hz": 4.975,
+      "paired_delta_hz": 0.07500000000000107
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.0839826839826836,
+      "stim_window_hz": 1.0051948051948054,
+      "delta_hz": -0.07878787878787818,
+      "n": 77,
+      "paired_rest_window_hz": 1.0000000000000002,
+      "paired_delta_hz": 0.0051948051948051965
+     },
+     "other": {
+      "rest_hz": 1.7116279069767442,
+      "stim_window_hz": 1.4967441860465116,
+      "delta_hz": -0.21488372093023256,
+      "n": 215,
+      "paired_rest_window_hz": 1.487441860465116,
+      "paired_delta_hz": 0.009302325581395543
+     },
+     "ash_ashj": {
+      "rest_hz": 1.7166666666666666,
+      "stim_window_hz": 1.0,
+      "delta_hz": -0.7166666666666666,
+      "n": 4,
+      "paired_rest_window_hz": 1.0,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8587,
+    "mean_rate_hz": 1.908222222222222,
+    "max_rate_hz": 11.666666666666666,
+    "nan": false,
+    "wall_s": 1.69,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.6083333333333325,
+      "stim_window_hz": 6.2749999999999995,
+      "delta_hz": -0.33333333333333304,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2865800865800867,
+      "stim_window_hz": 1.2129870129870128,
+      "delta_hz": -0.07359307359307388,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.9559689922480619,
+      "stim_window_hz": 1.7972093023255813,
+      "delta_hz": -0.15875968992248057,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.6500000000000001,
+      "stim_window_hz": 1.75,
+      "delta_hz": 0.09999999999999987,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8684,
+    "mean_rate_hz": 1.9297777777777776,
+    "max_rate_hz": 11.8,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.641666666666667,
+      "stim_window_hz": 6.275,
+      "delta_hz": -0.36666666666666625,
+      "n": 8,
+      "paired_rest_window_hz": 6.2749999999999995,
+      "paired_delta_hz": 8.881784197001252e-16
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.302164502164502,
+      "stim_window_hz": 1.2285714285714282,
+      "delta_hz": -0.07359307359307388,
+      "n": 77,
+      "paired_rest_window_hz": 1.2129870129870128,
+      "paired_delta_hz": 0.015584415584415368
+     },
+     "other": {
+      "rest_hz": 1.9792248062015505,
+      "stim_window_hz": 1.8120930232558141,
+      "delta_hz": -0.16713178294573638,
+      "n": 215,
+      "paired_rest_window_hz": 1.7972093023255813,
+      "paired_delta_hz": 0.014883720930232824
+     },
+     "ash_ashj": {
+      "rest_hz": 2.083333333333333,
+      "stim_window_hz": 1.75,
+      "delta_hz": -0.33333333333333304,
+      "n": 4,
+      "paired_rest_window_hz": 1.75,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8419,
+    "mean_rate_hz": 1.8708888888888888,
+    "max_rate_hz": 11.333333333333334,
+    "nan": false,
+    "wall_s": 1.59,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.35,
+      "stim_window_hz": 5.4750000000000005,
+      "delta_hz": -0.8749999999999991,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2095238095238094,
+      "stim_window_hz": 1.0727272727272728,
+      "delta_hz": -0.1367965367965367,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.9410852713178297,
+      "stim_window_hz": 1.65953488372093,
+      "delta_hz": -0.28155038759689965,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.4500000000000002,
+      "stim_window_hz": 1.1500000000000001,
+      "delta_hz": -0.30000000000000004,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8550,
+    "mean_rate_hz": 1.9,
+    "max_rate_hz": 11.533333333333333,
+    "nan": false,
+    "wall_s": 1.64,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.441666666666667,
+      "stim_window_hz": 5.475,
+      "delta_hz": -0.9666666666666677,
+      "n": 8,
+      "paired_rest_window_hz": 5.4750000000000005,
+      "paired_delta_hz": -8.881784197001252e-16
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2268398268398266,
+      "stim_window_hz": 1.0805194805194807,
+      "delta_hz": -0.14632034632034596,
+      "n": 77,
+      "paired_rest_window_hz": 1.0727272727272728,
+      "paired_delta_hz": 0.007792207792207906
+     },
+     "other": {
+      "rest_hz": 1.972093023255814,
+      "stim_window_hz": 1.667906976744186,
+      "delta_hz": -0.30418604651162795,
+      "n": 215,
+      "paired_rest_window_hz": 1.65953488372093,
+      "paired_delta_hz": 0.008372093023256033
+     },
+     "ash_ashj": {
+      "rest_hz": 2.0,
+      "stim_window_hz": 1.1500000000000001,
+      "delta_hz": -0.8499999999999999,
+      "n": 4,
+      "paired_rest_window_hz": 1.1500000000000001,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8144,
+    "mean_rate_hz": 1.809777777777778,
+    "max_rate_hz": 11.0,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.133333333333334,
+      "stim_window_hz": 6.0,
+      "delta_hz": -0.13333333333333375,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1324675324675322,
+      "stim_window_hz": 1.0987012987012987,
+      "delta_hz": -0.033766233766233444,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.891472868217054,
+      "stim_window_hz": 1.9972093023255815,
+      "delta_hz": 0.1057364341085274,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.3833333333333333,
+      "stim_window_hz": 1.1,
+      "delta_hz": -0.2833333333333332,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8269,
+    "mean_rate_hz": 1.8375555555555556,
+    "max_rate_hz": 11.133333333333333,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.183333333333334,
+      "stim_window_hz": 5.949999999999999,
+      "delta_hz": -0.23333333333333428,
+      "n": 8,
+      "paired_rest_window_hz": 6.0,
+      "paired_delta_hz": -0.05000000000000071
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1549783549783545,
+      "stim_window_hz": 1.1116883116883118,
+      "delta_hz": -0.04329004329004271,
+      "n": 77,
+      "paired_rest_window_hz": 1.0987012987012987,
+      "paired_delta_hz": 0.012987012987013102
+     },
+     "other": {
+      "rest_hz": 1.92031007751938,
+      "stim_window_hz": 2.0148837209302326,
+      "delta_hz": 0.09457364341085261,
+      "n": 215,
+      "paired_rest_window_hz": 1.9972093023255815,
+      "paired_delta_hz": 0.017674418604651132
+     },
+     "ash_ashj": {
+      "rest_hz": 1.9333333333333331,
+      "stim_window_hz": 1.1,
+      "delta_hz": -0.833333333333333,
+      "n": 4,
+      "paired_rest_window_hz": 1.1,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7607,
+    "mean_rate_hz": 1.6904444444444444,
+    "max_rate_hz": 11.4,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.574999999999999,
+      "stim_window_hz": 5.875,
+      "delta_hz": 0.3000000000000007,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2121212121212122,
+      "stim_window_hz": 1.2233766233766235,
+      "delta_hz": 0.011255411255411296,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.7172093023255817,
+      "stim_window_hz": 1.8306976744186048,
+      "delta_hz": 0.1134883720930231,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.8000000000000002,
+      "stim_window_hz": 0.85,
+      "delta_hz": 0.04999999999999982,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7774,
+    "mean_rate_hz": 1.7275555555555555,
+    "max_rate_hz": 11.533333333333333,
+    "nan": false,
+    "wall_s": 1.61,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.691666666666666,
+      "stim_window_hz": 5.925000000000001,
+      "delta_hz": 0.23333333333333428,
+      "n": 8,
+      "paired_rest_window_hz": 5.875,
+      "paired_delta_hz": 0.05000000000000071
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2303030303030307,
+      "stim_window_hz": 1.2415584415584415,
+      "delta_hz": 0.011255411255410852,
+      "n": 77,
+      "paired_rest_window_hz": 1.2233766233766235,
+      "paired_delta_hz": 0.018181818181818077
+     },
+     "other": {
+      "rest_hz": 1.758139534883721,
+      "stim_window_hz": 1.854883720930233,
+      "delta_hz": 0.09674418604651192,
+      "n": 215,
+      "paired_rest_window_hz": 1.8306976744186048,
+      "paired_delta_hz": 0.024186046511628145
+     },
+     "ash_ashj": {
+      "rest_hz": 1.15,
+      "stim_window_hz": 0.85,
+      "delta_hz": -0.29999999999999993,
+      "n": 4,
+      "paired_rest_window_hz": 0.85,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7160,
+    "mean_rate_hz": 1.5911111111111111,
+    "max_rate_hz": 11.533333333333333,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.458333333333333,
+      "stim_window_hz": 4.55,
+      "delta_hz": -0.9083333333333332,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.116017316017316,
+      "stim_window_hz": 1.0337662337662339,
+      "delta_hz": -0.08225108225108202,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.6173643410852714,
+      "stim_window_hz": 1.4762790697674417,
+      "delta_hz": -0.14108527131782966,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7166666666666667,
+      "stim_window_hz": 0.7000000000000002,
+      "delta_hz": -0.016666666666666496,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7261,
+    "mean_rate_hz": 1.6135555555555554,
+    "max_rate_hz": 11.6,
+    "nan": false,
+    "wall_s": 1.61,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.55,
+      "stim_window_hz": 4.6,
+      "delta_hz": -0.9500000000000002,
+      "n": 8,
+      "paired_rest_window_hz": 4.55,
+      "paired_delta_hz": 0.04999999999999982
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1264069264069265,
+      "stim_window_hz": 1.0285714285714287,
+      "delta_hz": -0.09783549783549783,
+      "n": 77,
+      "paired_rest_window_hz": 1.0337662337662339,
+      "paired_delta_hz": -0.0051948051948051965
+     },
+     "other": {
+      "rest_hz": 1.6415503875968993,
+      "stim_window_hz": 1.478139534883721,
+      "delta_hz": -0.16341085271317835,
+      "n": 215,
+      "paired_rest_window_hz": 1.4762790697674417,
+      "paired_delta_hz": 0.0018604651162792418
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0833333333333333,
+      "stim_window_hz": 0.7000000000000002,
+      "delta_hz": -0.3833333333333331,
+      "n": 4,
+      "paired_rest_window_hz": 0.7000000000000002,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8468,
+    "mean_rate_hz": 1.8817777777777778,
+    "max_rate_hz": 12.533333333333333,
+    "nan": false,
+    "wall_s": 1.65,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.383333333333333,
+      "stim_window_hz": 6.1000000000000005,
+      "delta_hz": -0.2833333333333323,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.367965367965368,
+      "stim_window_hz": 1.2727272727272725,
+      "delta_hz": -0.09523809523809557,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.898294573643411,
+      "stim_window_hz": 1.82046511627907,
+      "delta_hz": -0.07782945736434099,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.9833333333333334,
+      "stim_window_hz": 1.05,
+      "delta_hz": 0.06666666666666665,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8542,
+    "mean_rate_hz": 1.8982222222222223,
+    "max_rate_hz": 12.666666666666666,
+    "nan": false,
+    "wall_s": 1.64,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.458333333333334,
+      "stim_window_hz": 6.1,
+      "delta_hz": -0.3583333333333343,
+      "n": 8,
+      "paired_rest_window_hz": 6.1000000000000005,
+      "paired_delta_hz": -8.881784197001252e-16
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.3774891774891775,
+      "stim_window_hz": 1.2935064935064933,
+      "delta_hz": -0.08398268398268427,
+      "n": 77,
+      "paired_rest_window_hz": 1.2727272727272725,
+      "paired_delta_hz": 0.020779220779220786
+     },
+     "other": {
+      "rest_hz": 1.9150387596899225,
+      "stim_window_hz": 1.8334883720930233,
+      "delta_hz": -0.08155038759689925,
+      "n": 215,
+      "paired_rest_window_hz": 1.82046511627907,
+      "paired_delta_hz": 0.01302325581395336
+     },
+     "ash_ashj": {
+      "rest_hz": 1.1666666666666667,
+      "stim_window_hz": 0.9999999999999999,
+      "delta_hz": -0.16666666666666685,
+      "n": 4,
+      "paired_rest_window_hz": 1.05,
+      "paired_delta_hz": -0.050000000000000155
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8131,
+    "mean_rate_hz": 1.8068888888888888,
+    "max_rate_hz": 12.133333333333333,
+    "nan": false,
+    "wall_s": 1.53,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.991666666666667,
+      "stim_window_hz": 5.225,
+      "delta_hz": -0.7666666666666675,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2536796536796537,
+      "stim_window_hz": 1.1454545454545457,
+      "delta_hz": -0.108225108225108,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.8493023255813954,
+      "stim_window_hz": 1.6734883720930231,
+      "delta_hz": -0.17581395348837225,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7333333333333334,
+      "stim_window_hz": 0.6000000000000001,
+      "delta_hz": -0.1333333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 8185,
+    "mean_rate_hz": 1.8188888888888892,
+    "max_rate_hz": 12.133333333333333,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.041666666666667,
+      "stim_window_hz": 5.225,
+      "delta_hz": -0.8166666666666673,
+      "n": 8,
+      "paired_rest_window_hz": 5.225,
+      "paired_delta_hz": 0.0
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2562770562770564,
+      "stim_window_hz": 1.1402597402597403,
+      "delta_hz": -0.11601731601731613,
+      "n": 77,
+      "paired_rest_window_hz": 1.1454545454545457,
+      "paired_delta_hz": -0.005194805194805419
+     },
+     "other": {
+      "rest_hz": 1.8632558139534883,
+      "stim_window_hz": 1.6660465116279073,
+      "delta_hz": -0.19720930232558098,
+      "n": 215,
+      "paired_rest_window_hz": 1.6734883720930231,
+      "paired_delta_hz": -0.007441860465115857
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0666666666666667,
+      "stim_window_hz": 0.6000000000000001,
+      "delta_hz": -0.46666666666666656,
+      "n": 4,
+      "paired_rest_window_hz": 0.6000000000000001,
+      "paired_delta_hz": 0.0
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7871,
+    "mean_rate_hz": 1.7491111111111108,
+    "max_rate_hz": 12.2,
+    "nan": false,
+    "wall_s": 1.57,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.975,
+      "stim_window_hz": 6.525,
+      "delta_hz": 0.5500000000000007,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1930735930735932,
+      "stim_window_hz": 1.1506493506493505,
+      "delta_hz": -0.0424242424242427,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.7910077519379846,
+      "stim_window_hz": 1.9404651162790698,
+      "delta_hz": 0.14945736434108525,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7666666666666667,
+      "stim_window_hz": 0.55,
+      "delta_hz": -0.21666666666666667,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "bg_model": "B (forced propagation; historical v2 behaviour)",
+    "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+    "total_spikes": 7985,
+    "mean_rate_hz": 1.7744444444444445,
+    "max_rate_hz": 12.266666666666667,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 6.1083333333333325,
+      "stim_window_hz": 6.675000000000001,
+      "delta_hz": 0.5666666666666682,
+      "n": 8,
+      "paired_rest_window_hz": 6.525,
+      "paired_delta_hz": 0.15000000000000036
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.2043290043290042,
+      "stim_window_hz": 1.1636363636363638,
+      "delta_hz": -0.04069264069264045,
+      "n": 77,
+      "paired_rest_window_hz": 1.1506493506493505,
+      "paired_delta_hz": 0.012987012987013324
+     },
+     "other": {
+      "rest_hz": 1.8173643410852713,
+      "stim_window_hz": 1.9665116279069768,
+      "delta_hz": 0.14914728682170542,
+      "n": 215,
+      "paired_rest_window_hz": 1.9404651162790698,
+      "paired_delta_hz": 0.026046511627906943
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0666666666666667,
+      "stim_window_hz": 0.55,
+      "delta_hz": -0.5166666666666666,
+      "n": 4,
+      "paired_rest_window_hz": 0.55,
+      "paired_delta_hz": 0.0
+     }
+    }
+   }
+  ],
+  "summary": {
+   "measured/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 9.025,
+    "stim_window_hz_mean": 8.735,
+    "delta_hz_values": [
+     -0.18333333333333357,
+     -1.1583333333333323,
+     -0.20833333333333393,
+     -1.2583333333333329,
+     0.6499999999999986
+    ],
+    "delta_hz_mean": -0.4316666666666668,
+    "delta_hz_sd": 0.7061122038631278,
+    "response_index_values": [
+     -0.020522388059701517,
+     -0.13694581280788168,
+     -0.020712510356255237,
+     -0.1366515837104072,
+     0.0708446866485012
+    ],
+    "response_index_mean": -0.04879752165714889
+   },
+   "measured/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.7153246753246756,
+    "stim_window_hz_mean": 1.6166233766233766,
+    "delta_hz_values": [
+     -0.014718614718614687,
+     -0.19913419913419905,
+     -0.05627705627705604,
+     -0.21038961038961057,
+     -0.08917748917748902
+    ],
+    "delta_hz_mean": -0.11393939393939387,
+    "delta_hz_sd": 0.07790206573227204,
+    "response_index_values": [
+     -0.008512769153730579,
+     -0.12234042553191485,
+     -0.029332129963898796,
+     -0.12162162162162171,
+     -0.054125065685759234
+    ],
+    "response_index_mean": -0.06718640239138504
+   },
+   "measured/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 3.1935503875968996,
+    "stim_window_hz_mean": 3.155720930232558,
+    "delta_hz_values": [
+     0.03937984496123992,
+     -0.15379844961240385,
+     -0.20837209302325554,
+     -0.19751937984496148,
+     0.2288372093023261
+    ],
+    "delta_hz_mean": -0.05829457364341097,
+    "delta_hz_sd": 0.16912288528612685,
+    "response_index_values": [
+     0.012357691933443488,
+     -0.05060191797592352,
+     -0.06206705458575775,
+     -0.06162925696594436,
+     0.06972789115646275
+    ],
+    "response_index_mean": -0.01844252928754388
+   },
+   "measured/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.6833333333333333,
+    "stim_window_hz_mean": 0.62,
+    "delta_hz_values": [
+     -0.31666666666666665,
+     -0.4666666666666667,
+     -0.033333333333333215,
+     -0.5833333333333335,
+     -0.5000000000000001
+    ],
+    "delta_hz_mean": -0.38,
+    "delta_hz_sd": 0.19362047641943483,
+    "response_index_values": [
+     -0.3114754098360656,
+     -0.5090909090909091,
+     -0.033898305084745645,
+     -0.5932203389830509,
+     -0.4545454545454546
+    ],
+    "response_index_mean": -0.38044608350804515
+   },
+   "shuf-42/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 5.448333333333334,
+    "stim_window_hz_mean": 5.139999999999999,
+    "delta_hz_values": [
+     -0.10000000000000053,
+     -0.9583333333333335,
+     -0.2333333333333334,
+     -0.8249999999999993,
+     0.45000000000000107
+    ],
+    "delta_hz_mean": -0.33333333333333315,
+    "delta_hz_sd": 0.5119407517802559,
+    "response_index_values": [
+     -0.0184331797235024,
+     -0.204626334519573,
+     -0.03835616438356165,
+     -0.1410256410256409,
+     0.08450704225352133
+    ],
+    "response_index_mean": -0.06358685547975132
+   },
+   "shuf-42/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.2093506493506494,
+    "stim_window_hz_mean": 1.1516883116883117,
+    "delta_hz_values": [
+     0.007792207792207684,
+     -0.10129870129870144,
+     -0.10476190476190483,
+     -0.09610389610389602,
+     -0.019913419913419883
+    ],
+    "delta_hz_mean": -0.0628571428571429,
+    "delta_hz_sd": 0.047274947222822314,
+    "response_index_values": [
+     0.006263048016701375,
+     -0.09176470588235305,
+     -0.08029197080291976,
+     -0.07628865979381437,
+     -0.017164179104477584
+    ],
+    "response_index_mean": -0.05184929351337268
+   },
+   "shuf-42/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.8547596899224807,
+    "stim_window_hz_mean": 1.770418604651163,
+    "delta_hz_values": [
+     -0.017364341085271295,
+     -0.22139534883720913,
+     -0.13023255813953472,
+     -0.24651162790697745,
+     0.11379844961240271
+    ],
+    "delta_hz_mean": -0.10034108527131798,
+    "delta_hz_sd": 0.133906193201097,
+    "response_index_values": [
+     -0.00935359946550859,
+     -0.13163716814159282,
+     -0.06466512702078514,
+     -0.12607040913415826,
+     0.06163923412831687
+    ],
+    "response_index_mean": -0.0540174139267456
+   },
+   "shuf-42/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.06,
+    "stim_window_hz_mean": 1.04,
+    "delta_hz_values": [
+     -0.1166666666666667,
+     -0.45000000000000007,
+     0.06666666666666665,
+     -0.7166666666666667,
+     -0.40000000000000013
+    ],
+    "delta_hz_mean": -0.32333333333333336,
+    "delta_hz_sd": 0.2725598812901284,
+    "response_index_values": [
+     -0.08235294117647061,
+     -0.391304347826087,
+     0.04651162790697674,
+     -0.4886363636363636,
+     -0.2962962962962964
+    ],
+    "response_index_mean": -0.24241566420564817
+   },
+   "shuf-43/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 6.081666666666666,
+    "stim_window_hz_mean": 5.71,
+    "delta_hz_values": [
+     0.025000000000000355,
+     -0.6333333333333329,
+     -0.36666666666666625,
+     -0.9666666666666677,
+     -0.23333333333333428
+    ],
+    "delta_hz_mean": -0.43500000000000016,
+    "delta_hz_sd": 0.3402776643990743,
+    "response_index_values": [
+     0.004329004329004391,
+     -0.11143695014662748,
+     -0.05520702634880797,
+     -0.15006468305304024,
+     -0.037735849056603925
+    ],
+    "response_index_mean": -0.07002310085521504
+   },
+   "shuf-43/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.1683116883116882,
+    "stim_window_hz_mean": 1.1236363636363635,
+    "delta_hz_values": [
+     0.03463203463203457,
+     -0.07878787878787818,
+     -0.07359307359307388,
+     -0.14632034632034596,
+     -0.04329004329004271
+    ],
+    "delta_hz_mean": -0.06147186147186123,
+    "delta_hz_sd": 0.05867294262060609,
+    "response_index_values": [
+     0.02991772625280473,
+     -0.07268370607028701,
+     -0.056515957446808734,
+     -0.11926605504587129,
+     -0.03748125937031436
+    ],
+    "response_index_mean": -0.051205850336095336
+   },
+   "shuf-43/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.8496744186046512,
+    "stim_window_hz_mean": 1.7620465116279072,
+    "delta_hz_values": [
+     0.010542635658914667,
+     -0.21488372093023256,
+     -0.16713178294573638,
+     -0.30418604651162795,
+     0.09457364341085261
+    ],
+    "delta_hz_mean": -0.11621705426356592,
+    "delta_hz_sd": 0.14707855042116352,
+    "response_index_values": [
+     0.00583090379008743,
+     -0.12554347826086956,
+     -0.08444305185649378,
+     -0.15424528301886795,
+     0.0492491522686904
+    ],
+    "response_index_mean": -0.06183035141549069
+   },
+   "shuf-43/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.4600000000000002,
+    "stim_window_hz_mean": 1.35,
+    "delta_hz_values": [
+     -0.3333333333333335,
+     -0.7166666666666666,
+     -0.33333333333333304,
+     -0.8499999999999999,
+     -0.833333333333333
+    ],
+    "delta_hz_mean": -0.6133333333333332,
+    "delta_hz_sd": 0.23319043243190263,
+    "response_index_values": [
+     -0.16000000000000006,
+     -0.4174757281553398,
+     -0.1599999999999999,
+     -0.42499999999999993,
+     -0.4310344827586206
+    ],
+    "response_index_mean": -0.3187020421827921
+   },
+   "shuf-44/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 5.876666666666667,
+    "stim_window_hz_mean": 5.705,
+    "delta_hz_values": [
+     0.23333333333333428,
+     -0.9500000000000002,
+     -0.3583333333333343,
+     -0.8166666666666673,
+     0.5666666666666682
+    ],
+    "delta_hz_mean": -0.26499999999999985,
+    "delta_hz_sd": 0.5869033613428675,
+    "response_index_values": [
+     0.04099560761347015,
+     -0.1711711711711712,
+     -0.05548387096774208,
+     -0.13517241379310355,
+     0.09276944065484337
+    ],
+    "response_index_mean": -0.045612481532740654
+   },
+   "shuf-44/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.2285714285714284,
+    "stim_window_hz_mean": 1.1735064935064936,
+    "delta_hz_values": [
+     0.011255411255410852,
+     -0.09783549783549783,
+     -0.08398268398268427,
+     -0.11601731601731613,
+     -0.04069264069264045
+    ],
+    "delta_hz_mean": -0.06545454545454557,
+    "delta_hz_sd": 0.04570772614619944,
+    "response_index_values": [
+     0.009148486980998965,
+     -0.08685626441199076,
+     -0.06096794468887513,
+     -0.09235010337698148,
+     -0.03378864126527658
+    ],
+    "response_index_mean": -0.052962893352425
+   },
+   "shuf-44/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.774635658914729,
+    "stim_window_hz_mean": 1.759813953488372,
+    "delta_hz_values": [
+     0.09674418604651192,
+     -0.16341085271317835,
+     -0.08155038759689925,
+     -0.19720930232558098,
+     0.14914728682170542
+    ],
+    "delta_hz_mean": -0.03925581395348825,
+    "delta_hz_sd": 0.13866819208435563,
+    "response_index_values": [
+     0.05502645502645519,
+     -0.09954665659236875,
+     -0.04258419689119172,
+     -0.1058412381427856,
+     0.08206790650059716
+    ],
+    "response_index_mean": -0.022175546019858747
+   },
+   "shuf-44/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.8,
+    "stim_window_hz_mean": 0.74,
+    "delta_hz_values": [
+     -0.29999999999999993,
+     -0.3833333333333331,
+     -0.16666666666666685,
+     -0.46666666666666656,
+     -0.5166666666666666
+    ],
+    "delta_hz_mean": -0.3666666666666666,
+    "delta_hz_sd": 0.12427567921538157,
+    "response_index_values": [
+     -0.26086956521739124,
+     -0.35384615384615364,
+     -0.14285714285714302,
+     -0.4374999999999999,
+     -0.48437499999999994
+    ],
+    "response_index_mean": -0.3358895723841376
+   }
+  },
+  "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation]",
+  "bg_model": "B (forced propagation; historical v2 behaviour)",
+  "shuffle_invariants": {
+   "shuf-42": {
+    "seed": 42,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e4312a8260fd971",
+      "multiset_sha256_shuffled": "3e4312a8260fd971"
+     },
+     "electrical": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88",
+      "parallel_pairs_in_shuffled": 35,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 4758,
+     "shuffled": 4758
+    }
+   },
+   "shuf-43": {
+    "seed": 43,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e4312a8260fd971",
+      "multiset_sha256_shuffled": "3e4312a8260fd971"
+     },
+     "electrical": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88",
+      "parallel_pairs_in_shuffled": 22,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 4758,
+     "shuffled": 4758
+    }
+   },
+   "shuf-44": {
+    "seed": 44,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e4312a8260fd971",
+      "multiset_sha256_shuffled": "3e4312a8260fd971"
+     },
+     "electrical": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88",
+      "parallel_pairs_in_shuffled": 20,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 4758,
+     "shuffled": 4758
+    }
+   }
+  },
+  "paired_stim_artifact": {
+   "file": "../data/paired-stim-example-50ms-v3-modelB.json",
+   "events_sha256": "76539fd640ba1a8fc2092dfc25ac45e6aba54263584bd8250a9cca17812fec56",
+   "n_events": 10461
+  },
+  "paired": {
+   "command_pool": {
+    "measured": {
+     "per_seed": {
+      "101": -0.2,
+      "102": 0.025,
+      "103": 0.15,
+      "104": 0.125,
+      "105": 0.1
+     },
+     "mean_paired_delta_hz": 0.04,
+     "sd_paired_delta_hz": 0.127083,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": -0.175,
+      "102": -0.05,
+      "103": 0.15,
+      "104": 0.125,
+      "105": -0.075
+     },
+     "mean_paired_delta_hz": -0.005,
+     "sd_paired_delta_hz": 0.123895,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": -0.05,
+      "102": 0.075,
+      "103": 0.0,
+      "104": -0.0,
+      "105": -0.05
+     },
+     "mean_paired_delta_hz": -0.005,
+     "sd_paired_delta_hz": 0.045826,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": 0.05,
+      "102": 0.05,
+      "103": -0.0,
+      "104": 0.0,
+      "105": 0.15
+     },
+     "mean_paired_delta_hz": 0.05,
+     "sd_paired_delta_hz": 0.054772,
+     "all_same_sign": false
+    }
+   },
+   "body_wall_motors": {
+    "measured": {
+     "per_seed": {
+      "101": -0.012987,
+      "102": 0.028571,
+      "103": -0.007792,
+      "104": 0.012987,
+      "105": -0.020779
+     },
+     "mean_paired_delta_hz": 0.0,
+     "sd_paired_delta_hz": 0.018145,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": -0.002597,
+      "102": 0.002597,
+      "103": 0.002597,
+      "104": 0.002597,
+      "105": 0.018182
+     },
+     "mean_paired_delta_hz": 0.004675,
+     "sd_paired_delta_hz": 0.007047,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": 0.005195,
+      "102": 0.005195,
+      "103": 0.015584,
+      "104": 0.007792,
+      "105": 0.012987
+     },
+     "mean_paired_delta_hz": 0.009351,
+     "sd_paired_delta_hz": 0.00422,
+     "all_same_sign": true
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": 0.018182,
+      "102": -0.005195,
+      "103": 0.020779,
+      "104": -0.005195,
+      "105": 0.012987
+     },
+     "mean_paired_delta_hz": 0.008312,
+     "sd_paired_delta_hz": 0.01131,
+     "all_same_sign": false
+    }
+   },
+   "other": {
+    "measured": {
+     "per_seed": {
+      "101": -0.026047,
+      "102": 0.019535,
+      "103": 0.003721,
+      "104": -0.021395,
+      "105": -0.024186
+     },
+     "mean_paired_delta_hz": -0.009674,
+     "sd_paired_delta_hz": 0.018158,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": -0.00093,
+      "102": 0.004651,
+      "103": 0.032558,
+      "104": 0.008372,
+      "105": -0.00093
+     },
+     "mean_paired_delta_hz": 0.008744,
+     "sd_paired_delta_hz": 0.012419,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": 0.004651,
+      "102": 0.009302,
+      "103": 0.014884,
+      "104": 0.008372,
+      "105": 0.017674
+     },
+     "mean_paired_delta_hz": 0.010977,
+     "sd_paired_delta_hz": 0.004685,
+     "all_same_sign": true
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": 0.024186,
+      "102": 0.00186,
+      "103": 0.013023,
+      "104": -0.007442,
+      "105": 0.026047
+     },
+     "mean_paired_delta_hz": 0.011535,
+     "sd_paired_delta_hz": 0.012857,
+     "all_same_sign": false
+    }
+   },
+   "ash_ashj": {
+    "measured": {
+     "per_seed": {
+      "101": -0.05,
+      "102": 0.0,
+      "103": -0.05,
+      "104": 0.0,
+      "105": -0.05
+     },
+     "mean_paired_delta_hz": -0.03,
+     "sd_paired_delta_hz": 0.024495,
+     "all_same_sign": false
+    },
+    "shuf-42": {
+     "per_seed": {
+      "101": 0.2,
+      "102": 0.0,
+      "103": 0.05,
+      "104": 0.0,
+      "105": -0.05
+     },
+     "mean_paired_delta_hz": 0.04,
+     "sd_paired_delta_hz": 0.086023,
+     "all_same_sign": false
+    },
+    "shuf-43": {
+     "per_seed": {
+      "101": -0.05,
+      "102": 0.0,
+      "103": 0.0,
+      "104": 0.0,
+      "105": 0.0
+     },
+     "mean_paired_delta_hz": -0.01,
+     "sd_paired_delta_hz": 0.02,
+     "all_same_sign": false
+    },
+    "shuf-44": {
+     "per_seed": {
+      "101": 0.0,
+      "102": 0.0,
+      "103": -0.05,
+      "104": 0.0,
+      "105": 0.0
+     },
+     "mean_paired_delta_hz": -0.01,
+     "sd_paired_delta_hz": 0.02,
+     "all_same_sign": false
+    }
+   }
+  },
+  "headline": {
+   "command_pool": {
+    "measured_delta_mean_hz": -0.4316666666666668,
+    "measured_delta_sd_hz": 0.7061122038631278,
+    "shuffle_deltas_mean_hz": [
+     -0.33333333333333315,
+     -0.43500000000000016,
+     -0.26499999999999985
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.06984550852938516,
+    "measured_beats_all_shuffles": false
+   },
+   "body_wall_motors": {
+    "measured_delta_mean_hz": -0.11393939393939387,
+    "measured_delta_sd_hz": 0.07790206573227204,
+    "shuffle_deltas_mean_hz": [
+     -0.0628571428571429,
+     -0.06147186147186123,
+     -0.06545454545454557
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.0016508340139770566,
+    "measured_beats_all_shuffles": false
+   },
+   "other": {
+    "measured_delta_mean_hz": -0.05829457364341097,
+    "measured_delta_sd_hz": 0.16912288528612685,
+    "shuffle_deltas_mean_hz": [
+     -0.10034108527131798,
+     -0.11621705426356592,
+     -0.03925581395348825
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.03317711606494455,
+    "measured_beats_all_shuffles": false
+   },
+   "ash_ashj": {
+    "measured_delta_mean_hz": -0.38,
+    "measured_delta_sd_hz": 0.19362047641943483,
+    "shuffle_deltas_mean_hz": [
+     -0.32333333333333336,
+     -0.6133333333333332,
+     -0.3666666666666666
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.12772462662663597,
+    "measured_beats_all_shuffles": false
+   }
+  },
+  "verdicts": {
+   "stable": true,
+   "routed_command_pool": false,
+   "routed_motors": false
+  }
+ }
+}

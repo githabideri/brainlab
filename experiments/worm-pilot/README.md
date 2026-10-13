@@ -149,3 +149,38 @@ network implements pinprick withdrawal in the animal; any behavior
 beyond motor-neuron spiking (muscles, body, environment absent); or
 anything about inhibition, plasticity, or real synaptic kinetics,
 which the released data do not contain.
+
+## Protocol superseded (v3, 2026-10-13, review round 5)
+
+The protocol above is the frozen v2 description and remains valid for
+the v1/v2 artifacts. Two P0 corrections changed the electrical part
+of the substrate (see `circuits/c-elegans-substrate.md` and the
+report's third addendum):
+
+1. **One canonical junction layer, not two.** The SI9 "symmetric" and
+   "asymmetric" gap-junction sheets are alternative representations
+   of the same physical junctions (every asymmetric pair appears in
+   the symmetric sheet with the identical weight; the SI7 synapse
+   list counts each junction exactly once). The v2 modelled them as
+   two independent layers, double-counting the electrical
+   conductance. v3 builds one undirected conductance layer from
+   `data/c-elegans-electrical-herm.json` (1,089 herm / 1,278 male
+   junctions; weight = symmetric-sheet section count, the preferred
+   value).
+2. **Explicit background-drive models.** v2 silently made each
+   background Poisson event both an external current injection *and*
+   a forced presynaptic spike (it propagated through the neuron's
+   chemical output fan-out even without a threshold crossing). v3
+   separates this: `bg_propagate = false` (Model A, default) is pure
+   external current with genuine-spike propagation only;
+   `bg_propagate = true` (Model B) reproduces the historical v2
+   behaviour. `src/test_bg_models.py` pins down the difference.
+
+The v3 configs (`config-5ms.json`, `config-50ms.json`,
+`config-50ms-v3-modelB.json`) keep the **frozen v2 parameters**
+(λ_bg, w_bg, α, β, τ_syn, S, seeds, seed rule) — no re-calibration;
+the v2 configs are preserved as `config-*-v2-dual-electrical.json`.
+`src/run_v3.py` re-runs the paired battery on the corrected
+substrate (160 runs); `src/test_invariants.py` now asserts the
+sheet-relationship findings and the single-layer shuffle
+invariants.
