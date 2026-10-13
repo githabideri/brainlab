@@ -384,3 +384,43 @@ Two items from the A-03 lane, recorded against the B-02 artifacts:
    integration, convergent spike trains sum to sub-threshold
    depolarization. This is a cross-lane consistency point, not new
    B-02 data; no numbers in the report change.
+
+## Review Note IV (2026-10-13 — third external review)
+
+This note corrects wording; it changes no number, no run, and no
+conclusion.
+
+1. **Two sentences in this report are factually wrong and must not be
+   re-cited.** Design decision 3 ("v783 contains **no optic→CC
+   edge** (B-01 review note II)") and the Limitations bullet ("v783
+   has no velocity afferent and **no optic→CC edge**") both assert
+   the very claim that B-01's review note II *refutes*, and that the
+   audit manifest proves wrong: v783 contains **434,005 optic-ish →
+   central** pairs, including **49 optic-ish → EPG/EPGt** pairs
+   (`data/audit-manifest-2026-10-12.json`, `scripts/fafb-cc-audit.py`).
+   The correct framing of the cue: it is a **declared artificial
+   interface** (60 mV events directly onto the EPG/EPGt cue-bin
+   cells) — a valid controlled stimulus on its own terms; it does
+   not need justification by an absence of optic input, and the
+   49 measured optic-ish→EPG pairs are simply not the pathway the
+   cue uses.
+2. **The positive control is an activity/oscillation control, not a
+   heading-decoding control.** The rebuilt ring oscillates at 64 Hz
+   under B-01's own protocol — that validates the simulator, the
+   drive protocol, and the measurement pipeline. No ring decoder has
+   been shown to read a heading; "PASS" must be read at the activity
+   level.
+3. **Scope of the null.** The battery tests one specific interface:
+   coarse 45° wedge-bin EPG/EPGt rates (7/8 bins occupied, one empty
+   bin, 5 side-contradiction cells) feeding a ridge decoder, driven
+   by a forced-spike P-EN schedule at three weight scales. It shows
+   that *this tested interface* does not produce a decodable heading
+   under the declared dynamics. It does **not** show that the
+   reconstructed compass architecture cannot support heading
+   dynamics at all: a cell-type/compartment-based EPG spatial
+   mapping (the v783 annotation is finer than wedges) and a decoder
+   less dependent on the geometric approximation are the natural
+   follow-ups and are not yet run. This report remains a
+   well-recorded negative experiment.
+4. The transduction null, the three lesion results, and the cue
+   behavior stand as reported.
