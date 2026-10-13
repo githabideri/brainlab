@@ -153,9 +153,11 @@ def spike_held_out_metrics(task: dict, arm) -> dict:
 
 
 def train_tanh(model, task: dict, n_train: int, seed: int, epochs: int,
-               patience: int, batch: int, lossf) -> dict:
+               patience: int, batch: int, lossf, version: str = "v1") -> dict:
     """One tanh/baseline run: Adam, val-LOSS checkpointing, full loss
-    trajectories, held-out touched exactly once, Δw recorded."""
+    trajectories, Δw recorded. The held-out fold is NOT evaluated here
+    (review round 4: the single final evaluation lives in the caller's
+    result path, run_rate)."""
     tr_idx, val_idx = _val_split(task, n_train, seed)
     X = torch.tensor(task["x"], dtype=torch.float32)
     if task["kind"] == "class":
@@ -196,12 +198,7 @@ def train_tanh(model, task: dict, n_train: int, seed: int, epochs: int,
     model.load_state_dict(best_state)
     wall = time.time() - t0
 
-    # held-out: touched exactly once
-    Xte = X[task["test_idx"]]
-    model.eval()
-    with torch.no_grad():
-        logits = model(Xte).numpy()
-
+    # (held-out evaluation deliberately absent here; see docstring)
     res = {
         "epochs_run": int(epochs_run),
         "early_stopped": epochs_run < epochs,
@@ -220,7 +217,9 @@ def train_tanh(model, task: dict, n_train: int, seed: int, epochs: int,
         # (no need to capture it at t=0).
         rec = circuit.dw_record()
         if rec["dw_eff"].size:
-            npz = Path(_dw_dir()) / (
+            # version-tagged: repeat runs must not overwrite previous
+            # draws' raw arrays (review round 4)
+            npz = Path(_dw_dir(version)) / (
                 f"dw_{getattr(model, '_arm_name', 'tanh')}_{task['key']}_s{seed}.npz")
             np.savez(npz, **{k: np.ascontiguousarray(v, dtype=np.float32)
                              for k, v in rec.items()})
@@ -229,8 +228,8 @@ def train_tanh(model, task: dict, n_train: int, seed: int, epochs: int,
     return res
 
 
-def _dw_dir():
-    d = Path(__file__).parent / "results" / "dw"
+def _dw_dir(version: str = "v1"):
+    d = Path(__file__).parent / "results" / "dw" / version
     d.mkdir(parents=True, exist_ok=True)
     return d
 
