@@ -1,10 +1,10 @@
 # 2026-10-12 — B-02 internal compass v2: the corrected anatomy runs, but the
 # measured P-EN→EPG wiring does not transduce the declared velocity drive
 
-**Campaign:** brainlab B-02 (brief:
-`/root/homelab/temp/brainlab/campaign/brief-b02.md`; common rules the same
-directory). Worked in worktree `temp/brainlab/wt-b02` (branch `b-02`),
-commits per stage. Completed 2026-10-13 (night run).
+**Campaign:** brainlab B-02 (a coordinator-maintained campaign brief; the
+common rules live in the same private campaign directory — not part of
+this repo). Worked in a dedicated git worktree (branch `b-02`), commits
+per stage. Completed 2026-10-13 (night run).
 
 The B-01 review notes (I and II, same day as B-01) relocated both ends of
 the compass out of the structures B-01 had wired: the readout from the 17
@@ -350,8 +350,8 @@ or the comparison structure.
 - B-01 report and its two review notes:
   `reports/2026-10-12-b01-internal-compass.md` (sections "Review
   notes — 2026-10-12" and "Review note II").
-- Brief and common rules: `/root/homelab/temp/brainlab/campaign/`
-  (`brief-b02.md`, `common-rules.md`).
+- Brief and common rules: a private, coordinator-maintained campaign
+  directory outside this repository (`brief-b02.md`, `common-rules.md`).
 - Circuit provenance: `circuits/fafb-cc-b02.md`; the B-01 counterpart
   `circuits/fafb-cc-b01.md`; navigation rules `docs/navigation.md`.
 - Turner-Evans et al. 2017 (shift loop); Shiu et al. 2024 (LIF
