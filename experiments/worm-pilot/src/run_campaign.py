@@ -20,13 +20,18 @@ artifact (data/paired-stim-example-<variant>.json): the measured and
 the shuf-42 background event lists, asserted byte-identical, with
 sha256.
 
-Primary metric (review requirement 4): the stim-rest DELTA, per wiring
-and seed and group: delta_hz = stim-window rate (5 s after the pulse)
-minus rest rate (whole 15 s); response index = delta / rest where
-rest >= 0.1 Hz. Headline table: measured vs each of the 3 shuffles on
-the delta, with the spread ACROSS the 3 independent graphs reported
+Primary metric (review round 4, 2026-10-13): the PAIRED stim contrast,
+per wiring and seed and group: paired_delta_hz = stim-run 5-s
+post-stimulus window rate MINUS the paired no-stimulus run's rate in
+the SAME window (same wiring, same sim seed, same bg seed). The
+within-run quantity (window minus the same run's whole-15-s mean)
+is retained in each record as `delta_hz` and is a diagnostic ONLY —
+it is not a stimulus effect (a stimulated run's 15-s mean includes
+the post-stimulus window). The headline reports the paired contrast;
+the spread ACROSS the 3 independent shuffle graphs is reported
 explicitly (v1's single shared graph confounded graph and seed
-variability).
+variability). The frozen reanalysis of the committed 80 runs lives in
+data/paired-stim-effect.json (src/reanalyze_paired.py; no rerun).
 
 Writes results-exact.json (frozen afterwards). Reads the FROZEN
 config-<variant>.json; no parameter is tuned here.
@@ -209,6 +214,43 @@ def run_variant(name, variant_idx):
                 out["summary"][f"{wiring}/{gname}"]["rest_hz_mean"] = \
                     float(np.mean([r["groups"][gname]["rest_hz"]
                                    for r in rest_runs]))
+    # --- paired stim contrast (review round 4: the PRIMARY metric) ---
+    # stim-run window rate minus the PAIRED rest run's rate in the same
+    # window (same wiring/seed/bg seed). The within-run `delta_hz`
+    # stays in the records as a diagnostic only.
+    bypair = {(r["wiring"], r["seed"]): r
+              for r in out["runs"] if r["cond"] == "rest"}
+    out["paired"] = {}
+    for r in out["runs"]:
+        if r["cond"] != "stim":
+            continue
+        rest = bypair.get((r["wiring"], r["seed"]))
+        if rest is None:
+            continue
+        for gname, g in r["groups"].items():
+            rg = rest["groups"].get(gname)
+            if rg is None or "stim_window_hz" not in g:
+                continue
+            d = g["stim_window_hz"] - rg["stim_window_hz"]
+            r["groups"][gname]["paired_rest_window_hz"] = rg["stim_window_hz"]
+            r["groups"][gname]["paired_delta_hz"] = d
+            cell = out["paired"].setdefault(
+                gname, {}).setdefault(
+                    r["wiring"], {"per_seed": {}, "deltas": []})
+            cell["per_seed"][str(r["seed"])] = round(d, 6)
+            cell["deltas"].append(d)
+    for gname in out["paired"]:
+        for wname in out["paired"][gname]:
+            c = out["paired"][gname][wname]
+            c["mean_paired_delta_hz"] = round(float(np.mean(c["deltas"])), 6)
+            c["sd_paired_delta_hz"] = round(float(np.std(c["deltas"])), 6)
+            c["all_same_sign"] = bool(
+                all(x > 0 for x in c["deltas"]) or all(x < 0 for x in c["deltas"]))
+            c.pop("deltas")
+    print(f"[{name}] paired contrasts: "
+          + ", ".join(f"{g}/{w} {out['paired'][g][w]['mean_paired_delta_hz']:+.4f} Hz"
+                      for g in sorted(out["paired"])
+                      for w in sorted(out["paired"][g])), flush=True)
     # headline: measured vs each shuffle on the delta, with the spread
     # ACROSS the 3 independent shuffle graphs reported explicitly
     head = {}

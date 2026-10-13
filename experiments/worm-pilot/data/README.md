@@ -37,6 +37,23 @@ Derived, reproducible products (do not edit by hand; regenerate with
   diagonal entries zeroed, symmetry disagreements, edge counts per
   sheet) used by `circuits/c-elegans-substrate.md`.
 
+Analysis artifacts (2026-10-13, review round 4; regenerate with the
+named scripts — never edit by hand):
+
+- `paired-stim-example-{5ms,50ms}.json` — measured vs shuf-42
+  background event lists for one (sim seed, variant), asserted
+  byte-identical, with sha256 (`src/run_campaign.py`).
+- `paired-stim-effect.json` — the corrected PRIMARY metric,
+  recomputed from the frozen `../results-exact.json` without rerun:
+  per (wiring, sim seed, group) `stim-run 5-s window rate − paired
+  rest-run 5-s window rate` (the `delta_hz` inside
+  `../results-exact.json` is a within-run diagnostic, not a stimulus
+  effect). `src/reanalyze_paired.py`.
+- `timecourse-50ms.json` — 40 new runs (4 wirings × 5 seeds ×
+  rest/stim, 50 ms variant) with per-group rates in short windows
+  around the ASH pulse (1 s pre, 500 ms pulse, 250/250/500/1000/3000
+  ms post) plus paired contrasts. `src/timecourse.py`.
+
 Caveats: the workbooks have hand-assembled layout quirks (see the
 substrate document for the exact handling and counted artifacts); the
 sheets' data rows are SPARSE (empty cells omitted from the XML), so
