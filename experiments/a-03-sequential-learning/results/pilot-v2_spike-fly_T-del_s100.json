@@ -1,0 +1,39 @@
+{
+  "experiment": "a-03-sequential-learning",
+  "phase": "pilot",
+  "version": "v2",
+  "dynamics": "spike",
+  "wiring": "fly",
+  "baseline": null,
+  "task": "T-del",
+  "seed": 100,
+  "n_train": 32,
+  "n_test": 32,
+  "treatment": "Shiu-2024 LIF (b-01 lif.py, pinned by sha256), circuit FROZEN (B-01 treatment); fixed declared Poisson drive to the 256 sensory nodes; efficacy sign x min(log1p|w|, c) x k (p95 -> 4.7 mV, B-01's capped-max regime) \u2014 declared pilot revision of the inert per-target mapping; tonic 10 mV on the 384 outputs (declared pilot revision of the sub-threshold 4 mV); ridge readout (alpha 1.0) = only learned object; dw = 0 by construction",
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "held_out": {
+    "accuracy": 0.2188,
+    "nll": 1.444,
+    "ceiling": 0.9073,
+    "chance": 0.25,
+    "efficiency": -0.0475
+  },
+  "dw": {
+    "n_edges": 42921,
+    "dw_zero_by_construction": true,
+    "mean_abs_dw": 0.0,
+    "frac_abs_gt_1e-3": 0.0,
+    "frac_abs_gt_1e-2": 0.0,
+    "abs_dw_over_abs_w0": 0.0
+  },
+  "wall_s": 42.6,
+  "epochs_run": 0,
+  "early_stopped": false,
+  "val_loss_best": null,
+  "train_loss_hist": [],
+  "val_loss_hist": [],
+  "weights_sha256": null,
+  "peak_rss_mb": 1183
+}

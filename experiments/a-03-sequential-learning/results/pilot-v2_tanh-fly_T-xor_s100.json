@@ -1,0 +1,58 @@
+{
+  "experiment": "a-03-sequential-learning",
+  "phase": "pilot",
+  "version": "v2",
+  "dynamics": "tanh",
+  "wiring": "fly",
+  "baseline": null,
+  "task": "T-xor",
+  "seed": 100,
+  "n_train": 96,
+  "n_test": 32,
+  "treatment": "tanh-rate sequential (A-02 treatment): trainable edge gains (zero-init -> 1.0) + leaks (-> 0.5) + biases (-> 0) + encoder/drive/readout/head; persistent hidden state, 2 propagation steps per input step (A-03 sizing revision of A-02's 4); val-LOSS checkpoint",
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "epochs_run": 4,
+  "early_stopped": false,
+  "val_loss_best": 0.667283,
+  "train_loss_first": 0.754907,
+  "train_loss_last": 0.699678,
+  "train_loss_hist": [
+    0.754907,
+    0.724156,
+    0.705613,
+    0.699678
+  ],
+  "val_loss_hist": [
+    0.6692,
+    0.774462,
+    0.73565,
+    0.667283
+  ],
+  "wall_s": 5.2,
+  "dw_npz_sha256": "8e10b82459dbda40bbee0e8699188fb576dff6bc1591f0eb1e01cf73c08e040f",
+  "dw": {
+    "n_edges": 42921,
+    "mean_dw": -1.555e-05,
+    "std_dw": 0.00018755,
+    "mean_abs_dw": 8.652e-05,
+    "max_abs_dw": 0.00637376,
+    "frac_abs_gt_1e-3": 0.005079,
+    "frac_abs_gt_1e-2": 0.0,
+    "abs_dw_over_abs_w0": 0.002423,
+    "corr_abs_dw_base": 0.723307,
+    "mean_abs_dw_leak": 0.00496993,
+    "mean_abs_dw_bias": 0.00476335
+  },
+  "held_out": {
+    "accuracy": 0.4883,
+    "nll": 0.7073,
+    "ceiling": 0.8586,
+    "chance": 0.5,
+    "efficiency": -0.0327
+  },
+  "weights_sha256": "a3540bc131c9720303f363d3b9fbcb875059915efd55a87a1c8aec508751c763",
+  "params_trained": 179754,
+  "peak_rss_mb": 1182
+}
