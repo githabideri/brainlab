@@ -151,6 +151,11 @@ def main() -> None:
     ap.add_argument("--circuit", required=True)
     ap.add_argument("--phase", choices=["pilot", "main", "summary", "manifest"],
                     default="pilot")
+    ap.add_argument("--tag", default="",
+                    help="output tag: per-run JSONs are written as "
+                         "<phase>-<tag>_*.json (e.g. --tag v2 re-runs a "
+                         "phase into fresh files, original artifacts "
+                         "untouched); recorded in the JSON as version")
     ap.add_argument("--seeds", default=",".join(map(str, SEEDS)))
     ap.add_argument("--tasks", default=",".join(TASK_KEYS))
     ap.add_argument("--arms", default="")  # empty = phase default
@@ -197,11 +202,12 @@ def main() -> None:
         # arbiter); main: the full 512-trial fold, identical for all arms
         test_prefix = 32 if args.phase == "pilot" else None
 
-        done = set(p.name for p in outdir.glob(f"{args.phase}_*.json"))
+        prefix = args.phase if not args.tag else f"{args.phase}-{args.tag}"
+        done = set(p.name for p in outdir.glob(f"{prefix}_*.json"))
         for arm in arms:
             for task_key in task_keys:
                 for seed in seeds:
-                    name = f"{args.phase}_{arm}_{task_key}_s{seed}.json"
+                    name = f"{prefix}_{arm}_{task_key}_s{seed}.json"
                     if name in done:
                         continue
                     task = all_tasks[task_key]
@@ -229,6 +235,7 @@ def main() -> None:
                     res = {
                         "experiment": "a-03-sequential-learning",
                         "phase": args.phase,
+                        "version": args.tag or "v1",
                         "dynamics": dyn,
                         "wiring": wiring,
                         "baseline": arm if dyn not in ("tanh", "spike") else None,

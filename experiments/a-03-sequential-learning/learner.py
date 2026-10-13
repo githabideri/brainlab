@@ -127,8 +127,15 @@ def _Y_rows(task: dict, y, r: int) -> np.ndarray:
 def spike_held_out_metrics(task: dict, arm) -> dict:
     """Spike arm: ridge readout (alpha = 1.0, no tuning) fit on the
     first 80% of the training features (fixed prefix — declared),
-    evaluated on the same held-out fold as every other arm. Features
-    were cached on the arm by run_features()."""
+    evaluated on the held-out fold.
+
+    LEAK-FREE (2026-10-13 fix, review P0): the fit set is the declared
+    training prefix ONLY — `Xtr[:n_fit, r]` with the matching training
+    targets. The v1 version also passed the held-out features AND
+    their true labels into `fit()` and then evaluated on those same
+    rows (direct train/test contamination; that is what produced the
+    pilot's 1.000 / 0.05 deg / R^2 = 1.0). Held-out labels are used
+    only inside `held_out_metrics()`, after prediction."""
     from model import RidgeReadout
 
     Xtr, Xte = arm.train_feats, arm.test_feats
@@ -137,12 +144,9 @@ def spike_held_out_metrics(task: dict, arm) -> dict:
     R = len(arm.task["report_steps"])
     outs = []
     for r in range(R):
-        Xf = np.vstack([Xtr[:n_fit, r], Xte[:, r]])
-        Y = np.vstack([
-            _Y_rows(task, y_all[arm.train_rows][:n_fit], r),
-            _Y_rows(task, y_all[arm.test_rows], r),
-        ])
-        m = RidgeReadout(alpha=1.0).fit(Xf, Y)
+        m = RidgeReadout(alpha=1.0).fit(
+            Xtr[:n_fit, r],
+            _Y_rows(task, y_all[arm.train_rows][:n_fit], r))
         outs.append(m.predict(Xte[:, r]))
     logits = np.stack(outs, 1)
     return held_out_metrics(task, logits, arm.test_rows)

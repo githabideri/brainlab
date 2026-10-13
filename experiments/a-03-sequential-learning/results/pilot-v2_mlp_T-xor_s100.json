@@ -1,0 +1,44 @@
+{
+  "experiment": "a-03-sequential-learning",
+  "phase": "pilot",
+  "version": "v2",
+  "dynamics": "mlp",
+  "wiring": null,
+  "baseline": "mlp",
+  "task": "T-xor",
+  "seed": 100,
+  "n_train": 96,
+  "n_test": 32,
+  "treatment": "conventional: MLP on a window of the last W steps (4; 5 for T-xor) \u2014 declared no-long-memory comparator",
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "epochs_run": 4,
+  "early_stopped": false,
+  "val_loss_best": 0.663142,
+  "train_loss_first": 0.690102,
+  "train_loss_last": 0.65939,
+  "train_loss_hist": [
+    0.690102,
+    0.684398,
+    0.675146,
+    0.65939
+  ],
+  "val_loss_hist": [
+    0.684942,
+    0.67809,
+    0.676548,
+    0.663142
+  ],
+  "wall_s": 0.0,
+  "held_out": {
+    "accuracy": 0.8633,
+    "nll": 0.6546,
+    "ceiling": 0.8586,
+    "chance": 0.5,
+    "efficiency": 1.0131
+  },
+  "weights_sha256": "18634368d4cc7cc96f8b8b4f64f6f508da7065f23900bcbe4f4c9ab64596b8b1",
+  "params_trained": 67585,
+  "peak_rss_mb": 1183
+}
