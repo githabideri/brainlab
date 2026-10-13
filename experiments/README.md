@@ -86,15 +86,26 @@ pre-registered and scheduled after the heavy lane. Report:
   semantic deviation disclosed (declared 15 mV never applied; spike-
   source delivery is the weaker, conservative realization). Report:
   `../reports/2026-10-12-b01-internal-compass.md`.
-- **b-02-design** (the drive-semantics question B-01 left open) — **redesigned
-  2026-10-12 after the primary-source audit** (see the B-01 report's review
-  notes): readout = the 51 official EPG/EPGt heading cells (present in the
-  B-01 subgraph), drive = P-EN1/P-EN2 under the Turner-Evans asymmetric
-  velocity input, weight-magnitude-matched and population-preserving
-  controls, seeded paired precomputed stimuli, distinct stimulation
-  semantics (current injection vs external events vs forced spikes) with
-  unit tests and positive controls. Preflight stages 0–5 planned (private
-  campaign file); protocol not yet written.
+- **b-02-internal-compass-v2** (the drive-semantics question B-01 left
+  open — executed) — `b-02-internal-compass-v2/`. **Done 2026-10-13:
+  the corrected design runs clean and lands a uniform, mechanism-rich
+  null.** Staged preflight (CC-only subgraph 2,878 / 300,521, shift
+  loop reproduced exactly, three named drive APIs + independent numpy
+  LIF differential test, positive control PASS at 64 Hz on a
+  byte-identical rebuild of B-01's ring) then a 6-arm × 5-seed
+  pre-registered battery: the measured P-EN→EPG wiring does **not**
+  transduce the declared velocity drive into a decodable heading at
+  ×0.5/×1/×2 weights (c2 MAE 85–93°, at chance in every arm; the side
+  geometry is irrelevant — signflip ≡ bio), and the B-01 null
+  reproduces one population over. Lesions explain the null: P-EN is
+  the network's primary activity source (−97 % when silenced), the
+  tonic-held ER ring is an inhibitory clamp on the readout (240–908×
+  disinhibition, still no tracking); the declared 60 mV visual cue is
+  the only thing that fires the readout population, and it works
+  exactly as declared (a valid interface onto a dead downstream). Also
+  found: B-01's ring run used the npz without its sign column
+  (all-positive weights). Report:
+  `../reports/2026-10-12-b02-internal-compass-v2.md`.
 - **worm-pilot** (multi-organism expansion: does the *measured* C. elegans
   connectome route a textbook sensorimotor computation?) —
   `worm-pilot/`. **Done 2026-10-12: bounded pilot, one positive wiring

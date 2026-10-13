@@ -305,3 +305,30 @@ citations in `docs/navigation.md` (Vela 2014; Huet & Straube 2010; Huet
 listed there under "Unverified citations" and the affected claims were
 re-anchored to verified references. The B-01 experiment, its data, and its
 conclusions as stated in review note I are unaffected by this.
+
+## Review note III — 2026-10-13 (from the executed B-02,
+## `reports/2026-10-12-b02-internal-compass-v2.md`)
+
+Two findings from the B-02 preflight bear on this report:
+
+1. **The ring control ran with all-positive weights.** B-02's
+   byte-identical rebuild (npz sha verified against this experiment's
+   manifest) shows that B-01's ring run read the npz `w` column
+   without the stored `sign` column — i.e. the 2.1 M spike saturation
+   figure corresponds to an all-positive circuit, not the declared
+   E/I mix. The signed rebuild (0.80–0.86 M spikes) still oscillates
+   in B-01's declared band, so the "the conventional control runs,
+   the biological wiring does not" contrast is unaffected; the
+   absolute ring number is a property of the all-positive variant.
+2. **The B-01 null reproduces one population over.** With the
+   corrected readout (EPG/EPGt) and drive (P-EN, forced spikes —
+   B-01's actual mechanism, now named) and the full preflight in
+   place, the measured wiring is at chance on the rotating-phase
+   readout in every arm of a 6-arm battery: the drive reaches the
+   readout (51/51 cells in ≤ 2 hops) but its measured efficacy is far
+   below what a decodable readout needs; the tonic-held ER ring
+   clamps the readout. The declared 60 mV visual cue is the only
+   input that fires the readout population, and it does so exactly as
+   declared. Nothing in this report's stated conclusions changes;
+   this note adds the mechanism of the null and the ring-weight
+   deviation.
