@@ -1,0 +1,36 @@
+{
+ "dt": 1.0,
+ "tau_m": 20.0,
+ "tau_syn": 5.0,
+ "v0": -52.0,
+ "v_th": -45.0,
+ "v_rst": -52.0,
+ "refractory_ms": 2.2,
+ "delay_ms": 1.8,
+ "delay_steps": 2,
+ "lambda_bg": 4,
+ "w_bg": 10.0,
+ "duration_ms": 15000,
+ "stim_start_ms": 5000,
+ "stim_dur_ms": 500,
+ "stim_ids": [
+  "ASHL",
+  "ASHR"
+ ],
+ "alpha": 1.6,
+ "beta": 0.006381121462685519,
+ "S": 28,
+ "seeds": [
+  101,
+  102,
+  103,
+  104,
+  105
+ ],
+ "shuffle_seeds": [
+  42,
+  43,
+  44
+ ],
+ "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)"
+}

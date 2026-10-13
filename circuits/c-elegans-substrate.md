@@ -58,9 +58,22 @@ were computed from the released data files in
   kinetics. Sign and strength per synapse are not measured: the
   released weights are "total number of EM serial sections of
   connectivity" (a size-weighted contact count), unsigned.
-- Gap junctions are listed in two sheets (symmetric vs. asymmetric
-  conductance) with the same section-count weight; per-junction
-  conductance values are not given.
+- Gap junctions are listed in two sheets ("symmetric" and
+  "asymmetric" conductance) with the same section-count weight; per-
+  junction conductance values are not given. **Correction (2026-10-13,
+  review round 5):** the two sheets are *alternative representations
+  of the same physical junctions*, not additive edge classes — every
+  asymmetric pair occurs in the symmetric sheet as the same unordered
+  pair (identical weight; herm 1,086/1,086, male 1,276/1,276 with one
+  weight discrepancy, VB06/VB07), plus a few symmetric-only pairs
+  (herm 3, male 1). Corroborated by the SI7 synapse list (one row per
+  physical synapse, each junction exactly once, partner = 1) and the
+  paper's undirected depiction (Fig. 1). The simulation therefore uses
+  a single canonical undirected layer (union of the sheets): 1,089
+  herm / 1,278 male junctions. The v2 treatment (both sheets as
+  independent layers, 2,178/2,556 records) double-counted the
+  electrical conductance and has been retired — see the worm report,
+  third addendum.
 
 ## Sex differences (measured from the released cell lists)
 
@@ -129,10 +142,10 @@ terminate each block.
 to the SI8 neuron lists, SI9 basis = section-weighted, extrapolation
 included):
 
-| Sex | Neurons in sim | Chemical edges | Gap junctions (sym, undirected) | Gap junctions (asym, directed) | Electrical total |
-|---|---|---|---|---|---|
-| hermaphrodite | 300 of 302 listed | 3,669 | 1,089 | 1,089 | 2,178 |
-| male | 378 of 383 listed | 3,986 | 1,278 | 1,278 | 2,556 |
+| Sex | Neurons in sim | Chemical edges | Gap junctions (canonical, undirected; one per physical junction) |
+|---|---|---|---|
+| hermaphrodite | 300 of 302 listed | 3,669 | 1,089 |
+| male | 378 of 383 listed | 3,986 | 1,278 |
 
 (The male chemical count 3,986 is unchanged from v1 — that sheet
 parsed correctly even positionally; the male *neuron* count moves
@@ -142,10 +155,12 @@ Against the authors' **reported** herm totals (4,887 chemical + 1,447
 gap, on 460 nodes incl. muscles/end organs): our 3,669 neuron→neuron
 chemical edges sit inside 4,841 non-zero neuron-source entries (the
 ~1,172 remainder is neuron→muscle/end-organ; 4,841 vs the reported
-4,887 is the authors' own counting-basis difference); the 2,178
-neuron–neuron electrical records sit inside 2,865 non-zero gap-sheet
-entries (the remainder touches muscles/end organs; the sym and asym
-sheets are separate record lists, not two views of one set). The few
+4,887 is the authors' own counting-basis difference); the 1,089
+canonical neuron–neuron junctions sit inside 2,865 non-zero gap-sheet
+entries (the remainder touches muscles/end organs; the reported
+1,447 full-graph junctions and our 1,089 neuron–neuron junctions are
+different counting bases, both consistent with one junction per
+sheet pair — see the third addendum for the full cross-check). The few
 missing neurons per sex are listed cells that carry no neuron–neuron
 edge in the matrices.
 

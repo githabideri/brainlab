@@ -35,7 +35,12 @@ explicitly and counted, not silently dropped:
   * a row that repeats the header (trailing block) terminates the sheet
 
 Outputs (JSON, stable schema):
-  data/c-elegans-edges-<sex>.json   neuron-only edge lists
+  data/c-elegans-edges-<sex>.json   neuron-only edge lists (faithful
+                                     per-sheet records: chem, gap_sym,
+                                     gap_asym)
+  data/c-elegans-electrical-<sex>.json  CANONICAL electrical graph
+                                     (one undirected record per physical
+                                     junction; see canonical_electrical)
   data/c-elegans-inventory.json     counts used by the substrate document
 """
 import json
@@ -208,6 +213,138 @@ def is_neuron(name, cells):
     return cat.lower().replace("-", " ") in NEURON_CATS
 
 
+def electrical_si7(data_dir, sheetname):
+    """SI7 synapse list, electrical (gap-junction) rows.
+
+    Each row is one scored physical synapse (unique contin id). Returns
+    ({undirected cell pair: [n_synapses, sum_sections]}, stats). The
+    'post' column may be comma-joined when partner number > 1 (herm:
+    never; male: 7 rows); the post1..post4 columns mirror it.
+    """
+    si7 = load_xlsx(data_dir + "/Cook2019_SI7_synapse-lists.xlsx")
+    rows = si7[sheetname]  # dense list of {col: value}; row 0 = header
+    pairs = {}
+    stats = {"rows": 0, "electrical": 0, "unmapped_cells": 0,
+             "self_pairs": 0}
+    for ri, row in enumerate(rows):
+        if ri == 0:
+            continue
+        stats["rows"] += 1
+        if "electrical" not in str(row.get(5) or "").lower():
+            continue
+        stats["electrical"] += 1
+        pre = str(row.get(3) or "").strip()
+        posts = [p.strip() for p in str(row.get(4) or "").split(",") if p.strip()]
+        for c in (8, 9, 10, 11):
+            p = str(row.get(c) or "").strip()
+            if p and p not in posts:
+                posts.append(p)
+        try:
+            sec = int(float(row.get(6) or 0))
+        except (TypeError, ValueError):
+            sec = 0
+        for post in posts:
+            if pre == post:
+                stats["self_pairs"] += 1
+                continue
+            if not pre or not post or "obj" in pre or "obj" in post or \
+                    "[" in pre or "[" in post:
+                stats["unmapped_cells"] += 1
+                continue
+            k = tuple(sorted((pre, post)))
+            s = pairs.setdefault(k, [0, 0])
+            s[0] += 1
+            s[1] += sec
+    return pairs, stats
+
+
+def canonical_electrical(edges, neuron_names, si7_pairs, si7_stats):
+    """Collapse the two SI9 gap-junction sheets into ONE canonical
+    undirected junction graph.
+
+    Review round 5 (2026-10-13) found — independently of the agent —
+    that the 'gap jn asymmetric' sheet is a near-duplicate of the
+    'gap jn symmetric' sheet: for herm, all 1,086 of its unique
+    unordered pairs also occur in the symmetric sheet with exactly
+    identical weights (3 symmetric-only pairs); the paper's own
+    figures draw gap junctions as a single undirected edge class, the
+    SI6 raw-adjacency book has a single gap-junction sheet, and the
+    SI7 synapse list records each physical synapse once. Treating the
+    two SI9 sheets as independent conductance layers therefore
+    double-counted 1,086/1,089 of the electrical weight and let the
+    shuffle randomize two layers of the same physical junctions
+    independently — a confound for measured-vs-shuffled comparisons.
+
+    Canonical rule (declared, deterministic):
+      * one undirected record per unique neuron-neuron pair in the
+        union of the two sheets (the union equals the symmetric sheet
+        for both sexes);
+      * weight = the symmetric-sheet value when present (SI9 weight =
+        total EM serial sections, extrapolation included — matches the
+        SI7 section sums for 795/948 EM-verified herm pairs, the rest
+        by extrapolation), else the asymmetric value;
+      * every disagreement is recorded in the record and counted in
+        the stats (herm: 0; male: 1, (VB06, VB07) sym 5 / asym 1).
+    The SI7 synapse list is the physical ground truth used for the
+    cross-check (EM-verified vs extrapolation-only pairs).
+    """
+    sym, asym = {}, {}
+    for e in edges:
+        a, b = e["pre"], e["post"]
+        if a not in neuron_names or b not in neuron_names:
+            continue
+        k = tuple(sorted((a, b)))
+        if e["kind"] == "gap_sym":
+            sym[k] = max(sym.get(k, 0), e["w"])
+        elif e["kind"] == "gap_asym":
+            asym.setdefault(k, []).append((a, b, e["w"]))
+    union = sorted(set(sym) | set(asym))
+    out, disagreements = [], []
+    for a, b in union:
+        ws = sym.get((a, b))
+        dirs = asym.get((a, b), [])
+        w = ws if ws is not None else dirs[0][2]
+        if ws is not None and dirs and ws != dirs[0][2]:
+            disagreements.append([a, b, int(ws), [int(x[2]) for x in dirs]])
+        s7 = si7_pairs.get((a, b))
+        out.append({
+            "pre": a, "post": b, "w": int(w),
+            "w_sym": int(ws) if ws is not None else None,
+            "w_asym": [int(x[2]) for x in dirs] or None,
+            "directions": [[p, d] for p, d, _ in dirs] or None,
+            "si7_synapses": int(s7[0]) if s7 else None,
+            "si7_sections": int(s7[1]) if s7 else None,
+        })
+    em = [r for r in out if r["si7_synapses"]]
+    ext = [r for r in out if not r["si7_synapses"]]
+    si7_nn = {k: v for k, v in si7_pairs.items()
+              if k[0] in neuron_names and k[1] in neuron_names
+              and k[0] != k[1]}
+    outside = sorted(k for k in si7_nn if k not in set(union))
+    wt_eq = sum(1 for r in em if r["si7_sections"] == r["w"])
+    wt_gt = sum(1 for r in em if r["si7_sections"] < r["w"])
+    wt_lt = sum(1 for r in em if r["si7_sections"] > r["w"])
+    stats = {
+        "sym_pairs": len(sym),
+        "asym_records": sum(len(v) for v in asym.values()),
+        "asym_pairs": len(asym),
+        "overlap_pairs": len(set(sym) & set(asym)),
+        "sym_only_pairs": sorted([list(k) for k in set(sym) - set(asym)]),
+        "asym_only_pairs": sorted([list(k) for k in set(asym) - set(sym)]),
+        "canonical_junctions": len(union),
+        "pairs_with_two_directed_records":
+            sum(1 for v in asym.values() if len(v) > 1),
+        "weight_disagreements": disagreements,
+        "si7": si7_stats,
+        "si7_em_verified_in_union": len(em),
+        "si7_extrapolation_only_in_union": len(ext),
+        "si7_pairs_outside_union": [list(k) for k in outside],
+        "weight_vs_si7_sections": {"equal": wt_eq, "si9_higher": wt_gt,
+                                   "si9_lower": wt_lt},
+    }
+    return out, stats
+
+
 def main(data_dir):
     si9 = load_xlsx(data_dir + "/Cook2019_SI9_connectome-matrices.xlsx")
     si6 = load_xlsx(data_dir + "/Cook2019_SI6_raw-adjacency.xlsx")
@@ -323,6 +460,15 @@ def main(data_dir):
             json.dump([{"pre": e["pre"], "post": e["post"],
                         "w": e["w"], "kind": e["kind"]}
                        for e in nn], f, indent=0)
+        # canonical electrical graph (one record per physical junction)
+        sheet = "hermaphrodite" if sex == "herm" else "male"
+        si7_pairs, si7_stats = electrical_si7(data_dir, sheet)
+        canon, cstats = canonical_electrical(
+            [e for e in nn if e["kind"] in ("gap_sym", "gap_asym")],
+            neuron_names, si7_pairs, si7_stats)
+        with open(data_dir + "/c-elegans-electrical-%s.json" % sex, "w") as f:
+            json.dump(canon, f, indent=0)
+        stats["electrical_canonical"] = cstats
         # neuron names used by the simulation
         names = sorted(n for n in neuron_names
                        if any(e["pre"] == n or e["post"] == n for e in nn))

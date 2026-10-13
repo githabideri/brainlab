@@ -84,6 +84,53 @@
   "neuron_only_gap_asym": 1089,
   "neuron_only_total": 5847,
   "dropped_non_neuron_edges": 1859,
+  "electrical_canonical": {
+   "sym_pairs": 1089,
+   "asym_records": 1089,
+   "asym_pairs": 1086,
+   "overlap_pairs": 1086,
+   "sym_only_pairs": [
+    [
+     "DD06",
+     "PDB"
+    ],
+    [
+     "M2R",
+     "M3R"
+    ],
+    [
+     "M4",
+     "M5"
+    ]
+   ],
+   "asym_only_pairs": [],
+   "canonical_junctions": 1089,
+   "pairs_with_two_directed_records": 3,
+   "weight_disagreements": [],
+   "si7": {
+    "rows": 9678,
+    "electrical": 2351,
+    "unmapped_cells": 6,
+    "self_pairs": 862
+   },
+   "si7_em_verified_in_union": 939,
+   "si7_extrapolation_only_in_union": 150,
+   "si7_pairs_outside_union": [
+    [
+     "ALML",
+     "BDUL"
+    ],
+    [
+     "ALMR",
+     "BDUR"
+    ]
+   ],
+   "weight_vs_si7_sections": {
+    "equal": 796,
+    "si9_higher": 106,
+    "si9_lower": 37
+   }
+  },
   "sim_neurons": 300
  },
  "male": {
@@ -146,6 +193,49 @@
   "neuron_only_gap_asym": 1278,
   "neuron_only_total": 6542,
   "dropped_non_neuron_edges": 2150,
+  "electrical_canonical": {
+   "sym_pairs": 1278,
+   "asym_records": 1278,
+   "asym_pairs": 1276,
+   "overlap_pairs": 1276,
+   "sym_only_pairs": [
+    [
+     "FLPL",
+     "RIVR"
+    ],
+    [
+     "R8AL",
+     "R8BL"
+    ]
+   ],
+   "asym_only_pairs": [],
+   "canonical_junctions": 1278,
+   "pairs_with_two_directed_records": 2,
+   "weight_disagreements": [
+    [
+     "VB06",
+     "VB07",
+     5,
+     [
+      1
+     ]
+    ]
+   ],
+   "si7": {
+    "rows": 14851,
+    "electrical": 5457,
+    "unmapped_cells": 1191,
+    "self_pairs": 1820
+   },
+   "si7_em_verified_in_union": 880,
+   "si7_extrapolation_only_in_union": 398,
+   "si7_pairs_outside_union": [],
+   "weight_vs_si7_sections": {
+    "equal": 824,
+    "si9_higher": 54,
+    "si9_lower": 2
+   }
+  },
   "sim_neurons": 378
  }
 }

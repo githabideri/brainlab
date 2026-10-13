@@ -6,16 +6,35 @@ Model conventions: the lab LIF of experiments/b-01-internal-compass/lif.py
 dt = 1 ms, single-exponential synaptic current with constant 1.8 ms
 delay), with two declared deviations (see README):
   1. gap junctions modelled as linear shared conductance, as in the
-     Cook 2019 treatment of the symmetric/asymmetric sheets:
-     dV/dt = -(V - T)/tau_m + sum_j g_j (v_j - V), with per-neuron
-     effective time constant 1/a, a = 1/tau_m + G_i. Solved exactly per
-     step (unconditionally stable); with no junctions this reduces to
-     lif.py's exact exponential form;
+     Cook 2019 treatment: dV/dt = -(V - T)/tau_m + sum_j g_j (v_j - V),
+     with per-neuron effective time constant 1/a, a = 1/tau_m + G_i.
+     Solved exactly per step (unconditionally stable); with no
+     junctions this reduces to lif.py's exact exponential form. The
+     junction set is the CANONICAL undirected graph (one record per
+     physical junction; review round 5, 2026-10-13 — the two SI9
+     'gap jn' sheets are alternative representations of the same
+     junctions, not independent layers; see
+     parse_cook2019.canonical_electrical):
   2. the stimulus is a constant depolarization offset on the ASH
      receptors (a receptor potential), not a spike train.
 
+Background drive (review round 5, 2026-10-13; two explicitly
+labelled models, selected by cfg["bg_propagate"]):
+  * Model A (default, False): each background Poisson event is a pure
+    external current injection into the receiving neuron (w_bg);
+    ONLY genuine threshold-crossing spikes propagate through the
+    neuron's chemical outputs.
+  * Model B (True; the historical v2 behaviour, kept for comparison
+    only): background events are additionally enqueued as presynaptic
+    events, i.e. they propagate through the chemical output fan-out
+    even when the neuron does not cross threshold. The v2 campaign
+    and time-course artifacts were produced under Model B.
+
 Chemical synapses: all-positive weights w = alpha * sqrt(section count)
 (the released data carry no signs — see circuits/c-elegans-substrate.md).
+
+Note: the v1 (corrupted-substrate) shuffle function was removed in
+round 5; v1's frozen results remain in data/ and its addendum.
 """
 import json
 import numpy as np
@@ -24,6 +43,7 @@ import numpy as np
 def load_network(data_dir, cfg):
     neurons = json.load(open(f"{data_dir}/c-elegans-neurons-herm.json"))
     edges = json.load(open(f"{data_dir}/c-elegans-edges-herm.json"))
+    canon = json.load(open(f"{data_dir}/c-elegans-electrical-herm.json"))
     idx = {n: i for i, n in enumerate(neurons)}
     n = len(neurons)
 
@@ -39,29 +59,37 @@ def load_network(data_dir, cfg):
     u_src, counts = np.unique(csrc, return_counts=True)
     u_start = np.concatenate([[0], np.cumsum(counts)])
 
-    # gap junctions. Symmetric sheets: undirected pairs (a, b, g).
-    # Asymmetric sheets: directed (s -> d, g).
-    sym_pairs, asym_pairs = [], []
-    for e in edges:
-        if e["kind"] == "gap_sym" and e["pre"] in idx and e["post"] in idx:
-            a, b = idx[e["pre"]], idx[e["post"]]
-            sym_pairs.append((min(a, b), max(a, b), float(e["w"]) * cfg["beta"]))
-        elif e["kind"] == "gap_asym" and e["pre"] in idx and e["post"] in idx:
-            asym_pairs.append((idx[e["pre"]], idx[e["post"]],
-                               float(e["w"]) * cfg["beta"]))
-    gs = np.array([x for p in sym_pairs for x in (p[0], p[1])] +
-                  [p[0] for p in asym_pairs], dtype=np.int64)
-    gd = np.array([x for p in sym_pairs for x in (p[1], p[0])] +
-                  [p[1] for p in asym_pairs], dtype=np.int64)
-    gw = np.array([w for p in sym_pairs for w in (p[2], p[2])] +
-                  [p[2] for p in asym_pairs], dtype=np.float64)
+    # CANONICAL electrical graph: one undirected junction per unique
+    # neuron-neuron pair (both SI9 sheets collapse into this set; the
+    # asymmetric sheet is a near-duplicate of the symmetric sheet —
+    # herm: 1,086/1,086 pairs, identical weights; see the parser).
+    g_pairs = []
+    for e in canon:
+        a, b = idx[e["pre"]], idx[e["post"]]
+        g_pairs.append((min(a, b), max(a, b), float(e["w"]) * cfg["beta"]))
+    gs = np.array([x for p in g_pairs for x in (p[0], p[1])], dtype=np.int64)
+    gd = np.array([x for p in g_pairs for x in (p[1], p[0])], dtype=np.int64)
+    gw = np.array([w for p in g_pairs for w in (p[2], p[2])], dtype=np.float64)
+
+    # v1-only raw per-sheet records (NOT used by the conductance matrix
+    # or make_shuffled_exact; kept so the deprecated v1 make_shuffled
+    # remains callable for auditing the 2026-10-12 pilot).
+    sym_pairs = [(min(idx[e["pre"]], idx[e["post"]]),
+                 max(idx[e["pre"]], idx[e["post"]]),
+                 float(e["w"]) * cfg["beta"])
+                for e in edges
+                if e["kind"] == "gap_sym" and e["pre"] in idx and e["post"] in idx]
+    asym_pairs = [(idx[e["pre"]], idx[e["post"]], float(e["w"]) * cfg["beta"])
+                 for e in edges
+                 if e["kind"] == "gap_asym" and e["pre"] in idx and e["post"] in idx]
 
     return {"n": n, "names": neurons, "idx": idx,
             "c_src": csrc, "c_dst": cdst, "c_w": c_w,
             "u_src": u_src, "u_start": u_start,
             "g_src": gs, "g_dst": gd, "g_w": gw,
+            "g_pairs": g_pairs,
             "g_sym_pairs": sym_pairs, "g_asym_pairs": asym_pairs,
-            "n_chem": len(chem), "n_gap_pairs": len(sym_pairs)}
+            "n_chem": len(chem), "n_gap_pairs": len(g_pairs)}
 
 
 class WormNet:
@@ -173,8 +201,14 @@ class WormNet:
             self.ref[spiked] = cfg["refractory_ms"]
             for i in spiked:
                 self.spikes[i].append(self.t)
-        # 9. queue internal + external events together (fixed delay)
-        if len(bg_ids) > 0:
+        # 9. queue events for the fixed synaptic delay. Model A
+        # (default): only genuine threshold-crossing spikes propagate;
+        # the background Poisson is pure external current (step 2).
+        # Model B (cfg["bg_propagate"] = True; historical v2 behaviour,
+        # labelled for comparison): background events are ALSO enqueued
+        # as presynaptic events, propagating through the chemical
+        # output fan-out even without a threshold crossing.
+        if cfg.get("bg_propagate", False) and len(bg_ids) > 0:
             self.queue.append(np.concatenate([spiked, bg_ids]))
         else:
             self.queue.append(spiked)
@@ -336,17 +370,17 @@ def make_shuffled_exact(net, cfg, seed):
         dropped: a permutation that yields a self-edge is repaired by a
         swap (see _fix_self_edges); any residual is counted and reported
         (expected 0).
-      * electrical: the raw record lists are shuffled SEPARATELY per
-        junction class (symmetric pairs; asymmetric directed records),
-        keeping the CLASS COUNTS exact; no merging of records, no
-        max-merge of weights. Asymmetric records: configuration model
-        with exact per-neuron in- and out-degree. Symmetric records:
-        each record is an undirected pair contributing one degree to each
-        endpoint; the 2*k endpoint slots are permuted and re-paired, so
-        the per-neuron junction degree is exact. Parallel pairs may
-        appear in the shuffle (the measured set has none; they are kept,
-        not merged). The per-record 'symmetric' label is NOT preserved
-        (only the class counts, degrees and weight multisets are).
+      * electrical (review round 5, 2026-10-13): the CANONICAL undirected
+        junction list — one record per physical junction (the two SI9
+        sheets are alternative representations of the same junctions,
+        so they are shuffled TOGETHER as a single layer, never
+        independently). Each record contributes one junction degree to
+        each endpoint; the 2*k endpoint slots are permuted and
+        re-paired (self-pairs repaired by swap-rejection), so the
+        per-neuron junction degree is exact; the weight multiset is
+        identical; no record is dropped. Parallel pairs may appear in
+        the shuffle (the measured set has none; they are kept, not
+        merged) and counted.
     Deterministic in `seed`.
     """
     import hashlib  # noqa: F401  (used via _sha)
@@ -402,100 +436,71 @@ def make_shuffled_exact(net, cfg, seed):
     assert inv["classes"]["chemical"]["out_degree_max_abs_diff"] == 0
     assert inv["classes"]["chemical"]["in_degree_max_abs_diff"] == 0
 
-    # ---- electrical: asymmetric (directed records) ------------------
-    asym = net["g_asym_pairs"]
-    a_src = np.array([p[0] for p in asym], dtype=np.int64)
-    a_dst = np.array([p[1] for p in asym], dtype=np.int64)
-    a_w = np.array([p[2] for p in asym], dtype=np.float64)
-    aout = _degvec(a_src, n)
-    ainn = _degvec(a_dst, n)
-    apres = np.repeat(np.arange(n, dtype=np.int64), aout)
-    aposts = np.repeat(np.arange(n, dtype=np.int64), ainn)
-    rng.shuffle(aposts)
-    an_self = _fix_self_edges(apres, aposts)
-    awsh = a_w.copy()
-    rng.shuffle(awsh)
-    ao = np.argsort(apres, kind="stable")
-    inv["classes"]["electrical_asymmetric"] = {
-        "records_measured": int(len(asym)), "records_shuffled": int(len(asym)),
-        "self_edges_residual": int(an_self),
-        **exact_degrees_measured_vs_shuffled(a_src, a_dst, apres, aposts),
-        **weight_check(a_w, awsh),
-    }
-    assert an_self == 0, f"residual asymmetric self-edges: {an_self}"
-    assert inv["classes"]["electrical_asymmetric"]["multiset_equal"]
-    assert inv["classes"]["electrical_asymmetric"]["out_degree_max_abs_diff"] == 0
-    assert inv["classes"]["electrical_asymmetric"]["in_degree_max_abs_diff"] == 0
-
-    # ---- electrical: symmetric (undirected records) ------------------
-    sym = net["g_sym_pairs"]
-    k = len(sym)
-    ends = np.array([x for p in sym for x in (p[0], p[1])], dtype=np.int64)
+    # ---- electrical: ONE canonical undirected junction layer --------
+    g = net["g_pairs"]
+    k = len(g)
+    ends = np.array([x for p in g for x in (p[0], p[1])], dtype=np.int64)
     rng.shuffle(ends)
-    pairs = [(int(ends[2 * i]), int(ends[2 * i + 1])) for i in range(k)]
     # swap-rejection on the endpoint array: for a self-pair (x, x) at
     # slots (2i, 2i+1) swap one endpoint with a slot of another pair that
     # keeps both pairs non-self
-    self_pairs = [i for i, (a, b) in enumerate(pairs) if a == b]
     residual_s = 0
-    for i in self_pairs:
-        x = ends[2 * i]
+    for i in range(k):
+        x, y = int(ends[2 * i]), int(ends[2 * i + 1])
+        if x != y:
+            continue
         fixed = False
         for j in range(2 * k):
             if j // 2 == i:
                 continue
-            y = ends[j]
             other = ends[j ^ 1]
-            # pair j after the swap: (other, x); pair i: (x, y)
-            if y != x and other != x:
+            # pair i after the swap: (x, ends[j]); pair j: (other, x)
+            if ends[j] != x and other != x:
                 ends[2 * i], ends[j] = ends[j], ends[2 * i]
                 fixed = True
                 break
         if not fixed:
             residual_s += 1
-    pairs = [(int(ends[2 * i]), int(ends[2 * i + 1])) for i in range(k)]
-    swsh = np.array([p[2] for p in sym], dtype=np.float64)
-    rng.shuffle(swsh)
-    pairs = sorted(pairs)
+    pairs = [(int(min(ends[2 * i], ends[2 * i + 1])),
+              int(max(ends[2 * i], ends[2 * i + 1]))) for i in range(k)]
+    gwsh = np.array([p[2] for p in g], dtype=np.float64)
+    rng.shuffle(gwsh)
     from collections import Counter as _Counter
     pc = _Counter(pairs)
-    # per-neuron degree: one per occurrence in the pair list
-    sdeg_m = np.zeros(n, dtype=np.int64)
-    for a, b, _ in sym:
-        sdeg_m[a] += 1
-        sdeg_m[b] += 1
-    sdeg_s = np.zeros(n, dtype=np.int64)
+    gdeg_m = np.zeros(n, dtype=np.int64)
+    for a, b, _ in g:
+        gdeg_m[a] += 1
+        gdeg_m[b] += 1
+    gdeg_s = np.zeros(n, dtype=np.int64)
     for a, b in pairs:
-        sdeg_s[a] += 1
-        sdeg_s[b] += 1
-    inv["classes"]["electrical_symmetric"] = {
+        gdeg_s[a] += 1
+        gdeg_s[b] += 1
+    inv["classes"]["electrical"] = {
         "records_measured": k, "records_shuffled": k,
         "self_edges_residual": int(residual_s),
-        "degree_max_abs_diff": int(np.abs(sdeg_m - sdeg_s).max()),
-        "degree_vector_sha256_measured": _sha(sdeg_m),
-        "degree_vector_sha256_shuffled": _sha(sdeg_s),
-        **weight_check([p[2] for p in sym], swsh),
+        "degree_max_abs_diff": int(np.abs(gdeg_m - gdeg_s).max()),
+        "degree_vector_sha256_measured": _sha(gdeg_m),
+        "degree_vector_sha256_shuffled": _sha(gdeg_s),
+        **weight_check([p[2] for p in g], gwsh),
         "parallel_pairs_in_shuffled": int(sum(1 for p in pc if pc[p] > 1)),
-        "parallel_pairs_measured": int(sum(1 for p in _Counter(
-            [(a, b) for a, b, _ in sym]) if _Counter([(a, b) for a, b, _ in sym])[p] > 1)),
+        "parallel_pairs_measured": 0,  # canonical: one record per pair
     }
-    assert residual_s == 0, f"residual symmetric self-edges: {residual_s}"
-    assert inv["classes"]["electrical_symmetric"]["multiset_equal"]
-    assert inv["classes"]["electrical_symmetric"]["degree_max_abs_diff"] == 0
+    assert residual_s == 0, f"residual electrical self-edges: {residual_s}"
+    assert inv["classes"]["electrical"]["multiset_equal"]
+    assert inv["classes"]["electrical"]["degree_max_abs_diff"] == 0
 
     # ---- rebuild the network arrays (measured layout) ---------------
-    gs = np.array([x for a, b in pairs for x in (a, b)] +
-                  [int(s) for s, _ in zip(apres, aposts)], dtype=np.int64)
-    gd = np.array([x for a, b in pairs for x in (b, a)] +
-                  [int(d) for _, d in zip(apres, aposts)], dtype=np.int64)
-    gw = np.array([w for _, w in zip(pairs, swsh) for _ in (0, 1)] +
-                  [w for _, w in zip(apres, awsh)], dtype=np.float64)
+    gs = np.array([x for a, b in pairs for x in (a, b)], dtype=np.int64)
+    gd = np.array([x for a, b in pairs for x in (b, a)], dtype=np.int64)
+    gw = np.array([w for _, w in zip(pairs, gwsh) for _ in (0, 1)],
+                  dtype=np.float64)
     shuf["g_src"], shuf["g_dst"], shuf["g_w"] = gs, gd, gw
-    shuf["g_sym_pairs"] = [(a, b, float(w)) for (a, b), w in zip(pairs, swsh)]
-    shuf["g_asym_pairs"] = [(int(s), int(d), float(w))
-                            for s, d, w in zip(apres, aposts, awsh)]
+    shuf["g_pairs"] = [(a, b, float(w)) for (a, b), w in zip(pairs, gwsh)]
+    # v1-only keys: keep the measured records (the v1 shuffle is not
+    # used by the model); the shuffled network's conductance comes from
+    # g_pairs alone.
     shuf["n_gap_pairs"] = k
-    inv["total_edges"] = {"measured": int(len(cs) + len(asym) + k),
-                          "shuffled": int(len(pres) + len(apres) + k)}
+    inv["total_edges"] = {"measured": int(len(cs) + k),
+                          "shuffled": int(len(pres) + k)}
     assert inv["total_edges"]["measured"] == inv["total_edges"]["shuffled"]
     return shuf, inv

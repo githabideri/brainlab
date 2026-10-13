@@ -37,6 +37,80 @@ Derived, reproducible products (do not edit by hand; regenerate with
   diagonal entries zeroed, symmetry disagreements, edge counts per
   sheet) used by `circuits/c-elegans-substrate.md`.
 
+
+## Canonical electrical graph (v3, 2026-10-13, review round 5)
+
+The two SI9 gap-junction sheets ("symmetric", "asymmetric") are
+alternative representations of the **same physical junctions**, not
+additive edge classes (verified: every asymmetric pair occurs in the
+symmetric sheet as the same unordered pair with the identical weight —
+herm 1,086/1,086, 0 mismatches; male 1,276/1,276, 1 mismatch
+(VB06/VB07: sym 5 vs asym 1); a few symmetric-only pairs: herm 3
+(DD06/PDB, M2R/M3R, M4/M5), male 1 (M1R/M2R); corroborated by the SI7
+synapse list, which lists each physical synapse exactly once with
+partner = 1, and by the paper's undirected depiction). The v2
+simulation double-counted the electrical conductance (2,178 records
+herm); v3 uses one canonical undirected layer.
+
+- `c-elegans-electrical-herm.json` / `c-elegans-electrical-male.json`
+  — **the** electrical graph: one undirected record per physical
+  junction `{pre, post, w, in_sym_sheet, in_asym_sheet, em_verified,
+  si7_sections_sym, si7_sections_asym}` (pre < post; `w` = symmetric
+  sheet section count, the preferred weight; `em_verified` = listed
+  in the SI7 synapse list). herm 1,089 (939 EM-verified, 150
+  extrapolation-only; 2 in the graph but not EM-verified); male 1,278.
+  Regenerate: `python src/parse_cook2019.py`.
+- The `c-elegans-edges-<sex>.json` `gap_sym` / `gap_asym` records are
+  retained for provenance only; `src/sim.py` no longer builds the
+  conductance matrix from them (it loads the canonical file). The
+  inventory now carries the sheet-relationship statistics and the SI7
+  cross-check numbers.
+
+## Background-drive models (v3)
+
+`src/sim.py` `WormNet.step()`: `cfg["bg_propagate"] = False`
+(**Model A**, default) — background Poisson events are pure external
+current; only genuine threshold-crossing spikes propagate.
+`bg_propagate = True` (**Model B**) — the historical v2 behaviour, in
+which every background event was *also* enqueued as a presynaptic
+spike and propagated through the neuron's chemical output fan-out
+even when the neuron never crossed threshold. `src/test_bg_models.py`
+demonstrates the difference on a minimal network and asserts the
+background event trains are byte-identical across models. Every run
+record carries the model label.
+
+## v3 results (review round 5 minimal re-run; 160 runs, frozen
+parameters)
+
+- `../results-v3-canonical.json` — canonical substrate, Model A,
+  both variants (80 runs). 5 ms: silent network (0 rest spikes in all
+  wirings); 50 ms: sparse (all-neuron rest ≈ 0.17–0.20 Hz), paired
+  contrasts 0.0 in every group/wiring.
+- `../results-v3-modelB-50ms.json` — canonical substrate, Model B,
+  50 ms only (40 runs). Alive (measured rest 2.97 Hz vs ≈ 1.78 in all
+  shuffles); ASH response contrast +0.040 Hz (4/5 seeds positive,
+  shuf-44 at or above the measured mean).
+- `timecourse-50ms-v3.json` — 40 runs (Model A, 50 ms), same window
+  layout as `timecourse-50ms.json` (v2 substrate): paired contrasts
+  0.0 in every window and wiring.
+- `paired-stim-example-{5ms,50ms}-v3.json` — v3-substrate versions of
+  the paired-input artifacts (the event trains are substrate-
+  independent by the seed rule; sha256 recorded per file).
+- `../config-5ms-v2-dual-electrical.json` /
+  `../config-50ms-v2-dual-electrical.json` — the frozen v2 configs
+  (renamed, unmodified); `../config-5ms.json` / `../config-50ms.json`
+  — v3 (same frozen parameters, `bg_propagate: false`, substrate
+  label); `../config-50ms-v3-modelB.json` — the Model B comparison
+  config.
+
+Round-4 verdicts on the v2 substrate (the +0.090 Hz 5-s and the
++1.75 Hz during-pulse command-pool contrasts) **do not survive** the
+corrected substrate under either background model — see the report's
+third addendum. All v1/v2 artifacts above (`results.json`,
+`results-exact.json`, `timecourse-50ms.json`, `paired-stim-effect.
+json`, calibration logs, `paired-stim-example-{5ms,50ms}.json`) are
+frozen and untouched.
+
 Analysis artifacts (2026-10-13, review round 4; regenerate with the
 named scripts — never edit by hand):
 
@@ -49,10 +123,11 @@ named scripts — never edit by hand):
   rest-run 5-s window rate` (the `delta_hz` inside
   `../results-exact.json` is a within-run diagnostic, not a stimulus
   effect). `src/reanalyze_paired.py`.
-- `timecourse-50ms.json` — 40 new runs (4 wirings × 5 seeds ×
-  rest/stim, 50 ms variant) with per-group rates in short windows
-  around the ASH pulse (1 s pre, 500 ms pulse, 250/250/500/1000/3000
-  ms post) plus paired contrasts. `src/timecourse.py`.
+- `timecourse-50ms.json` — 40 runs (4 wirings × 5 seeds × rest/stim,
+  50 ms variant, **v2 substrate**) with per-group rates in short
+  windows around the ASH pulse (1 s pre, 500 ms pulse, 250/250/500/
+  1000/3000 ms post) plus paired contrasts. `src/timecourse.py`.
+  (v3-substrate re-run: `timecourse-50ms-v3.json`, below.)
 
 Caveats: the workbooks have hand-assembled layout quirks (see the
 substrate document for the exact handling and counted artifacts); the

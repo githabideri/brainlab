@@ -32,5 +32,7 @@
   43,
   44
  ],
- "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)"
+ "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)",
+ "bg_propagate": false,
+ "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure)."
 }

@@ -69,8 +69,9 @@ def bg_seed(sim_seed, variant_idx):
     return sim_seed * 1000 + variant_idx
 
 
-def run_variant(name, variant_idx):
-    cfg = json.load(open(os.path.join(HERE, "..", f"config-{name}.json")))
+def run_variant(name, variant_idx, tag="exact", cfg_name=None):
+    cfg_path = f"config-{cfg_name or name}.json"
+    cfg = json.load(open(os.path.join(HERE, "..", cfg_path)))
     net = load_network(DATA, cfg)
     shuf_seeds = cfg.get("shuffle_seeds", [42, 43, 44])
     shuf_nets = {}
@@ -95,6 +96,13 @@ def run_variant(name, variant_idx):
     wirings = [("measured", net)] + \
               [(f"shuf-{s}", shuf_nets[s]) for s in shuf_seeds]
     out = {"config": cfg, "runs": [], "summary": {},
+           "substrate": cfg.get("substrate",
+                                 "v2-dual-electrical (sym + asym sheets "
+                                 "as separate layers)"),
+           "bg_model": ("B (forced propagation; historical v2 behaviour)"
+                        if cfg.get("bg_propagate", False)
+                        else "A (pure external current; only threshold-"
+                             "crossing spikes propagate; default)"),
            "shuffle_invariants": {f"shuf-{s}": shuf_inv[s]
                                   for s in shuf_seeds}}
 
@@ -115,6 +123,7 @@ def run_variant(name, variant_idx):
     art = {
         "variant": name, "sim_seed": s0, "bg_seed": seedA,
         "seed_rule": "bg_seed = sim_seed*1000 + variant_idx (never wiring)",
+        "substrate": out["substrate"], "bg_model": out["bg_model"],
         "n_neurons": net["n"],
         "background": f"per-neuron Bernoulli per 1 ms step, p = "
                       f"lambda_bg*dt/1000, lambda_bg = {cfg['lambda_bg']}",
@@ -124,7 +133,9 @@ def run_variant(name, variant_idx):
         "events_sha256": h,
         "events": [[t, ids] for t, ids in evA],
     }
-    p = os.path.join(DATA, f"paired-stim-example-{name}.json")
+    p = os.path.join(DATA, "paired-stim-example-%s.json" % name
+                     if tag == "exact" else
+                     "paired-stim-example-%s-%s.json" % (name, tag))
     with open(p, "w") as f:
         json.dump(art, f, indent=1)
     out["paired_stim_artifact"] = {"file": os.path.relpath(p, HERE),
@@ -154,6 +165,8 @@ def run_variant(name, variant_idx):
                 win_rate = win / 5.0
                 rec = {"wiring": wname, "seed": seed, "cond": cond,
                        "bg_seed": bg_seed(seed, variant_idx),
+                       "bg_model": out["bg_model"],
+                       "substrate": out["substrate"],
                        "total_spikes": int(counts.sum()),
                        "mean_rate_hz": float(rest_rate.mean()),
                        "max_rate_hz": float(rest_rate.max()),
@@ -287,16 +300,18 @@ def run_variant(name, variant_idx):
     return out
 
 
-def main():
+def main(out_rel=None):
     results = {}
     for idx, name in enumerate(VARIANTS):
         results[name] = run_variant(name, idx)
         print(json.dumps({name: results[name]["verdicts"],
                           "headline": results[name]["headline"]}, indent=1))
-    with open(os.path.join(HERE, "..", "results-exact.json"), "w") as f:
+    p = os.path.join(HERE, "..", out_rel or "results-exact.json")
+    with open(p, "w") as f:
         json.dump(results, f, indent=1)
-    print("results-exact.json written (v1 results.json untouched)")
+    print(f"{os.path.relpath(p, HERE)} written (frozen afterwards)")
 
 
 if __name__ == "__main__":
-    main()
+    import sys as _sys
+    main(_sys.argv[1] if len(_sys.argv) > 1 else None)
