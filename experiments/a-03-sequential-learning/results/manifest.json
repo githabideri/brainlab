@@ -1,0 +1,224 @@
+{
+  "experiment": "a-03-sequential-learning",
+  "circuit": {
+    "dataset": "FlyWire FAFB v783 (via FlyBridge public atlas, MIT)",
+    "entry": "circuits/flywire-fafb-olfactory-1536.md",
+    "sha256": "ef6a6c1dd520b461b3beaca3859f0c5de4fb3fccb94336c180016d6ef0017227",
+    "verified": true
+  },
+  "lif": {
+    "file": "experiments/a-03-sequential-learning/lif.py",
+    "source": "verbatim copy of experiments/b-01-internal-compass/lif.py (Shiu et al. 2024 model)",
+    "sha256": "ecf832264748c4e4a6a5204aad46313b6469a62bf378949895a20e5f12a9d94c",
+    "dependency_note": "B-02 Stage 1 differentially tests lif.py; if it changes, spike results must be re-verified before publication"
+  },
+  "controls": {
+    "degree": {
+      "control": "degree",
+      "seed": 20261013,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "edge-magnitude multiset"
+      ],
+      "breaks": [
+        "specific source->target pairing",
+        "per-source magnitude profile",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "8ca4d58ef7ef0084b1f229a72f1c2de453eb7b091493395e7af6223c4f3f43da"
+    },
+    "sign": {
+      "control": "sign",
+      "seed": 20261014,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per-node E/I balance (in and out)",
+        "per-source outgoing magnitude multiset"
+      ],
+      "breaks": [
+        "specific source->target pairing"
+      ],
+      "edge_sha256": "b4e51fab2a1de7da96a6cdd84afa8c97b1e943e215e1a89960a87aeb5a8ff1be"
+    },
+    "weight": {
+      "control": "weight",
+      "seed": 20261015,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per-edge magnitude multiset (global and per-source outgoing)"
+      ],
+      "breaks": [
+        "specific source->target pairing of strong edges",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "177b44606356ddc68bea6fefdb97519f7e0a8f0ab31ad8ff29e9e347cc194d2f"
+    },
+    "population": {
+      "control": "population",
+      "seed": 20261016,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per population-pair edge counts",
+        "per-block magnitude multiset"
+      ],
+      "breaks": [
+        "node-level source->target pairing",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "062289318fcbdc9f4217dd15be55d9684f31987e56339696b03680c62d3a6426"
+    },
+    "disconnected": {
+      "control": "disconnected",
+      "seed": null,
+      "preserves": [
+        "nodes only"
+      ],
+      "breaks": [
+        "all edges (the readout sees no circuit activity -> majority-class floor)"
+      ],
+      "edge_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "tasks": {
+    "T-del": {
+      "T": 8,
+      "d": 4,
+      "kind": "class",
+      "report_steps": [
+        7
+      ],
+      "n_train_total": 1024,
+      "n_test": 512,
+      "ceiling": {
+        "kind": "accuracy",
+        "chance": 0.25,
+        "ceiling": 0.90729
+      },
+      "declared": "generated (tasks.py); identical stimulus stream across all arms"
+    },
+    "T-ang": {
+      "T": 10,
+      "d": 1,
+      "kind": "reg",
+      "report_steps": [
+        9
+      ],
+      "n_train_total": 1024,
+      "n_test": 512,
+      "ceiling": {
+        "kind": "rmce_deg",
+        "chance": 89.80395630609054,
+        "ceiling": 45.46410379422469
+      },
+      "declared": "generated (tasks.py); identical stimulus stream across all arms"
+    },
+    "T-xor": {
+      "T": 12,
+      "d": 1,
+      "kind": "binary",
+      "report_steps": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "n_train_total": 1024,
+      "n_test": 512,
+      "ceiling": {
+        "kind": "accuracy",
+        "chance": 0.5,
+        "ceiling": 0.8586
+      },
+      "declared": "generated (tasks.py); identical stimulus stream across all arms"
+    }
+  },
+  "spike_drive": {
+    "r0_hz": 2.0,
+    "rmax_hz": 48.0,
+    "tonic_outputs_mv": 10.0,
+    "w_scale_mv": 4.7,
+    "step_ms": 100,
+    "window_ms": 200,
+    "w_x": "fixed master-seed projection d->256 (seed 20261020 + 5000 + task index)"
+  },
+  "tanh_treatment": "tanh-rate sequential (A-02 treatment): trainable edge gains (zero-init -> 1.0) + leaks (-> 0.5) + biases (-> 0) + encoder/drive/readout/head; persistent hidden state, 2 propagation steps per input step (A-03 sizing revision of A-02's 4); val-LOSS checkpoint",
+  "checkpoint_rule": "best internal-val LOSS (never accuracy); patience on val-loss; full loss trajectories in each run JSON",
+  "grid": {
+    "main": {
+      "tanh": {
+        "n_train": 128,
+        "epochs": 20,
+        "patience": 5
+      },
+      "spike": {
+        "n_train": 128
+      },
+      "baselines": {
+        "n_train": 256,
+        "epochs": 20,
+        "patience": 5
+      }
+    },
+    "pilot": {
+      "tanh": {
+        "n_train": 96,
+        "epochs": 4,
+        "patience": 5
+      },
+      "spike": {
+        "n_train": 32
+      },
+      "baselines": {
+        "n_train": 96,
+        "epochs": 4,
+        "patience": 5
+      }
+    },
+    "main_arms": [
+      "tanh-fly",
+      "tanh-degree",
+      "tanh-sign",
+      "tanh-weight",
+      "tanh-population",
+      "tanh-disconnected",
+      "spike-fly",
+      "spike-degree",
+      "spike-sign",
+      "spike-weight",
+      "spike-population",
+      "spike-disconnected",
+      "gru",
+      "mlp"
+    ],
+    "main_runs": "32 arm columns x 3 tasks x 5 seeds = 210",
+    "shrink_ladder": [
+      "drop sign+weight (both dynamics)",
+      "tanh 256->128 / spike 128->64 trials",
+      "5->3 seeds (criterion a: >=3 of 3)",
+      "drop T-xor"
+    ]
+  },
+  "master_seed": 20261020,
+  "ceiling_seed": 20261021,
+  "run_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "batch": 64,
+  "lr": 0.0025,
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "git_head": "526c856aa582dffe08333819d59dd9dd9d28c6f2"
+}

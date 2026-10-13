@@ -130,12 +130,17 @@ def run_spike(doc, wiring, wirings, task, n_train, te_idx, seed) -> dict:
             "weights_sha256": None}
 
 
-def run_rate(arm: str, doc, wirings, task, n_train, te_idx, seed, cfg) -> dict:
+def run_rate(arm: str, doc, wirings, task, n_train, te_idx, seed, cfg,
+             version: str = "v1") -> dict:
+    # Review round 4 (2026-10-13): seed BEFORE construction — the
+    # recorded run seed must determine the initial parameters, not
+    # only the training shuffles (which train_tanh seeds again).
+    torch.manual_seed(seed)
     m = model.make_rate_model(arm, doc, wirings, task)
     m._arm_name = arm
     lossf = lambda logits, y: model.task_loss(task, logits, y)
     res = learner.train_tanh(m, task, n_train, seed, cfg["epochs"],
-                             cfg["patience"], BATCH, lossf)
+                             cfg["patience"], BATCH, lossf, version=version)
     Xte = torch.tensor(task["x"][te_idx], dtype=torch.float32)
     m.eval()
     with torch.no_grad():
@@ -225,12 +230,13 @@ def main() -> None:
                         else:
                             r = run_rate(arm, doc, wirings, task,
                                          cfg["tanh"]["n_train"], te_idx, seed,
-                                         cfg["tanh"])
+                                         cfg["tanh"], version=args.tag or "v1")
                         n_train = cfg[dyn]["n_train"]
                     else:
                         r = run_rate(arm, doc, wirings, task,
                                      cfg["baselines"]["n_train"], te_idx,
-                                     seed, cfg["baselines"])
+                                     seed, cfg["baselines"],
+                                     version=args.tag or "v1")
                         n_train = cfg["baselines"]["n_train"]
                     res = {
                         "experiment": "a-03-sequential-learning",
@@ -263,11 +269,12 @@ def main() -> None:
                 if p.name not in ("summary.json", "manifest.json")]
         cells = {}
         for r in runs:
-            key = (r["phase"], r["dynamics"], r["wiring"] or r["baseline"],
-                   r["task"])
+            # version-aware: v1 and v2 runs must never be pooled
+            key = (r["phase"], r.get("version", "v1"),
+                   r["dynamics"], r["wiring"] or r["baseline"], r["task"])
             cells.setdefault(key, []).append(r)
         summary = {}
-        for (phase, dyn, w, task_key), rs in sorted(cells.items()):
+        for (phase, version, dyn, w, task_key), rs in sorted(cells.items()):
             def stat(key):
                 vals = [r["held_out"].get(key) for r in rs
                         if r["held_out"].get(key) is not None]
@@ -296,7 +303,7 @@ def main() -> None:
                 cell["dw"] = {k: stat2(k) for k in
                               ("mean_abs_dw", "frac_abs_gt_1e-3",
                                "frac_abs_gt_1e-2", "abs_dw_over_abs_w0")}
-            summary[f"{phase}/{dyn}/{w}/{task_key}"] = cell
+            summary[f"{phase}/{version}/{dyn}/{w}/{task_key}"] = cell
         (outdir / "summary.json").write_text(json.dumps(summary, indent=2))
         print(f"summary.json: {len(summary)} cells", flush=True)
 
@@ -334,7 +341,7 @@ def main() -> None:
                       for k in TASK_KEYS},
             "spike_drive": {"r0_hz": model.R0, "rmax_hz": model.RMAX,
                             "tonic_outputs_mv": model.TONIC_OUT,
-                            "w_scale_mv": model.W_SCALE,
+                            "w_scale_mv": model.EFFECT_P95_MV,
                             "step_ms": model.STEP_MS,
                             "window_ms": model.WINDOW_MS,
                             "w_x": f"fixed master-seed projection d->256 "
