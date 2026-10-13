@@ -1,0 +1,4076 @@
+{
+ "5ms": {
+  "config": {
+   "dt": 1.0,
+   "tau_m": 20.0,
+   "tau_syn": 5.0,
+   "v0": -52.0,
+   "v_th": -45.0,
+   "v_rst": -52.0,
+   "refractory_ms": 2.2,
+   "delay_ms": 1.8,
+   "delay_steps": 2,
+   "lambda_bg": 4,
+   "w_bg": 10.0,
+   "duration_ms": 15000,
+   "stim_start_ms": 5000,
+   "stim_dur_ms": 500,
+   "stim_ids": [
+    "ASHL",
+    "ASHR"
+   ],
+   "alpha": 1.6,
+   "beta": 0.006381121462685519,
+   "S": 28,
+   "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+   ],
+   "shuffle_seeds": [
+    42,
+    43,
+    44
+   ],
+   "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)"
+  },
+  "runs": [
+   {
+    "wiring": "measured",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101000,
+    "total_spikes": 9,
+    "mean_rate_hz": 0.002,
+    "max_rate_hz": 0.3333333333333333,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0027906976744186047,
+      "stim_window_hz": 0.0018604651162790699,
+      "delta_hz": -0.0009302325581395348,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101000,
+    "total_spikes": 37,
+    "mean_rate_hz": 0.008222222222222223,
+    "max_rate_hz": 1.7333333333333334,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.011472868217054264,
+      "stim_window_hz": 0.0018604651162790699,
+      "delta_hz": -0.009612403100775194,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.4666666666666667,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.4666666666666667,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102000,
+    "total_spikes": 7,
+    "mean_rate_hz": 0.0015555555555555557,
+    "max_rate_hz": 0.3333333333333333,
+    "nan": false,
+    "wall_s": 1.53,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.002170542635658915,
+      "stim_window_hz": 0.0037209302325581397,
+      "delta_hz": 0.0015503875968992248,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102000,
+    "total_spikes": 28,
+    "mean_rate_hz": 0.006222222222222223,
+    "max_rate_hz": 1.3333333333333333,
+    "nan": false,
+    "wall_s": 1.54,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.00868217054263566,
+      "stim_window_hz": 0.0037209302325581397,
+      "delta_hz": -0.00496124031007752,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.35,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.35,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103000,
+    "total_spikes": 8,
+    "mean_rate_hz": 0.0017777777777777776,
+    "max_rate_hz": 0.26666666666666666,
+    "nan": false,
+    "wall_s": 1.51,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.00248062015503876,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.00248062015503876,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103000,
+    "total_spikes": 44,
+    "mean_rate_hz": 0.009777777777777778,
+    "max_rate_hz": 2.2666666666666666,
+    "nan": false,
+    "wall_s": 1.61,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.013643410852713178,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.013643410852713178,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.6,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104000,
+    "total_spikes": 8,
+    "mean_rate_hz": 0.0017777777777777776,
+    "max_rate_hz": 0.4666666666666667,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.00248062015503876,
+      "stim_window_hz": 0.002790697674418605,
+      "delta_hz": 0.0003100775193798453,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104000,
+    "total_spikes": 40,
+    "mean_rate_hz": 0.00888888888888889,
+    "max_rate_hz": 1.9333333333333333,
+    "nan": false,
+    "wall_s": 1.51,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0124031007751938,
+      "stim_window_hz": 0.002790697674418605,
+      "delta_hz": -0.009612403100775196,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.5166666666666667,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.5166666666666667,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105000,
+    "total_spikes": 15,
+    "mean_rate_hz": 0.0033333333333333335,
+    "max_rate_hz": 0.6666666666666666,
+    "nan": false,
+    "wall_s": 1.5,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.004651162790697674,
+      "stim_window_hz": 0.004651162790697674,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105000,
+    "total_spikes": 43,
+    "mean_rate_hz": 0.009555555555555555,
+    "max_rate_hz": 1.8,
+    "nan": false,
+    "wall_s": 1.54,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.013333333333333334,
+      "stim_window_hz": 0.004651162790697674,
+      "delta_hz": -0.00868217054263566,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.4666666666666667,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.4666666666666667,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.53,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101000,
+    "total_spikes": 42,
+    "mean_rate_hz": 0.009333333333333332,
+    "max_rate_hz": 2.8,
+    "nan": false,
+    "wall_s": 1.64,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.013023255813953487,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.013023255813953487,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.7,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.51,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102000,
+    "total_spikes": 39,
+    "mean_rate_hz": 0.008666666666666666,
+    "max_rate_hz": 2.6,
+    "nan": false,
+    "wall_s": 1.53,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.012093023255813955,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.012093023255813955,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.65,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.65,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.62,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103000,
+    "total_spikes": 40,
+    "mean_rate_hz": 0.008888888888888889,
+    "max_rate_hz": 2.6666666666666665,
+    "nan": false,
+    "wall_s": 1.55,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.012403100775193798,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.012403100775193798,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6666666666666666,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.6666666666666666,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.54,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104000,
+    "total_spikes": 41,
+    "mean_rate_hz": 0.009111111111111111,
+    "max_rate_hz": 2.7333333333333334,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.012713178294573644,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.012713178294573644,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6833333333333333,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.6833333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.62,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105000,
+    "total_spikes": 42,
+    "mean_rate_hz": 0.009333333333333332,
+    "max_rate_hz": 2.8,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.013023255813953487,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.013023255813953487,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.7,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101000,
+    "total_spikes": 2,
+    "mean_rate_hz": 0.0004444444444444444,
+    "max_rate_hz": 0.13333333333333333,
+    "nan": false,
+    "wall_s": 1.54,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.00062015503875969,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.00062015503875969,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.03333333333333333,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.03333333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102000,
+    "total_spikes": 2,
+    "mean_rate_hz": 0.0004444444444444444,
+    "max_rate_hz": 0.13333333333333333,
+    "nan": false,
+    "wall_s": 1.61,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.00062015503875969,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.00062015503875969,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.03333333333333333,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.03333333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103000,
+    "total_spikes": 1,
+    "mean_rate_hz": 0.0002222222222222222,
+    "max_rate_hz": 0.06666666666666667,
+    "nan": false,
+    "wall_s": 1.59,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0008658008658008658,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.0008658008658008658,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103000,
+    "total_spikes": 3,
+    "mean_rate_hz": 0.0006666666666666668,
+    "max_rate_hz": 0.13333333333333333,
+    "nan": false,
+    "wall_s": 1.63,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0008658008658008658,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.0008658008658008658,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.00062015503875969,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.00062015503875969,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.03333333333333333,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.03333333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.52,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104000,
+    "total_spikes": 2,
+    "mean_rate_hz": 0.0004444444444444444,
+    "max_rate_hz": 0.13333333333333333,
+    "nan": false,
+    "wall_s": 1.51,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.00062015503875969,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.00062015503875969,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.03333333333333333,
+      "stim_window_hz": 0.0,
+      "delta_hz": -0.03333333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.52,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.54,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.59,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.48,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.5,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.46,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.51,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.49,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105000,
+    "total_spikes": 0,
+    "mean_rate_hz": 0.0,
+    "max_rate_hz": 0.0,
+    "nan": false,
+    "wall_s": 1.52,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.0,
+      "stim_window_hz": 0.0,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   }
+  ],
+  "summary": {
+   "measured/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "measured/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "measured/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.002914728682170543,
+    "stim_window_hz_mean": 0.002604651162790698,
+    "delta_hz_values": [
+     -0.009612403100775194,
+     -0.00496124031007752,
+     -0.013643410852713178,
+     -0.009612403100775196,
+     -0.00868217054263566
+    ],
+    "delta_hz_mean": -0.009302325581395349,
+    "delta_hz_sd": 0.0027664754137296695,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "measured/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     -0.4666666666666667,
+     -0.35,
+     -0.6,
+     -0.5166666666666667,
+     -0.4666666666666667
+    ],
+    "delta_hz_mean": -0.48,
+    "delta_hz_sd": 0.08124038404635961,
+    "response_index_values": [
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0
+    ],
+    "response_index_mean": -1.0
+   },
+   "shuf-42/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-42/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-42/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     -0.013023255813953487,
+     -0.012093023255813955,
+     -0.012403100775193798,
+     -0.012713178294573644,
+     -0.013023255813953487
+    ],
+    "delta_hz_mean": -0.012651162790697673,
+    "delta_hz_sd": 0.0003616094198353666,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-42/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     -0.7,
+     -0.65,
+     -0.6666666666666666,
+     -0.6833333333333333,
+     -0.7
+    ],
+    "delta_hz_mean": -0.68,
+    "delta_hz_sd": 0.019436506316150983,
+    "response_index_values": [
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0
+    ],
+    "response_index_mean": -1.0
+   },
+   "shuf-43/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-43/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.00017316017316017316,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     -0.0008658008658008658,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": -0.00017316017316017316,
+    "delta_hz_sd": 0.0003463203463203463,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-43/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     -0.00062015503875969,
+     -0.00062015503875969,
+     -0.00062015503875969,
+     -0.00062015503875969,
+     0.0
+    ],
+    "delta_hz_mean": -0.0004961240310077519,
+    "delta_hz_sd": 0.00024806201550387597,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-43/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     -0.03333333333333333,
+     -0.03333333333333333,
+     -0.03333333333333333,
+     -0.03333333333333333,
+     0.0
+    ],
+    "delta_hz_mean": -0.026666666666666665,
+    "delta_hz_sd": 0.013333333333333334,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-44/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-44/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-44/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   },
+   "shuf-44/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.0,
+    "stim_window_hz_mean": 0.0,
+    "delta_hz_values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "delta_hz_mean": 0.0,
+    "delta_hz_sd": 0.0,
+    "response_index_values": [],
+    "response_index_mean": null
+   }
+  },
+  "shuffle_invariants": {
+   "shuf-42": {
+    "seed": 42,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "6b56c2e87b31fe67",
+      "multiset_sha256_shuffled": "6b56c2e87b31fe67"
+     },
+     "electrical_asymmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "cc3a770ea8e23971",
+      "in_degree_vector_sha256": "ef362bea72d44791",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e2dfca0910adb63",
+      "multiset_sha256_shuffled": "3e2dfca0910adb63"
+     },
+     "electrical_symmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e2dfca0910adb63",
+      "multiset_sha256_shuffled": "3e2dfca0910adb63",
+      "parallel_pairs_in_shuffled": 10,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 5847,
+     "shuffled": 5847
+    }
+   },
+   "shuf-43": {
+    "seed": 43,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "6b56c2e87b31fe67",
+      "multiset_sha256_shuffled": "6b56c2e87b31fe67"
+     },
+     "electrical_asymmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "cc3a770ea8e23971",
+      "in_degree_vector_sha256": "ef362bea72d44791",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e2dfca0910adb63",
+      "multiset_sha256_shuffled": "3e2dfca0910adb63"
+     },
+     "electrical_symmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e2dfca0910adb63",
+      "multiset_sha256_shuffled": "3e2dfca0910adb63",
+      "parallel_pairs_in_shuffled": 12,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 5847,
+     "shuffled": 5847
+    }
+   },
+   "shuf-44": {
+    "seed": 44,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "6b56c2e87b31fe67",
+      "multiset_sha256_shuffled": "6b56c2e87b31fe67"
+     },
+     "electrical_asymmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "cc3a770ea8e23971",
+      "in_degree_vector_sha256": "ef362bea72d44791",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e2dfca0910adb63",
+      "multiset_sha256_shuffled": "3e2dfca0910adb63"
+     },
+     "electrical_symmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e2dfca0910adb63",
+      "multiset_sha256_shuffled": "3e2dfca0910adb63",
+      "parallel_pairs_in_shuffled": 16,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 5847,
+     "shuffled": 5847
+    }
+   }
+  },
+  "paired_stim_artifact": {
+   "file": "../data/paired-stim-example-5ms.json",
+   "events_sha256": "af88fac1ab9e232c766e1ec7932987eccbfd58820c2dc9f53d7ef7f7ddabefbe",
+   "n_events": 10499
+  },
+  "headline": {
+   "command_pool": {
+    "measured_delta_mean_hz": 0.0,
+    "measured_delta_sd_hz": 0.0,
+    "shuffle_deltas_mean_hz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.0,
+    "measured_beats_all_shuffles": false
+   },
+   "body_wall_motors": {
+    "measured_delta_mean_hz": 0.0,
+    "measured_delta_sd_hz": 0.0,
+    "shuffle_deltas_mean_hz": [
+     0.0,
+     -0.00017316017316017316,
+     0.0
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 8.16284884486635e-05,
+    "measured_beats_all_shuffles": false
+   },
+   "other": {
+    "measured_delta_mean_hz": -0.009302325581395349,
+    "measured_delta_sd_hz": 0.0027664754137296695,
+    "shuffle_deltas_mean_hz": [
+     -0.012651162790697673,
+     -0.0004961240310077519,
+     0.0
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.005850384852112447,
+    "measured_beats_all_shuffles": false
+   },
+   "ash_ashj": {
+    "measured_delta_mean_hz": -0.48,
+    "measured_delta_sd_hz": 0.08124038404635961,
+    "shuffle_deltas_mean_hz": [
+     -0.68,
+     -0.026666666666666665,
+     0.0
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.3144581858010441,
+    "measured_beats_all_shuffles": false
+   }
+  },
+  "verdicts": {
+   "stable": true,
+   "routed_command_pool": false,
+   "routed_motors": false
+  }
+ },
+ "50ms": {
+  "config": {
+   "dt": 1.0,
+   "tau_m": 20.0,
+   "tau_syn": 50.0,
+   "v0": -52.0,
+   "v_th": -45.0,
+   "v_rst": -52.0,
+   "refractory_ms": 2.2,
+   "delay_ms": 1.8,
+   "delay_steps": 2,
+   "lambda_bg": 4,
+   "w_bg": 7.0,
+   "duration_ms": 15000,
+   "stim_start_ms": 5000,
+   "stim_dur_ms": 500,
+   "stim_ids": [
+    "ASHL",
+    "ASHR"
+   ],
+   "alpha": 0.4,
+   "beta": 0.00096159557648134,
+   "S": 8,
+   "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+   ],
+   "shuffle_seeds": [
+    42,
+    43,
+    44
+   ],
+   "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)"
+  },
+  "runs": [
+   {
+    "wiring": "measured",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "total_spikes": 9870,
+    "mean_rate_hz": 2.1933333333333334,
+    "max_rate_hz": 25.466666666666665,
+    "nan": false,
+    "wall_s": 1.73,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 4.833333333333333,
+      "stim_window_hz": 5.300000000000001,
+      "delta_hz": 0.4666666666666677,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.0467532467532468,
+      "stim_window_hz": 1.077922077922078,
+      "delta_hz": 0.03116883116883118,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.505736434108527,
+      "stim_window_hz": 2.606511627906976,
+      "delta_hz": 0.1007751937984489,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.5499999999999999,
+      "stim_window_hz": 0.6499999999999999,
+      "delta_hz": 0.09999999999999998,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "total_spikes": 9978,
+    "mean_rate_hz": 2.2173333333333334,
+    "max_rate_hz": 25.8,
+    "nan": false,
+    "wall_s": 1.79,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 4.925,
+      "stim_window_hz": 5.425000000000001,
+      "delta_hz": 0.5000000000000009,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.058874458874459,
+      "stim_window_hz": 1.090909090909091,
+      "delta_hz": 0.03203463203463208,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.531472868217054,
+      "stim_window_hz": 2.6260465116279064,
+      "delta_hz": 0.09457364341085217,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7833333333333333,
+      "stim_window_hz": 0.6,
+      "delta_hz": -0.18333333333333335,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "total_spikes": 9218,
+    "mean_rate_hz": 2.0484444444444443,
+    "max_rate_hz": 24.133333333333333,
+    "nan": false,
+    "wall_s": 1.75,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 4.45,
+      "stim_window_hz": 3.475,
+      "delta_hz": -0.9750000000000001,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.0017316017316016,
+      "stim_window_hz": 0.8597402597402598,
+      "delta_hz": -0.14199134199134178,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.333953488372093,
+      "stim_window_hz": 2.213953488372093,
+      "delta_hz": -0.1200000000000001,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.35,
+      "stim_window_hz": 0.15000000000000002,
+      "delta_hz": -0.19999999999999996,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "total_spikes": 9320,
+    "mean_rate_hz": 2.071111111111111,
+    "max_rate_hz": 24.2,
+    "nan": false,
+    "wall_s": 1.69,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 4.541666666666667,
+      "stim_window_hz": 3.625,
+      "delta_hz": -0.916666666666667,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.0086580086580088,
+      "stim_window_hz": 0.8805194805194805,
+      "delta_hz": -0.12813852813852833,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.3596899224806207,
+      "stim_window_hz": 2.2632558139534886,
+      "delta_hz": -0.09643410852713208,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6,
+      "stim_window_hz": 0.2,
+      "delta_hz": -0.39999999999999997,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "total_spikes": 10478,
+    "mean_rate_hz": 2.3284444444444445,
+    "max_rate_hz": 26.866666666666667,
+    "nan": false,
+    "wall_s": 1.68,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.416666666666667,
+      "stim_window_hz": 5.25,
+      "delta_hz": -0.16666666666666696,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.1835497835497837,
+      "stim_window_hz": 1.1688311688311686,
+      "delta_hz": -0.01471861471861513,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.623565891472868,
+      "stim_window_hz": 2.423255813953488,
+      "delta_hz": -0.20031007751938024,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.4833333333333333,
+      "stim_window_hz": 0.75,
+      "delta_hz": 0.2666666666666667,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "total_spikes": 10518,
+    "mean_rate_hz": 2.337333333333333,
+    "max_rate_hz": 26.866666666666667,
+    "nan": false,
+    "wall_s": 1.74,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.458333333333333,
+      "stim_window_hz": 5.2749999999999995,
+      "delta_hz": -0.18333333333333357,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.193073593073593,
+      "stim_window_hz": 1.1870129870129869,
+      "delta_hz": -0.0060606060606061,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.631007751937984,
+      "stim_window_hz": 2.429767441860465,
+      "delta_hz": -0.20124031007751908,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6,
+      "stim_window_hz": 0.6500000000000001,
+      "delta_hz": 0.050000000000000155,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "total_spikes": 9980,
+    "mean_rate_hz": 2.217777777777778,
+    "max_rate_hz": 25.466666666666665,
+    "nan": false,
+    "wall_s": 1.75,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.041666666666667,
+      "stim_window_hz": 4.225,
+      "delta_hz": -0.8166666666666673,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.0597402597402596,
+      "stim_window_hz": 0.942857142857143,
+      "delta_hz": -0.1168831168831167,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.5274418604651165,
+      "stim_window_hz": 2.3888372093023253,
+      "delta_hz": -0.1386046511627912,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.4333333333333333,
+      "stim_window_hz": 0.3,
+      "delta_hz": -0.1333333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "total_spikes": 10054,
+    "mean_rate_hz": 2.2342222222222223,
+    "max_rate_hz": 25.6,
+    "nan": false,
+    "wall_s": 1.68,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.158333333333333,
+      "stim_window_hz": 4.325,
+      "delta_hz": -0.833333333333333,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 1.0683982683982685,
+      "stim_window_hz": 0.9532467532467533,
+      "delta_hz": -0.11515151515151512,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.542945736434109,
+      "stim_window_hz": 2.413023255813954,
+      "delta_hz": -0.12992248062015488,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7000000000000001,
+      "stim_window_hz": 0.3,
+      "delta_hz": -0.4000000000000001,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "total_spikes": 9976,
+    "mean_rate_hz": 2.2168888888888887,
+    "max_rate_hz": 26.466666666666665,
+    "nan": false,
+    "wall_s": 1.65,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 4.983333333333333,
+      "stim_window_hz": 5.65,
+      "delta_hz": 0.666666666666667,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.9800865800865801,
+      "stim_window_hz": 0.9116883116883119,
+      "delta_hz": -0.06839826839826824,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.5568992248062017,
+      "stim_window_hz": 2.7925581395348837,
+      "delta_hz": 0.23565891472868206,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.5,
+      "stim_window_hz": 0.4,
+      "delta_hz": -0.09999999999999998,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "measured",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "total_spikes": 10013,
+    "mean_rate_hz": 2.225111111111111,
+    "max_rate_hz": 26.266666666666666,
+    "nan": false,
+    "wall_s": 1.77,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 5.05,
+      "stim_window_hz": 5.7,
+      "delta_hz": 0.6500000000000004,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.9835497835497835,
+      "stim_window_hz": 0.9116883116883119,
+      "delta_hz": -0.07186147186147163,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 2.5646511627906974,
+      "stim_window_hz": 2.7869767441860462,
+      "delta_hz": 0.22232558139534886,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7666666666666666,
+      "stim_window_hz": 0.4,
+      "delta_hz": -0.3666666666666666,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "total_spikes": 4739,
+    "mean_rate_hz": 1.053111111111111,
+    "max_rate_hz": 6.6,
+    "nan": false,
+    "wall_s": 1.68,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.675,
+      "stim_window_hz": 2.7,
+      "delta_hz": 0.025000000000000355,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.664069264069264,
+      "stim_window_hz": 0.6623376623376622,
+      "delta_hz": -0.0017316017316018062,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1320930232558135,
+      "stim_window_hz": 1.16,
+      "delta_hz": 0.027906976744186407,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0166666666666666,
+      "stim_window_hz": 1.1,
+      "delta_hz": 0.08333333333333348,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "total_spikes": 4777,
+    "mean_rate_hz": 1.0615555555555556,
+    "max_rate_hz": 6.666666666666667,
+    "nan": false,
+    "wall_s": 1.6,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.7,
+      "stim_window_hz": 2.7,
+      "delta_hz": 0.0,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6683982683982684,
+      "stim_window_hz": 0.6675324675324675,
+      "delta_hz": -0.0008658008658009031,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1413953488372088,
+      "stim_window_hz": 1.161860465116279,
+      "delta_hz": 0.020465116279070106,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.3,
+      "stim_window_hz": 1.1,
+      "delta_hz": -0.19999999999999996,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "total_spikes": 4361,
+    "mean_rate_hz": 0.9691111111111111,
+    "max_rate_hz": 6.666666666666667,
+    "nan": false,
+    "wall_s": 1.62,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.408333333333333,
+      "stim_window_hz": 1.775,
+      "delta_hz": -0.6333333333333333,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.5835497835497835,
+      "stim_window_hz": 0.5454545454545455,
+      "delta_hz": -0.03809523809523796,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.053643410852713,
+      "stim_window_hz": 0.9013953488372094,
+      "delta_hz": -0.15224806201550367,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.9333333333333332,
+      "stim_window_hz": 0.8500000000000001,
+      "delta_hz": -0.08333333333333315,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "total_spikes": 4413,
+    "mean_rate_hz": 0.9806666666666668,
+    "max_rate_hz": 6.866666666666666,
+    "nan": false,
+    "wall_s": 1.7,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.425,
+      "stim_window_hz": 1.775,
+      "delta_hz": -0.6499999999999999,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.5852813852813852,
+      "stim_window_hz": 0.5480519480519482,
+      "delta_hz": -0.037229437229436946,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.0685271317829457,
+      "stim_window_hz": 0.9023255813953488,
+      "delta_hz": -0.16620155038759687,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.3333333333333333,
+      "stim_window_hz": 0.8500000000000001,
+      "delta_hz": -0.48333333333333317,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "total_spikes": 5101,
+    "mean_rate_hz": 1.1335555555555556,
+    "max_rate_hz": 7.2,
+    "nan": false,
+    "wall_s": 1.64,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.8499999999999996,
+      "stim_window_hz": 2.9000000000000004,
+      "delta_hz": 0.05000000000000071,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.7324675324675325,
+      "stim_window_hz": 0.6649350649350649,
+      "delta_hz": -0.06753246753246755,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.2133333333333334,
+      "stim_window_hz": 1.0995348837209302,
+      "delta_hz": -0.11379844961240315,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0999999999999999,
+      "stim_window_hz": 1.3499999999999999,
+      "delta_hz": 0.25,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "total_spikes": 5141,
+    "mean_rate_hz": 1.1424444444444446,
+    "max_rate_hz": 7.4,
+    "nan": false,
+    "wall_s": 1.69,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.8583333333333334,
+      "stim_window_hz": 2.9000000000000004,
+      "delta_hz": 0.04166666666666696,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.7376623376623377,
+      "stim_window_hz": 0.6675324675324676,
+      "delta_hz": -0.07012987012987004,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.2235658914728682,
+      "stim_window_hz": 1.0986046511627907,
+      "delta_hz": -0.12496124031007749,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.4000000000000001,
+      "stim_window_hz": 1.3499999999999999,
+      "delta_hz": -0.050000000000000266,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "total_spikes": 4904,
+    "mean_rate_hz": 1.0897777777777777,
+    "max_rate_hz": 6.666666666666667,
+    "nan": false,
+    "wall_s": 1.64,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.8583333333333334,
+      "stim_window_hz": 2.5999999999999996,
+      "delta_hz": -0.25833333333333375,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6683982683982684,
+      "stim_window_hz": 0.5818181818181819,
+      "delta_hz": -0.08658008658008653,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1748837209302327,
+      "stim_window_hz": 1.0232558139534882,
+      "delta_hz": -0.15162790697674455,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.0833333333333333,
+      "stim_window_hz": 0.75,
+      "delta_hz": -0.33333333333333326,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "total_spikes": 4965,
+    "mean_rate_hz": 1.1033333333333333,
+    "max_rate_hz": 6.733333333333333,
+    "nan": false,
+    "wall_s": 1.76,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.9,
+      "stim_window_hz": 2.5999999999999996,
+      "delta_hz": -0.30000000000000027,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6735930735930736,
+      "stim_window_hz": 0.5844155844155845,
+      "delta_hz": -0.08917748917748913,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1903875968992248,
+      "stim_window_hz": 1.0232558139534884,
+      "delta_hz": -0.16713178294573638,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.4833333333333334,
+      "stim_window_hz": 0.7000000000000001,
+      "delta_hz": -0.7833333333333333,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "total_spikes": 4732,
+    "mean_rate_hz": 1.0515555555555556,
+    "max_rate_hz": 7.6,
+    "nan": false,
+    "wall_s": 1.67,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.675,
+      "stim_window_hz": 2.875,
+      "delta_hz": 0.20000000000000018,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6095238095238096,
+      "stim_window_hz": 0.587012987012987,
+      "delta_hz": -0.022510822510822592,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1494573643410855,
+      "stim_window_hz": 1.2613953488372096,
+      "delta_hz": 0.11193798449612413,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.1,
+      "stim_window_hz": 1.05,
+      "delta_hz": -0.050000000000000044,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-42",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "total_spikes": 4783,
+    "mean_rate_hz": 1.062888888888889,
+    "max_rate_hz": 7.8,
+    "nan": false,
+    "wall_s": 1.76,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.7,
+      "stim_window_hz": 2.8499999999999996,
+      "delta_hz": 0.14999999999999947,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6155844155844156,
+      "stim_window_hz": 0.5870129870129871,
+      "delta_hz": -0.02857142857142847,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.162170542635659,
+      "stim_window_hz": 1.262325581395349,
+      "delta_hz": 0.1001550387596899,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.4666666666666668,
+      "stim_window_hz": 1.05,
+      "delta_hz": -0.41666666666666674,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "total_spikes": 4624,
+    "mean_rate_hz": 1.0275555555555556,
+    "max_rate_hz": 5.8,
+    "nan": false,
+    "wall_s": 1.65,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9000000000000001,
+      "stim_window_hz": 2.075,
+      "delta_hz": 0.17500000000000004,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.7194805194805196,
+      "stim_window_hz": 0.7272727272727273,
+      "delta_hz": 0.007792207792207684,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1054263565891473,
+      "stim_window_hz": 1.128372093023256,
+      "delta_hz": 0.022945736434108577,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.5833333333333334,
+      "stim_window_hz": 0.6499999999999999,
+      "delta_hz": 0.06666666666666654,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "total_spikes": 4652,
+    "mean_rate_hz": 1.0337777777777777,
+    "max_rate_hz": 5.8,
+    "nan": false,
+    "wall_s": 1.63,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9083333333333337,
+      "stim_window_hz": 2.1,
+      "delta_hz": 0.19166666666666643,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.7229437229437231,
+      "stim_window_hz": 0.7298701298701299,
+      "delta_hz": 0.006926406926406781,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1125581395348838,
+      "stim_window_hz": 1.128372093023256,
+      "delta_hz": 0.015813953488372112,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7833333333333333,
+      "stim_window_hz": 0.6,
+      "delta_hz": -0.18333333333333335,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "total_spikes": 4385,
+    "mean_rate_hz": 0.9744444444444446,
+    "max_rate_hz": 5.666666666666667,
+    "nan": false,
+    "wall_s": 1.61,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9916666666666665,
+      "stim_window_hz": 1.625,
+      "delta_hz": -0.3666666666666665,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6502164502164502,
+      "stim_window_hz": 0.6129870129870131,
+      "delta_hz": -0.03722943722943717,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.0527131782945738,
+      "stim_window_hz": 0.9237209302325581,
+      "delta_hz": -0.1289922480620157,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.5333333333333333,
+      "stim_window_hz": 0.39999999999999997,
+      "delta_hz": -0.13333333333333336,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "total_spikes": 4426,
+    "mean_rate_hz": 0.9835555555555557,
+    "max_rate_hz": 5.666666666666667,
+    "nan": false,
+    "wall_s": 1.59,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9999999999999998,
+      "stim_window_hz": 1.625,
+      "delta_hz": -0.3749999999999998,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6545454545454547,
+      "stim_window_hz": 0.6155844155844157,
+      "delta_hz": -0.038961038961038974,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.063565891472868,
+      "stim_window_hz": 0.9227906976744185,
+      "delta_hz": -0.1407751937984496,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.7833333333333334,
+      "stim_window_hz": 0.39999999999999997,
+      "delta_hz": -0.38333333333333347,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "total_spikes": 5122,
+    "mean_rate_hz": 1.138222222222222,
+    "max_rate_hz": 6.4,
+    "nan": false,
+    "wall_s": 1.67,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.4000000000000004,
+      "stim_window_hz": 2.3,
+      "delta_hz": -0.10000000000000053,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.8190476190476191,
+      "stim_window_hz": 0.7636363636363636,
+      "delta_hz": -0.05541125541125558,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.2055813953488372,
+      "stim_window_hz": 1.1162790697674416,
+      "delta_hz": -0.08930232558139561,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.8833333333333333,
+      "stim_window_hz": 1.05,
+      "delta_hz": 0.16666666666666674,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "total_spikes": 5148,
+    "mean_rate_hz": 1.144,
+    "max_rate_hz": 6.466666666666667,
+    "nan": false,
+    "wall_s": 1.67,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.408333333333333,
+      "stim_window_hz": 2.3,
+      "delta_hz": -0.10833333333333339,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.8207792207792208,
+      "stim_window_hz": 0.7610389610389611,
+      "delta_hz": -0.05974025974025976,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.2127131782945737,
+      "stim_window_hz": 1.1181395348837209,
+      "delta_hz": -0.09457364341085284,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 1.05,
+      "stim_window_hz": 1.0,
+      "delta_hz": -0.050000000000000044,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "total_spikes": 4968,
+    "mean_rate_hz": 1.104,
+    "max_rate_hz": 6.4,
+    "nan": false,
+    "wall_s": 1.6,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.275,
+      "stim_window_hz": 2.0,
+      "delta_hz": -0.2749999999999999,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.7376623376623376,
+      "stim_window_hz": 0.6727272727272727,
+      "delta_hz": -0.06493506493506485,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1916279069767441,
+      "stim_window_hz": 1.027906976744186,
+      "delta_hz": -0.16372093023255818,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.65,
+      "stim_window_hz": 0.49999999999999994,
+      "delta_hz": -0.15000000000000008,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "total_spikes": 5015,
+    "mean_rate_hz": 1.1144444444444446,
+    "max_rate_hz": 6.4,
+    "nan": false,
+    "wall_s": 1.68,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.3,
+      "stim_window_hz": 2.0,
+      "delta_hz": -0.2999999999999998,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.7411255411255411,
+      "stim_window_hz": 0.6727272727272727,
+      "delta_hz": -0.06839826839826835,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.204031007751938,
+      "stim_window_hz": 1.0288372093023255,
+      "delta_hz": -0.17519379844961258,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.9833333333333333,
+      "stim_window_hz": 0.49999999999999994,
+      "delta_hz": -0.48333333333333334,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "total_spikes": 4735,
+    "mean_rate_hz": 1.0522222222222222,
+    "max_rate_hz": 5.733333333333333,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.0083333333333333,
+      "stim_window_hz": 2.0,
+      "delta_hz": -0.008333333333333304,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6969696969696969,
+      "stim_window_hz": 0.6545454545454547,
+      "delta_hz": -0.04242424242424225,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.143875968992248,
+      "stim_window_hz": 1.236279069767442,
+      "delta_hz": 0.09240310077519398,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.6666666666666667,
+      "stim_window_hz": 0.65,
+      "delta_hz": -0.01666666666666672,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-43",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "total_spikes": 4776,
+    "mean_rate_hz": 1.0613333333333332,
+    "max_rate_hz": 5.733333333333333,
+    "nan": false,
+    "wall_s": 1.58,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 2.025,
+      "stim_window_hz": 2.05,
+      "delta_hz": 0.02499999999999991,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6995670995670995,
+      "stim_window_hz": 0.6493506493506495,
+      "delta_hz": -0.05021645021645005,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1550387596899228,
+      "stim_window_hz": 1.2427906976744183,
+      "delta_hz": 0.08775193798449554,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.9166666666666667,
+      "stim_window_hz": 0.65,
+      "delta_hz": -0.2666666666666667,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 101,
+    "cond": "rest",
+    "bg_seed": 101001,
+    "total_spikes": 4442,
+    "mean_rate_hz": 0.987111111111111,
+    "max_rate_hz": 6.2,
+    "nan": false,
+    "wall_s": 1.56,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.625,
+      "stim_window_hz": 1.6749999999999998,
+      "delta_hz": 0.04999999999999982,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6406926406926408,
+      "stim_window_hz": 0.6519480519480519,
+      "delta_hz": 0.011255411255411185,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.0874418604651164,
+      "stim_window_hz": 1.135813953488372,
+      "delta_hz": 0.048372093023255625,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.30000000000000004,
+      "stim_window_hz": 0.30000000000000004,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 101,
+    "cond": "stim",
+    "bg_seed": 101001,
+    "total_spikes": 4470,
+    "mean_rate_hz": 0.9933333333333333,
+    "max_rate_hz": 6.2,
+    "nan": false,
+    "wall_s": 1.72,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.6583333333333332,
+      "stim_window_hz": 1.7249999999999996,
+      "delta_hz": 0.06666666666666643,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6415584415584416,
+      "stim_window_hz": 0.6571428571428573,
+      "delta_hz": 0.0155844155844157,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.0945736434108528,
+      "stim_window_hz": 1.1432558139534883,
+      "delta_hz": 0.04868217054263546,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.4666666666666667,
+      "stim_window_hz": 0.30000000000000004,
+      "delta_hz": -0.16666666666666663,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 102,
+    "cond": "rest",
+    "bg_seed": 102001,
+    "total_spikes": 4271,
+    "mean_rate_hz": 0.9491111111111111,
+    "max_rate_hz": 6.733333333333333,
+    "nan": false,
+    "wall_s": 1.59,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.6333333333333333,
+      "stim_window_hz": 1.2999999999999998,
+      "delta_hz": -0.3333333333333335,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6233766233766234,
+      "stim_window_hz": 0.612987012987013,
+      "delta_hz": -0.010389610389610393,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.0403100775193799,
+      "stim_window_hz": 0.9925581395348837,
+      "delta_hz": -0.04775193798449617,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.2833333333333333,
+      "stim_window_hz": 0.2,
+      "delta_hz": -0.08333333333333331,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 102,
+    "cond": "stim",
+    "bg_seed": 102001,
+    "total_spikes": 4295,
+    "mean_rate_hz": 0.9544444444444442,
+    "max_rate_hz": 6.8,
+    "nan": false,
+    "wall_s": 1.67,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.6333333333333333,
+      "stim_window_hz": 1.2999999999999998,
+      "delta_hz": -0.3333333333333335,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6242424242424243,
+      "stim_window_hz": 0.612987012987013,
+      "delta_hz": -0.011255411255411296,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.0474418604651166,
+      "stim_window_hz": 0.9934883720930233,
+      "delta_hz": -0.05395348837209324,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.45,
+      "stim_window_hz": 0.2,
+      "delta_hz": -0.25,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 103,
+    "cond": "rest",
+    "bg_seed": 103001,
+    "total_spikes": 4841,
+    "mean_rate_hz": 1.0757777777777777,
+    "max_rate_hz": 6.8,
+    "nan": false,
+    "wall_s": 1.76,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9083333333333334,
+      "stim_window_hz": 1.825,
+      "delta_hz": -0.08333333333333348,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.754978354978355,
+      "stim_window_hz": 0.6753246753246754,
+      "delta_hz": -0.07965367965367953,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.15968992248062,
+      "stim_window_hz": 1.069767441860465,
+      "delta_hz": -0.08992248062015507,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.5,
+      "stim_window_hz": 0.5,
+      "delta_hz": 0.0,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 103,
+    "cond": "stim",
+    "bg_seed": 103001,
+    "total_spikes": 4852,
+    "mean_rate_hz": 1.0782222222222224,
+    "max_rate_hz": 6.8,
+    "nan": false,
+    "wall_s": 1.69,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9166666666666667,
+      "stim_window_hz": 1.825,
+      "delta_hz": -0.09166666666666679,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.754978354978355,
+      "stim_window_hz": 0.6753246753246754,
+      "delta_hz": -0.07965367965367953,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1627906976744187,
+      "stim_window_hz": 1.069767441860465,
+      "delta_hz": -0.09302325581395365,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.55,
+      "stim_window_hz": 0.5,
+      "delta_hz": -0.050000000000000044,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 104,
+    "cond": "rest",
+    "bg_seed": 104001,
+    "total_spikes": 4806,
+    "mean_rate_hz": 1.068,
+    "max_rate_hz": 6.8,
+    "nan": false,
+    "wall_s": 1.7,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9,
+      "stim_window_hz": 1.5,
+      "delta_hz": -0.3999999999999999,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6787878787878788,
+      "stim_window_hz": 0.6051948051948052,
+      "delta_hz": -0.07359307359307365,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1764341085271317,
+      "stim_window_hz": 1.038139534883721,
+      "delta_hz": -0.1382945736434107,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.36666666666666664,
+      "stim_window_hz": 0.15000000000000002,
+      "delta_hz": -0.21666666666666662,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 104,
+    "cond": "stim",
+    "bg_seed": 104001,
+    "total_spikes": 4827,
+    "mean_rate_hz": 1.0726666666666667,
+    "max_rate_hz": 6.8,
+    "nan": false,
+    "wall_s": 1.78,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.9083333333333334,
+      "stim_window_hz": 1.5,
+      "delta_hz": -0.40833333333333344,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.6796536796536797,
+      "stim_window_hz": 0.6051948051948052,
+      "delta_hz": -0.07445887445887456,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1823255813953488,
+      "stim_window_hz": 1.0446511627906976,
+      "delta_hz": -0.13767441860465124,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.5166666666666666,
+      "stim_window_hz": 0.15000000000000002,
+      "delta_hz": -0.3666666666666666,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 105,
+    "cond": "rest",
+    "bg_seed": 105001,
+    "total_spikes": 4645,
+    "mean_rate_hz": 1.0322222222222224,
+    "max_rate_hz": 7.2,
+    "nan": false,
+    "wall_s": 2.13,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.8916666666666666,
+      "stim_window_hz": 2.2249999999999996,
+      "delta_hz": 0.33333333333333304,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.638961038961039,
+      "stim_window_hz": 0.5818181818181818,
+      "delta_hz": -0.05714285714285716,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1410852713178292,
+      "stim_window_hz": 1.2548837209302326,
+      "delta_hz": 0.11379844961240337,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.3833333333333333,
+      "stim_window_hz": 0.3,
+      "delta_hz": -0.08333333333333331,
+      "n": 4
+     }
+    }
+   },
+   {
+    "wiring": "shuf-44",
+    "seed": 105,
+    "cond": "stim",
+    "bg_seed": 105001,
+    "total_spikes": 4667,
+    "mean_rate_hz": 1.037111111111111,
+    "max_rate_hz": 7.266666666666667,
+    "nan": false,
+    "wall_s": 2.52,
+    "groups": {
+     "command_pool": {
+      "rest_hz": 1.925,
+      "stim_window_hz": 2.2249999999999996,
+      "delta_hz": 0.2999999999999996,
+      "n": 8
+     },
+     "body_wall_motors": {
+      "rest_hz": 0.638961038961039,
+      "stim_window_hz": 0.5818181818181818,
+      "delta_hz": -0.05714285714285716,
+      "n": 77
+     },
+     "other": {
+      "rest_hz": 1.1466666666666665,
+      "stim_window_hz": 1.2548837209302326,
+      "delta_hz": 0.10821705426356609,
+      "n": 215
+     },
+     "ash_ashj": {
+      "rest_hz": 0.4666666666666667,
+      "stim_window_hz": 0.3,
+      "delta_hz": -0.16666666666666669,
+      "n": 4
+     }
+    }
+   }
+  ],
+  "summary": {
+   "measured/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 4.945,
+    "stim_window_hz_mean": 4.869999999999999,
+    "delta_hz_values": [
+     0.5000000000000009,
+     -0.916666666666667,
+     -0.18333333333333357,
+     -0.833333333333333,
+     0.6500000000000004
+    ],
+    "delta_hz_mean": -0.15666666666666645,
+    "delta_hz_sd": 0.650862675394912,
+    "response_index_values": [
+     0.10152284263959409,
+     -0.20183486238532114,
+     -0.03358778625954203,
+     -0.16155088852988686,
+     0.1287128712871288
+    ],
+    "response_index_mean": -0.03334756464960543
+   },
+   "measured/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.0543722943722944,
+    "stim_window_hz_mean": 1.0046753246753248,
+    "delta_hz_values": [
+     0.03203463203463208,
+     -0.12813852813852833,
+     -0.0060606060606061,
+     -0.11515151515151512,
+     -0.07186147186147163
+    ],
+    "delta_hz_mean": -0.057835497835497816,
+    "delta_hz_sd": 0.06193811349938239,
+    "response_index_values": [
+     0.030253475061324656,
+     -0.12703862660944223,
+     -0.0050798258345428485,
+     -0.10777957860615879,
+     -0.0730633802816899
+    ],
+    "response_index_mean": -0.05654158725410182
+   },
+   "measured/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 2.5095193798449613,
+    "stim_window_hz_mean": 2.503813953488372,
+    "delta_hz_values": [
+     0.09457364341085217,
+     -0.09643410852713208,
+     -0.20124031007751908,
+     -0.12992248062015488,
+     0.22232558139534886
+    ],
+    "delta_hz_mean": -0.022139534883721,
+    "delta_hz_sd": 0.15658805433650336,
+    "response_index_values": [
+     0.0373591376776088,
+     -0.04086727989487528,
+     -0.07648791985857385,
+     -0.051091330325569985,
+     0.08668842945230325
+    ],
+    "response_index_mean": -0.008879792589821415
+   },
+   "measured/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.46333333333333326,
+    "stim_window_hz_mean": 0.43000000000000005,
+    "delta_hz_values": [
+     -0.18333333333333335,
+     -0.39999999999999997,
+     0.050000000000000155,
+     -0.4000000000000001,
+     -0.3666666666666666
+    ],
+    "delta_hz_mean": -0.25999999999999995,
+    "delta_hz_sd": 0.17467430008765206,
+    "response_index_values": [
+     -0.2340425531914894,
+     -0.6666666666666666,
+     0.08333333333333359,
+     -0.5714285714285715,
+     -0.4782608695652173
+    ],
+    "response_index_mean": -0.3734130655037222
+   },
+   "shuf-42/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 2.693333333333333,
+    "stim_window_hz_mean": 2.565,
+    "delta_hz_values": [
+     0.0,
+     -0.6499999999999999,
+     0.04166666666666696,
+     -0.30000000000000027,
+     0.14999999999999947
+    ],
+    "delta_hz_mean": -0.15166666666666676,
+    "delta_hz_sd": 0.290421150132776,
+    "response_index_values": [
+     0.0,
+     -0.26804123711340205,
+     0.014577259475218762,
+     -0.10344827586206906,
+     0.05555555555555535
+    ],
+    "response_index_mean": -0.0602713395889394
+   },
+   "shuf-42/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.6516017316017316,
+    "stim_window_hz_mean": 0.6109090909090911,
+    "delta_hz_values": [
+     -0.0008658008658009031,
+     -0.037229437229436946,
+     -0.07012987012987004,
+     -0.08917748917748913,
+     -0.02857142857142847
+    ],
+    "delta_hz_mean": -0.0451948051948051,
+    "delta_hz_sd": 0.031180373043386653,
+    "response_index_values": [
+     -0.0012953367875648226,
+     -0.06360946745562082,
+     -0.09507042253521114,
+     -0.13239074550128527,
+     -0.04641350210970448
+    ],
+    "response_index_mean": -0.06775589487787731
+   },
+   "shuf-42/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.1446821705426355,
+    "stim_window_hz_mean": 1.0896744186046512,
+    "delta_hz_values": [
+     0.020465116279070106,
+     -0.16620155038759687,
+     -0.12496124031007749,
+     -0.16713178294573638,
+     0.1001550387596899
+    ],
+    "delta_hz_mean": -0.06753488372093015,
+    "delta_hz_sd": 0.1084586095973645,
+    "response_index_values": [
+     0.017929910350448552,
+     -0.15554265815438187,
+     -0.10212873796249364,
+     -0.14040114613180513,
+     0.08617929562433295
+    ],
+    "response_index_mean": -0.058792667254779815
+   },
+   "shuf-42/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.0466666666666664,
+    "stim_window_hz_mean": 1.01,
+    "delta_hz_values": [
+     -0.19999999999999996,
+     -0.48333333333333317,
+     -0.050000000000000266,
+     -0.7833333333333333,
+     -0.41666666666666674
+    ],
+    "delta_hz_mean": -0.38666666666666666,
+    "delta_hz_sd": 0.25130769099961014,
+    "response_index_values": [
+     -0.1538461538461538,
+     -0.3624999999999999,
+     -0.0357142857142859,
+     -0.5280898876404494,
+     -0.2840909090909091
+    ],
+    "response_index_mean": -0.27284824725835966
+   },
+   "shuf-43/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 2.1149999999999998,
+    "stim_window_hz_mean": 2.0149999999999997,
+    "delta_hz_values": [
+     0.19166666666666643,
+     -0.3749999999999998,
+     -0.10833333333333339,
+     -0.2999999999999998,
+     0.02499999999999991
+    ],
+    "delta_hz_mean": -0.11333333333333333,
+    "delta_hz_sd": 0.20760539492026678,
+    "response_index_values": [
+     0.10043668122270728,
+     -0.18749999999999992,
+     -0.044982698961937746,
+     -0.1304347826086956,
+     0.012345679012345635
+    ],
+    "response_index_mean": -0.05002702426711607
+   },
+   "shuf-43/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.7246753246753246,
+    "stim_window_hz_mean": 0.6857142857142857,
+    "delta_hz_values": [
+     0.006926406926406781,
+     -0.038961038961038974,
+     -0.05974025974025976,
+     -0.06839826839826835,
+     -0.05021645021645005
+    ],
+    "delta_hz_mean": -0.04207792207792207,
+    "delta_hz_sd": 0.02638974673585113,
+    "response_index_values": [
+     0.00958083832335309,
+     -0.059523809523809534,
+     -0.07278481012658229,
+     -0.09228971962616817,
+     -0.07178217821782155
+    ],
+    "response_index_mean": -0.05735993583420569
+   },
+   "shuf-43/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.13984496124031,
+    "stim_window_hz_mean": 1.0881860465116278,
+    "delta_hz_values": [
+     0.015813953488372112,
+     -0.1407751937984496,
+     -0.09457364341085284,
+     -0.17519379844961258,
+     0.08775193798449554
+    ],
+    "delta_hz_mean": -0.06139534883720947,
+    "delta_hz_sd": 0.09854768965627923,
+    "response_index_values": [
+     0.014214046822742491,
+     -0.13236151603498544,
+     -0.07798517003323968,
+     -0.1455060520216329,
+     0.07597315436241558
+    ],
+    "response_index_mean": -0.053133107380939994
+   },
+   "shuf-43/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.6633333333333333,
+    "stim_window_hz_mean": 0.63,
+    "delta_hz_values": [
+     -0.18333333333333335,
+     -0.38333333333333347,
+     -0.050000000000000044,
+     -0.48333333333333334,
+     -0.2666666666666667
+    ],
+    "delta_hz_mean": -0.27333333333333343,
+    "delta_hz_sd": 0.15114378731672845,
+    "response_index_values": [
+     -0.2340425531914894,
+     -0.48936170212765967,
+     -0.04761904761904766,
+     -0.4915254237288136,
+     -0.29090909090909095
+    ],
+    "response_index_mean": -0.31069156351522026
+   },
+   "shuf-44/command_pool": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.7916666666666665,
+    "stim_window_hz_mean": 1.7149999999999999,
+    "delta_hz_values": [
+     0.06666666666666643,
+     -0.3333333333333335,
+     -0.09166666666666679,
+     -0.40833333333333344,
+     0.2999999999999996
+    ],
+    "delta_hz_mean": -0.09333333333333353,
+    "delta_hz_sd": 0.25966859220509847,
+    "response_index_values": [
+     0.04020100502512549,
+     -0.2040816326530613,
+     -0.047826086956521796,
+     -0.2139737991266376,
+     0.15584415584415565
+    ],
+    "response_index_mean": -0.05396727157338792
+   },
+   "shuf-44/body_wall_motors": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.6673593073593074,
+    "stim_window_hz_mean": 0.6264935064935064,
+    "delta_hz_values": [
+     0.0155844155844157,
+     -0.011255411255411296,
+     -0.07965367965367953,
+     -0.07445887445887456,
+     -0.05714285714285716
+    ],
+    "delta_hz_mean": -0.04138528138528137,
+    "delta_hz_sd": 0.037309488083982226,
+    "response_index_values": [
+     0.024291497975708683,
+     -0.01803051317614431,
+     -0.10550458715596314,
+     -0.10955414012738866,
+     -0.08943089430894312
+    ],
+    "response_index_mean": -0.059645727358546105
+   },
+   "shuf-44/other": {
+    "n_seeds": 5,
+    "rest_hz_mean": 1.1209922480620154,
+    "stim_window_hz_mean": 1.1012093023255813,
+    "delta_hz_values": [
+     0.04868217054263546,
+     -0.05395348837209324,
+     -0.09302325581395365,
+     -0.13767441860465124,
+     0.10821705426356609
+    ],
+    "delta_hz_mean": -0.025550387596899315,
+    "delta_hz_sd": 0.09092340028655058,
+    "response_index_values": [
+     0.044475920679886496,
+     -0.051509769094138735,
+     -0.08000000000000014,
+     -0.11644374508261218,
+     0.09437533802055184
+    ],
+    "response_index_mean": -0.021820451095262546
+   },
+   "shuf-44/ash_ashj": {
+    "n_seeds": 5,
+    "rest_hz_mean": 0.3666666666666667,
+    "stim_window_hz_mean": 0.29,
+    "delta_hz_values": [
+     -0.16666666666666663,
+     -0.25,
+     -0.050000000000000044,
+     -0.3666666666666666,
+     -0.16666666666666669
+    ],
+    "delta_hz_mean": -0.2,
+    "delta_hz_sd": 0.10488088481701512,
+    "response_index_values": [
+     -0.35714285714285704,
+     -0.5555555555555556,
+     -0.09090909090909098,
+     -0.7096774193548386,
+     -0.35714285714285715
+    ],
+    "response_index_mean": -0.4140855560210399
+   }
+  },
+  "shuffle_invariants": {
+   "shuf-42": {
+    "seed": 42,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e4312a8260fd971",
+      "multiset_sha256_shuffled": "3e4312a8260fd971"
+     },
+     "electrical_asymmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "cc3a770ea8e23971",
+      "in_degree_vector_sha256": "ef362bea72d44791",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88"
+     },
+     "electrical_symmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88",
+      "parallel_pairs_in_shuffled": 10,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 5847,
+     "shuffled": 5847
+    }
+   },
+   "shuf-43": {
+    "seed": 43,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e4312a8260fd971",
+      "multiset_sha256_shuffled": "3e4312a8260fd971"
+     },
+     "electrical_asymmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "cc3a770ea8e23971",
+      "in_degree_vector_sha256": "ef362bea72d44791",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88"
+     },
+     "electrical_symmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88",
+      "parallel_pairs_in_shuffled": 12,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 5847,
+     "shuffled": 5847
+    }
+   },
+   "shuf-44": {
+    "seed": 44,
+    "classes": {
+     "chemical": {
+      "records_measured": 3669,
+      "records_shuffled": 3669,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "20c019b52e635e5d",
+      "in_degree_vector_sha256": "c62445d086818ff5",
+      "n_weights": 3669,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "3e4312a8260fd971",
+      "multiset_sha256_shuffled": "3e4312a8260fd971"
+     },
+     "electrical_asymmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "out_degree_max_abs_diff": 0,
+      "in_degree_max_abs_diff": 0,
+      "out_degree_vector_sha256": "cc3a770ea8e23971",
+      "in_degree_vector_sha256": "ef362bea72d44791",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88"
+     },
+     "electrical_symmetric": {
+      "records_measured": 1089,
+      "records_shuffled": 1089,
+      "self_edges_residual": 0,
+      "degree_max_abs_diff": 0,
+      "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+      "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+      "n_weights": 1089,
+      "multiset_equal": true,
+      "multiset_sha256_measured": "f502bf657c444d88",
+      "multiset_sha256_shuffled": "f502bf657c444d88",
+      "parallel_pairs_in_shuffled": 16,
+      "parallel_pairs_measured": 0
+     }
+    },
+    "total_edges": {
+     "measured": 5847,
+     "shuffled": 5847
+    }
+   }
+  },
+  "paired_stim_artifact": {
+   "file": "../data/paired-stim-example-50ms.json",
+   "events_sha256": "76539fd640ba1a8fc2092dfc25ac45e6aba54263584bd8250a9cca17812fec56",
+   "n_events": 10461
+  },
+  "headline": {
+   "command_pool": {
+    "measured_delta_mean_hz": -0.15666666666666645,
+    "measured_delta_sd_hz": 0.650862675394912,
+    "shuffle_deltas_mean_hz": [
+     -0.15166666666666676,
+     -0.11333333333333333,
+     -0.09333333333333353
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.024203356567546595,
+    "measured_beats_all_shuffles": false
+   },
+   "body_wall_motors": {
+    "measured_delta_mean_hz": -0.057835497835497816,
+    "measured_delta_sd_hz": 0.06193811349938239,
+    "shuffle_deltas_mean_hz": [
+     -0.0451948051948051,
+     -0.04207792207792207,
+     -0.04138528138528137
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.0016568773557756988,
+    "measured_beats_all_shuffles": false
+   },
+   "other": {
+    "measured_delta_mean_hz": -0.022139534883721,
+    "measured_delta_sd_hz": 0.15658805433650336,
+    "shuffle_deltas_mean_hz": [
+     -0.06753488372093015,
+     -0.06139534883720947,
+     -0.025550387596899315
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.018515018077515467,
+    "measured_beats_all_shuffles": true
+   },
+   "ash_ashj": {
+    "measured_delta_mean_hz": -0.25999999999999995,
+    "measured_delta_sd_hz": 0.17467430008765206,
+    "shuffle_deltas_mean_hz": [
+     -0.38666666666666666,
+     -0.27333333333333343,
+     -0.2
+    ],
+    "shuffle_deltas_spread_across_graphs_hz": 0.07678734463631552,
+    "measured_beats_all_shuffles": false
+   }
+  },
+  "verdicts": {
+   "stable": true,
+   "routed_command_pool": false,
+   "routed_motors": false
+  }
+ }
+}

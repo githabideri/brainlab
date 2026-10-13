@@ -93,6 +93,7 @@ class WormNet:
         self.stim_ids = np.zeros(0, dtype=np.int64)
         self.t_stim_current = 0.0
         self.spikes = {i: [] for i in range(self.n)}
+        self.bg_events = []  # (t_ms, [neuron ids]) — paired-input record
         self.g_sum = 0.0
         self.g_samples = 0
         self._step_count = 0
@@ -134,10 +135,14 @@ class WormNet:
         self.t += cfg["dt"]
         # 1. deliver delayed internal spikes
         self._deliver(self.queue.pop(0))
-        # 2. background Poisson drive (external spikes, same delay)
+        # 2. background Poisson drive (external spikes, same delay);
+        # the rng draw is a single vector per step and is independent of
+        # network state, so identical (seed, cfg) give identical input
+        # trains on ANY wiring (the paired-input guarantee)
         bg = self.rng.binomial(1, cfg["lambda_bg"] * cfg["dt"] / 1000.0, self.n)
         bg_ids = np.nonzero(bg)[0]
         if len(bg_ids) > 0:
+            self.bg_events.append((self.t, [int(i) for i in bg_ids]))
             np.add.at(self.g, bg_ids, cfg["w_bg"])
         # 3. target offset (synaptic current decayed with tau_syn)
         T = cfg["v0"] + self.g
