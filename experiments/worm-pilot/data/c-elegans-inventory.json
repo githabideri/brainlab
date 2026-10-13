@@ -31,15 +31,15 @@
     "mode": "directed",
     "nodes_in_columns": 453,
     "rows_named": 300,
-    "nonzero_entries_neuron_to_node": 4800,
-    "non_numeric_entries_skipped": 740,
-    "diagonal_entries_zeroed": 52,
+    "nonzero_entries_neuron_to_node": 4841,
+    "non_numeric_entries_skipped": 0,
+    "diagonal_entries_zeroed": 0,
     "symmetry_disagreements": null,
     "parse": {
      "rows_seen": 301,
      "rows_skipped_banner": 0,
      "rows_skipped_number": 0,
-     "rows_skipped_noname": 0,
+     "rows_skipped_noname": 1,
      "header_repeat_rows": 0
     }
    },
@@ -47,43 +47,43 @@
     "sheet": "herm gap jn symmetric",
     "mode": "symmetric",
     "nodes_in_columns": 468,
-    "rows_named": 448,
-    "nonzero_entries_neuron_to_node": 1198,
-    "non_numeric_entries_skipped": 447,
-    "diagonal_entries_zeroed": 201,
-    "symmetry_disagreements": 135,
+    "rows_named": 468,
+    "nonzero_entries_neuron_to_node": 1433,
+    "non_numeric_entries_skipped": 0,
+    "diagonal_entries_zeroed": 0,
+    "symmetry_disagreements": 1,
     "parse": {
-     "rows_seen": 469,
+     "rows_seen": 471,
      "rows_skipped_banner": 0,
      "rows_skipped_number": 0,
-     "rows_skipped_noname": 20,
-     "header_repeat_rows": 1
+     "rows_skipped_noname": 3,
+     "header_repeat_rows": 0
     }
    },
    "gap_asym": {
     "sheet": "herm gap jn asymmetric",
     "mode": "directed",
-    "nodes_in_columns": 469,
+    "nodes_in_columns": 468,
     "rows_named": 468,
-    "nonzero_entries_neuron_to_node": 1427,
-    "non_numeric_entries_skipped": 929,
-    "diagonal_entries_zeroed": 15,
+    "nonzero_entries_neuron_to_node": 1432,
+    "non_numeric_entries_skipped": 0,
+    "diagonal_entries_zeroed": 0,
     "symmetry_disagreements": null,
     "parse": {
      "rows_seen": 469,
      "rows_skipped_banner": 0,
      "rows_skipped_number": 0,
-     "rows_skipped_noname": 0,
+     "rows_skipped_noname": 1,
      "header_repeat_rows": 0
     }
    }
   },
   "neurons_in_lists": 300,
-  "neuron_only_chem": 3618,
-  "neuron_only_gap_sym": 980,
-  "neuron_only_gap_asym": 1150,
-  "neuron_only_total": 5748,
-  "dropped_non_neuron_edges": 1677,
+  "neuron_only_chem": 3669,
+  "neuron_only_gap_sym": 1089,
+  "neuron_only_gap_asym": 1089,
+  "neuron_only_total": 5847,
+  "dropped_non_neuron_edges": 1859,
   "sim_neurons": 300
  },
  "male": {
@@ -91,11 +91,11 @@
    "chem": {
     "sheet": "male chemical",
     "mode": "directed",
-    "nodes_in_columns": 576,
+    "nodes_in_columns": 575,
     "rows_named": 382,
     "nonzero_entries_neuron_to_node": 5246,
-    "non_numeric_entries_skipped": 382,
-    "diagonal_entries_zeroed": 60,
+    "non_numeric_entries_skipped": 0,
+    "diagonal_entries_zeroed": 0,
     "symmetry_disagreements": null,
     "parse": {
      "rows_seen": 383,
@@ -108,44 +108,44 @@
    "gap_sym": {
     "sheet": "male gap jn symmetric",
     "mode": "symmetric",
-    "nodes_in_columns": 586,
-    "rows_named": 573,
-    "nonzero_entries_neuron_to_node": 1605,
-    "non_numeric_entries_skipped": 1148,
-    "diagonal_entries_zeroed": 39,
-    "symmetry_disagreements": 70,
+    "nodes_in_columns": 585,
+    "rows_named": 585,
+    "nonzero_entries_neuron_to_node": 1724,
+    "non_numeric_entries_skipped": 0,
+    "diagonal_entries_zeroed": 0,
+    "symmetry_disagreements": 1,
     "parse": {
      "rows_seen": 586,
      "rows_skipped_banner": 0,
      "rows_skipped_number": 0,
-     "rows_skipped_noname": 12,
+     "rows_skipped_noname": 1,
      "header_repeat_rows": 0
     }
    },
    "gap_asym": {
     "sheet": "male gap jn asymmetric",
     "mode": "directed",
-    "nodes_in_columns": 586,
-    "rows_named": 573,
-    "nonzero_entries_neuron_to_node": 1699,
-    "non_numeric_entries_skipped": 1151,
-    "diagonal_entries_zeroed": 49,
+    "nodes_in_columns": 585,
+    "rows_named": 585,
+    "nonzero_entries_neuron_to_node": 1722,
+    "non_numeric_entries_skipped": 0,
+    "diagonal_entries_zeroed": 0,
     "symmetry_disagreements": null,
     "parse": {
      "rows_seen": 586,
      "rows_skipped_banner": 0,
      "rows_skipped_number": 0,
-     "rows_skipped_noname": 12,
+     "rows_skipped_noname": 1,
      "header_repeat_rows": 0
     }
    }
   },
   "neurons_in_lists": 383,
   "neuron_only_chem": 3986,
-  "neuron_only_gap_sym": 1257,
-  "neuron_only_gap_asym": 1262,
-  "neuron_only_total": 6505,
-  "dropped_non_neuron_edges": 2045,
-  "sim_neurons": 380
+  "neuron_only_gap_sym": 1278,
+  "neuron_only_gap_asym": 1278,
+  "neuron_only_total": 6542,
+  "dropped_non_neuron_edges": 2150,
+  "sim_neurons": 378
  }
 }

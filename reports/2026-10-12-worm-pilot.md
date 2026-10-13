@@ -158,3 +158,140 @@ synapses, or any claim about the animal.
   `data/`.
 - Runtime: calibration 4.5 min, campaign 1.2 min/variant; every
   individual run ≤ 6 s.
+
+## Addendum, 2026-10-13 — the v1 shuffle comparisons are superseded
+
+This addendum (append-only; the original text above is frozen)
+supersedes every shuffled-control comparison in the original. It has
+three parts: (i) the v1 shuffle was not an exact control; (ii) in the
+course of fixing it, a defect in the substrate parse was found and
+corrected, which means the v1 "measured" wiring was itself not the
+published wiring; (iii) the re-run on the corrected substrate with
+exact controls does **not** reproduce the v1 positive verdict.
+
+### (i) The v1 shuffle defect (third independent review, 2026-10-13)
+
+`make_shuffled()` (v1) (a) dropped self-edges instead of
+redistributing them (3,607 of 3,618 chemical records survived), (b)
+merged the symmetric and asymmetric gap-junction records into
+undirected pairs with a max-weight merge (1,901 of 2,033
+electrical records — the shuffle therefore had a *different* record
+structure from the "measured" wiring it was compared against), and
+(c) used a single shuffle graph shared by all five simulation seeds,
+so seed variability was confounded with graph variability. None of
+those defects is large in isolation, but taken together the v1
+comparisons were not the declared "same edge counts, same degree
+marginals, same weight multiset" controls.
+
+### (ii) Substrate correction (found while fixing the shuffle)
+
+The v1 parser mapped spreadsheet *list positions* to label positions.
+The workbooks' data rows are sparse (the XML omits empty cells), while
+the label row lacks the leading columns — so every value was
+attributed to the label **one column left**. Evidence: the v1 files
+contained impossible self-edges (e.g. AVAL→AVAL = 21, 46 total in the
+herm file); the independent SI6 raw-EM book, parsed the same way,
+overlapped SI9 on only 20% of pairs; and v1's 2,030 "asymmetric"
+gap-junction records (1,901 after the shuffle's merges) cannot be
+reproduced from the workbook under any counting rule. The v2 parser
+maps each cell by its explicit column reference; it is validated two
+ways — SI6 agrees with SI9 on 99.8% (herm) / 99.5% (male) of
+neuron→neuron chemical pairs (residual = SI9's declared extrapolated
+insertions) — and it yields zero self-edges and zero non-numeric
+cells. Corrected neuron→neuron counts: herm **3,669 chemical, 1,089
+symmetric, 1,089 asymmetric (2,178 electrical; 5,847 total)**; male
+3,986 / 1,278 / 1,278 (2,556; 6,542 total). (The v1 figures — 3,618 /
+980 / 1,150 herm, and the brief's 3,033 = 1,003 + 2,030 electrical —
+are the corrupted values.) Details in
+`circuits/c-elegans-substrate.md` ("Correction, 2026-10-13").
+
+### (iii) Re-run with exact-invariant controls (80 runs)
+
+`make_shuffled_exact()` shuffles the RAW record lists per junction
+class: exact per-neuron in- and out-degree vectors, identical weight
+multisets (sha256-equal), zero dropped records (self-edge
+permutations repaired by swap-rejection; 0 residual), exact
+sym/asym class counts, no merges. Three **independent** graphs
+(seeds 42/43/44), each compared against the measured wiring on 5
+simulation seeds × {rest, 500 ms ASH pulse} × {5 ms, 50 ms} = 80
+runs. Paired inputs: the background Poisson rng is seeded
+`sim_seed*1000 + variant_idx` — a function of the simulation seed and
+variant only, never of the wiring — so measured and every shuffle see
+byte-identical input trains for a given seed (verified and dumped:
+`data/paired-stim-example-*.json`, sha256 in `results-exact.json`).
+An invariants block (record counts, degree vectors, weight
+multisets, self-edge residuals) is written per shuffle into
+`results-exact.json`; `src/test_invariants.py` re-asserts all 34
+checks. The frozen configs were recalibrated on the corrected
+substrate (old v1 configs preserved as
+`config-*-v1-corrupted-substrate.json`); no parameter was tuned
+against the readout.
+
+**5 ms (the declared primary variant): null, now on the correct
+substrate.** The network is silent in all 20 of its runs (measured
+and all three shuffles, rest and stimulus): the ASH pulse elicits
+only a handful of receptor-cell spikes (ASH/ASJ ≈ 0.4–0.7 Hz whole
+run; the 5 ms decay still limits any downstream depolarization far
+below threshold, exactly the mechanism computed in the original).
+stim−rest deltas are 0 Hz in every wiring. The original's "variant A
+is a documented null" stands, and its controls are now exact.
+
+**50 ms (reasserted as EXPLORATORY — the variant was selected after
+examining 5 ms): the v1 positive verdict does not reproduce.**
+What survives is a **resting-state** effect: the measured wiring
+self-sustains a state ≈ 2× denser than every exact control, in all
+three independent graphs and all five seeds (whole-animal rest
+2.20 Hz vs 1.02–1.06 Hz; command pool ≈ 5.0 Hz vs ≈ 1.6–2.9 Hz;
+per-neuron max 25.7 Hz vs 6.0–6.9 Hz; across-graph spread
+1.02/1.06/1.06 Hz). What does **not** survive is the stimulus
+routing: the stim−rest delta in the command pool is ≤ 0 in every
+wiring (measured −0.16 ± 0.65 Hz; shuffles −0.09 to −0.15 Hz;
+across-graph spread 0.024 Hz) — the pulse pushes the already-saturated
+state no further, and no wiring shows a positive response. The
+body-wall motor deltas are likewise negative-to-zero in all wirings.
+(The headline table's one "measured beats shuffles" flag, on the
+all-other-neurons group, is an artifact of comparing small negative
+deltas and carries no meaning.) v1's "measured post-stim 14.65 Hz vs
+shuffled 2.46 Hz, response index 5.7 vs 1.0" was an artifact of the
+corrupted substrate plus the single non-exact graph.
+
+**Corrected statement.** Under this all-excitatory model, (a) the
+5 ms variant produces no measurable effect of the declared ASH pulse
+beyond the receptor cells, in any wiring; (b) at the 50 ms
+(exploratory) decay, the measured wiring differs from its exact
+controls in its **self-sustained resting state**, but the pulse
+elicits no measurable command-pool or body-wall delta above the
+controls — i.e. the wiring does not *route the stimulus* under these
+assumptions, even though it does change the baseline state. The
+"resting-state" difference is the only wiring-dependent effect that
+survives the exact controls, and it is an exploratory-variant result
+that needs more seeds and a sign assignment before it can be taken
+seriously (it may be an all-excitatory artifact: a random wiring with
+the same degree marginals can also be close to a bifurcation, and
+the two graphs may sit on different sides of it).
+
+### Non-claims (unchanged from the original)
+
+No muscles, no biomechanics, no feedback: spiking ≠ movement. The
+release carries no synapse signs or kinetics; the all-excitatory
+choice is a declared assumption, and several results above may be
+artifacts of it. Five seeds per condition. Nothing here is a
+whole-animal emulation or a behavior demonstration.
+
+### Artifacts (2026-10-13)
+
+- `experiments/worm-pilot/results-exact.json` — all 80 runs, per-seed
+  stim−rest deltas, headline table with across-graph spread,
+  per-shuffle invariants blocks, paired-artifact hashes. (v1
+  `results.json` frozen, untouched.)
+- `experiments/worm-pilot/data/paired-stim-example-{5ms,50ms}.json` —
+  the measured vs shuf-42 background event lists for one
+  (sim seed, variant), asserted identical, with sha256.
+- `experiments/worm-pilot/src/make_shuffled_exact` (in `sim.py`),
+  `src/test_invariants.py`; recalibrated frozen `config-5ms.json` /
+  `config-50ms.json` (v1 copies kept as
+  `*-v1-corrupted-substrate.json`), `calibration-log.json` (v1 log
+  kept likewise); regenerated `c-elegans-edges-*.json` /
+  `c-elegans-inventory.json` / `c-elegans-neurons-male.json`.
+- `circuits/c-elegans-substrate.md` — correction note and v2 parse
+  table.

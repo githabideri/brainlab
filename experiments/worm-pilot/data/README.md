@@ -23,14 +23,25 @@ Derived, reproducible products (do not edit by hand; regenerate with
   neuron-to-neuron edge lists `{pre, post, w, kind}`; `w` = total EM
   serial sections of connectivity (the released weight), `kind` ∈
   {`chem`, `gap_sym` (undirected, stored once), `gap_asym` (directed)}.
+  **2026-10-13 regeneration**: 3,669 `chem` + 1,089 `gap_sym` + 1,089
+  `gap_asym` = 5,847 records (herm); 3,986 + 1,278 + 1,278 = 6,542
+  (male). The 2026-10-12 v1 files are replaced (their counts, 3,618 /
+  2,130 and 3,986 / 2,519, came from a positional parse of sparse
+  spreadsheet rows — see the correction note in
+  `circuits/c-elegans-substrate.md`); the old files remain in git
+  history at the 2026-10-12 commit.
 - `c-elegans-neurons-herm.json` / `c-elegans-neurons-male.json` — the
   neuron names that carry at least one neuron–neuron edge (the
-  simulation node list).
+  simulation node list). herm 300; male 378 (was 380 under v1).
 - `c-elegans-inventory.json` — all parse statistics (rows seen/skipped,
   diagonal entries zeroed, symmetry disagreements, edge counts per
   sheet) used by `circuits/c-elegans-substrate.md`.
 
 Caveats: the workbooks have hand-assembled layout quirks (see the
 substrate document for the exact handling and counted artifacts); the
-SI7 synapse lists in particular have shifted leading columns and are
-kept here as provenance only, not parsed into edges.
+sheets' data rows are SPARSE (empty cells omitted from the XML), so
+values must be mapped to their labels by each cell's explicit column
+reference, never by list position — the v1 parser did it by position
+and shifted every value one label column left (correction note in
+`circuits/c-elegans-substrate.md`). The SI7 synapse lists in particular
+are kept here as provenance only, not parsed into edges.

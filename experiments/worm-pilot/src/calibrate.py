@@ -142,7 +142,9 @@ def calibrate_variant(tau_syn):
 
     frozen = {**base_cfg(tau_syn), "alpha": alpha, "beta": beta,
               "S": S_chosen, "lambda_bg": bg_best[0], "w_bg": bg_best[1],
-              "seeds": [101, 102, 103, 104, 105], "shuffle_seed": 7}
+              "seeds": [101, 102, 103, 104, 105],
+              "shuffle_seeds": [42, 43, 44],
+              "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)"}
     return frozen, log
 
 
