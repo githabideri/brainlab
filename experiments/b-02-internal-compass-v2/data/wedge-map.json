@@ -1,0 +1,602 @@
+{
+ "declared": {
+  "center_x": 132771.5294117647,
+  "center_y": 37137.882352941175,
+  "center_z": 4386.35294117647,
+  "center_source": "centroid of the 17 official EL ring-cell arborization centroids (declared, not fitted)",
+  "angle": "atan2(y-cy, x-cx) in degrees, 0..360; +angle is the atan2 sense in v783 coordinates (mapping to clockwise-as-viewed-from-above recorded in the experiment README)",
+  "bin": "floor(angle/45) mod 8 (coarse 8 x 45-degree bins; pre-decided before any run)",
+  "z_band_um": [
+   1692.0,
+   7438.0
+  ],
+  "r_band_um": [
+   1025.1502042025245,
+   35536.11746477926
+  ]
+ },
+ "cells": [
+  {
+   "idx": 38,
+   "root_id": 720575940610901930,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 215.9,
+   "bin": 4,
+   "r_um": 13903.7,
+   "z_um": 4684.0,
+   "mismatch": false
+  },
+  {
+   "idx": 66,
+   "root_id": 720575940613829900,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 263.5,
+   "bin": 5,
+   "r_um": 12538.5,
+   "z_um": 3235.0,
+   "mismatch": true
+  },
+  {
+   "idx": 71,
+   "root_id": 720575940614297640,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 292.0,
+   "bin": 6,
+   "r_um": 13994.5,
+   "z_um": 3417.0,
+   "mismatch": false
+  },
+  {
+   "idx": 159,
+   "root_id": 720575940624784280,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 235.1,
+   "bin": 5,
+   "r_um": 11976.8,
+   "z_um": 3985.0,
+   "mismatch": false
+  },
+  {
+   "idx": 248,
+   "root_id": 720575940635461550,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 255.1,
+   "bin": 5,
+   "r_um": 8645.8,
+   "z_um": 3668.0,
+   "mismatch": false
+  },
+  {
+   "idx": 299,
+   "root_id": 720575940605827761,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 233.9,
+   "bin": 5,
+   "r_um": 13145.7,
+   "z_um": 3944.0,
+   "mismatch": false
+  },
+  {
+   "idx": 309,
+   "root_id": 720575940608722371,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 266.3,
+   "bin": 5,
+   "r_um": 11819.1,
+   "z_um": 3302.0,
+   "mismatch": true
+  },
+  {
+   "idx": 353,
+   "root_id": 720575940616569601,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 27.2,
+   "bin": 0,
+   "r_um": 17830.3,
+   "z_um": 4610.0,
+   "mismatch": false
+  },
+  {
+   "idx": 364,
+   "root_id": 720575940617769851,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 240.6,
+   "bin": 5,
+   "r_um": 9832.1,
+   "z_um": 3986.0,
+   "mismatch": false
+  },
+  {
+   "idx": 396,
+   "root_id": 720575940620664741,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 327.9,
+   "bin": 7,
+   "r_um": 14705.7,
+   "z_um": 4397.0,
+   "mismatch": false
+  },
+  {
+   "idx": 411,
+   "root_id": 720575940622364771,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 322.0,
+   "bin": 7,
+   "r_um": 14719.7,
+   "z_um": 4249.0,
+   "mismatch": false
+  },
+  {
+   "idx": 464,
+   "root_id": 720575940627140551,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 320.2,
+   "bin": 7,
+   "r_um": 12751.0,
+   "z_um": 4105.0,
+   "mismatch": false
+  },
+  {
+   "idx": 479,
+   "root_id": 720575940628802041,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 160.9,
+   "bin": 3,
+   "r_um": 13976.0,
+   "z_um": 5521.0,
+   "mismatch": false
+  },
+  {
+   "idx": 635,
+   "root_id": 720575940618612952,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 227.6,
+   "bin": 5,
+   "r_um": 13203.8,
+   "z_um": 4188.0,
+   "mismatch": false
+  },
+  {
+   "idx": 640,
+   "root_id": 720575940619006272,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 289.3,
+   "bin": 6,
+   "r_um": 13240.7,
+   "z_um": 3473.0,
+   "mismatch": false
+  },
+  {
+   "idx": 670,
+   "root_id": 720575940620776662,
+   "type": "EPGt",
+   "side": "right",
+   "angle_deg": 37.1,
+   "bin": 0,
+   "r_um": 16533.8,
+   "z_um": 5369.0,
+   "mismatch": false
+  },
+  {
+   "idx": 741,
+   "root_id": 720575940626449082,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 296.9,
+   "bin": 6,
+   "r_um": 14164.5,
+   "z_um": 3444.0,
+   "mismatch": false
+  },
+  {
+   "idx": 771,
+   "root_id": 720575940628493572,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 13.3,
+   "bin": 0,
+   "r_um": 18048.1,
+   "z_um": 5335.0,
+   "mismatch": false
+  },
+  {
+   "idx": 807,
+   "root_id": 720575940632844002,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 311.2,
+   "bin": 6,
+   "r_um": 12885.5,
+   "z_um": 4013.0,
+   "mismatch": false
+  },
+  {
+   "idx": 827,
+   "root_id": 720575940635427982,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 146.5,
+   "bin": 3,
+   "r_um": 16238.6,
+   "z_um": 4549.0,
+   "mismatch": false
+  },
+  {
+   "idx": 857,
+   "root_id": 720575940638850512,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 229.1,
+   "bin": 5,
+   "r_um": 12225.7,
+   "z_um": 4122.0,
+   "mismatch": false
+  },
+  {
+   "idx": 866,
+   "root_id": 720575940642634532,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 251.6,
+   "bin": 5,
+   "r_um": 10205.7,
+   "z_um": 3531.0,
+   "mismatch": false
+  },
+  {
+   "idx": 880,
+   "root_id": 720575940604801993,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 313.7,
+   "bin": 6,
+   "r_um": 13612.5,
+   "z_um": 4047.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1004,
+   "root_id": 720575940623852873,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 152.5,
+   "bin": 3,
+   "r_um": 17213.4,
+   "z_um": 5666.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1057,
+   "root_id": 720575940629691753,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 257.1,
+   "bin": 5,
+   "r_um": 12378.3,
+   "z_um": 3382.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1064,
+   "root_id": 720575940630199963,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 306.6,
+   "bin": 6,
+   "r_um": 11914.7,
+   "z_um": 3685.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1236,
+   "root_id": 720575940619905404,
+   "type": "EPGt",
+   "side": "left",
+   "angle_deg": 143.6,
+   "bin": 3,
+   "r_um": 16039.3,
+   "z_um": 2593.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1238,
+   "root_id": 720575940620020694,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 13.1,
+   "bin": 0,
+   "r_um": 16974.0,
+   "z_um": 5319.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1244,
+   "root_id": 720575940620419354,
+   "type": "EPGt",
+   "side": "right",
+   "angle_deg": 37.3,
+   "bin": 0,
+   "r_um": 17127.3,
+   "z_um": 4306.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1277,
+   "root_id": 720575940624096234,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 156.0,
+   "bin": 3,
+   "r_um": 15297.6,
+   "z_um": 5594.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1296,
+   "root_id": 720575940625351354,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 235.8,
+   "bin": 5,
+   "r_um": 14100.2,
+   "z_um": 3846.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1381,
+   "root_id": 720575940636730694,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 7.6,
+   "bin": 0,
+   "r_um": 16427.9,
+   "z_um": 5239.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1469,
+   "root_id": 720575940614926475,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 159.9,
+   "bin": 3,
+   "r_um": 16157.6,
+   "z_um": 5434.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1510,
+   "root_id": 720575940619296365,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 223.2,
+   "bin": 4,
+   "r_um": 13066.6,
+   "z_um": 4278.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1571,
+   "root_id": 720575940626137895,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 218.3,
+   "bin": 4,
+   "r_um": 12630.5,
+   "z_um": 4256.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1579,
+   "root_id": 720575940626721835,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 27.6,
+   "bin": 0,
+   "r_um": 17693.9,
+   "z_um": 4610.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1646,
+   "root_id": 720575940632614295,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 181.6,
+   "bin": 4,
+   "r_um": 13977.3,
+   "z_um": 5170.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1708,
+   "root_id": 720575940660921985,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 154.3,
+   "bin": 3,
+   "r_um": 27172.1,
+   "z_um": 1884.0,
+   "mismatch": true
+  },
+  {
+   "idx": 1775,
+   "root_id": 720575940616502066,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 29.3,
+   "bin": 0,
+   "r_um": 17684.9,
+   "z_um": 4610.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1813,
+   "root_id": 720575940620282906,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 159.5,
+   "bin": 3,
+   "r_um": 13989.5,
+   "z_um": 5419.0,
+   "mismatch": false
+  },
+  {
+   "idx": 1960,
+   "root_id": 720575940631125036,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 130.1,
+   "bin": 2,
+   "r_um": 14514.5,
+   "z_um": 2486.0,
+   "mismatch": true
+  },
+  {
+   "idx": 1966,
+   "root_id": 720575940631708836,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 287.4,
+   "bin": 6,
+   "r_um": 13530.0,
+   "z_um": 3204.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2040,
+   "root_id": 720575940610453427,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 237.5,
+   "bin": 5,
+   "r_um": 13301.4,
+   "z_um": 3727.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2181,
+   "root_id": 720575940626315207,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 164.5,
+   "bin": 3,
+   "r_um": 13955.9,
+   "z_um": 5508.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2254,
+   "root_id": 720575940633719487,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 153.2,
+   "bin": 3,
+   "r_um": 16073.5,
+   "z_um": 5626.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2312,
+   "root_id": 720575940602917088,
+   "type": "EPGt",
+   "side": "left",
+   "angle_deg": 139.6,
+   "bin": 3,
+   "r_um": 16494.6,
+   "z_um": 4954.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2360,
+   "root_id": 720575940613836438,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 286.5,
+   "bin": 6,
+   "r_um": 12540.7,
+   "z_um": 3402.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2435,
+   "root_id": 720575940623046548,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 236.8,
+   "bin": 5,
+   "r_um": 10924.8,
+   "z_um": 3978.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2518,
+   "root_id": 720575940628843458,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 269.6,
+   "bin": 5,
+   "r_um": 13066.2,
+   "z_um": 3138.0,
+   "mismatch": true
+  },
+  {
+   "idx": 2625,
+   "root_id": 720575940611216099,
+   "type": "EPG",
+   "side": "right",
+   "angle_deg": 316.6,
+   "bin": 7,
+   "r_um": 13591.9,
+   "z_um": 4129.0,
+   "mismatch": false
+  },
+  {
+   "idx": 2877,
+   "root_id": 720575940658101889,
+   "type": "EPG",
+   "side": "left",
+   "angle_deg": 192.6,
+   "bin": 4,
+   "r_um": 13710.4,
+   "z_um": 5072.0,
+   "mismatch": false
+  }
+ ],
+ "per_bin_counts": {
+  "0": 8,
+  "1": 0,
+  "2": 1,
+  "3": 11,
+  "4": 5,
+  "5": 14,
+  "6": 8,
+  "7": 4
+ },
+ "bins_empty": [
+  1
+ ],
+ "mismatch_idx": [
+  1,
+  6,
+  37,
+  40,
+  48
+ ],
+ "sha256_of_mapping": "ee5b98c96805c0f046bbaae7267414e1ccf28d8c5d9bc1bb96978fb3d93db468"
+}

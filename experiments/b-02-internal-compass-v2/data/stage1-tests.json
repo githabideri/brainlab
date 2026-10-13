@@ -1,0 +1,83 @@
+{
+ "T1_inject": {
+  "dv=6": [],
+  "dv=7": [],
+  "dv=8": [
+   1.0,
+   81.0
+  ]
+ },
+ "T2_force_edge": {
+  "target_first_spike_ms": 8.0,
+  "g_delivered_mV": 49.12384796142578,
+  "expected_g_mV": 49.123845184678906
+ },
+ "T3_api2_vs_wiring": {
+  "n_target_spikes": 1
+ },
+ "T4_differential": {
+  "single_neuron_pulse": {
+   "torch": [
+    1.0
+   ],
+   "numpy": [
+    1.0
+   ],
+   "exact_match": true
+  },
+  "network50": {
+   "n_torch_spikes": 12,
+   "n_numpy_spikes": 12,
+   "max_spike_time_diff_ms": 4.0,
+   "per_neuron_count_mismatch_sum": 0,
+   "note": "torch float32 vs numpy float64; same equations and operation order; differences are float-precision boundary crossings, not logic"
+  }
+ },
+ "reachability": {
+  "PEN_a": {
+   "EPG+EPGt": {
+    "min_hops": 2,
+    "reached_le3": 51,
+    "n_target": 51
+   },
+   "PEN": {
+    "min_hops": 1,
+    "reached_le3": 42,
+    "n_target": 42
+   },
+   "ER": {
+    "min_hops": 2,
+    "reached_le3": 278,
+    "n_target": 278
+   },
+   "EL": {
+    "min_hops": 2,
+    "reached_le3": 17,
+    "n_target": 17
+   }
+  },
+  "PEN_b": {
+   "EPG+EPGt": {
+    "min_hops": 2,
+    "reached_le3": 51,
+    "n_target": 51
+   },
+   "PEN": {
+    "min_hops": 1,
+    "reached_le3": 42,
+    "n_target": 42
+   },
+   "ER": {
+    "min_hops": 2,
+    "reached_le3": 278,
+    "n_target": 278
+   },
+   "EL": {
+    "min_hops": 2,
+    "reached_le3": 17,
+    "n_target": 17
+   }
+  }
+ },
+ "sha256_of_test_output": "41c0a5a3f683eb44a71a00ad32d2525dfba68eecb9771c5f5ad5a11e01e8bc54"
+}

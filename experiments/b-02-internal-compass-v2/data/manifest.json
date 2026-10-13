@@ -1,0 +1,609 @@
+{
+ "experiment": "b-02-internal-compass-v2",
+ "stage": "0 (anatomical preflight)",
+ "dataset": "FlyWire FAFB v783 (female adult brain; Dorkenwald et al., Nature 2024, https://www.nature.com/articles/s41586-024-07558-y); official FAFB v783 annotation (flyconnectome/flywire_annotations, Schlegel et al., Nature 2024, DOI 10.1038/s41586-024-07686-5)",
+ "files": {
+  "connectivity_parquet": {
+   "basename": "2025_Connectivity_783.parquet",
+   "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+   "rows": 15091983
+  },
+  "classification_csv": {
+   "url": "https://raw.githubusercontent.com/snedea/flybrain/refs/heads/main/data/classification.csv.gz",
+   "sha256": "d941a74188476d60a06dfef7c5130871edbfe9fca77cda571f81f7b9726a184c",
+   "rows": 139255,
+   "note": "same file/hash as B-01; provides the CX/ALPN split"
+  },
+  "annotation_tsv": {
+   "basename": "flywire_annotations_783.tsv",
+   "sha256": "b214970b55d2fbe0853bba536fdcb9e28730f4eb7ab06f600491df795da683cd",
+   "rows": 139248,
+   "join_key": "root_id (supervoxel_id does not match parquet ids)"
+  }
+ },
+ "selection": {
+  "rule": "node set = flybrain classification class == CX (exactly the B-01 subgraph minus ALPN); all proven pairs with both endpoints in the set",
+  "neurons": 2878,
+  "edges": 300521,
+  "annotation_matched": 2868,
+  "annotation_unmatched": 10,
+  "sign_balance": {
+   "excitatory": 163537,
+   "inhibitory": 136984
+  },
+  "psd_quantiles": {
+   "0.5": 2,
+   "0.9": 10,
+   "0.95": 18,
+   "0.99": 39
+  },
+  "psd_max": 319,
+  "populations": {
+   "EPG": {
+    "n": 47
+   },
+   "EPGt": {
+    "n": 4
+   },
+   "PEN_a": {
+    "n": 20
+   },
+   "PEN_b": {
+    "n": 22
+   },
+   "ER": {
+    "n": 278
+   },
+   "EL": {
+    "n": 17
+   },
+   "ExR": {
+    "n": 26
+   },
+   "PEG": {
+    "n": 20
+   },
+   "Delta7": {
+    "n": 42
+   },
+   "PFL1": {
+    "n": 14
+   },
+   "PFL2": {
+    "n": 12
+   },
+   "PFL3": {
+    "n": 24
+   },
+   "PEN": {
+    "n": 42
+   },
+   "PFL": {
+    "n": 50
+   },
+   "CX_all": {
+    "n": 2878
+   }
+  },
+  "shift_loop": {
+   "EPG_EPGt_to_PEN_a": 313,
+   "EPG_EPGt_to_PEN_b": 269,
+   "PEN_a_to_EPG_EPGt": 356,
+   "PEN_b_to_EPG_EPGt": 252,
+   "EPG_EPGt_self": 535,
+   "expected (audit-manifest-2026-10-12)": {
+    "EPG_EPGt_to_PEN_a": 313,
+    "EPG_EPGt_to_PEN_b": 269,
+    "PEN_a_to_EPG_EPGt": 356,
+    "PEN_b_to_EPG_EPGt": 252
+   }
+  }
+ },
+ "transform": {
+  "script": "build_circuit.py (this directory)",
+  "weight_rule": "sign * min(PSD, p95) * 0.275 mV (p95 of THIS subgraph's PSD distribution, declared)",
+  "subgraph_file_sha256": "52081937dfc0b2df6fdfc14984cab7ca9481954557e898053e7d74a9e155ff35"
+ },
+ "elapsed_s": 17.3,
+ "stimuli": {
+  "session_ms": 126000,
+  "drive": {
+   "base_hz": 2.0,
+   "scale_hz": 40.0,
+   "api": "API 3 forced spikes (B-01's actual mechanism, renamed in lif2.py): the stream counts are delivered as forced P-EN spikes; downstream efficacy = measured edge weights sign*min(PSD,17)*0.275 mV (the transduction under test). AMENDMENT frozen at Stage 3: Stage 1's draft had declared API 2 @ 3 mV/event, which the efficacy analysis flags as a guaranteed null (3 mV x 42 Hz sums to ~0.03 mV effective dv at rest). The stream files themselves are unchanged (mechanism-independent counts); hashes below remain valid.",
+   "pen_right_cells": [
+    176,
+    312,
+    450,
+    564,
+    935,
+    1021,
+    1093,
+    1163,
+    1326,
+    1355,
+    1367,
+    1396,
+    1707,
+    1734,
+    1758,
+    1801,
+    1869,
+    2154,
+    2348,
+    2511,
+    2848
+   ],
+   "pen_left_cells": [
+    20,
+    143,
+    156,
+    365,
+    856,
+    870,
+    1265,
+    1524,
+    1874,
+    2139,
+    2173,
+    2324,
+    2456,
+    2473,
+    2566,
+    2589,
+    2645,
+    2742,
+    2771,
+    2805,
+    2853
+   ]
+  },
+  "cue": {
+   "rate_hz": 30,
+   "phase": "c4 (116..126 s)",
+   "wedge_map_sha256": "ee5b98c96805c0f046bbaae7267414e1ccf28d8c5d9bc1bb96978fb3d93db468",
+   "weight_mV": 60.0,
+   "api": "API 2 external events onto EPG/EPGt cue-bin cells, declared W_CUE = 60 mV/event (frozen at Stage 3; v783 has no optic->CC edge, the cue is a declared added interface)"
+  },
+  "streams": {
+   "seed0": {
+    "file": "data/stimuli/stream-seed0.npz",
+    "sha256": "ddb5ea4ba50f87bd99ee772bc52c31659af442b02724e57250318f43e4d1ddcf",
+    "n_events": {
+     "pen_right": 24066,
+     "pen_left": 17460,
+     "cue": 1509
+    },
+    "omega_segments": [
+     [
+      5.0,
+      191.0
+     ],
+     [
+      5.0,
+      -175.0
+     ],
+     [
+      5.0,
+      157.0
+     ],
+     [
+      5.0,
+      -152.0
+     ],
+     [
+      5.0,
+      194.0
+     ],
+     [
+      25.0,
+      0.0
+     ],
+     [
+      6.0,
+      172.0
+     ],
+     [
+      6.0,
+      -161.0
+     ],
+     [
+      6.0,
+      254.0
+     ],
+     [
+      6.0,
+      -151.0
+     ],
+     [
+      6.0,
+      253.0
+     ],
+     [
+      6.0,
+      -155.0
+     ],
+     [
+      20.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ]
+    ],
+    "cue": {
+     "theta_true_at_cue_deg": 187.0,
+     "bin": 4,
+     "n_cells": 5,
+     "fallback": null,
+     "cells": [
+      38,
+      1510,
+      1571,
+      1646,
+      2877
+     ]
+    }
+   },
+   "seed1": {
+    "file": "data/stimuli/stream-seed1.npz",
+    "sha256": "c27ebe4e6f5a45e331da6ac93caf5bb0ffb457d02e8524623bc5d5323a54845b",
+    "n_events": {
+     "pen_right": 24928,
+     "pen_left": 22755,
+     "cue": 1449
+    },
+    "omega_segments": [
+     [
+      5.0,
+      229.0
+     ],
+     [
+      5.0,
+      -206.0
+     ],
+     [
+      5.0,
+      223.0
+     ],
+     [
+      5.0,
+      -206.0
+     ],
+     [
+      5.0,
+      171.0
+     ],
+     [
+      25.0,
+      0.0
+     ],
+     [
+      6.0,
+      249.0
+     ],
+     [
+      6.0,
+      -295.0
+     ],
+     [
+      6.0,
+      281.0
+     ],
+     [
+      6.0,
+      -169.0
+     ],
+     [
+      6.0,
+      153.0
+     ],
+     [
+      6.0,
+      -240.0
+     ],
+     [
+      20.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ]
+    ],
+    "cue": {
+     "theta_true_at_cue_deg": 209.0,
+     "bin": 4,
+     "n_cells": 5,
+     "fallback": null,
+     "cells": [
+      38,
+      1510,
+      1571,
+      1646,
+      2877
+     ]
+    }
+   },
+   "seed2": {
+    "file": "data/stimuli/stream-seed2.npz",
+    "sha256": "46df3f702843400d5c71a9a8c614c6cd5ad7ca61f42360f59c5b9d47234845b8",
+    "n_events": {
+     "pen_right": 26930,
+     "pen_left": 22919,
+     "cue": 2422
+    },
+    "omega_segments": [
+     [
+      5.0,
+      262.0
+     ],
+     [
+      5.0,
+      -299.0
+     ],
+     [
+      5.0,
+      276.0
+     ],
+     [
+      5.0,
+      -235.0
+     ],
+     [
+      5.0,
+      189.0
+     ],
+     [
+      25.0,
+      0.0
+     ],
+     [
+      6.0,
+      264.0
+     ],
+     [
+      6.0,
+      -177.0
+     ],
+     [
+      6.0,
+      201.0
+     ],
+     [
+      6.0,
+      -288.0
+     ],
+     [
+      6.0,
+      233.0
+     ],
+     [
+      6.0,
+      -168.0
+     ],
+     [
+      20.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ]
+    ],
+    "cue": {
+     "theta_true_at_cue_deg": 275.0,
+     "bin": 6,
+     "n_cells": 8,
+     "fallback": null,
+     "cells": [
+      71,
+      640,
+      741,
+      807,
+      880,
+      1064,
+      1966,
+      2360
+     ]
+    }
+   },
+   "seed3": {
+    "file": "data/stimuli/stream-seed3.npz",
+    "sha256": "4febce70f021bb6334c820f792c4af6b17558fbf0a8c91faec4241ef4bc70af9",
+    "n_events": {
+     "pen_right": 26693,
+     "pen_left": 22403,
+     "cue": 3217
+    },
+    "omega_segments": [
+     [
+      5.0,
+      243.0
+     ],
+     [
+      5.0,
+      -239.0
+     ],
+     [
+      5.0,
+      284.0
+     ],
+     [
+      5.0,
+      -270.0
+     ],
+     [
+      5.0,
+      159.0
+     ],
+     [
+      25.0,
+      0.0
+     ],
+     [
+      6.0,
+      240.0
+     ],
+     [
+      6.0,
+      -205.0
+     ],
+     [
+      6.0,
+      222.0
+     ],
+     [
+      6.0,
+      -183.0
+     ],
+     [
+      6.0,
+      266.0
+     ],
+     [
+      6.0,
+      -229.0
+     ],
+     [
+      20.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ]
+    ],
+    "cue": {
+     "theta_true_at_cue_deg": 111.0,
+     "bin": 3,
+     "n_cells": 11,
+     "fallback": {
+      "from_bin": 2,
+      "to_bin": 3
+     },
+     "cells": [
+      479,
+      827,
+      1004,
+      1236,
+      1277,
+      1469,
+      1708,
+      1813,
+      2181,
+      2254,
+      2312
+     ]
+    }
+   },
+   "seed4": {
+    "file": "data/stimuli/stream-seed4.npz",
+    "sha256": "76a926f9a005c091964c04e1a34c14e9ac802c02dc603d099ea2d8a5a3896d94",
+    "n_events": {
+     "pen_right": 26794,
+     "pen_left": 23079,
+     "cue": 3241
+    },
+    "omega_segments": [
+     [
+      5.0,
+      195.0
+     ],
+     [
+      5.0,
+      -255.0
+     ],
+     [
+      5.0,
+      254.0
+     ],
+     [
+      5.0,
+      -291.0
+     ],
+     [
+      5.0,
+      268.0
+     ],
+     [
+      25.0,
+      0.0
+     ],
+     [
+      6.0,
+      241.0
+     ],
+     [
+      6.0,
+      -196.0
+     ],
+     [
+      6.0,
+      288.0
+     ],
+     [
+      6.0,
+      -158.0
+     ],
+     [
+      6.0,
+      169.0
+     ],
+     [
+      6.0,
+      -280.0
+     ],
+     [
+      20.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ],
+     [
+      10.0,
+      0.0
+     ]
+    ],
+    "cue": {
+     "theta_true_at_cue_deg": 159.0,
+     "bin": 3,
+     "n_cells": 11,
+     "fallback": null,
+     "cells": [
+      479,
+      827,
+      1004,
+      1236,
+      1277,
+      1469,
+      1708,
+      1813,
+      2181,
+      2254,
+      2312
+     ]
+    }
+   }
+  }
+ }
+}
