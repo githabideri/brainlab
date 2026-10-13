@@ -59,18 +59,23 @@ fit its own weights. The MLP/GRU re-runs replicate A-01 exactly
   dynamics × learning, on *sequential* tasks that cannot saturate —
   delayed-cue T-del, angular integration T-ang, temporal XOR; 6
   wiring controls byte-identical to A-01's; val-**LOSS** checkpointing;
-  measured Δw per arm) — `a-03-sequential-learning/`. **Design lane
-done 2026-10-12** (pre-registration committed before any run; 15/15
-unit tests; 18/18 official pilot in 9 min): the pilot is a sizing
-read-out, not a claim — the frozen spiking circuit saturates T-del/T-ang
-in one pass at 32 trials while tanh/GRU are near chance at 4 epochs, so
-the 20-epoch budget + val-loss checkpoint rule equalizes the arms before
-comparison. Two load-bearing design defects were caught by measurement
-(the declared spike mapping was dynamically inert; B-01's `lif.py`
-`reset()` is latent-broken — sanctioned reset is fresh construction).
-The 210-run main grid (≈28 h background, resumable per cell) is
-pre-registered and scheduled after the heavy lane. Report:
-`../reports/2026-10-12-a03-design.md`.
+  measured Δw per arm) — `a-03-sequential-learning/`. **Corrected
+2026-10-13 (external review P0)**: the v1 pilot's spike-arm scores
+(T-del 1.000, T-ang 0.05° / R²=1.0) were a **train/test leak** — the
+ridge was fit on the held-out features and their labels — and are
+marked evaluation-invalid in the report addendum. The corrected v2
+pilot (leak-free fit, explicit sensory addressing, paired per-trial
+Poisson with a committed byte-identical spike-train dump, 6 hygiene
+regression tests, 21/21 total) finds **no signal above chance** in the
+spiking reservoir at pilot budget (T-ang RMCE 75.8–95.4° vs chance
+89.8°). Renamed per review: this is a **spiking-reservoir benchmark
+with a learned readout** (frozen LIF + trainable ridge), not
+spiking+synaptic learning; the genuinely plastic variant is a separate
+future experiment. The 210-run main grid is re-estimated at ≈19–21 h,
+remains **not run**, and needs the two noted one-line fixes (W_SCALE
+manifest crash; version the Δw result paths) plus the independent
+re-review before it may start. Report:
+`../reports/2026-10-12-a03-design.md` (addendum is authoritative).
 - **b-01-internal-compass** (can a *measured* central-complex subgraph
   run a decodable heading attractor?) — `b-01-internal-compass/`.
   **Done 2026-10-12: clean null at the declared drive point.** 15 runs
@@ -108,19 +113,24 @@ pre-registered and scheduled after the heavy lane. Report:
   `../reports/2026-10-12-b02-internal-compass-v2.md`.
 - **worm-pilot** (multi-organism expansion: does the *measured* C. elegans
   connectome route a textbook sensorimotor computation?) —
-  `worm-pilot/`. **Done 2026-10-12: bounded pilot, one positive wiring
-  finding + one documented null.** 300-neuron LIF network on the Cook
-  2019 hermaphrodite connectome (3,618 chemical + 2,130 gap-junction
-  neuron–neuron edges, sha256-pinned SI workbooks), nociceptive
-  withdrawal (ASH pulse → command pool → body-wall motors) vs a
-  degree/weight-matched shuffle, 5 seeds. Lab 5 ms integration: honest
-  null with a calculable mechanism (w·λ·τ_syn ≈ 1.5 mV « 7 mV threshold
-  gap); widened 50 ms variant (declared after A's diagnostics): measured
-  wiring sustains a ~5× denser sparse rest than the shuffle and routes
-  the pulse to the command pool (ri ≈ +0.9) and motor classes (ri ≈
-  +0.86); the shuffle does not respond. Non-claims binding (no muscles,
-  no signs in the release, spiking ≠ movement). Report:
-  `../reports/2026-10-12-worm-pilot.md`.
+  `worm-pilot/`. **Corrected 2026-10-13 (external review P1)**: the v1
+  substrate was **corrupted** — the parser mapped spreadsheet cells by
+  list position, shifting every value one label column left (fabricated
+  self-edges; the v1 counts 3,618 chem / 2,130 gap are wrong). The v2
+  column-reference parse is cross-validated against the independent SI6
+  raw-EM book (99.8% pair overlap): **herm 3,669 chemical + 2,178
+  electrical** (1,089 sym + 1,089 asym) neuron–neuron edges. Re-run on
+  the corrected substrate with 3 independent exact-invariant shuffles
+  (34 asserted invariants: degrees, weight multisets, record counts,
+  zero drops), paired byte-identical stimuli, 80 runs: the 5 ms variant
+  is a clean null in every wiring; the 50 ms variant (reasserted
+  **exploratory**, post-hoc) shows a **resting-state** effect (measured
+  rest ≈ 2.2 Hz vs ≈ 1.0–1.1 Hz in all three shuffle graphs) but the
+  stim−rest delta is ≤ 0 in every wiring — **v1's positive "routed"
+  verdict does not reproduce** and is superseded by the report's dated
+  addendum. Non-claims binding (no muscles, no signs in the release,
+  spiking ≠ movement). Report:
+  `../reports/2026-10-12-worm-pilot.md` (addendum is authoritative).
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling
