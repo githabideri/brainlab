@@ -186,6 +186,24 @@ authoritative).
   *every* wiring (one shuffle above the measured) — the stimulus
   shape controls responsiveness, the wiring does not control
   specificity. Report: `../reports/2026-10-22-worm-v3-sensitivity.md`.
+  (Its declared next step — the τ window map — was executed 2026-10-22
+  as the **worm-tau-window** experiment below.)
+- **worm-tau-window** (the v3-sensitivity follow-up, run as a new
+  focused experiment on the v3 substrate) — `worm-tau-window/`.
+  **Done 2026-10-22:** 200 runs over τ_syn ∈ {40,45,55,60,75} ms
+  (Model B, all-excitatory, measured + shuf 42/43/44, 5 seeds ×
+  {rest, stim}, the shared `bg_seed = sim_seed*1000+1` train),
+  combined with v3-sensitivity's frozen B1/B3 points into a 9-point
+  map. **The resting-state wiring effect is a band-pass:** dominance
+  over all three shuffles at every point of the contiguous **25–60 ms
+  window**, peaking at **40–45 ms** (ratio ~2.0×, larger than at the
+  50 ms anchor); the contrast edge is the narrower **45–50 ms**
+  core; the 100 ms "reversal" is the far side of a crossover between
+  60 and 75 ms. Both wirings fire monotonically faster as τ grows —
+  the effect is a property of the (wiring, timescale) pair, not a
+  routing result at any grid point; the control-wiring bar is
+  unchanged (FAIL stands). Exploratory map by declaration. Report:
+  `../reports/2026-10-22-worm-tau-window.md`.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling

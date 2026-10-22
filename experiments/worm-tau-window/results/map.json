@@ -1,0 +1,252 @@
+{
+ "points": {
+  "10.0": {
+   "rest_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0001,
+    "shuf-44": 0.0
+   },
+   "contrast_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0,
+    "shuf-44": 0.0
+   },
+   "dominance": false,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0,
+    "shuf-44": 0.0
+   }
+  },
+  "25.0": {
+   "rest_hz": {
+    "measured": 0.1269,
+    "shuf-42": 0.0617,
+    "shuf-43": 0.0619,
+    "shuf-44": 0.0618
+   },
+   "contrast_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0,
+    "shuf-44": 0.0
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 0.075,
+    "shuf-42": 0.01,
+    "shuf-43": 0.1017,
+    "shuf-44": 0.0433
+   }
+  },
+  "40.0": {
+   "rest_hz": {
+    "measured": 1.2415,
+    "shuf-42": 0.6102,
+    "shuf-43": 0.6299,
+    "shuf-44": 0.591
+   },
+   "contrast_hz": {
+    "measured": -0.01,
+    "shuf-42": 0.0,
+    "shuf-43": 0.005,
+    "shuf-44": 0.0
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 2.5733,
+    "shuf-42": 0.98,
+    "shuf-43": 1.8933,
+    "shuf-44": 1.3717
+   }
+  },
+  "45.0": {
+   "rest_hz": {
+    "measured": 2.0075,
+    "shuf-42": 1.0572,
+    "shuf-43": 1.073,
+    "shuf-44": 1.0339
+   },
+   "contrast_hz": {
+    "measured": 0.065,
+    "shuf-42": 0.015,
+    "shuf-43": 0.015,
+    "shuf-44": 0.01
+   },
+   "dominance": true,
+   "contrast_edge": true,
+   "cp_rest_hz": {
+    "measured": 5.3317,
+    "shuf-42": 2.5933,
+    "shuf-43": 3.4983,
+    "shuf-44": 3.0017
+   }
+  },
+  "50.0": {
+   "rest_hz": {
+    "measured": 2.9696,
+    "shuf-42": 1.7849,
+    "shuf-43": 1.7876,
+    "shuf-44": 1.7439,
+    "shuf-45": 1.7528,
+    "shuf-46": 2.0517,
+    "shuf-47": 1.7554,
+    "shuf-48": 1.9322,
+    "shuf-49": 1.8166,
+    "shuf-50": 1.7513,
+    "shuf-51": 2.001,
+    "shuf-52": 1.7975
+   },
+   "contrast_hz": {
+    "measured": 0.055,
+    "shuf-42": 0.04,
+    "shuf-43": 0.04,
+    "shuf-44": -0.005,
+    "shuf-45": 0.04,
+    "shuf-46": -0.055,
+    "shuf-47": 0.005,
+    "shuf-48": -0.005,
+    "shuf-49": 0.04,
+    "shuf-50": 0.015,
+    "shuf-51": 0.01,
+    "shuf-52": -0.005
+   },
+   "dominance": true,
+   "contrast_edge": true,
+   "cp_rest_hz": {
+    "measured": 9.025,
+    "shuf-42": 5.4483,
+    "shuf-43": 6.0817,
+    "shuf-44": 5.8767,
+    "shuf-45": 6.68,
+    "shuf-46": 7.1833,
+    "shuf-47": 5.295,
+    "shuf-48": 6.5017,
+    "shuf-49": 6.4233,
+    "shuf-50": 6.1817,
+    "shuf-51": 7.49,
+    "shuf-52": 6.075
+   }
+  },
+  "55.0": {
+   "rest_hz": {
+    "measured": 4.0392,
+    "shuf-42": 2.9115,
+    "shuf-43": 2.9138,
+    "shuf-44": 2.8854
+   },
+   "contrast_hz": {
+    "measured": 0.09,
+    "shuf-42": -0.05,
+    "shuf-43": -0.025,
+    "shuf-44": 0.13
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 12.8467,
+    "shuf-42": 9.5683,
+    "shuf-43": 9.79,
+    "shuf-44": 9.895
+   }
+  },
+  "60.0": {
+   "rest_hz": {
+    "measured": 5.1772,
+    "shuf-42": 4.4544,
+    "shuf-43": 4.4672,
+    "shuf-44": 4.5068
+   },
+   "contrast_hz": {
+    "measured": 0.045,
+    "shuf-42": 0.055,
+    "shuf-43": -0.025,
+    "shuf-44": 0.13
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 16.5067,
+    "shuf-42": 14.5617,
+    "shuf-43": 14.2967,
+    "shuf-44": 15.0517
+   }
+  },
+  "75.0": {
+   "rest_hz": {
+    "measured": 8.3984,
+    "shuf-42": 9.2719,
+    "shuf-43": 9.376,
+    "shuf-44": 9.655
+   },
+   "contrast_hz": {
+    "measured": -0.01,
+    "shuf-42": 0.12,
+    "shuf-43": 0.06,
+    "shuf-44": 0.09
+   },
+   "dominance": false,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 24.9567,
+    "shuf-42": 26.6117,
+    "shuf-43": 25.6133,
+    "shuf-44": 27.6183
+   }
+  },
+  "100.0": {
+   "rest_hz": {
+    "measured": 11.8836,
+    "shuf-42": 13.3759,
+    "shuf-43": 13.523,
+    "shuf-44": 13.7565
+   },
+   "contrast_hz": {
+    "measured": -0.13,
+    "shuf-42": 0.175,
+    "shuf-43": 0.135,
+    "shuf-44": -0.02
+   },
+   "dominance": false,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 32.7017,
+    "shuf-42": 34.0333,
+    "shuf-43": 32.805,
+    "shuf-44": 35.3233
+   }
+  }
+ },
+ "dominance_set": [
+  "25.0",
+  "40.0",
+  "45.0",
+  "50.0",
+  "55.0",
+  "60.0"
+ ],
+ "window": [
+  "25.0",
+  "40.0",
+  "45.0",
+  "50.0",
+  "55.0",
+  "60.0"
+ ],
+ "window_definition": "maximal contiguous set of grid points (combined {10,25,40,45,50,55,60,75,100}) where the measured whole-animal rest rate exceeds all three shuffle rest rates; anchor 50 ms",
+ "flags": {
+  "dominance": "measured rest > all shuffles",
+  "contrast_edge": "measured command-pool win5 paired contrast > all shuffles"
+ },
+ "note": "exploratory regime map of the STATE effect; no 'wiring matters' claim \u2014 the control-wiring bar (docs/evaluation.md \u00a77) is unchanged",
+ "source": {
+  "10/25/50/100": "experiments/worm-v3-sensitivity/results/ (frozen 2026-10-22)",
+  "40/45/55/60/75": "this experiment"
+ }
+}

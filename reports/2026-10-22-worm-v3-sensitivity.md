@@ -212,6 +212,11 @@ synapse transmitter identity), or real receptor transduction
 - The τ=100 ms reversal and the τ-window of the resting-state
   effect are now the interesting geometry: a sweep over
   τ ∈ {40, 45, 55, 60, 75} would map the window's boundaries.
+
+> **Update (2026-10-22):** that sweep was run as the new
+> [2026-10-22-worm-tau-window](2026-10-22-worm-tau-window.md) experiment — the
+> effect is a band-pass (dominant 25–60 ms, peak 40–45 ms, crossover
+> 60–75 ms); the control-wiring verdict here is unchanged.
 - A full per-synapse transmitter assignment (Glu/GABA/ACh from
   the expression atlases) rather than the partial GAD-class
   proxy; and a glutamatergic-class flip as the complementary

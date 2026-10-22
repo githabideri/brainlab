@@ -16,6 +16,16 @@ and what the numbers do not show).
 
 ## Recent
 
+- [2026-10-22-worm-tau-window](2026-10-22-worm-tau-window.md) — the
+  τ-window map of the resting-state effect: 200 runs over
+  τ_syn ∈ {40,45,55,60,75} ms combined with the v3-sensitivity B1/B3
+  points into a 9-point grid. The effect is a **band-pass**: dominance
+  over all three shuffles across the contiguous **25–60 ms** window,
+  peaking at 40–45 ms (ratio ~2.0×), contrast edge at the 45–50 ms
+  core; the 100 ms reversal is the far side of a 60–75 ms crossover.
+  Exploratory map by declaration — the control-wiring bar is
+  unchanged (FAIL stands).
+
 - [2026-10-22-worm-v3-sensitivity](2026-10-22-worm-v3-sensitivity.md) — the
   worm-pilot's bounded follow-up, run: 440 runs, 11 independent
   exact-invariant shuffles, signs/τ/graded-stimulus batteries. The

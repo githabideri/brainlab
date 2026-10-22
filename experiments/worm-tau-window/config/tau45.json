@@ -1,0 +1,38 @@
+{
+ "dt": 1.0,
+ "tau_m": 20.0,
+ "tau_syn": 45.0,
+ "v0": -52.0,
+ "v_th": -45.0,
+ "v_rst": -52.0,
+ "refractory_ms": 2.2,
+ "delay_ms": 1.8,
+ "delay_steps": 2,
+ "lambda_bg": 4,
+ "w_bg": 7.0,
+ "duration_ms": 15000,
+ "stim_start_ms": 5000,
+ "stim_dur_ms": 500,
+ "stim_ids": [
+  "ASHL",
+  "ASHR"
+ ],
+ "alpha": 0.4,
+ "beta": 0.00096159557648134,
+ "S": 8,
+ "seeds": [
+  101,
+  102,
+  103,
+  104,
+  105
+ ],
+ "shuffle_seeds": [
+  42,
+  43,
+  44
+ ],
+ "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)",
+ "bg_propagate": true,
+ "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation] [tau-window derived: tau_syn 45 ms]"
+}

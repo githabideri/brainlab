@@ -1,0 +1,463 @@
+[tau40] paired input ok: 10461 events, sha256 76539fd640ba...
+[tau40] measured seed=101 rest: total=5496 mean=1.22Hz (1.9s, 6s elapsed)
+[tau40] measured seed=101 stim: total=5579 mean=1.24Hz (1.9s, 8s elapsed)
+[tau40] measured seed=102 rest: total=5138 mean=1.14Hz (1.9s, 10s elapsed)
+[tau40] measured seed=102 stim: total=5214 mean=1.16Hz (2.0s, 12s elapsed)
+[tau40] measured seed=103 rest: total=5951 mean=1.32Hz (2.0s, 14s elapsed)
+[tau40] measured seed=103 stim: total=6025 mean=1.34Hz (2.0s, 16s elapsed)
+[tau40] measured seed=104 rest: total=5694 mean=1.27Hz (2.0s, 18s elapsed)
+[tau40] measured seed=104 stim: total=5752 mean=1.28Hz (2.0s, 20s elapsed)
+[tau40] measured seed=105 rest: total=5655 mean=1.26Hz (1.9s, 22s elapsed)
+[tau40] measured seed=105 stim: total=5745 mean=1.28Hz (2.0s, 24s elapsed)
+[tau40] shuf-42 seed=101 rest: total=2778 mean=0.62Hz (1.9s, 26s elapsed)
+[tau40] shuf-42 seed=101 stim: total=2822 mean=0.63Hz (1.7s, 27s elapsed)
+[tau40] shuf-42 seed=102 rest: total=2490 mean=0.55Hz (1.6s, 29s elapsed)
+[tau40] shuf-42 seed=102 stim: total=2526 mean=0.56Hz (1.6s, 30s elapsed)
+[tau40] shuf-42 seed=103 rest: total=2943 mean=0.65Hz (1.8s, 32s elapsed)
+[tau40] shuf-42 seed=103 stim: total=2980 mean=0.66Hz (1.8s, 34s elapsed)
+[tau40] shuf-42 seed=104 rest: total=2804 mean=0.62Hz (1.8s, 36s elapsed)
+[tau40] shuf-42 seed=104 stim: total=2845 mean=0.63Hz (1.8s, 38s elapsed)
+[tau40] shuf-42 seed=105 rest: total=2715 mean=0.60Hz (1.8s, 40s elapsed)
+[tau40] shuf-42 seed=105 stim: total=2768 mean=0.62Hz (2.0s, 42s elapsed)
+[tau40] shuf-43 seed=101 rest: total=2751 mean=0.61Hz (1.9s, 43s elapsed)
+[tau40] shuf-43 seed=101 stim: total=2831 mean=0.63Hz (1.9s, 45s elapsed)
+[tau40] shuf-43 seed=102 rest: total=2546 mean=0.57Hz (1.8s, 47s elapsed)
+[tau40] shuf-43 seed=102 stim: total=2625 mean=0.58Hz (1.8s, 49s elapsed)
+[tau40] shuf-43 seed=103 rest: total=3053 mean=0.68Hz (2.0s, 51s elapsed)
+[tau40] shuf-43 seed=103 stim: total=3119 mean=0.69Hz (2.3s, 53s elapsed)
+[tau40] shuf-43 seed=104 rest: total=2954 mean=0.66Hz (2.0s, 55s elapsed)
+[tau40] shuf-43 seed=104 stim: total=3035 mean=0.67Hz (1.9s, 57s elapsed)
+[tau40] shuf-43 seed=105 rest: total=2868 mean=0.64Hz (1.9s, 59s elapsed)
+[tau40] shuf-43 seed=105 stim: total=2956 mean=0.66Hz (1.9s, 61s elapsed)
+[tau40] shuf-44 seed=101 rest: total=2599 mean=0.58Hz (1.9s, 63s elapsed)
+[tau40] shuf-44 seed=101 stim: total=2637 mean=0.59Hz (1.9s, 65s elapsed)
+[tau40] shuf-44 seed=102 rest: total=2479 mean=0.55Hz (1.9s, 67s elapsed)
+[tau40] shuf-44 seed=102 stim: total=2531 mean=0.56Hz (1.8s, 68s elapsed)
+[tau40] shuf-44 seed=103 rest: total=2846 mean=0.63Hz (1.9s, 70s elapsed)
+[tau40] shuf-44 seed=103 stim: total=2871 mean=0.64Hz (1.9s, 72s elapsed)
+[tau40] shuf-44 seed=104 rest: total=2701 mean=0.60Hz (1.9s, 74s elapsed)
+[tau40] shuf-44 seed=104 stim: total=2738 mean=0.61Hz (1.9s, 76s elapsed)
+[tau40] shuf-44 seed=105 rest: total=2672 mean=0.59Hz (1.8s, 78s elapsed)
+[tau40] shuf-44 seed=105 stim: total=2706 mean=0.60Hz (1.8s, 80s elapsed)
+[tau40] wrote results/tau40.json (40 runs, stable=True, 80s)
+[tau45] paired input ok: 10461 events, sha256 76539fd640ba...
+[tau45] measured seed=101 rest: total=8961 mean=1.99Hz (2.0s, 6s elapsed)
+[tau45] measured seed=101 stim: total=9038 mean=2.01Hz (2.0s, 8s elapsed)
+[tau45] measured seed=102 rest: total=8491 mean=1.89Hz (2.1s, 10s elapsed)
+[tau45] measured seed=102 stim: total=8574 mean=1.91Hz (2.0s, 12s elapsed)
+[tau45] measured seed=103 rest: total=9622 mean=2.14Hz (2.1s, 14s elapsed)
+[tau45] measured seed=103 stim: total=9719 mean=2.16Hz (2.0s, 16s elapsed)
+[tau45] measured seed=104 rest: total=9054 mean=2.01Hz (2.0s, 18s elapsed)
+[tau45] measured seed=104 stim: total=9211 mean=2.05Hz (2.1s, 20s elapsed)
+[tau45] measured seed=105 rest: total=9040 mean=2.01Hz (2.0s, 23s elapsed)
+[tau45] measured seed=105 stim: total=9155 mean=2.03Hz (2.0s, 25s elapsed)
+[tau45] shuf-42 seed=101 rest: total=4780 mean=1.06Hz (1.9s, 26s elapsed)
+[tau45] shuf-42 seed=101 stim: total=4829 mean=1.07Hz (1.9s, 28s elapsed)
+[tau45] shuf-42 seed=102 rest: total=4305 mean=0.96Hz (1.9s, 30s elapsed)
+[tau45] shuf-42 seed=102 stim: total=4378 mean=0.97Hz (2.0s, 32s elapsed)
+[tau45] shuf-42 seed=103 rest: total=5119 mean=1.14Hz (1.9s, 34s elapsed)
+[tau45] shuf-42 seed=103 stim: total=5157 mean=1.15Hz (1.9s, 36s elapsed)
+[tau45] shuf-42 seed=104 rest: total=4942 mean=1.10Hz (2.1s, 38s elapsed)
+[tau45] shuf-42 seed=104 stim: total=5030 mean=1.12Hz (2.0s, 40s elapsed)
+[tau45] shuf-42 seed=105 rest: total=4642 mean=1.03Hz (1.9s, 42s elapsed)
+[tau45] shuf-42 seed=105 stim: total=4708 mean=1.05Hz (2.0s, 44s elapsed)
+[tau45] shuf-43 seed=101 rest: total=4694 mean=1.04Hz (1.7s, 46s elapsed)
+[tau45] shuf-43 seed=101 stim: total=4805 mean=1.07Hz (1.7s, 47s elapsed)
+[tau45] shuf-43 seed=102 rest: total=4476 mean=0.99Hz (1.6s, 49s elapsed)
+[tau45] shuf-43 seed=102 stim: total=4590 mean=1.02Hz (1.6s, 51s elapsed)
+[tau45] shuf-43 seed=103 rest: total=5160 mean=1.15Hz (1.7s, 52s elapsed)
+[tau45] shuf-43 seed=103 stim: total=5273 mean=1.17Hz (1.6s, 54s elapsed)
+[tau45] shuf-43 seed=104 rest: total=4991 mean=1.11Hz (1.8s, 56s elapsed)
+[tau45] shuf-43 seed=104 stim: total=5100 mean=1.13Hz (1.9s, 58s elapsed)
+[tau45] shuf-43 seed=105 rest: total=4821 mean=1.07Hz (1.9s, 59s elapsed)
+[tau45] shuf-43 seed=105 stim: total=4928 mean=1.10Hz (1.9s, 61s elapsed)
+[tau45] shuf-44 seed=101 rest: total=4502 mean=1.00Hz (1.9s, 63s elapsed)
+[tau45] shuf-44 seed=101 stim: total=4569 mean=1.02Hz (1.9s, 65s elapsed)
+[tau45] shuf-44 seed=102 rest: total=4270 mean=0.95Hz (1.9s, 67s elapsed)
+[tau45] shuf-44 seed=102 stim: total=4330 mean=0.96Hz (1.8s, 69s elapsed)
+[tau45] shuf-44 seed=103 rest: total=4952 mean=1.10Hz (1.9s, 71s elapsed)
+[tau45] shuf-44 seed=103 stim: total=5016 mean=1.11Hz (1.9s, 73s elapsed)
+[tau45] shuf-44 seed=104 rest: total=4816 mean=1.07Hz (1.9s, 75s elapsed)
+[tau45] shuf-44 seed=104 stim: total=4900 mean=1.09Hz (1.9s, 76s elapsed)
+[tau45] shuf-44 seed=105 rest: total=4722 mean=1.05Hz (1.9s, 78s elapsed)
+[tau45] shuf-44 seed=105 stim: total=4798 mean=1.07Hz (1.9s, 80s elapsed)
+[tau45] wrote results/tau45.json (40 runs, stable=True, 80s)
+[tau55] paired input ok: 10461 events, sha256 76539fd640ba...
+[tau55] measured seed=101 rest: total=18207 mean=4.05Hz (2.1s, 6s elapsed)
+[tau55] measured seed=101 stim: total=18265 mean=4.06Hz (2.2s, 8s elapsed)
+[tau55] measured seed=102 rest: total=17152 mean=3.81Hz (2.2s, 11s elapsed)
+[tau55] measured seed=102 stim: total=17518 mean=3.89Hz (2.1s, 13s elapsed)
+[tau55] measured seed=103 rest: total=19105 mean=4.25Hz (2.1s, 15s elapsed)
+[tau55] measured seed=103 stim: total=19363 mean=4.30Hz (2.2s, 17s elapsed)
+[tau55] measured seed=104 rest: total=18032 mean=4.01Hz (2.2s, 19s elapsed)
+[tau55] measured seed=104 stim: total=18278 mean=4.06Hz (2.1s, 21s elapsed)
+[tau55] measured seed=105 rest: total=18387 mean=4.09Hz (2.2s, 24s elapsed)
+[tau55] measured seed=105 stim: total=18630 mean=4.14Hz (2.0s, 26s elapsed)
+[tau55] shuf-42 seed=101 rest: total=12948 mean=2.88Hz (1.8s, 27s elapsed)
+[tau55] shuf-42 seed=101 stim: total=13033 mean=2.90Hz (1.8s, 29s elapsed)
+[tau55] shuf-42 seed=102 rest: total=11769 mean=2.62Hz (1.8s, 31s elapsed)
+[tau55] shuf-42 seed=102 stim: total=11933 mean=2.65Hz (2.1s, 33s elapsed)
+[tau55] shuf-42 seed=103 rest: total=14272 mean=3.17Hz (2.2s, 35s elapsed)
+[tau55] shuf-42 seed=103 stim: total=14392 mean=3.20Hz (2.1s, 37s elapsed)
+[tau55] shuf-42 seed=104 rest: total=13526 mean=3.01Hz (2.1s, 39s elapsed)
+[tau55] shuf-42 seed=104 stim: total=13731 mean=3.05Hz (2.1s, 42s elapsed)
+[tau55] shuf-42 seed=105 rest: total=12993 mean=2.89Hz (2.0s, 44s elapsed)
+[tau55] shuf-42 seed=105 stim: total=12989 mean=2.89Hz (2.0s, 46s elapsed)
+[tau55] shuf-43 seed=101 rest: total=12797 mean=2.84Hz (2.0s, 48s elapsed)
+[tau55] shuf-43 seed=101 stim: total=13005 mean=2.89Hz (2.3s, 50s elapsed)
+[tau55] shuf-43 seed=102 rest: total=12070 mean=2.68Hz (2.0s, 52s elapsed)
+[tau55] shuf-43 seed=102 stim: total=12237 mean=2.72Hz (2.0s, 54s elapsed)
+[tau55] shuf-43 seed=103 rest: total=14013 mean=3.11Hz (2.0s, 56s elapsed)
+[tau55] shuf-43 seed=103 stim: total=14218 mean=3.16Hz (2.0s, 58s elapsed)
+[tau55] shuf-43 seed=104 rest: total=13624 mean=3.03Hz (2.0s, 60s elapsed)
+[tau55] shuf-43 seed=104 stim: total=13813 mean=3.07Hz (2.0s, 62s elapsed)
+[tau55] shuf-43 seed=105 rest: total=13056 mean=2.90Hz (2.0s, 64s elapsed)
+[tau55] shuf-43 seed=105 stim: total=13190 mean=2.93Hz (2.0s, 66s elapsed)
+[tau55] shuf-44 seed=101 rest: total=12757 mean=2.83Hz (2.0s, 68s elapsed)
+[tau55] shuf-44 seed=101 stim: total=12915 mean=2.87Hz (2.0s, 70s elapsed)
+[tau55] shuf-44 seed=102 rest: total=11660 mean=2.59Hz (2.2s, 72s elapsed)
+[tau55] shuf-44 seed=102 stim: total=11875 mean=2.64Hz (2.0s, 74s elapsed)
+[tau55] shuf-44 seed=103 rest: total=14199 mean=3.16Hz (2.1s, 76s elapsed)
+[tau55] shuf-44 seed=103 stim: total=14340 mean=3.19Hz (2.2s, 78s elapsed)
+[tau55] shuf-44 seed=104 rest: total=13317 mean=2.96Hz (2.1s, 80s elapsed)
+[tau55] shuf-44 seed=104 stim: total=13610 mean=3.02Hz (2.0s, 83s elapsed)
+[tau55] shuf-44 seed=105 rest: total=12989 mean=2.89Hz (2.0s, 85s elapsed)
+[tau55] shuf-44 seed=105 stim: total=13151 mean=2.92Hz (2.0s, 87s elapsed)
+[tau55] wrote results/tau55.json (40 runs, stable=True, 87s)
+[tau60] paired input ok: 10461 events, sha256 76539fd640ba...
+[tau60] measured seed=101 rest: total=23298 mean=5.18Hz (2.2s, 7s elapsed)
+[tau60] measured seed=101 stim: total=23568 mean=5.24Hz (2.2s, 9s elapsed)
+[tau60] measured seed=102 rest: total=22230 mean=4.94Hz (2.1s, 11s elapsed)
+[tau60] measured seed=102 stim: total=22393 mean=4.98Hz (2.2s, 13s elapsed)
+[tau60] measured seed=103 rest: total=24171 mean=5.37Hz (2.1s, 15s elapsed)
+[tau60] measured seed=103 stim: total=24479 mean=5.44Hz (2.2s, 17s elapsed)
+[tau60] measured seed=104 rest: total=23211 mean=5.16Hz (2.2s, 20s elapsed)
+[tau60] measured seed=104 stim: total=23505 mean=5.22Hz (2.6s, 22s elapsed)
+[tau60] measured seed=105 rest: total=23576 mean=5.24Hz (2.1s, 24s elapsed)
+[tau60] measured seed=105 stim: total=23923 mean=5.32Hz (2.0s, 26s elapsed)
+[tau60] shuf-42 seed=101 rest: total=19797 mean=4.40Hz (1.8s, 28s elapsed)
+[tau60] shuf-42 seed=101 stim: total=19855 mean=4.41Hz (2.0s, 30s elapsed)
+[tau60] shuf-42 seed=102 rest: total=18191 mean=4.04Hz (2.1s, 32s elapsed)
+[tau60] shuf-42 seed=102 stim: total=18457 mean=4.10Hz (2.2s, 34s elapsed)
+[tau60] shuf-42 seed=103 rest: total=21584 mean=4.80Hz (2.1s, 36s elapsed)
+[tau60] shuf-42 seed=103 stim: total=21953 mean=4.88Hz (2.2s, 39s elapsed)
+[tau60] shuf-42 seed=104 rest: total=20726 mean=4.61Hz (2.1s, 41s elapsed)
+[tau60] shuf-42 seed=104 stim: total=20967 mean=4.66Hz (2.2s, 43s elapsed)
+[tau60] shuf-42 seed=105 rest: total=19926 mean=4.43Hz (2.4s, 45s elapsed)
+[tau60] shuf-42 seed=105 stim: total=20022 mean=4.45Hz (1.9s, 47s elapsed)
+[tau60] shuf-43 seed=101 rest: total=19628 mean=4.36Hz (1.9s, 49s elapsed)
+[tau60] shuf-43 seed=101 stim: total=19791 mean=4.40Hz (2.1s, 51s elapsed)
+[tau60] shuf-43 seed=102 rest: total=18600 mean=4.13Hz (2.1s, 53s elapsed)
+[tau60] shuf-43 seed=102 stim: total=18907 mean=4.20Hz (2.1s, 55s elapsed)
+[tau60] shuf-43 seed=103 rest: total=21581 mean=4.80Hz (2.2s, 58s elapsed)
+[tau60] shuf-43 seed=103 stim: total=21655 mean=4.81Hz (2.2s, 60s elapsed)
+[tau60] shuf-43 seed=104 rest: total=20454 mean=4.55Hz (2.1s, 62s elapsed)
+[tau60] shuf-43 seed=104 stim: total=20734 mean=4.61Hz (2.1s, 64s elapsed)
+[tau60] shuf-43 seed=105 rest: total=20248 mean=4.50Hz (2.1s, 66s elapsed)
+[tau60] shuf-43 seed=105 stim: total=20355 mean=4.52Hz (2.1s, 68s elapsed)
+[tau60] shuf-44 seed=101 rest: total=19885 mean=4.42Hz (2.2s, 70s elapsed)
+[tau60] shuf-44 seed=101 stim: total=20115 mean=4.47Hz (2.2s, 73s elapsed)
+[tau60] shuf-44 seed=102 rest: total=18427 mean=4.09Hz (2.1s, 75s elapsed)
+[tau60] shuf-44 seed=102 stim: total=18655 mean=4.15Hz (2.0s, 77s elapsed)
+[tau60] shuf-44 seed=103 rest: total=21938 mean=4.88Hz (2.1s, 79s elapsed)
+[tau60] shuf-44 seed=103 stim: total=22222 mean=4.94Hz (2.1s, 81s elapsed)
+[tau60] shuf-44 seed=104 rest: total=20716 mean=4.60Hz (2.1s, 83s elapsed)
+[tau60] shuf-44 seed=104 stim: total=21070 mean=4.68Hz (2.1s, 85s elapsed)
+[tau60] shuf-44 seed=105 rest: total=20436 mean=4.54Hz (2.1s, 87s elapsed)
+[tau60] shuf-44 seed=105 stim: total=20820 mean=4.63Hz (2.1s, 89s elapsed)
+[tau60] wrote results/tau60.json (40 runs, stable=True, 89s)
+[tau75] paired input ok: 10461 events, sha256 76539fd640ba...
+[tau75] measured seed=101 rest: total=37722 mean=8.38Hz (2.3s, 7s elapsed)
+[tau75] measured seed=101 stim: total=37994 mean=8.44Hz (2.3s, 9s elapsed)
+[tau75] measured seed=102 rest: total=36519 mean=8.12Hz (2.4s, 12s elapsed)
+[tau75] measured seed=102 stim: total=36695 mean=8.15Hz (2.5s, 14s elapsed)
+[tau75] measured seed=103 rest: total=38798 mean=8.62Hz (2.6s, 17s elapsed)
+[tau75] measured seed=103 stim: total=38997 mean=8.67Hz (2.3s, 19s elapsed)
+[tau75] measured seed=104 rest: total=37825 mean=8.41Hz (2.4s, 22s elapsed)
+[tau75] measured seed=104 stim: total=37939 mean=8.43Hz (3.2s, 25s elapsed)
+[tau75] measured seed=105 rest: total=38100 mean=8.47Hz (2.8s, 28s elapsed)
+[tau75] measured seed=105 stim: total=38394 mean=8.53Hz (2.5s, 30s elapsed)
+[tau75] shuf-42 seed=101 rest: total=41295 mean=9.18Hz (2.3s, 32s elapsed)
+[tau75] shuf-42 seed=101 stim: total=41530 mean=9.23Hz (2.5s, 35s elapsed)
+[tau75] shuf-42 seed=102 rest: total=40325 mean=8.96Hz (2.5s, 37s elapsed)
+[tau75] shuf-42 seed=102 stim: total=40844 mean=9.08Hz (2.3s, 40s elapsed)
+[tau75] shuf-42 seed=103 rest: total=43357 mean=9.63Hz (2.8s, 43s elapsed)
+[tau75] shuf-42 seed=103 stim: total=43474 mean=9.66Hz (2.7s, 45s elapsed)
+[tau75] shuf-42 seed=104 rest: total=41967 mean=9.33Hz (2.5s, 48s elapsed)
+[tau75] shuf-42 seed=104 stim: total=42262 mean=9.39Hz (2.7s, 50s elapsed)
+[tau75] shuf-42 seed=105 rest: total=41673 mean=9.26Hz (2.5s, 53s elapsed)
+[tau75] shuf-42 seed=105 stim: total=41900 mean=9.31Hz (2.5s, 55s elapsed)
+[tau75] shuf-43 seed=101 rest: total=41890 mean=9.31Hz (2.6s, 58s elapsed)
+[tau75] shuf-43 seed=101 stim: total=42162 mean=9.37Hz (2.4s, 60s elapsed)
+[tau75] shuf-43 seed=102 rest: total=40869 mean=9.08Hz (2.3s, 63s elapsed)
+[tau75] shuf-43 seed=102 stim: total=41156 mean=9.15Hz (2.5s, 65s elapsed)
+[tau75] shuf-43 seed=103 rest: total=43762 mean=9.72Hz (2.5s, 68s elapsed)
+[tau75] shuf-43 seed=103 stim: total=44209 mean=9.82Hz (2.6s, 70s elapsed)
+[tau75] shuf-43 seed=104 rest: total=42177 mean=9.37Hz (2.6s, 73s elapsed)
+[tau75] shuf-43 seed=104 stim: total=42589 mean=9.46Hz (2.8s, 76s elapsed)
+[tau75] shuf-43 seed=105 rest: total=42263 mean=9.39Hz (2.7s, 78s elapsed)
+[tau75] shuf-43 seed=105 stim: total=42571 mean=9.46Hz (2.6s, 81s elapsed)
+[tau75] shuf-44 seed=101 rest: total=42670 mean=9.48Hz (3.0s, 84s elapsed)
+[tau75] shuf-44 seed=101 stim: total=43131 mean=9.58Hz (3.2s, 87s elapsed)
+[tau75] shuf-44 seed=102 rest: total=42246 mean=9.39Hz (2.5s, 90s elapsed)
+[tau75] shuf-44 seed=102 stim: total=42085 mean=9.35Hz (2.7s, 92s elapsed)
+[tau75] shuf-44 seed=103 rest: total=44981 mean=10.00Hz (2.4s, 95s elapsed)
+[tau75] shuf-44 seed=103 stim: total=45176 mean=10.04Hz (2.7s, 97s elapsed)
+[tau75] shuf-44 seed=104 rest: total=43453 mean=9.66Hz (2.8s, 100s elapsed)
+[tau75] shuf-44 seed=104 stim: total=43886 mean=9.75Hz (2.6s, 103s elapsed)
+[tau75] shuf-44 seed=105 rest: total=43887 mean=9.75Hz (2.6s, 105s elapsed)
+[tau75] shuf-44 seed=105 stim: total=44040 mean=9.79Hz (2.9s, 108s elapsed)
+[tau75] wrote results/tau75.json (40 runs, stable=True, 108s)
+{
+ "points": {
+  "10.0": {
+   "rest_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0001,
+    "shuf-44": 0.0
+   },
+   "contrast_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0,
+    "shuf-44": 0.0
+   },
+   "dominance": false,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0,
+    "shuf-44": 0.0
+   }
+  },
+  "25.0": {
+   "rest_hz": {
+    "measured": 0.1269,
+    "shuf-42": 0.0617,
+    "shuf-43": 0.0619,
+    "shuf-44": 0.0618
+   },
+   "contrast_hz": {
+    "measured": 0.0,
+    "shuf-42": 0.0,
+    "shuf-43": 0.0,
+    "shuf-44": 0.0
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 0.075,
+    "shuf-42": 0.01,
+    "shuf-43": 0.1017,
+    "shuf-44": 0.0433
+   }
+  },
+  "40.0": {
+   "rest_hz": {
+    "measured": 1.2415,
+    "shuf-42": 0.6102,
+    "shuf-43": 0.6299,
+    "shuf-44": 0.591
+   },
+   "contrast_hz": {
+    "measured": -0.01,
+    "shuf-42": 0.0,
+    "shuf-43": 0.005,
+    "shuf-44": 0.0
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 2.5733,
+    "shuf-42": 0.98,
+    "shuf-43": 1.8933,
+    "shuf-44": 1.3717
+   }
+  },
+  "45.0": {
+   "rest_hz": {
+    "measured": 2.0075,
+    "shuf-42": 1.0572,
+    "shuf-43": 1.073,
+    "shuf-44": 1.0339
+   },
+   "contrast_hz": {
+    "measured": 0.065,
+    "shuf-42": 0.015,
+    "shuf-43": 0.015,
+    "shuf-44": 0.01
+   },
+   "dominance": true,
+   "contrast_edge": true,
+   "cp_rest_hz": {
+    "measured": 5.3317,
+    "shuf-42": 2.5933,
+    "shuf-43": 3.4983,
+    "shuf-44": 3.0017
+   }
+  },
+  "50.0": {
+   "rest_hz": {
+    "measured": 2.9696,
+    "shuf-42": 1.7849,
+    "shuf-43": 1.7876,
+    "shuf-44": 1.7439,
+    "shuf-45": 1.7528,
+    "shuf-46": 2.0517,
+    "shuf-47": 1.7554,
+    "shuf-48": 1.9322,
+    "shuf-49": 1.8166,
+    "shuf-50": 1.7513,
+    "shuf-51": 2.001,
+    "shuf-52": 1.7975
+   },
+   "contrast_hz": {
+    "measured": 0.055,
+    "shuf-42": 0.04,
+    "shuf-43": 0.04,
+    "shuf-44": -0.005,
+    "shuf-45": 0.04,
+    "shuf-46": -0.055,
+    "shuf-47": 0.005,
+    "shuf-48": -0.005,
+    "shuf-49": 0.04,
+    "shuf-50": 0.015,
+    "shuf-51": 0.01,
+    "shuf-52": -0.005
+   },
+   "dominance": true,
+   "contrast_edge": true,
+   "cp_rest_hz": {
+    "measured": 9.025,
+    "shuf-42": 5.4483,
+    "shuf-43": 6.0817,
+    "shuf-44": 5.8767,
+    "shuf-45": 6.68,
+    "shuf-46": 7.1833,
+    "shuf-47": 5.295,
+    "shuf-48": 6.5017,
+    "shuf-49": 6.4233,
+    "shuf-50": 6.1817,
+    "shuf-51": 7.49,
+    "shuf-52": 6.075
+   }
+  },
+  "55.0": {
+   "rest_hz": {
+    "measured": 4.0392,
+    "shuf-42": 2.9115,
+    "shuf-43": 2.9138,
+    "shuf-44": 2.8854
+   },
+   "contrast_hz": {
+    "measured": 0.09,
+    "shuf-42": -0.05,
+    "shuf-43": -0.025,
+    "shuf-44": 0.13
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 12.8467,
+    "shuf-42": 9.5683,
+    "shuf-43": 9.79,
+    "shuf-44": 9.895
+   }
+  },
+  "60.0": {
+   "rest_hz": {
+    "measured": 5.1772,
+    "shuf-42": 4.4544,
+    "shuf-43": 4.4672,
+    "shuf-44": 4.5068
+   },
+   "contrast_hz": {
+    "measured": 0.045,
+    "shuf-42": 0.055,
+    "shuf-43": -0.025,
+    "shuf-44": 0.13
+   },
+   "dominance": true,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 16.5067,
+    "shuf-42": 14.5617,
+    "shuf-43": 14.2967,
+    "shuf-44": 15.0517
+   }
+  },
+  "75.0": {
+   "rest_hz": {
+    "measured": 8.3984,
+    "shuf-42": 9.2719,
+    "shuf-43": 9.376,
+    "shuf-44": 9.655
+   },
+   "contrast_hz": {
+    "measured": -0.01,
+    "shuf-42": 0.12,
+    "shuf-43": 0.06,
+    "shuf-44": 0.09
+   },
+   "dominance": false,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 24.9567,
+    "shuf-42": 26.6117,
+    "shuf-43": 25.6133,
+    "shuf-44": 27.6183
+   }
+  },
+  "100.0": {
+   "rest_hz": {
+    "measured": 11.8836,
+    "shuf-42": 13.3759,
+    "shuf-43": 13.523,
+    "shuf-44": 13.7565
+   },
+   "contrast_hz": {
+    "measured": -0.13,
+    "shuf-42": 0.175,
+    "shuf-43": 0.135,
+    "shuf-44": -0.02
+   },
+   "dominance": false,
+   "contrast_edge": false,
+   "cp_rest_hz": {
+    "measured": 32.7017,
+    "shuf-42": 34.0333,
+    "shuf-43": 32.805,
+    "shuf-44": 35.3233
+   }
+  }
+ },
+ "dominance_set": [
+  "25.0",
+  "40.0",
+  "45.0",
+  "50.0",
+  "55.0",
+  "60.0"
+ ],
+ "window": [
+  "25.0",
+  "40.0",
+  "45.0",
+  "50.0",
+  "55.0",
+  "60.0"
+ ],
+ "window_definition": "maximal contiguous set of grid points (combined {10,25,40,45,50,55,60,75,100}) where the measured whole-animal rest rate exceeds all three shuffle rest rates; anchor 50 ms",
+ "flags": {
+  "dominance": "measured rest > all shuffles",
+  "contrast_edge": "measured command-pool win5 paired contrast > all shuffles"
+ },
+ "note": "exploratory regime map of the STATE effect; no 'wiring matters' claim \u2014 the control-wiring bar (docs/evaluation.md \u00a77) is unchanged",
+ "source": {
+  "10/25/50/100": "experiments/worm-v3-sensitivity/results/ (frozen 2026-10-22)",
+  "40/45/55/60/75": "this experiment"
+ }
+}
+wrote results/map.json
