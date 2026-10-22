@@ -1,0 +1,25 @@
+{
+  "name": "GABA-synthesizing neuron classes, hermaphrodite, 2016 map",
+  "source": {
+    "citation": "Gendrel M, Atlas EG, Hobert O. (2016) A cellular and regulatory map of the GABAergic nervous system of C. elegans. eLife 5:e17686. doi:10.7554/eLife.17686",
+    "url": "https://elifesciences.org/articles/17686",
+    "accessed": "2026-10-22",
+    "basis": "Table 1 ('GABA-positive cells'): only cells with GAD (unc-25) synthesis evidence are taken as GABAergic. Previously identified classes: RME, RIS, AVL, DVB, DD, VD (McIntire et al. 1993). Newly identified GAD-positive: RIB. Explicitly EXCLUDED (GABA uptake without synthesis, i.e. 'recycling'/'clearance' cells): ALA, AVF, SMDD/SMVD, plus the ambiguous AVA/AVB (anti-GABA +/-, unc-25 negative, ACh co-labelled) and AVJ (unc-25 negative)."
+  },
+  "classes": {
+    "RME": ["RMEL", "RMER", "RMED", "RMEV", "RMBL", "RMBR", "RMBD", "RMBV", "RMDL", "RMDR"],
+    "RIS": ["RIS"],
+    "AVL": ["AVL"],
+    "DVB": ["DVB", "DVC", "PVC", "SVB"],
+    "DD": ["DD01", "DD02", "DD03", "DD04", "DD05", "DD06"],
+    "VD": ["VD01", "VD02", "VD03", "VD04", "VD05", "VD06", "VD07", "VD08", "VD09", "VD10", "VD11", "VD12", "VD13"],
+    "RIB": ["RIBL", "RIBR"]
+  },
+  "in_300_neuron_network": {
+    "present": ["AVL", "DD01", "DD02", "DD03", "DD04", "DD05", "DD06", "DVB", "DVC", "RIBL", "RIBR", "RIS", "RMDL", "RMDR", "RMED", "RMEL", "RMER", "RMEV", "VD01", "VD02", "VD03", "VD04", "VD05", "VD06", "VD07", "VD08", "VD09", "VD10", "VD11", "VD12", "VD13"],
+    "n_present": 31,
+    "absent_from_network": ["PVC", "RMBD", "RMBL", "RMBR", "RMBV", "SVB"],
+    "note": "PVC/SVB and the RMB members have no neuron-neuron edges in the Cook 2019 release and are not part of the 300-neuron network."
+  },
+  "application": "Chemical synapses with a presynaptic neuron in 'present' are assigned negative (inhibitory) weight, same magnitude (alpha*sqrt(section count)) as the all-excitatory substrate. All other chemical edges stay positive (declared simplification: glutamatergic identity is not assigned per synapse from the release data). Gap junctions carry no sign."
+}
