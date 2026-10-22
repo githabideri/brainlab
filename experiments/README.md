@@ -159,12 +159,33 @@ authoritative).
   v1 "no positive ASH response in any wiring" null is reinstated on a
   defensible substrate; the +0.090/+1.75 Hz are recorded as a
   substrate artifact (not revalidated). The bounded follow-up
-  (more shuffles, transmitter signs, τ sensitivity, real ASH
-  transduction) remains **not run** — re-authorization would apply to
-  the v3 substrate. Non-claims binding (no muscles, no signs in the
-  release, spiking ≠ movement). Report:
+  (more shuffles, transmitter signs, τ sensitivity, graded
+  stimulus) was executed 2026-10-22 as the new
+  **worm-v3-sensitivity** experiment (below). Non-claims binding
+  (no muscles, no signs in the release, spiking ≠ movement). Report:
   `../reports/2026-10-12-worm-pilot.md` (third addendum is
   authoritative).
+- **worm-v3-sensitivity** (the pilot's bounded follow-up, re-
+  authorized 2026-10-22 and run as a new focused experiment on the
+  v3 substrate) — `worm-v3-sensitivity/`. **Done 2026-10-22:**
+  440 runs, pre-registered stop rules evaluated by code.
+  **(1)** The surviving **resting-state difference is
+  wiring-specific**: measured rest 2.97 Hz vs 11 independent
+  exact-invariant shuffles at 1.74–2.05 Hz — 0 of 11 reach the
+  pre-registered 0.75× threshold, so it is not a random-neighborhood
+  of the all-excitatory bifurcation; but it lives in a narrow τ
+  window (silent at 25 ms, *reversed* at 100 ms) and weakens
+  (2.97→1.77 Hz) when the 6.0% of edges from GAD-synthesizing
+  classes (Gendrel/Atlas/Hobert 2016) are made inhibitory — a state
+  effect, more sign-sensitive than a random wiring's. **(2)** The
+  **ASH-response routing remains a null in every tested
+  combination** (bg model × τ 10–100 ms × signs × step/trapezoid):
+  the pre-registered control-wiring bar (measured > 0.5 Hz, all
+  seeds, beats all shuffles) is not met anywhere. A graded
+  (trapezoid) stimulus elicits ~0.4–0.7 Hz command-pool responses in
+  *every* wiring (one shuffle above the measured) — the stimulus
+  shape controls responsiveness, the wiring does not control
+  specificity. Report: `../reports/2026-10-22-worm-v3-sensitivity.md`.
 - **plasticity-rule A/B** (dopamine-STDP vs gain-scaling vs none, same
   substrate) — after discriminability; the toolkit is read-only, so this
   one means writing the learning rule (the FlyBridge gain-scaling

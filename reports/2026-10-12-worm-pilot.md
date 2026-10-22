@@ -551,3 +551,13 @@ than a graded receptor model).
   All v1/v2 artifacts (`results.json`, `results-exact.json`,
   `data/timecourse-50ms.json`, `data/paired-stim-effect.json`,
   calibration logs) are untouched.
+
+> **Update (2026-10-22):** the bounded follow-up proposed in the
+> second/third addenda (more shuffles, transmitter signs, τ
+> sensitivity, graded stimulus) was re-authorized and run as the
+> new [`worm-v3-sensitivity`](../experiments/worm-v3-sensitivity/)
+> experiment — see [2026-10-22-worm-v3-sensitivity](2026-10-22-worm-v3-sensitivity.md):
+> the resting-state difference is confirmed wiring-specific (0 of 11
+> shuffles in the active basin) but is a narrow-τ state effect that
+> weakens under partial GABAergic signs; the ASH-response routing
+> remains a null in every tested combination.

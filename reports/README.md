@@ -16,6 +16,15 @@ and what the numbers do not show).
 
 ## Recent
 
+- [2026-10-22-worm-v3-sensitivity](2026-10-22-worm-v3-sensitivity.md) — the
+  worm-pilot's bounded follow-up, run: 440 runs, 11 independent
+  exact-invariant shuffles, signs/τ/graded-stimulus batteries. The
+  resting-state difference is confirmed wiring-specific (0 of 11
+  shuffles in the active basin) but is a narrow-τ state effect that
+  weakens under partial GABAergic signs; the ASH-response routing
+  remains a null in every tested combination (control-wiring bar
+  not met anywhere).
+
 - [2026-10-04-flybridge-audit](2026-10-04-flybridge-audit.md) — a third
   party's trained-connectome experiment (FlyBridge), examined claim by
   claim: what is real, what is assisted, what is untested.

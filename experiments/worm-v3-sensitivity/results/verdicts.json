@@ -1,0 +1,192 @@
+{
+ "stop_rules": {
+  "S1_resting_state": {
+   "measured_rest_hz": 2.9696,
+   "shuffle_rest_hz": {
+    "shuf-42": 1.7849,
+    "shuf-43": 1.7876,
+    "shuf-44": 1.7439,
+    "shuf-45": 1.7528,
+    "shuf-46": 2.0517,
+    "shuf-47": 1.7554,
+    "shuf-48": 1.9322,
+    "shuf-49": 1.8166,
+    "shuf-50": 1.7513,
+    "shuf-51": 2.001,
+    "shuf-52": 1.7975
+   },
+   "n_shuffles_at_or_above_0p75_measured": 0,
+   "active_shuffles": [],
+   "verdict": "wiring-specificity stands (<=2 of 11)",
+   "command_pool_rest_hz": {
+    "measured": 9.025,
+    "shuf-42": 5.4483,
+    "shuf-43": 6.0817,
+    "shuf-44": 5.8767,
+    "shuf-45": 6.68,
+    "shuf-46": 7.1833,
+    "shuf-47": 5.295,
+    "shuf-48": 6.5017,
+    "shuf-49": 6.4233,
+    "shuf-50": 6.1817,
+    "shuf-51": 7.49,
+    "shuf-52": 6.075
+   }
+  },
+  "S2_signs": {
+   "measured_signed_contrast_win5_hz": -0.075,
+   "measured_signed_per_seed": [
+    -0.225,
+    0.0,
+    -0.075,
+    -0.0,
+    -0.075
+   ],
+   "signed_shuffle_contrasts_win5_hz": {
+    "shuf-42": -0.01,
+    "shuf-43": -0.02,
+    "shuf-44": 0.02
+   },
+   "rest_table": {
+    "measured": 1.7713,
+    "shuf-42": 1.1439,
+    "shuf-43": 1.227,
+    "shuf-44": 1.1618
+   },
+   "pass": false
+  },
+  "S3_timescale_map": {
+   "10.0": {
+    "command_pool_contrast": {
+     "measured": 0.0,
+     "shuf-42": 0.0,
+     "shuf-43": 0.0,
+     "shuf-44": 0.0
+    },
+    "motor_contrast": {
+     "measured": 0.0,
+     "shuf-42": 0.0,
+     "shuf-43": 0.0,
+     "shuf-44": 0.0
+    },
+    "rest_hz": {
+     "measured": 0.0,
+     "shuf-42": 0.0,
+     "shuf-43": 0.0001,
+     "shuf-44": 0.0
+    }
+   },
+   "25.0": {
+    "command_pool_contrast": {
+     "measured": 0.0,
+     "shuf-42": 0.0,
+     "shuf-43": 0.0,
+     "shuf-44": 0.0
+    },
+    "motor_contrast": {
+     "measured": 0.0,
+     "shuf-42": 0.0,
+     "shuf-43": 0.0,
+     "shuf-44": 0.0
+    },
+    "rest_hz": {
+     "measured": 0.1269,
+     "shuf-42": 0.0617,
+     "shuf-43": 0.0619,
+     "shuf-44": 0.0618
+    }
+   },
+   "50.0": {
+    "command_pool_contrast": {
+     "measured": 0.055,
+     "shuf-42": 0.04,
+     "shuf-43": 0.04,
+     "shuf-44": -0.005,
+     "shuf-45": 0.04,
+     "shuf-46": -0.055,
+     "shuf-47": 0.005,
+     "shuf-48": -0.005,
+     "shuf-49": 0.04,
+     "shuf-50": 0.015,
+     "shuf-51": 0.01,
+     "shuf-52": -0.005
+    },
+    "motor_contrast": {
+     "measured": 0.012987,
+     "shuf-42": 0.012987,
+     "shuf-43": 0.007273,
+     "shuf-44": 0.010909,
+     "shuf-45": 0.006234,
+     "shuf-46": -0.004156,
+     "shuf-47": 0.006234,
+     "shuf-48": 0.005714,
+     "shuf-49": -0.003117,
+     "shuf-50": -0.000519,
+     "shuf-51": 0.007273,
+     "shuf-52": 0.004675
+    },
+    "rest_hz": {
+     "measured": 2.9696,
+     "shuf-42": 1.7849,
+     "shuf-43": 1.7876,
+     "shuf-44": 1.7439,
+     "shuf-45": 1.7528,
+     "shuf-46": 2.0517,
+     "shuf-47": 1.7554,
+     "shuf-48": 1.9322,
+     "shuf-49": 1.8166,
+     "shuf-50": 1.7513,
+     "shuf-51": 2.001,
+     "shuf-52": 1.7975
+    }
+   },
+   "100.0": {
+    "command_pool_contrast": {
+     "measured": -0.13,
+     "shuf-42": 0.175,
+     "shuf-43": 0.135,
+     "shuf-44": -0.02
+    },
+    "motor_contrast": {
+     "measured": -0.046234,
+     "shuf-42": 0.073766,
+     "shuf-43": -0.018182,
+     "shuf-44": -0.006753
+    },
+    "rest_hz": {
+     "measured": 11.8836,
+     "shuf-42": 13.3759,
+     "shuf-43": 13.523,
+     "shuf-44": 13.7565
+    }
+   }
+  },
+  "S4_graded_stimulus": {
+   "step": {
+    "measured": 0.055,
+    "shuf-42": 0.04,
+    "shuf-43": 0.04,
+    "shuf-44": -0.005,
+    "shuf-45": 0.04,
+    "shuf-46": -0.055,
+    "shuf-47": 0.005,
+    "shuf-48": -0.005,
+    "shuf-49": 0.04,
+    "shuf-50": 0.015,
+    "shuf-51": 0.01,
+    "shuf-52": -0.005
+   },
+   "trapezoid": {
+    "measured": 0.52,
+    "shuf-42": 0.47,
+    "shuf-43": 0.655,
+    "shuf-44": 0.375
+   }
+  }
+ },
+ "overall": {
+  "wiring_matters_pass": false,
+  "passing_cells": [],
+  "rule": "measured command-pool win5 paired contrast > 0.5 Hz (seed mean), positive in all 5 seeds, exceeding all matched shuffles, in at least one battery"
+ }
+}

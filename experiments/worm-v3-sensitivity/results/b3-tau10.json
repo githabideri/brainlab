@@ -1,0 +1,4151 @@
+{
+ "battery": "b3-tau10",
+ "label": "Model B, tau 10 ms, all-excitatory",
+ "bg_model": "B (forced propagation; historical v2 behaviour)",
+ "substrate": "v3-canonical-electrical (frozen worm-pilot data); parameters = frozen v2 values",
+ "signs": "all-excitatory (frozen)",
+ "stimulus": "500 ms constant depolarization, frozen S",
+ "tau_syn": 10.0,
+ "config": {
+  "dt": 1.0,
+  "tau_m": 20.0,
+  "tau_syn": 10.0,
+  "v0": -52.0,
+  "v_th": -45.0,
+  "v_rst": -52.0,
+  "refractory_ms": 2.2,
+  "delay_ms": 1.8,
+  "delay_steps": 2,
+  "lambda_bg": 4,
+  "w_bg": 7.0,
+  "duration_ms": 15000,
+  "stim_start_ms": 5000,
+  "stim_dur_ms": 500,
+  "stim_ids": [
+   "ASHL",
+   "ASHR"
+  ],
+  "alpha": 0.4,
+  "beta": 0.00096159557648134,
+  "S": 8,
+  "seeds": [
+   101,
+   102,
+   103,
+   104,
+   105
+  ],
+  "shuffle_seeds": [
+   42,
+   43,
+   44
+  ],
+  "bg_seed_rule": "sim_seed*1000 + variant_idx (never wiring)",
+  "bg_propagate": true,
+  "substrate": "v3-canonical-electrical: one undirected junction per physical gap junction (SI9 sym/asym sheets are alternative representations of the same junctions); bg drive = Model A (pure external current, only threshold-crossing spikes propagate). Parameters (lambda_bg, w_bg, alpha, beta, tau_syn, S) are the FROZEN v2 values \u2014 NOT recalibrated for the new substrate (review round 5: freeze, then re-measure). [Model B comparison: historical forced propagation] [B3 derived: tau_syn 10 ms]"
+ },
+ "seeds": [
+  101,
+  102,
+  103,
+  104,
+  105
+ ],
+ "shuffle_seeds": [
+  42,
+  43,
+  44
+ ],
+ "shuffle_invariants": {
+  "shuf-42": {
+   "seed": 42,
+   "classes": {
+    "chemical": {
+     "records_measured": 3669,
+     "records_shuffled": 3669,
+     "self_edges_residual": 0,
+     "out_degree_max_abs_diff": 0,
+     "in_degree_max_abs_diff": 0,
+     "out_degree_vector_sha256": "20c019b52e635e5d",
+     "in_degree_vector_sha256": "c62445d086818ff5",
+     "n_weights": 3669,
+     "multiset_equal": true,
+     "multiset_sha256_measured": "3e4312a8260fd971",
+     "multiset_sha256_shuffled": "3e4312a8260fd971"
+    },
+    "electrical": {
+     "records_measured": 1089,
+     "records_shuffled": 1089,
+     "self_edges_residual": 0,
+     "degree_max_abs_diff": 0,
+     "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+     "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+     "n_weights": 1089,
+     "multiset_equal": true,
+     "multiset_sha256_measured": "f502bf657c444d88",
+     "multiset_sha256_shuffled": "f502bf657c444d88",
+     "parallel_pairs_in_shuffled": 35,
+     "parallel_pairs_measured": 0
+    }
+   },
+   "total_edges": {
+    "measured": 4758,
+    "shuffled": 4758
+   }
+  },
+  "shuf-43": {
+   "seed": 43,
+   "classes": {
+    "chemical": {
+     "records_measured": 3669,
+     "records_shuffled": 3669,
+     "self_edges_residual": 0,
+     "out_degree_max_abs_diff": 0,
+     "in_degree_max_abs_diff": 0,
+     "out_degree_vector_sha256": "20c019b52e635e5d",
+     "in_degree_vector_sha256": "c62445d086818ff5",
+     "n_weights": 3669,
+     "multiset_equal": true,
+     "multiset_sha256_measured": "3e4312a8260fd971",
+     "multiset_sha256_shuffled": "3e4312a8260fd971"
+    },
+    "electrical": {
+     "records_measured": 1089,
+     "records_shuffled": 1089,
+     "self_edges_residual": 0,
+     "degree_max_abs_diff": 0,
+     "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+     "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+     "n_weights": 1089,
+     "multiset_equal": true,
+     "multiset_sha256_measured": "f502bf657c444d88",
+     "multiset_sha256_shuffled": "f502bf657c444d88",
+     "parallel_pairs_in_shuffled": 22,
+     "parallel_pairs_measured": 0
+    }
+   },
+   "total_edges": {
+    "measured": 4758,
+    "shuffled": 4758
+   }
+  },
+  "shuf-44": {
+   "seed": 44,
+   "classes": {
+    "chemical": {
+     "records_measured": 3669,
+     "records_shuffled": 3669,
+     "self_edges_residual": 0,
+     "out_degree_max_abs_diff": 0,
+     "in_degree_max_abs_diff": 0,
+     "out_degree_vector_sha256": "20c019b52e635e5d",
+     "in_degree_vector_sha256": "c62445d086818ff5",
+     "n_weights": 3669,
+     "multiset_equal": true,
+     "multiset_sha256_measured": "3e4312a8260fd971",
+     "multiset_sha256_shuffled": "3e4312a8260fd971"
+    },
+    "electrical": {
+     "records_measured": 1089,
+     "records_shuffled": 1089,
+     "self_edges_residual": 0,
+     "degree_max_abs_diff": 0,
+     "degree_vector_sha256_measured": "f8abc69c20ec44cb",
+     "degree_vector_sha256_shuffled": "f8abc69c20ec44cb",
+     "n_weights": 1089,
+     "multiset_equal": true,
+     "multiset_sha256_measured": "f502bf657c444d88",
+     "multiset_sha256_shuffled": "f502bf657c444d88",
+     "parallel_pairs_in_shuffled": 20,
+     "parallel_pairs_measured": 0
+    }
+   },
+   "total_edges": {
+    "measured": 4758,
+    "shuffled": 4758
+   }
+  }
+ },
+ "paired_input": {
+  "battery": "b3-tau10",
+  "sim_seed": 101,
+  "bg_seed": 101001,
+  "seed_rule": "bg_seed = sim_seed*1000 + 1 (never wiring/sign/timescale/stimulus)",
+  "substrate": "v3-canonical-electrical (frozen worm-pilot data); parameters = frozen v2 values",
+  "bg_model": "B (forced propagation; historical v2 behaviour)",
+  "n_neurons": 300,
+  "measured_vs_shuf42_bg_event_lists_identical": true,
+  "events_sha256": "76539fd640ba1a8fc2092dfc25ac45e6aba54263584bd8250a9cca17812fec56",
+  "n_events": 10461,
+  "label": "Model B, tau 10 ms, all-excitatory",
+  "signs": "all-excitatory (frozen)",
+  "stimulus": "500 ms constant depolarization, frozen S",
+  "tau_syn": 10.0
+ },
+ "paired_contrast": {
+  "measured": {
+   "command_pool": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "body_wall_motors": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "other": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.176744,
+     "per_seed": [
+      0.176744,
+      0.195349,
+      0.148837,
+      0.204651,
+      0.15814
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "ash_ashj": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 9.5,
+     "per_seed": [
+      9.5,
+      10.5,
+      8.0,
+      11.0,
+      8.5
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  "shuf-42": {
+   "command_pool": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "body_wall_motors": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "other": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.035349,
+     "per_seed": [
+      0.018605,
+      0.055814,
+      0.009302,
+      0.065116,
+      0.027907
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "ash_ashj": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 1.9,
+     "per_seed": [
+      1.0,
+      3.0,
+      0.5,
+      3.5,
+      1.5
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  "shuf-43": {
+   "command_pool": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "body_wall_motors": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "other": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.16186,
+     "per_seed": [
+      0.167442,
+      0.186047,
+      0.130233,
+      0.204651,
+      0.12093
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "ash_ashj": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 8.7,
+     "per_seed": [
+      9.0,
+      10.0,
+      7.0,
+      11.0,
+      6.5
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  "shuf-44": {
+   "command_pool": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "body_wall_motors": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "other": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 0.050233,
+     "per_seed": [
+      0.046512,
+      0.065116,
+      0.018605,
+      0.093023,
+      0.027907
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "ash_ashj": {
+    "pre": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "pulse": {
+     "mean": 2.7,
+     "per_seed": [
+      2.5,
+      3.5,
+      1.0,
+      5.0,
+      1.5
+     ]
+    },
+    "w0": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w1": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w2": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w3": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "w4": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "win5": {
+     "mean": 0.0,
+     "per_seed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  }
+ },
+ "runs": [
+  {
+   "wiring": "measured",
+   "seed": 101,
+   "cond": "rest",
+   "bg_seed": 101001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 101,
+   "cond": "stim",
+   "bg_seed": 101001,
+   "total_spikes": 19,
+   "mean_rate_hz": 0.004222222222222222,
+   "max_rate_hz": 0.5333333333333333,
+   "nan": false,
+   "wall_s": 1.6,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.005891472868217054,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.17674418604651163,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.31666666666666665,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 9.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 102,
+   "cond": "rest",
+   "bg_seed": 102001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 102,
+   "cond": "stim",
+   "bg_seed": 102001,
+   "total_spikes": 21,
+   "mean_rate_hz": 0.004666666666666666,
+   "max_rate_hz": 0.6666666666666666,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.006511627906976744,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.19534883720930232,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.35,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 10.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 103,
+   "cond": "rest",
+   "bg_seed": 103001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.6,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 103,
+   "cond": "stim",
+   "bg_seed": 103001,
+   "total_spikes": 16,
+   "mean_rate_hz": 0.0035555555555555553,
+   "max_rate_hz": 0.5333333333333333,
+   "nan": false,
+   "wall_s": 1.58,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.00496124031007752,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.14883720930232558,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.26666666666666666,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 8.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 104,
+   "cond": "rest",
+   "bg_seed": 104001,
+   "total_spikes": 1,
+   "mean_rate_hz": 0.0002222222222222222,
+   "max_rate_hz": 0.06666666666666667,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.000310077519379845,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0015503875968992248,
+      "win5": 0.0009302325581395349
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 104,
+   "cond": "stim",
+   "bg_seed": 104001,
+   "total_spikes": 23,
+   "mean_rate_hz": 0.005111111111111111,
+   "max_rate_hz": 0.6666666666666666,
+   "nan": false,
+   "wall_s": 1.58,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.007131782945736434,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.20465116279069767,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0015503875968992248,
+      "win5": 0.0009302325581395349
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.3666666666666667,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 11.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 105,
+   "cond": "rest",
+   "bg_seed": 105001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.57,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "measured",
+   "seed": 105,
+   "cond": "stim",
+   "bg_seed": 105001,
+   "total_spikes": 17,
+   "mean_rate_hz": 0.0037777777777777775,
+   "max_rate_hz": 0.6,
+   "nan": false,
+   "wall_s": 1.55,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.005271317829457364,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.15813953488372093,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.2833333333333333,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 8.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 101,
+   "cond": "rest",
+   "bg_seed": 101001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.53,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 101,
+   "cond": "stim",
+   "bg_seed": 101001,
+   "total_spikes": 2,
+   "mean_rate_hz": 0.0004444444444444444,
+   "max_rate_hz": 0.13333333333333333,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.00062015503875969,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.018604651162790697,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.03333333333333333,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 1.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 102,
+   "cond": "rest",
+   "bg_seed": 102001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.54,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 102,
+   "cond": "stim",
+   "bg_seed": 102001,
+   "total_spikes": 6,
+   "mean_rate_hz": 0.0013333333333333335,
+   "max_rate_hz": 0.26666666666666666,
+   "nan": false,
+   "wall_s": 1.53,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0018604651162790699,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.05581395348837209,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.1,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 3.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 103,
+   "cond": "rest",
+   "bg_seed": 103001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.56,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 103,
+   "cond": "stim",
+   "bg_seed": 103001,
+   "total_spikes": 1,
+   "mean_rate_hz": 0.0002222222222222222,
+   "max_rate_hz": 0.06666666666666667,
+   "nan": false,
+   "wall_s": 1.61,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.000310077519379845,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.009302325581395349,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.016666666666666666,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 104,
+   "cond": "rest",
+   "bg_seed": 104001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.51,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 104,
+   "cond": "stim",
+   "bg_seed": 104001,
+   "total_spikes": 7,
+   "mean_rate_hz": 0.0015555555555555557,
+   "max_rate_hz": 0.3333333333333333,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.002170542635658915,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.06511627906976744,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.11666666666666667,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 3.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 105,
+   "cond": "rest",
+   "bg_seed": 105001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.5,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-42",
+   "seed": 105,
+   "cond": "stim",
+   "bg_seed": 105001,
+   "total_spikes": 3,
+   "mean_rate_hz": 0.0006666666666666668,
+   "max_rate_hz": 0.13333333333333333,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0009302325581395349,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.027906976744186046,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.05,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 1.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 101,
+   "cond": "rest",
+   "bg_seed": 101001,
+   "total_spikes": 1,
+   "mean_rate_hz": 0.0002222222222222222,
+   "max_rate_hz": 0.06666666666666667,
+   "nan": false,
+   "wall_s": 1.56,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0008658008658008658,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 101,
+   "cond": "stim",
+   "bg_seed": 101001,
+   "total_spikes": 19,
+   "mean_rate_hz": 0.004222222222222222,
+   "max_rate_hz": 0.4666666666666667,
+   "nan": false,
+   "wall_s": 1.57,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0008658008658008658,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.00558139534883721,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.16744186046511628,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.30000000000000004,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 9.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 102,
+   "cond": "rest",
+   "bg_seed": 102001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.47,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 102,
+   "cond": "stim",
+   "bg_seed": 102001,
+   "total_spikes": 20,
+   "mean_rate_hz": 0.0044444444444444444,
+   "max_rate_hz": 0.6666666666666666,
+   "nan": false,
+   "wall_s": 1.57,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0062015503875969,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.18604651162790697,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.33333333333333337,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 10.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 103,
+   "cond": "rest",
+   "bg_seed": 103001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 103,
+   "cond": "stim",
+   "bg_seed": 103001,
+   "total_spikes": 14,
+   "mean_rate_hz": 0.0031111111111111114,
+   "max_rate_hz": 0.4,
+   "nan": false,
+   "wall_s": 1.54,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.00434108527131783,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.13023255813953488,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.23333333333333334,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 7.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 104,
+   "cond": "rest",
+   "bg_seed": 104001,
+   "total_spikes": 1,
+   "mean_rate_hz": 0.0002222222222222222,
+   "max_rate_hz": 0.06666666666666667,
+   "nan": false,
+   "wall_s": 1.54,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.000310077519379845,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0015503875968992248,
+      "win5": 0.0009302325581395349
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 104,
+   "cond": "stim",
+   "bg_seed": 104001,
+   "total_spikes": 23,
+   "mean_rate_hz": 0.005111111111111111,
+   "max_rate_hz": 0.6,
+   "nan": false,
+   "wall_s": 1.64,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.007131782945736434,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.20465116279069767,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0015503875968992248,
+      "win5": 0.0009302325581395349
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.3666666666666667,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 11.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 105,
+   "cond": "rest",
+   "bg_seed": 105001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.58,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-43",
+   "seed": 105,
+   "cond": "stim",
+   "bg_seed": 105001,
+   "total_spikes": 13,
+   "mean_rate_hz": 0.002888888888888889,
+   "max_rate_hz": 0.4666666666666667,
+   "nan": false,
+   "wall_s": 1.59,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.004031007751937985,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.12093023255813953,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.21666666666666667,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 6.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 101,
+   "cond": "rest",
+   "bg_seed": 101001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.59,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 101,
+   "cond": "stim",
+   "bg_seed": 101001,
+   "total_spikes": 5,
+   "mean_rate_hz": 0.0011111111111111113,
+   "max_rate_hz": 0.13333333333333333,
+   "nan": false,
+   "wall_s": 1.6,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.001550387596899225,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.046511627906976744,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.08333333333333333,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 2.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 102,
+   "cond": "rest",
+   "bg_seed": 102001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.56,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 102,
+   "cond": "stim",
+   "bg_seed": 102001,
+   "total_spikes": 7,
+   "mean_rate_hz": 0.0015555555555555557,
+   "max_rate_hz": 0.26666666666666666,
+   "nan": false,
+   "wall_s": 1.61,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.002170542635658915,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.06511627906976744,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.11666666666666667,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 3.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 103,
+   "cond": "rest",
+   "bg_seed": 103001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.64,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 103,
+   "cond": "stim",
+   "bg_seed": 103001,
+   "total_spikes": 2,
+   "mean_rate_hz": 0.0004444444444444444,
+   "max_rate_hz": 0.06666666666666667,
+   "nan": false,
+   "wall_s": 1.59,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.00062015503875969,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.018604651162790697,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.03333333333333333,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 1.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 104,
+   "cond": "rest",
+   "bg_seed": 104001,
+   "total_spikes": 1,
+   "mean_rate_hz": 0.0002222222222222222,
+   "max_rate_hz": 0.06666666666666667,
+   "nan": false,
+   "wall_s": 1.52,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.000310077519379845,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0015503875968992248,
+      "win5": 0.0009302325581395349
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 104,
+   "cond": "stim",
+   "bg_seed": 104001,
+   "total_spikes": 11,
+   "mean_rate_hz": 0.0024444444444444444,
+   "max_rate_hz": 0.4,
+   "nan": false,
+   "wall_s": 1.53,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0034108527131782944,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.09302325581395349,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0015503875968992248,
+      "win5": 0.0009302325581395349
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.16666666666666669,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 5.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 105,
+   "cond": "rest",
+   "bg_seed": 105001,
+   "total_spikes": 0,
+   "mean_rate_hz": 0.0,
+   "max_rate_hz": 0.0,
+   "nan": false,
+   "wall_s": 1.57,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  },
+  {
+   "wiring": "shuf-44",
+   "seed": 105,
+   "cond": "stim",
+   "bg_seed": 105001,
+   "total_spikes": 3,
+   "mean_rate_hz": 0.0006666666666666668,
+   "max_rate_hz": 0.13333333333333333,
+   "nan": false,
+   "wall_s": 1.61,
+   "n_flipped": 0,
+   "groups": {
+    "command_pool": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "body_wall_motors": {
+     "rate_15s": 0.0,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.0,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "other": {
+     "rate_15s": 0.0009302325581395349,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 0.027906976744186046,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    },
+    "ash_ashj": {
+     "rate_15s": 0.05,
+     "windows": {
+      "pre": 0.0,
+      "pulse": 1.5,
+      "w0": 0.0,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0,
+      "w4": 0.0,
+      "win5": 0.0
+     }
+    }
+   }
+  }
+ ],
+ "stable": true,
+ "wall_s": 65.6
+}

@@ -362,10 +362,10 @@ def analyze(res, wanted):
     # S2: do signs change the picture? (B2)
     if "b2" in wanted:
         b = res["b2"]
-        cp = b["paired_contrast"].get("command_pool", {})
-        meas = cp.get("measured", {}).get("win5", {})
-        sh_means = {w: c.get("win5", {}).get("mean")
-                    for w, c in cp.items() if w != "measured"}
+        pc = b["paired_contrast"]
+        meas = pc.get("measured", {}).get("command_pool", {}).get("win5", {})
+        sh_means = {w: c.get("command_pool", {}).get("win5", {}).get("mean")
+                    for w, c in pc.items() if w != "measured"}
         s2 = {
             "measured_signed_contrast_win5_hz": meas.get("mean"),
             "measured_signed_per_seed": meas.get("per_seed"),
@@ -393,16 +393,15 @@ def analyze(res, wanted):
         s3 = {}
         for tau in sorted(taus):
             b = res[taus[tau]]
-            cp = b["paired_contrast"].get("command_pool", {})
-            mo = b["paired_contrast"].get("body_wall_motors", {})
+            pc = b["paired_contrast"]
             rt = rest_table(taus[tau]) or {}
             s3[str(tau)] = {
                 "command_pool_contrast": {
-                    w: c.get("win5", {}).get("mean")
-                    for w, c in cp.items()},
+                    w: c.get("command_pool", {}).get("win5", {}).get("mean")
+                    for w, c in pc.items()},
                 "motor_contrast": {
-                    w: c.get("win5", {}).get("mean")
-                    for w, c in mo.items()},
+                    w: c.get("body_wall_motors", {}).get("win5", {}).get("mean")
+                    for w, c in pc.items()},
                 "rest_hz": {w: round(x, 4) for w, x in sorted(rt.items())},
             }
         v["stop_rules"]["S3_timescale_map"] = s3
@@ -411,9 +410,8 @@ def analyze(res, wanted):
     if "b1" in wanted and "b4" in wanted:
         s4 = {}
         for label, b in (("step", res["b1"]), ("trapezoid", res["b4"])):
-            cp = b["paired_contrast"].get("command_pool", {})
-            s4[label] = {w: c.get("win5", {}).get("mean")
-                         for w, c in cp.items()}
+            s4[label] = {w: c.get("command_pool", {}).get("win5", {}).get("mean")
+                         for w, c in b["paired_contrast"].items()}
         v["stop_rules"]["S4_graded_stimulus"] = s4
 
     # Overall verdict (control-wiring bar): measured command-pool win5
@@ -421,15 +419,16 @@ def analyze(res, wanted):
     # battery's shuffles — in any battery.
     hits = []
     for key, b in res.items():
-        cp = b["paired_contrast"].get("command_pool", {}).get("measured")
-        if not cp:
+        pc = b["paired_contrast"]
+        meas = pc.get("measured", {}).get("command_pool", {}).get("win5")
+        if not meas:
             continue
-        m, ps = cp["win5"].get("mean"), cp["win5"].get("per_seed", [])
+        m, ps = meas.get("mean"), meas.get("per_seed", [])
         if m is None or m <= 0.5 or not ps or not all(x > 0 for x in ps):
             continue
-        sh_max = max((c["win5"].get("mean") or 0.0)
-                     for w, c in b["paired_contrast"]["command_pool"].items()
-                     if w != "measured")
+        sh_max = max(((c.get("command_pool", {}).get("win5", {}).get("mean")
+                       or 0.0)
+                      for w, c in pc.items() if w != "measured"))
         if m > sh_max:
             hits.append({"battery": key, "contrast_hz": m,
                          "per_seed": ps})
