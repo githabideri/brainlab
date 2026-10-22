@@ -98,7 +98,8 @@ def verify(doc_path: Path, doc: dict) -> dict:
 
 def run_cell(doc, wiring: str, wirings: dict, task: dict, k: int,
              outdir: Path, provenance: dict,
-             test_prefix: int | None = None) -> dict:
+             test_prefix: int | None = None,
+             name_prefix: str = "") -> dict:
     set_drive_salt(k)
     arm = model.SpikeArm(doc, wirings[wiring], task, task["x"],
                          task["train_idx"])
@@ -131,7 +132,7 @@ def run_cell(doc, wiring: str, wirings: dict, task: dict, k: int,
         "hardware_role": HARDWARE_ROLE,
     }
     res.update(provenance)
-    p = outdir / f"{wiring}_r{k}.json"
+    p = outdir / f"{name_prefix}{wiring}_r{k}.json"
     p.write_text(json.dumps(res, indent=2))
     print(f"  -> {p.name}: rmce={held['rmce_deg']} r2={held.get('r2')} "
           f"(wall {res['wall_s']}s)", flush=True)
@@ -244,7 +245,7 @@ def main() -> None:
     wlist = [w.strip() for w in args.wirings.split(",")]
     assert set(wlist) <= set(WIRINGS), f"unknown wirings {wlist}"
 
-    outdir = HERE / "results"
+    outdir = HERE.parent / "results"
     outdir.mkdir(exist_ok=True)
     if not args.map_only:
         for k in range(args.k):

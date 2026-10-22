@@ -1,0 +1,28 @@
+{
+  "s1": {
+    "fly": {
+      "smoke": 84.951,
+      "decision_pilot": 84.951,
+      "match": true
+    },
+    "degree": {
+      "smoke": 92.767,
+      "decision_pilot": 92.767,
+      "match": true
+    }
+  },
+  "s2": {
+    "wall_s": 625.2,
+    "rmce_deg": 87.49,
+    "no_nan": true,
+    "sane_range": true,
+    "shrink_k5_to_3": false
+  },
+  "s1_32prefix_first_attempt": {
+    "fly": 81.205,
+    "degree": 85.521,
+    "note": "first smoke run (32 prefix, the addendum's wording); kept as a data point, not the S1 check"
+  },
+  "proceed": true,
+  "k": 5
+}

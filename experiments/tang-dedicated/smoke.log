@@ -1,0 +1,27 @@
+control degree        seed=20261013 edges=8ca4d58ef7ef0084… preserves=['per-node in/out degree', 'edge count', 'edge-magnitude multiset']
+control sign          seed=20261014 edges=b4e51fab2a1de7da… preserves=['per-node in/out degree', 'edge count', 'per-node E/I balance (in and out)', 'per-source outgoing magnitude multiset']
+control weight        seed=20261015 edges=177b44606356ddc6… preserves=['per-node in/out degree', 'edge count', 'per-edge magnitude multiset (global and per-source outgoing)']
+control population    seed=20261016 edges=062289318fcbdc9f… preserves=['per-node in/out degree', 'edge count', 'per population-pair edge counts', 'per-block magnitude multiset']
+control disconnected  seed=None edges=e3b0c44298fc1c14… preserves=['nodes only']
+control degree        seed=20261013 edges=8ca4d58ef7ef0084… preserves=['per-node in/out degree', 'edge count', 'edge-magnitude multiset']
+control sign          seed=20261014 edges=b4e51fab2a1de7da… preserves=['per-node in/out degree', 'edge count', 'per-node E/I balance (in and out)', 'per-source outgoing magnitude multiset']
+control weight        seed=20261015 edges=177b44606356ddc6… preserves=['per-node in/out degree', 'edge count', 'per-edge magnitude multiset (global and per-source outgoing)']
+control population    seed=20261016 edges=062289318fcbdc9f… preserves=['per-node in/out degree', 'edge count', 'per population-pair edge counts', 'per-block magnitude multiset']
+control disconnected  seed=None edges=e3b0c44298fc1c14… preserves=['nodes only']
+== S1: bit-identity vs the A-03 decision pilot (r0, 32 prefix)
+  -> fly_r0.json: rmce=81.205 r2=-0.2612 (wall 181.7s)
+  S1 fly: smoke 81.205 vs decision-pilot 84.951 -> MISMATCH
+  -> degree_r0.json: rmce=85.521 r2=-0.3158 (wall 181.7s)
+  S1 degree: smoke 85.521 vs decision-pilot 92.767 -> MISMATCH
+== S2: one full run (fly, r1, 640 trials)
+  -> fly_r1.json: rmce=87.49 r2=-0.4449 (wall 625.2s)
+Traceback (most recent call last):
+  File "/root/homelab/submodules/brainlab/experiments/tang-dedicated/src/smoke_tang.py", line 97, in <module>
+    main()
+  File "/root/homelab/submodules/brainlab/experiments/tang-dedicated/src/smoke_tang.py", line 77, in main
+    nan = any(v != v for row in (r["held_out"].items()) for v in
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/homelab/submodules/brainlab/experiments/tang-dedicated/src/smoke_tang.py", line 77, in <genexpr>
+    nan = any(v != v for row in (r["held_out"].items()) for v in
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object is not iterable

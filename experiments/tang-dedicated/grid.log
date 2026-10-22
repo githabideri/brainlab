@@ -1,0 +1,13 @@
+circuit: 1536 nodes, 42921 edges
+control degree        seed=20261013 edges=8ca4d58ef7ef0084… preserves=['per-node in/out degree', 'edge count', 'edge-magnitude multiset']
+control sign          seed=20261014 edges=b4e51fab2a1de7da… preserves=['per-node in/out degree', 'edge count', 'per-node E/I balance (in and out)', 'per-source outgoing magnitude multiset']
+control weight        seed=20261015 edges=177b44606356ddc6… preserves=['per-node in/out degree', 'edge count', 'per-edge magnitude multiset (global and per-source outgoing)']
+control population    seed=20261016 edges=062289318fcbdc9f… preserves=['per-node in/out degree', 'edge count', 'per population-pair edge counts', 'per-block magnitude multiset']
+control disconnected  seed=None edges=e3b0c44298fc1c14… preserves=['nodes only']
+verified: circuit ef6a6c1dd520  lif ecf832264748  controls x5 vs A-03 manifest
+ceiling: {'kind': 'rmce_deg', 'chance': 89.80395630609054, 'ceiling': 45.46410379422469}
+control degree        seed=20261013 edges=8ca4d58ef7ef0084… preserves=['per-node in/out degree', 'edge count', 'edge-magnitude multiset']
+control sign          seed=20261014 edges=b4e51fab2a1de7da… preserves=['per-node in/out degree', 'edge count', 'per-node E/I balance (in and out)', 'per-source outgoing magnitude multiset']
+control weight        seed=20261015 edges=177b44606356ddc6… preserves=['per-node in/out degree', 'edge count', 'per-edge magnitude multiset (global and per-source outgoing)']
+control population    seed=20261016 edges=062289318fcbdc9f… preserves=['per-node in/out degree', 'edge count', 'per population-pair edge counts', 'per-block magnitude multiset']
+control disconnected  seed=None edges=e3b0c44298fc1c14… preserves=['nodes only']

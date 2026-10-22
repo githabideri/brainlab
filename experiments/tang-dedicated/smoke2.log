@@ -1,0 +1,18 @@
+control degree        seed=20261013 edges=8ca4d58ef7ef0084… preserves=['per-node in/out degree', 'edge count', 'edge-magnitude multiset']
+control sign          seed=20261014 edges=b4e51fab2a1de7da… preserves=['per-node in/out degree', 'edge count', 'per-node E/I balance (in and out)', 'per-source outgoing magnitude multiset']
+control weight        seed=20261015 edges=177b44606356ddc6… preserves=['per-node in/out degree', 'edge count', 'per-edge magnitude multiset (global and per-source outgoing)']
+control population    seed=20261016 edges=062289318fcbdc9f… preserves=['per-node in/out degree', 'edge count', 'per population-pair edge counts', 'per-block magnitude multiset']
+control disconnected  seed=None edges=e3b0c44298fc1c14… preserves=['nodes only']
+control degree        seed=20261013 edges=8ca4d58ef7ef0084… preserves=['per-node in/out degree', 'edge count', 'edge-magnitude multiset']
+control sign          seed=20261014 edges=b4e51fab2a1de7da… preserves=['per-node in/out degree', 'edge count', 'per-node E/I balance (in and out)', 'per-source outgoing magnitude multiset']
+control weight        seed=20261015 edges=177b44606356ddc6… preserves=['per-node in/out degree', 'edge count', 'per-edge magnitude multiset (global and per-source outgoing)']
+control population    seed=20261016 edges=062289318fcbdc9f… preserves=['per-node in/out degree', 'edge count', 'per population-pair edge counts', 'per-block magnitude multiset']
+control disconnected  seed=None edges=e3b0c44298fc1c14… preserves=['nodes only']
+== S1: bit-identity vs the A-03 decision pilot (r0, full 512 fold)
+  -> s1_fly_r0.json: rmce=84.951 r2=-0.3375 (wall 538.6s)
+  S1 fly: smoke 84.951 vs decision-pilot 84.951 -> MATCH
+  -> s1_degree_r0.json: rmce=92.767 r2=-0.4842 (wall 548.6s)
+  S1 degree: smoke 92.767 vs decision-pilot 92.767 -> MATCH
+  S2 (reused): wall 625s, rmce 87.49
+  S2 fly r1: wall 625s, rmce 87.49, nan=False, sane=True -> K = 5
+SMOKE PASS
