@@ -11,3 +11,43 @@ control sign          seed=20261014 edges=b4e51fab2a1de7da… preserves=['per-no
 control weight        seed=20261015 edges=177b44606356ddc6… preserves=['per-node in/out degree', 'edge count', 'per-edge magnitude multiset (global and per-source outgoing)']
 control population    seed=20261016 edges=062289318fcbdc9f… preserves=['per-node in/out degree', 'edge count', 'per population-pair edge counts', 'per-block magnitude multiset']
 control disconnected  seed=None edges=e3b0c44298fc1c14… preserves=['nodes only']
+  -> fly_r0.json: rmce=84.951 r2=-0.3375 (wall 537.4s)
+    elapsed 537s cumulative
+  -> degree_r0.json: rmce=92.767 r2=-0.4842 (wall 543.1s)
+    elapsed 543s cumulative
+  -> sign_r0.json: rmce=86.101 r2=-0.3868 (wall 523.1s)
+    elapsed 523s cumulative
+  -> weight_r0.json: rmce=90.879 r2=-0.411 (wall 383.3s)
+    elapsed 383s cumulative
+  -> population_r0.json: rmce=89.962 r2=-0.5082 (wall 531.1s)
+    elapsed 531s cumulative
+Traceback (most recent call last):
+  File "/root/homelab/submodules/brainlab/experiments/tang-dedicated/src/run_tang.py", line 268, in <module>
+    main()
+  File "/root/homelab/submodules/brainlab/experiments/tang-dedicated/src/run_tang.py", line 257, in main
+    run_cell(doc, w, wirings, task, k, outdir, prov,
+  File "/root/homelab/submodules/brainlab/experiments/tang-dedicated/src/run_tang.py", line 104, in run_cell
+    arm = model.SpikeArm(doc, wirings[wiring], task, task["x"],
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/homelab/submodules/brainlab/experiments/a-03-sequential-learning/model.py", line 241, in __init__
+    self._w = lif_weights(doc, src, tgt, w)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/homelab/submodules/brainlab/experiments/a-03-sequential-learning/model.py", line 218, in lif_weights
+    c = np.percentile(mag, 95)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/homelab/temp/brainlab/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4259, in percentile
+    return _quantile_unchecked(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/homelab/temp/brainlab/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4523, in _quantile_unchecked
+    return _ureduce(a,
+           ^^^^^^^^^^^
+  File "/root/homelab/temp/brainlab/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 3893, in _ureduce
+    r = func(a, **kwargs)
+        ^^^^^^^^^^^^^^^^^
+  File "/root/homelab/temp/brainlab/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4682, in _quantile_ureduce_func
+    result = _quantile(arr,
+             ^^^^^^^^^^^^^^
+  File "/root/homelab/temp/brainlab/venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4806, in _quantile
+    slices_having_nans = np.isnan(arr[-1, ...])
+                                  ~~~^^^^^^^^^
+IndexError: index -1 is out of bounds for axis 0 with size 0

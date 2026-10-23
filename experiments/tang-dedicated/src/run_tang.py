@@ -67,6 +67,20 @@ def set_drive_salt(k: int) -> None:
     model._trial_seed = _trial_seed
 
 
+_orig_lif_weights = model.lif_weights
+
+
+def _safe_lif_weights(doc: dict, src, tgt, w):
+    """Guard for the zero-edge `disconnected` control: A-03's
+    lif_weights calls np.percentile on the edge magnitudes, which
+    raises on an empty array (latent in A-03 — its decision pilot
+    never ran a disconnected spike arm). Empty edges -> empty
+    efficacy array; everything else is the imported function."""
+    if len(src) == 0:
+        return np.zeros(0, dtype=np.float32)
+    return _orig_lif_weights(doc, src, tgt, w)
+
+
 def build_wirings(doc: dict) -> dict:
     groups = np.array([ne["group"] for ne in doc["neurons"]], dtype=np.int64)
     n = len(doc["neurons"])
@@ -77,6 +91,8 @@ def build_wirings(doc: dict) -> dict:
 
 
 def verify(doc_path: Path, doc: dict) -> dict:
+    global _safe_lif_weights
+    model.lif_weights = _safe_lif_weights  # zero-edge guard (see above)
     got = sha256_file(doc_path)
     assert got == CIRCUIT_SHA256, f"staged circuit hash mismatch: {got}"
     a03_manifest = json.loads(
@@ -96,10 +112,71 @@ def verify(doc_path: Path, doc: dict) -> dict:
     return {"circuit_sha256": got, "lif_sha256": lif_now, "controls": ctl}
 
 
+def _mean_predictor_metrics(task: dict, tr_idx: np.ndarray,
+                            te_idx: np.ndarray) -> dict:
+    """The exact output of a zero-edge (disconnected) LIF arm.
+
+    With no edges the 384 output nodes receive only the 10 mV tonic;
+    every trial starts from the identical initial state and gets the
+    identical 1000 ms of tonic, so the per-trial output rate features
+    are constant across trials. A ridge on constant (zero after
+    standardization) features predicts the training-fold mean target,
+    i.e. the mean-predictor null floor — computed directly here, no
+    LIF. (The pinned lif.py cannot even construct a zero-edge network:
+    its _deliver indexes the empty synaptic-update queues — a latent
+    B-01 defect, out of this lane's hands.)"""
+    import math
+    pred = task["y"][tr_idx].mean(0)  # (2,) mean (sin, cos) target
+    ang = np.degrees(np.arctan2(pred[0], pred[1])) % 360.0
+    H = task["extra"]["H"][te_idx]
+    err = np.abs((ang - H + 180.0) % 360.0 - 180.0)
+    rmce = float(err.mean())
+    yte = task["y"][te_idx]
+    ss_res = float(((yte - pred) ** 2).sum())
+    ss_tot = float(((yte - yte.mean(0)) ** 2).sum())
+    r2 = 1.0 - ss_res / ss_tot if ss_tot > 0 else 0.0
+    ceil, chance = task["ceiling"]["ceiling"], task["ceiling"]["chance"]
+    eff = min(ceil / rmce, 99.0) if rmce > 0 else 99.0
+    return {"rmce_deg": round(rmce, 3), "r2": round(r2, 4),
+            "ceiling": round(ceil, 3), "chance": round(chance, 3),
+            "efficiency": round(eff, 4)}
+
+
 def run_cell(doc, wiring: str, wirings: dict, task: dict, k: int,
              outdir: Path, provenance: dict,
              test_prefix: int | None = None,
              name_prefix: str = "") -> dict:
+    p = outdir / f"{name_prefix}{wiring}_r{k}.json"
+    if wiring == "disconnected":
+        tr_idx, _ = tasks.split(task, N_TRAIN)
+        te_idx = task["test_idx"]
+        if test_prefix is not None:
+            te_idx = te_idx[:test_prefix]
+        t0 = time.time()
+        held = _mean_predictor_metrics(task, tr_idx, te_idx)
+        res = {
+            "experiment": "tang-dedicated",
+            "wiring": wiring,
+            "realization": k,
+            "drive_salt": "n/a (zero edges: drive-independent)",
+            "null_floor_direct_computation": True,
+            "task": "T-ang",
+            "n_train": int(len(tr_idx)),
+            "n_test": int(len(te_idx)),
+            "n_edges": 0,
+            "dw_zero_by_construction": True,
+            "held_out": held,
+            "wall_s": round(time.time() - t0, 1),
+            "torch_version": torch.__version__,
+            "numpy_version": np.__version__,
+            "hardware_role": HARDWARE_ROLE,
+        }
+        res.update(provenance)
+        p.write_text(json.dumps(res, indent=2))
+        print(f"  -> {p.name}: rmce={held['rmce_deg']} (direct mean "
+              f"predictor; zero-edge LIF is undefined on the pinned lif.py)",
+              flush=True)
+        return res
     set_drive_salt(k)
     arm = model.SpikeArm(doc, wirings[wiring], task, task["x"],
                          task["train_idx"])
