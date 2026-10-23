@@ -1,0 +1,96 @@
+{
+  "experiment": "tang-dedicated",
+  "wiring": "disconnected",
+  "realization": 0,
+  "drive_salt": "n/a (zero edges: drive-independent)",
+  "null_floor_direct_computation": true,
+  "task": "T-ang",
+  "n_train": 128,
+  "n_test": 512,
+  "n_edges": 0,
+  "dw_zero_by_construction": true,
+  "held_out": {
+    "rmce_deg": 84.575,
+    "r2": -0.0001,
+    "ceiling": 45.464,
+    "chance": 89.804,
+    "efficiency": 0.5376
+  },
+  "wall_s": 0.0,
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "hardware_role": "4-core CPU host, 12 GB RAM",
+  "circuit_sha256": "ef6a6c1dd520b461b3beaca3859f0c5de4fb3fccb94336c180016d6ef0017227",
+  "lif_sha256": "ecf832264748c4e4a6a5204aad46313b6469a62bf378949895a20e5f12a9d94c",
+  "controls": {
+    "degree": {
+      "control": "degree",
+      "seed": 20261013,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "edge-magnitude multiset"
+      ],
+      "breaks": [
+        "specific source->target pairing",
+        "per-source magnitude profile",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "8ca4d58ef7ef0084b1f229a72f1c2de453eb7b091493395e7af6223c4f3f43da"
+    },
+    "sign": {
+      "control": "sign",
+      "seed": 20261014,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per-node E/I balance (in and out)",
+        "per-source outgoing magnitude multiset"
+      ],
+      "breaks": [
+        "specific source->target pairing"
+      ],
+      "edge_sha256": "b4e51fab2a1de7da96a6cdd84afa8c97b1e943e215e1a89960a87aeb5a8ff1be"
+    },
+    "weight": {
+      "control": "weight",
+      "seed": 20261015,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per-edge magnitude multiset (global and per-source outgoing)"
+      ],
+      "breaks": [
+        "specific source->target pairing of strong edges",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "177b44606356ddc68bea6fefdb97519f7e0a8f0ab31ad8ff29e9e347cc194d2f"
+    },
+    "population": {
+      "control": "population",
+      "seed": 20261016,
+      "preserves": [
+        "per-node in/out degree",
+        "edge count",
+        "per population-pair edge counts",
+        "per-block magnitude multiset"
+      ],
+      "breaks": [
+        "node-level source->target pairing",
+        "per-node E/I balance"
+      ],
+      "edge_sha256": "062289318fcbdc9f4217dd15be55d9684f31987e56339696b03680c62d3a6426"
+    },
+    "disconnected": {
+      "control": "disconnected",
+      "seed": null,
+      "preserves": [
+        "nodes only"
+      ],
+      "breaks": [
+        "all edges (the readout sees no circuit activity -> majority-class floor)"
+      ],
+      "edge_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

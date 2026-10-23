@@ -16,6 +16,18 @@ and what the numbers do not show).
 
 ## Recent
 
+- [2026-10-22-tang-dedicated](2026-10-22-tang-dedicated.md) — the
+  A-03 decision pilot's one sub-ceiling lead (spike T-ang, fly 84.95
+  vs degree 92.77°) gets its dedicated study: 6 wirings × 5
+  independent Poisson drive realizations on the 512-trial fold. **
+  FAIL:** the "lead" is the no-information mean-predictor null floor
+  (84.575°, better than chance) with a fold-size-dependent
+  degradation contrast on top — fly is stable in 1/5 drives and
+  beaten by the floor in all of them; every R² negative; no arm
+  near the 45.46° ceiling. The A-03 STOP stands. Also documents the
+  pilot addendum's 32-prefix wording error and the pinned B-01
+  `lif.py` zero-edge incompatibility.
+
 - [2026-10-22-worm-tau-window](2026-10-22-worm-tau-window.md) — the
   τ-window map of the resting-state effect: 200 runs over
   τ_syn ∈ {40,45,55,60,75} ms combined with the v3-sensitivity B1/B3

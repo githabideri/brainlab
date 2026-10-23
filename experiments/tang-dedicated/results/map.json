@@ -1,0 +1,130 @@
+{
+  "experiment": "tang-dedicated",
+  "task": "T-ang",
+  "ceiling_rmce": 45.46410379422469,
+  "chance_rmce": 89.80395630609054,
+  "decision_pilot_reference": {
+    "fly": 84.95,
+    "degree": 92.77,
+    "chance": 89.8,
+    "ceiling": 45.46
+  },
+  "rows": {
+    "fly": {
+      "rmce_per_realization": [
+        84.951,
+        87.49,
+        87.978,
+        88.727,
+        90.31
+      ],
+      "rmce_mean": 87.891,
+      "rmce_std": 1.753,
+      "r2_mean": -0.4232,
+      "efficiency_mean": 0.5175
+    },
+    "degree": {
+      "rmce_per_realization": [
+        92.767,
+        90.457,
+        86.35,
+        87.828,
+        88.137
+      ],
+      "rmce_mean": 89.108,
+      "rmce_std": 2.254,
+      "r2_mean": -0.3981,
+      "efficiency_mean": 0.5105
+    },
+    "sign": {
+      "rmce_per_realization": [
+        86.101,
+        87.994,
+        91.581,
+        89.364,
+        89.332
+      ],
+      "rmce_mean": 88.874,
+      "rmce_std": 1.802,
+      "r2_mean": -0.4262,
+      "efficiency_mean": 0.5118
+    },
+    "weight": {
+      "rmce_per_realization": [
+        90.879,
+        89.812,
+        90.844,
+        87.176,
+        83.266
+      ],
+      "rmce_mean": 88.395,
+      "rmce_std": 2.897,
+      "r2_mean": -0.4152,
+      "efficiency_mean": 0.5149
+    },
+    "population": {
+      "rmce_per_realization": [
+        89.962,
+        93.145,
+        94.057,
+        89.814,
+        89.643
+      ],
+      "rmce_mean": 91.324,
+      "rmce_std": 1.884,
+      "r2_mean": -0.498,
+      "efficiency_mean": 0.4981
+    },
+    "disconnected": {
+      "rmce_per_realization": [
+        84.575,
+        84.575,
+        84.575,
+        84.575,
+        84.575
+      ],
+      "rmce_mean": 84.575,
+      "rmce_std": 0.0,
+      "r2_mean": -0.0001,
+      "efficiency_mean": 0.5376
+    }
+  },
+  "fly_minus_degree_per_realization": {
+    "fly-minus-degree r0": -7.816,
+    "fly-minus-degree r1": -2.967,
+    "fly-minus-degree r2": 1.628,
+    "fly-minus-degree r3": 0.899,
+    "fly-minus-degree r4": 2.173
+  },
+  "p1": {
+    "rule": "fly-degree <= -5 deg in >= 4 of 5 (>=2 of 3 if shrunk)",
+    "per_realization_deg": [
+      -7.816,
+      -2.967,
+      1.628,
+      0.899,
+      2.173
+    ],
+    "votes": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "pass": false
+  },
+  "p2": {
+    "rule": "fly mean < every control mean AND beats best control (disconnected) by >= 5 deg AND fly single-best in >= 4 of 5 (>=3 if shrunk)",
+    "fly_mean": 87.891,
+    "best_control": "disconnected",
+    "best_control_mean": 84.575,
+    "margin_over_best": -3.316,
+    "single_best_votes": 0,
+    "pass": false
+  },
+  "overall": {
+    "pass": false,
+    "verdict": "FAIL: the sub-ceiling spike T-ang lead does not survive the dedicated study"
+  }
+}

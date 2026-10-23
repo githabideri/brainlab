@@ -89,7 +89,33 @@ evaluation re-labelled, never three replicates; `results/summary.json`
 now indexes all 44 cells (18 pilot/v1, 18 pilot/v2, 8 main/v3-dec).
 Report:
 `../reports/2026-10-12-a03-design.md` (revision note is
-authoritative).
+authoritative). Its one surviving sub-ceiling lead (spike T-ang,
+fly 84.95 vs degree 92.77° — one deterministic evaluation) was
+re-tested 2026-10-22/23 in the dedicated **tang-dedicated** study
+below: **FAIL** — the "lead" is the no-information mean-predictor
+null floor (84.575°, better than chance) with a fold-size-dependent
+degradation contrast on top; fly is not stable (1/5 drives) and is
+beaten by the floor in every realization.
+- **tang-dedicated** (the A-03 spike T-ang lead, re-run as a new
+  focused experiment on the same circuit/drive) —
+  `tang-dedicated/`. **Done 2026-10-22/23: FAIL.** 30 runs = 6
+  wirings (fly + all five controls) × 5 independent Poisson drive
+  realizations (r0 = A-03's exact drive salt — bit-identity to the
+  decision pilot verified: 84.951/92.767° exactly), 128-trial ridge,
+  declared 512-trial held-out fold. **P1 (stability) 1 of 5**
+  (fly−degree per drive: −7.82/−2.97/+1.63/+0.90/+2.17°); **P2
+  (specificity) fails**: fly is the best LIF wiring on average
+  (87.89°) but sits 3.3° *worse* than the disconnected null floor
+  (84.575° — itself better than the 89.804° chance) in every
+  realization, single-best 0/5; every R² is negative; no arm
+  approaches the 45.46° ceiling; one shuffle (weight r4) even beat
+  the floor once. Two records fixed: the pilot addendum's "32-trial
+  prefix" wording (its JSONs are n_test=512; the 32-prefix first
+  attempt kept as data: the gap is 4.3° there vs 7.82° on 512) and
+  the pinned B-01 `lif.py` zero-edge incompatibility (latent; the
+  disconnected arm is exactly the mean-predictor floor and is
+  computed directly). The A-03 STOP stands. Report:
+  `../reports/2026-10-22-tang-dedicated.md`.
 - **b-01-internal-compass** (can a *measured* central-complex subgraph
   run a decodable heading attractor?) — `b-01-internal-compass/`.
   **Done 2026-10-12: clean null at the declared drive point.** 15 runs
